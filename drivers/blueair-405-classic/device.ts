@@ -10,15 +10,6 @@ interface Setting {
 }
 
 /**
- * Represents the event data for the onSettings function.
- */
-interface OnSettingsEvent {
-    oldSettings: Record<string, any>;
-    newSettings: Record<string, any>;
-    changedKeys: string[];
-}
-
-/**
  * Converts a UNIX timestamp to a human-readable date-time string.
  *
  * @param UNIX_timestamp - The UNIX timestamp to be converted.
@@ -364,17 +355,25 @@ class BlueAir405ClassicDevice extends Device {
 
     /**
      * onSettings is called when the user updates the device's settings.
-     * @param event the onSettings event data
-     * @param event.oldSettings The old settings object
-     * @param event.newSettings The new settings object
-     * @param event.changedKeys An array of keys changed since the previous version
-     * @returns A promise that resolves to a custom message that will be displayed or void.
+     * @param {object} event the onSettings event data
+     * @param {object} event.oldSettings The old settings object
+     * @param {object} event.newSettings The new settings object
+     * @param {string[]} event.changedKeys An array of keys changed since the previous version
+     * @returns {Promise<string|void>} return a custom message that will be displayed
      */
     async onSettings({
         oldSettings,
         newSettings,
         changedKeys,
-    }: OnSettingsEvent): Promise<string | void> {
+    }: {
+        oldSettings: {
+            [key: string]: boolean | string | number | undefined | null;
+        };
+        newSettings: {
+            [key: string]: boolean | string | number | undefined | null;
+        };
+        changedKeys: string[];
+    }): Promise<string | void> {
         this.log('BlueAir405ClassicDevice settings where changed');
     }
 

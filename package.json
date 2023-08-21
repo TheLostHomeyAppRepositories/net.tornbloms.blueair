@@ -1,7 +1,7 @@
 {
     "name": "net.tornbloms.blueair",
     "version": "1.0.0",
-    "main": "app.js",
+    "main": "app.ts",
     "scripts": {
         "lint": "eslint --ext .js,.ts --ignore-path .gitignore .",
         "build": "tsc"
