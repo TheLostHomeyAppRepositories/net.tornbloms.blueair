@@ -1,0 +1,60 @@
+{
+    "name": {
+        "en": "BlueAir 405 Classic"
+    },
+    "class": "fan",
+    "capabilities": [
+        "fan_speed",
+        "brightness",
+        "child_lock",
+        "last_retrival_date",
+        "wifi_status",
+        "filter_status"
+    ],
+    "platforms": ["local", "cloud"],
+    "connectivity": [],
+    "images": {
+        "small": "{{driverAssetsPath}}/images/small.png",
+        "large": "{{driverAssetsPath}}/images/large.png",
+        "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+    },
+    "pair": [
+        {
+            "id": "login_credentials",
+            "template": "login_credentials",
+            "options": {
+                "logo": "icon.svg",
+                "title": {
+                    "en": "Login to your account"
+                },
+                "usernameLabel": {
+                    "en": "E-mail address",
+                    "se": "E-post adress"
+                },
+                "usernamePlaceholder": {
+                    "en": "john@doe.com",
+                    "se": "namn@domain.se"
+                },
+                "passwordLabel": {
+                    "en": "Password",
+                    "se": "Lösenord"
+                },
+                "passwordPlaceholder": {
+                    "en": "Password",
+                    "se": "Lösenord"
+                }
+            }
+        },
+        {
+            "id": "list_devices",
+            "template": "list_devices",
+            "navigation": {
+                "next": "add_devices"
+            }
+        },
+        {
+            "id": "add_devices",
+            "template": "add_devices"
+        }
+    ]
+}

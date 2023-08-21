@@ -1,0 +1,675 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "net.tornbloms.blueair",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "brandColor": "#0C2F4F",
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "name": {
+    "en": "BlueAir",
+    "se": "BlueAir"
+  },
+  "description": {
+    "en": "BulueAir purifiers becuse you need a deep breth.",
+    "se": "BlueAir luftfilter, för att du behöver andas."
+  },
+  "category": [
+    "climate"
+  ],
+  "tags": {
+    "en": [
+      "purifier",
+      "BlueAir",
+      "air"
+    ],
+    "se": [
+      "luftrenare",
+      "BlueAir",
+      "luft"
+    ]
+  },
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png"
+  },
+  "author": {
+    "name": "Mathias Törnblom",
+    "email": "mathias@tornbloms.net"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Mathias Törnblom"
+      }
+    ],
+    "translators": [
+      {
+        "name": "Mathias Törnblom"
+      }
+    ]
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "mathiastornblom"
+      },
+      "githubSponsors": {
+        "username": "mathiastornblom"
+      }
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/mathiastornblom/net.tornbloms.blueair/issues"
+  },
+  "source": "https://github.com/mathiastornblom/net.tornbloms.blueair",
+  "support": "mailto:mathias@tornbloms.net",
+  "flow": {
+    "triggers": [
+      {
+        "title": {
+          "en": "Fan speed has changed"
+        },
+        "hint": {
+          "en": "The fan speed has benn changed",
+          "se": "Fartn på fläkten är ändrad"
+        },
+        "tokens": [
+          {
+            "type": "string",
+            "name": "device-name",
+            "title": {
+              "en": "Device name"
+            },
+            "example": {
+              "en": "BlueAir 405 Classic"
+            }
+          },
+          {
+            "type": "string",
+            "name": "device-uuid",
+            "title": {
+              "en": "Device uuid"
+            },
+            "example": {
+              "en": "2504776FFDC0BAB2"
+            }
+          },
+          {
+            "type": "string",
+            "name": "fan speed",
+            "title": {
+              "en": "fan speed"
+            },
+            "example": {
+              "en": "3"
+            }
+          }
+        ],
+        "id": "fan-speed-has-changed"
+      },
+      {
+        "title": {
+          "en": "Filter needs change"
+        },
+        "hint": {
+          "en": "Normaly filter has a status OK but if it changes this flow wioll trigger.",
+          "se": "Normalt status är OK."
+        },
+        "tokens": [
+          {
+            "type": "string",
+            "name": "device-name",
+            "title": {
+              "en": "Device name"
+            },
+            "example": {
+              "en": "BlueAir 405 Classic"
+            }
+          },
+          {
+            "type": "string",
+            "name": "device-uuid",
+            "title": {
+              "en": "Device uuid"
+            },
+            "example": {
+              "en": "2504776FFDC0BAB2"
+            }
+          },
+          {
+            "type": "string",
+            "name": "device-response",
+            "title": {
+              "en": "Device response"
+            },
+            "example": {
+              "en": "OK"
+            }
+          }
+        ],
+        "id": "filter-needs-change"
+      }
+    ],
+    "actions": [
+      {
+        "title": {
+          "en": "Set brightness"
+        },
+        "titleFormatted": {
+          "en": "Set the brightness to a [[brightness]]"
+        },
+        "args": [
+          {
+            "type": "dropdown",
+            "name": "brightness",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "0"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "4"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "set-brightness"
+      },
+      {
+        "title": {
+          "en": "Set fan speed"
+        },
+        "titleFormatted": {
+          "en": "Set the fan speed to [[fanspeed]]"
+        },
+        "args": [
+          {
+            "type": "dropdown",
+            "name": "fanspeed",
+            "values": [
+              {
+                "id": "auto",
+                "label": {
+                  "en": "Auto"
+                }
+              },
+              {
+                "id": "0",
+                "label": {
+                  "en": "0"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "3"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "set-fan-speed"
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "BlueAir 405 Classic"
+      },
+      "class": "fan",
+      "capabilities": [
+        "fan_speed",
+        "brightness",
+        "child_lock",
+        "last_retrival_date",
+        "wifi_status",
+        "filter_status"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [],
+      "images": {
+        "small": "/drivers/blueair-405-classic/assets/images/small.png",
+        "large": "/drivers/blueair-405-classic/assets/images/large.png",
+        "xlarge": "/drivers/blueair-405-classic/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "login_credentials",
+          "template": "login_credentials",
+          "options": {
+            "logo": "icon.svg",
+            "title": {
+              "en": "Login to your account"
+            },
+            "usernameLabel": {
+              "en": "E-mail address",
+              "se": "E-post adress"
+            },
+            "usernamePlaceholder": {
+              "en": "john@doe.com",
+              "se": "namn@domain.se"
+            },
+            "passwordLabel": {
+              "en": "Password",
+              "se": "Lösenord"
+            },
+            "passwordPlaceholder": {
+              "en": "Password",
+              "se": "Lösenord"
+            }
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "blueair-405-classic",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Login details",
+            "se": "Login detaljer"
+          },
+          "children": [
+            {
+              "id": "username",
+              "type": "text",
+              "label": {
+                "en": "E-mail",
+                "se": "Epost"
+              },
+              "value": "JohnDoe@domain.com",
+              "hint": {
+                "en": "The email of the user.",
+                "se": "Epostadressen för användaren."
+              }
+            },
+            {
+              "id": "password",
+              "type": "text",
+              "label": {
+                "en": "Password",
+                "se": "Lösenord"
+              },
+              "value": "Secret",
+              "hint": {
+                "en": "The password of the user.",
+                "se": "Lösenordet för användaren"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Device infomation",
+            "se": "Enhetsdetaljer"
+          },
+          "children": [
+            {
+              "id": "uuid",
+              "type": "label",
+              "label": {
+                "en": "E-mail",
+                "se": "Epost"
+              },
+              "value": "EE04776CEDC0BAB2",
+              "hint": {
+                "en": "The uniqe id of the device.",
+                "se": "Unik identifierare för enheten."
+              }
+            },
+            {
+              "id": "name",
+              "type": "label",
+              "label": {
+                "en": "Name",
+                "se": "Namn"
+              },
+              "value": "BlueAir 405 Classic",
+              "hint": {
+                "en": "Name of the device",
+                "se": "Namn på enheten"
+              }
+            },
+            {
+              "id": "compatibility",
+              "type": "label",
+              "label": {
+                "en": "Compatibility",
+                "se": "Kompabilitet"
+              },
+              "value": "classic_405",
+              "hint": {
+                "en": "Compatibility of the device",
+                "se": "Kompabilitet på enheten"
+              }
+            },
+            {
+              "id": "model",
+              "type": "label",
+              "label": {
+                "en": "Model",
+                "se": "Model"
+              },
+              "value": "1.0.9",
+              "hint": {
+                "en": "Model of the device",
+                "se": "Model på enheten"
+              }
+            },
+            {
+              "id": "mac",
+              "type": "label",
+              "label": {
+                "en": "MAC",
+                "se": "MAC"
+              },
+              "value": "34EAE728765C",
+              "hint": {
+                "en": "MAC address of the device",
+                "se": "MAC address på enheten"
+              }
+            },
+            {
+              "id": "firmware",
+              "type": "label",
+              "label": {
+                "en": "Firmware",
+                "se": "Firmware"
+              },
+              "value": "1.1.38",
+              "hint": {
+                "en": "Verison of the firmware",
+                "se": "Version av programvara"
+              }
+            },
+            {
+              "id": "mcuFirmware",
+              "type": "label",
+              "label": {
+                "en": "MCU Firmware",
+                "se": "MCU Firmware"
+              },
+              "value": "1.0.35",
+              "hint": {
+                "en": "Version of the MCU Firmware",
+                "se": "Vesion på MCU Firmware"
+              }
+            },
+            {
+              "id": "wlanDriver",
+              "type": "label",
+              "label": {
+                "en": "WLAN Driver",
+                "se": "WLAN Driver"
+              },
+              "value": "V10",
+              "hint": {
+                "en": "Version of the WLAN Driver",
+                "se": "Version av WLAN Driver"
+              }
+            },
+            {
+              "id": "lastSyncDate",
+              "type": "label",
+              "label": {
+                "en": "Last sync date",
+                "se": "Senaste sync"
+              },
+              "value": "2000-01-01",
+              "hint": {
+                "en": "Date for the latest sync",
+                "se": "Datum för senaste sync"
+              }
+            },
+            {
+              "id": "installationDate",
+              "type": "label",
+              "label": {
+                "en": "Installation date",
+                "se": "Installationsdatum"
+              },
+              "value": "2000-01-01",
+              "hint": {
+                "en": "Date for the installation",
+                "se": "Datum för instalation"
+              }
+            },
+            {
+              "id": "lastCalibrationDate",
+              "type": "label",
+              "label": {
+                "en": "Last calibration date",
+                "se": "Senaste kalibrering"
+              },
+              "value": "2000-01-01",
+              "hint": {
+                "en": "Date for the latest calibration",
+                "se": "Datum för senaste kalibrering"
+              }
+            },
+            {
+              "id": "initUsagePeriod",
+              "type": "label",
+              "label": {
+                "en": "initUsagePeriod",
+                "se": "initUsagePeriod"
+              },
+              "value": "0",
+              "hint": {
+                "en": "initUsagePeriod",
+                "se": "initUsagePeriod"
+              }
+            },
+            {
+              "id": "rebootPeriod",
+              "type": "label",
+              "label": {
+                "en": "Reboot period",
+                "se": "Reboot period"
+              },
+              "value": "10000",
+              "hint": {
+                "en": "Reboot period",
+                "se": "Reboot period"
+              }
+            },
+            {
+              "id": "roomLocation",
+              "type": "label",
+              "label": {
+                "en": "Location",
+                "se": "Rum"
+              },
+              "value": "kitchen",
+              "hint": {
+                "en": "The location of the device",
+                "se": "I vilket rum finns enheten"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Advanced settings",
+            "se": "Avancerade inställningar"
+          },
+          "children": [
+            {
+              "id": "update",
+              "type": "number",
+              "label": {
+                "en": "Update interval",
+                "se": "Uppdatera"
+              },
+              "value": 10,
+              "min": 10,
+              "max": 60,
+              "units": {
+                "en": "Seconds",
+                "se": "Sekunder"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "brightness": {
+      "type": "number",
+      "title": {
+        "en": "Brightness",
+        "se": "Ljusstyrka"
+      },
+      "uiComponent": "slider",
+      "getable": true,
+      "setable": true,
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "icon": "/assets/images/dim.svg"
+    },
+    "child_lock": {
+      "type": "boolean",
+      "title": {
+        "en": "Childlock",
+        "se": "Barnlås"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "toggle",
+      "icon": "/assets/images/child-lock.svg"
+    },
+    "fan_speed": {
+      "type": "enum",
+      "title": {
+        "en": "Fan speed",
+        "se": "Fläktfart"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "picker",
+      "uiQuickAction": true,
+      "values": [
+        {
+          "id": "0",
+          "title": {
+            "en": "Fan speed 0"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "Fan speed 1"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "Fan speed 2"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "Fan speed 3"
+          }
+        },
+        {
+          "id": "auto",
+          "title": {
+            "en": "Auto"
+          }
+        }
+      ]
+    },
+    "filter_status": {
+      "type": "string",
+      "title": {
+        "en": "Filter status",
+        "se": "Filter status"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/images/air-filter.svg"
+    },
+    "last_retrival_date": {
+      "type": "string",
+      "title": {
+        "en": "Latest update date",
+        "se": "Senast uppdaterad"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/images/clock.svg"
+    },
+    "wifi_status": {
+      "type": "string",
+      "title": {
+        "en": "Wi-Fi status",
+        "se": "Wi-Fi status"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/images/wifi.svg"
+    }
+  }
+}

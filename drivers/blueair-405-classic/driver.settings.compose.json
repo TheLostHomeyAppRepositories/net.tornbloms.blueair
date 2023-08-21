@@ -1,0 +1,198 @@
+[
+    {
+        "type": "group",
+        "label": { "en": "Login details", "se": "Login detaljer" },
+        "children": [
+            {
+                "id": "username",
+                "type": "text",
+                "label": { "en": "E-mail", "se": "Epost" },
+                "value": "JohnDoe@domain.com",
+                "hint": {
+                    "en": "The email of the user.",
+                    "se": "Epostadressen för användaren."
+                }
+            },
+            {
+                "id": "password",
+                "type": "text",
+                "label": { "en": "Password", "se": "Lösenord" },
+                "value": "Secret",
+                "hint": {
+                    "en": "The password of the user.",
+                    "se": "Lösenordet för användaren"
+                }
+            }
+        ]
+    },
+    {
+        "type": "group",
+        "label": { "en": "Device infomation", "se": "Enhetsdetaljer" },
+        "children": [
+            {
+                "id": "uuid",
+                "type": "label",
+                "label": { "en": "E-mail", "se": "Epost" },
+                "value": "EE04776CEDC0BAB2",
+                "hint": {
+                    "en": "The uniqe id of the device.",
+                    "se": "Unik identifierare för enheten."
+                }
+            },
+            {
+                "id": "name",
+                "type": "label",
+                "label": { "en": "Name", "se": "Namn" },
+                "value": "BlueAir 405 Classic",
+                "hint": {
+                    "en": "Name of the device",
+                    "se": "Namn på enheten"
+                }
+            },
+            {
+                "id": "compatibility",
+                "type": "label",
+                "label": { "en": "Compatibility", "se": "Kompabilitet" },
+                "value": "classic_405",
+                "hint": {
+                    "en": "Compatibility of the device",
+                    "se": "Kompabilitet på enheten"
+                }
+            },
+            {
+                "id": "model",
+                "type": "label",
+                "label": { "en": "Model", "se": "Model" },
+                "value": "1.0.9",
+                "hint": {
+                    "en": "Model of the device",
+                    "se": "Model på enheten"
+                }
+            },
+            {
+                "id": "mac",
+                "type": "label",
+                "label": { "en": "MAC", "se": "MAC" },
+                "value": "34EAE728765C",
+                "hint": {
+                    "en": "MAC address of the device",
+                    "se": "MAC address på enheten"
+                }
+            },
+            {
+                "id": "firmware",
+                "type": "label",
+                "label": { "en": "Firmware", "se": "Firmware" },
+                "value": "1.1.38",
+                "hint": {
+                    "en": "Verison of the firmware",
+                    "se": "Version av programvara"
+                }
+            },
+            {
+                "id": "mcuFirmware",
+                "type": "label",
+                "label": { "en": "MCU Firmware", "se": "MCU Firmware" },
+                "value": "1.0.35",
+                "hint": {
+                    "en": "Version of the MCU Firmware",
+                    "se": "Vesion på MCU Firmware"
+                }
+            },
+            {
+                "id": "wlanDriver",
+                "type": "label",
+                "label": { "en": "WLAN Driver", "se": "WLAN Driver" },
+                "value": "V10",
+                "hint": {
+                    "en": "Version of the WLAN Driver",
+                    "se": "Version av WLAN Driver"
+                }
+            },
+            {
+                "id": "lastSyncDate",
+                "type": "label",
+                "label": { "en": "Last sync date", "se": "Senaste sync" },
+                "value": "2000-01-01",
+                "hint": {
+                    "en": "Date for the latest sync",
+                    "se": "Datum för senaste sync"
+                }
+            },
+            {
+                "id": "installationDate",
+                "type": "label",
+                "label": {
+                    "en": "Installation date",
+                    "se": "Installationsdatum"
+                },
+                "value": "2000-01-01",
+                "hint": {
+                    "en": "Date for the installation",
+                    "se": "Datum för instalation"
+                }
+            },
+            {
+                "id": "lastCalibrationDate",
+                "type": "label",
+                "label": {
+                    "en": "Last calibration date",
+                    "se": "Senaste kalibrering"
+                },
+                "value": "2000-01-01",
+                "hint": {
+                    "en": "Date for the latest calibration",
+                    "se": "Datum för senaste kalibrering"
+                }
+            },
+            {
+                "id": "initUsagePeriod",
+                "type": "label",
+                "label": { "en": "initUsagePeriod", "se": "initUsagePeriod" },
+                "value": "0",
+                "hint": {
+                    "en": "initUsagePeriod",
+                    "se": "initUsagePeriod"
+                }
+            },
+            {
+                "id": "rebootPeriod",
+                "type": "label",
+                "label": { "en": "Reboot period", "se": "Reboot period" },
+                "value": "10000",
+                "hint": {
+                    "en": "Reboot period",
+                    "se": "Reboot period"
+                }
+            },
+            {
+                "id": "roomLocation",
+                "type": "label",
+                "label": { "en": "Location", "se": "Rum" },
+                "value": "kitchen",
+                "hint": {
+                    "en": "The location of the device",
+                    "se": "I vilket rum finns enheten"
+                }
+            }
+        ]
+    },
+    {
+        "type": "group",
+        "label": {
+            "en": "Advanced settings",
+            "se": "Avancerade inställningar"
+        },
+        "children": [
+            {
+                "id": "update",
+                "type": "number",
+                "label": { "en": "Update interval", "se": "Uppdatera" },
+                "value": 10,
+                "min": 10,
+                "max": 60,
+                "units": { "en": "Seconds", "se": "Sekunder" }
+            }
+        ]
+    }
+]
