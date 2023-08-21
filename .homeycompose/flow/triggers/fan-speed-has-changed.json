@@ -1,0 +1,41 @@
+{
+    "title": {
+        "en": "Fan speed has changed"
+    },
+    "hint": {
+        "en": "The fan speed has benn changed",
+        "se": "Fartn på fläkten är ändrad"
+    },
+    "tokens": [
+        {
+            "type": "string",
+            "name": "device-name",
+            "title": {
+                "en": "Device name"
+            },
+            "example": {
+                "en": "BlueAir 405 Classic"
+            }
+        },
+        {
+            "type": "string",
+            "name": "device-uuid",
+            "title": {
+                "en": "Device uuid"
+            },
+            "example": {
+                "en": "2504776FFDC0BAB2"
+            }
+        },
+        {
+            "type": "string",
+            "name": "fan speed",
+            "title": {
+                "en": "fan speed"
+            },
+            "example": {
+                "en": "3"
+            }
+        }
+    ]
+}

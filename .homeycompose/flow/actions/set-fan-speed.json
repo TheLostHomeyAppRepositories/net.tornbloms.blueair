@@ -1,0 +1,46 @@
+{
+    "title": {
+        "en": "Set fan speed"
+    },
+    "titleFormatted": {
+        "en": "Set the fan speed to [[fanspeed]]"
+    },
+    "args": [
+        {
+            "type": "dropdown",
+            "name": "fanspeed",
+            "values": [
+                {
+                    "id": "auto",
+                    "label": {
+                        "en": "Auto"
+                    }
+                },
+                {
+                    "id": "0",
+                    "label": {
+                        "en": "0"
+                    }
+                },
+                {
+                    "id": "1",
+                    "label": {
+                        "en": "1"
+                    }
+                },
+                {
+                    "id": "2",
+                    "label": {
+                        "en": "2"
+                    }
+                },
+                {
+                    "id": "3",
+                    "label": {
+                        "en": "3"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "type": "string",
+    "title": {
+        "en": "Filter status",
+        "se": "Filter status"
+    },
+    "getable": true,
+    "setable": false,
+    "uiComponent": "sensor",
+    "icon": "/assets/images/air-filter.svg"
+}

@@ -1,0 +1,56 @@
+{
+    "id": "net.tornbloms.blueair",
+    "version": "1.0.0",
+    "compatibility": ">=5.0.0",
+    "sdk": 3,
+    "brandColor": "#0C2F4F",
+    "platforms": ["local", "cloud"],
+    "name": {
+        "en": "BlueAir",
+        "se": "BlueAir"
+    },
+    "description": {
+        "en": "BulueAir purifiers becuse you need a deep breth.",
+        "se": "BlueAir luftfilter, för att du behöver andas."
+    },
+    "category": ["climate"],
+    "tags": {
+        "en": ["purifier", "BlueAir", "air"],
+        "se": ["luftrenare", "BlueAir", "luft"]
+    },
+    "images": {
+        "small": "/assets/images/small.png",
+        "large": "/assets/images/large.png"
+    },
+    "author": {
+        "name": "Mathias Törnblom",
+        "email": "mathias@tornbloms.net"
+    },
+    "contributors": {
+        "developers": [
+            {
+                "name": "Mathias Törnblom"
+            }
+        ],
+        "translators": [
+            {
+                "name": "Mathias Törnblom"
+            }
+        ]
+    },
+    "contributing": {
+        "donate": {
+            "paypal": {
+                "username": "mathiastornblom"
+            },
+            "githubSponsors": {
+                "username": "mathiastornblom"
+            }
+        }
+    },
+    "bugs": {
+        "url": "https://github.com/mathiastornblom/net.tornbloms.blueair/issues"
+    },
+    "source": "https://github.com/mathiastornblom/net.tornbloms.blueair",
+    "support": "mailto:mathias@tornbloms.net"
+}

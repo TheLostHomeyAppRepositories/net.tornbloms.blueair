@@ -1,0 +1,46 @@
+{
+    "title": {
+        "en": "Set brightness"
+    },
+    "titleFormatted": {
+        "en": "Set the brightness to a [[brightness]]"
+    },
+    "args": [
+        {
+            "type": "dropdown",
+            "name": "brightness",
+            "values": [
+                {
+                    "id": "0",
+                    "label": {
+                        "en": "0"
+                    }
+                },
+                {
+                    "id": "1",
+                    "label": {
+                        "en": "1"
+                    }
+                },
+                {
+                    "id": "2",
+                    "label": {
+                        "en": "2"
+                    }
+                },
+                {
+                    "id": "3",
+                    "label": {
+                        "en": "3"
+                    }
+                },
+                {
+                    "id": "4",
+                    "label": {
+                        "en": "4"
+                    }
+                }
+            ]
+        }
+    ]
+}

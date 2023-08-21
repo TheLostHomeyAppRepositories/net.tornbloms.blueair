@@ -1,0 +1,41 @@
+{
+    "title": {
+        "en": "Filter needs change"
+    },
+    "hint": {
+        "en": "Normaly filter has a status OK but if it changes this flow wioll trigger.",
+        "se": "Normalt status är OK."
+    },
+    "tokens": [
+        {
+            "type": "string",
+            "name": "device-name",
+            "title": {
+                "en": "Device name"
+            },
+            "example": {
+                "en": "BlueAir 405 Classic"
+            }
+        },
+        {
+            "type": "string",
+            "name": "device-uuid",
+            "title": {
+                "en": "Device uuid"
+            },
+            "example": {
+                "en": "2504776FFDC0BAB2"
+            }
+        },
+        {
+            "type": "string",
+            "name": "device-response",
+            "title": {
+                "en": "Device response"
+            },
+            "example": {
+                "en": "OK"
+            }
+        }
+    ]
+}

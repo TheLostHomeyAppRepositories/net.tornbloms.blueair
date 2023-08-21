@@ -1,0 +1,11 @@
+{
+    "type": "string",
+    "title": {
+        "en": "Wi-Fi status",
+        "se": "Wi-Fi status"
+    },
+    "getable": true,
+    "setable": false,
+    "uiComponent": "sensor",
+    "icon": "/assets/images/wifi.svg"
+}
