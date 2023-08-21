@@ -2,10 +2,14 @@
     "title": {
         "en": "Fan speed has changed"
     },
+    "titleFormatted": {
+        "en": "The fan speed has changed."
+    },
     "hint": {
         "en": "The fan speed has benn changed",
         "se": "Fartn på fläkten är ändrad"
     },
+    "platforms": ["local"],
     "tokens": [
         {
             "type": "string",

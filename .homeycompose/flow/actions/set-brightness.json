@@ -5,6 +5,7 @@
     "titleFormatted": {
         "en": "Set the brightness to a [[brightness]]"
     },
+    "platforms": ["local"],
     "args": [
         {
             "type": "dropdown",

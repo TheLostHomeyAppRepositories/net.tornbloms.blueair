@@ -1,11 +1,15 @@
 {
     "title": {
-        "en": "Filter needs change"
+        "en": "Filter needs change."
+    },
+    "titleFormatted": {
+        "en": "Filter needs change."
     },
     "hint": {
         "en": "Normaly filter has a status OK but if it changes this flow wioll trigger.",
         "se": "Normalt status är OK."
     },
+    "platforms": ["local"],
     "tokens": [
         {
             "type": "string",

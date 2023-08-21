@@ -5,6 +5,7 @@
     "titleFormatted": {
         "en": "Set the fan speed to [[fanspeed]]"
     },
+    "platforms": ["local"],
     "args": [
         {
             "type": "dropdown",

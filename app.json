@@ -72,10 +72,16 @@
         "title": {
           "en": "Fan speed has changed"
         },
+        "titleFormatted": {
+          "en": "The fan speed has changed."
+        },
         "hint": {
           "en": "The fan speed has benn changed",
           "se": "Fartn på fläkten är ändrad"
         },
+        "platforms": [
+          "local"
+        ],
         "tokens": [
           {
             "type": "string",
@@ -112,12 +118,18 @@
       },
       {
         "title": {
-          "en": "Filter needs change"
+          "en": "Filter needs change."
+        },
+        "titleFormatted": {
+          "en": "Filter needs change."
         },
         "hint": {
           "en": "Normaly filter has a status OK but if it changes this flow wioll trigger.",
           "se": "Normalt status är OK."
         },
+        "platforms": [
+          "local"
+        ],
         "tokens": [
           {
             "type": "string",
@@ -161,6 +173,9 @@
         "titleFormatted": {
           "en": "Set the brightness to a [[brightness]]"
         },
+        "platforms": [
+          "local"
+        ],
         "args": [
           {
             "type": "dropdown",
@@ -208,6 +223,9 @@
         "titleFormatted": {
           "en": "Set the fan speed to [[fanspeed]]"
         },
+        "platforms": [
+          "local"
+        ],
         "args": [
           {
             "type": "dropdown",
@@ -265,8 +283,7 @@
         "filter_status"
       ],
       "platforms": [
-        "local",
-        "cloud"
+        "local"
       ],
       "connectivity": [],
       "images": {
