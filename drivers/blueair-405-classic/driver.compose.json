@@ -11,7 +11,7 @@
         "wifi_status",
         "filter_status"
     ],
-    "platforms": ["local", "cloud"],
+    "platforms": ["local"],
     "connectivity": [],
     "images": {
         "small": "{{driverAssetsPath}}/images/small.png",
