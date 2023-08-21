@@ -1,54 +1,71 @@
-'use strict';
+import { Device } from 'homey';
+import { ApiClient } from 'blueair-client';
 
-const { Device } = require('homey');
+/**
+ * Represents a setting object.
+ */
+interface Setting {
+    name: string;
+    [key: string]: any; // This allows for other properties in the setting object.
+}
 
-const { ApiClient } = require('blueair-client');
+/**
+ * Represents the event data for the onSettings function.
+ */
+interface OnSettingsEvent {
+    oldSettings: Record<string, any>;
+    newSettings: Record<string, any>;
+    changedKeys: string[];
+}
 
 /**
  * Converts a UNIX timestamp to a human-readable date-time string.
  *
- * @param {number} UNIX_timestamp - The UNIX timestamp to be converted.
- * @returns {string} - A string representing the date and time in the format "YYYY-MM-DD HH:MM:SS".
- *
- * @example
- * const timestamp = 1629460800; // Represents "2021-08-20 12:00:00"
- * const readableDate = timeConverter(timestamp);
- * console.log(readableDate); // Outputs: "2021-08-20 12:00:00"
+ * @param UNIX_timestamp - The UNIX timestamp to be converted.
+ * @returns A string representation of the date and time in the format "YYYY-MM-DD HH:mm:ss".
  */
-function timeConverter(UNIX_timestamp) {
-    var a = new Date(UNIX_timestamp * 1000);
+function timeConverter(UNIX_timestamp: number): string {
+    const a: Date = new Date(UNIX_timestamp * 1000);
 
     /**
      * Helper function to ensure numbers are represented with two digits.
      *
-     * @param {number} n - The number to be padded.
-     * @returns {string} - A string representation of the number, padded with a leading zero if the number is less than 10.
+     * @param n - The number to be padded.
+     * @returns A string representation of the number, padded with a leading zero if the number is less than 10.
      */
-    function pad(n) {
-        return n < 10 ? '0' + n : n;
+    function pad(n: number): string {
+        return n < 10 ? '0' + n : n.toString();
     }
 
-    var year = a.getFullYear();
-    var month = pad(a.getMonth() + 1); // Add 1 to the month value because getMonth() is zero-based
-    var date = pad(a.getDate());
-    var hour = pad(a.getHours());
-    var min = pad(a.getMinutes());
-    var sec = pad(a.getSeconds());
-    var time =
+    const year: number = a.getFullYear();
+    const month: string = pad(a.getMonth() + 1); // Add 1 to the month value because getMonth() is zero-based
+    const date: string = pad(a.getDate());
+    const hour: string = pad(a.getHours());
+    const min: string = pad(a.getMinutes());
+    const sec: string = pad(a.getSeconds());
+    const time: string =
         year + '-' + month + '-' + date + ' ' + hour + ':' + min + ':' + sec;
     return time;
 }
 
-function filterSettings(settings, name) {
-    const setting = settings.find((s) => s.name === name);
+/**
+ * Filters the settings array to find a setting by its name.
+ * @param settings - An array of settings to search through.
+ * @param name - The name of the setting to search for.
+ * @returns The found setting or null if not found.
+ */
+function filterSettings(settings: Setting[], name: string): Setting | null {
+    const setting: Setting | undefined = settings.find(
+        (s: Setting) => s.name === name
+    );
     return setting || null;
 }
-
 class BlueAir405ClassicDevice extends Device {
+    private _savedfanspeed: Setting | null | undefined;
     /**
      * onInit is called when the device is initialized.
      */
-    async onInit() {
+    async onInit(): Promise<void> {
         let settings = this.getSettings();
         let data = this.getData();
         let userId = this.getStoreValue('userId');
@@ -71,7 +88,7 @@ class BlueAir405ClassicDevice extends Device {
                     await client.setFanSpeed(
                         data.uuid,
                         value,
-                        result.defaultValue,
+                        result?.defaultValue,
                         userId
                     );
                     await client.setFanAuto(
@@ -88,7 +105,7 @@ class BlueAir405ClassicDevice extends Device {
                 await client.setBrightness(
                     data.uuid,
                     String(value),
-                    result.defaultValue,
+                    result?.defaultValue,
                     userId
                 );
             });
@@ -98,16 +115,16 @@ class BlueAir405ClassicDevice extends Device {
                     this.log('Changed child lock:', value);
                     await client.setChildLock(
                         data.uuid,
-                        1,
-                        result.defaultValue,
+                        '1',
+                        result?.defaultValue,
                         userId
                     );
                 } else {
                     this.log('Changed child lock:', value);
                     await client.setChildLock(
                         data.uuid,
-                        0,
-                        result.defaultValue,
+                        '0',
+                        result?.defaultValue,
                         userId
                     );
                 }
@@ -133,12 +150,15 @@ class BlueAir405ClassicDevice extends Device {
                 DeviceAttributes,
                 'wifi_status'
             );
-            this.setCapabilityValue('fan_speed', result_fan_speed.currentValue);
+            this.setCapabilityValue(
+                'fan_speed',
+                result_fan_speed?.currentValue
+            );
             this.setCapabilityValue(
                 'brightness',
-                parseInt(result_brightness.currentValue)
+                parseInt(result_brightness?.currentValue)
             );
-            if (result_child_lock.currentValue == 1) {
+            if (result_child_lock?.currentValue == 1) {
                 this.setCapabilityValue('child_lock', true);
             } else {
                 this.setCapabilityValue('child_lock', false);
@@ -148,14 +168,14 @@ class BlueAir405ClassicDevice extends Device {
                 'last_retrival_date',
                 timeConverter(DeviceInfo.lastSyncDate)
             );
-            if (result_wifi_status.currentValue == '1') {
+            if (result_wifi_status?.currentValue == '1') {
                 this.setCapabilityValue('wifi_status', 'OK');
             } else {
                 this.setCapabilityValue('wifi_status', 'Error');
             }
             this.setCapabilityValue(
                 'filter_status',
-                result_filter_status.currentValue
+                result_filter_status?.currentValue
             );
 
             this.setSettings({
@@ -177,7 +197,7 @@ class BlueAir405ClassicDevice extends Device {
                 roomLocation: DeviceInfo.roomLocation,
             });
 
-            this.CapabilityInterval = setInterval(async () => {
+            setInterval(async () => {
                 this.log('setInternal: ', settings.update * 1000);
                 var DeviceAttributes = await client.getDeviceAttributes(
                     data.uuid
@@ -205,13 +225,13 @@ class BlueAir405ClassicDevice extends Device {
                 );
                 this.setCapabilityValue(
                     'fan_speed',
-                    result_fan_speed.currentValue
+                    result_fan_speed?.currentValue
                 );
                 this.setCapabilityValue(
                     'brightness',
-                    parseInt(result_brightness.currentValue)
+                    parseInt(result_brightness?.currentValue)
                 );
-                if (result_child_lock.currentValue == 1) {
+                if (result_child_lock?.currentValue == 1) {
                     this.setCapabilityValue('child_lock', true);
                 } else {
                     this.setCapabilityValue('child_lock', false);
@@ -221,18 +241,18 @@ class BlueAir405ClassicDevice extends Device {
                     'last_retrival_date',
                     timeConverter(DeviceInfo.lastSyncDate)
                 );
-                if (result_wifi_status.currentValue == '1') {
+                if (result_wifi_status?.currentValue == '1') {
                     this.setCapabilityValue('wifi_status', 'OK');
                 } else {
                     this.setCapabilityValue('wifi_status', 'Error');
                 }
                 this.setCapabilityValue(
                     'filter_status',
-                    result_filter_status.currentValue
+                    result_filter_status?.currentValue
                 );
                 if (
-                    this._savedfanspeed.currentValue !=
-                    result_fan_speed.currentValue
+                    this._savedfanspeed?.currentValue !=
+                    result_fan_speed?.currentValue
                 ) {
                     const cardTriggerFilter = this.homey.flow.getTriggerCard(
                         'fan-speed-has-changed'
@@ -240,13 +260,13 @@ class BlueAir405ClassicDevice extends Device {
                     cardTriggerFilter.trigger({
                         'device-name': settings.name,
                         'device-uuid': settings.uuid,
-                        'fan speed': result_filter_status.currentValue,
+                        'fan speed': result_filter_status?.currentValue,
                     });
                     this._savedfanspeed = result_fan_speed;
                 }
             }, settings.update * 1000);
 
-            this.SettingsInterval = setInterval(async () => {
+            setInterval(async () => {
                 this.setSettings({
                     uuid: DeviceInfo.uuid,
                     name: DeviceInfo.name,
@@ -274,14 +294,14 @@ class BlueAir405ClassicDevice extends Device {
                     DeviceAttributes,
                     'filter_status'
                 );
-                if (result_filter_status.currentValue != 'OK') {
+                if (result_filter_status?.currentValue != 'OK') {
                     const cardTriggerFilter = this.homey.flow.getTriggerCard(
                         'filter-needs-change'
                     );
                     cardTriggerFilter.trigger({
                         'device-name': settings.name,
                         'device-uuid': settings.uuid,
-                        'device-response': result_filter_status.currentValue,
+                        'device-response': result_filter_status?.currentValue,
                     });
                 }
             }, 60000);
@@ -338,89 +358,39 @@ class BlueAir405ClassicDevice extends Device {
     /**
      * onAdded is called when the user adds the device, called just after pairing.
      */
-    async onAdded() {
+    async onAdded(): Promise<void> {
         this.log('BlueAir405ClassicDevice has been added');
     }
 
     /**
      * onSettings is called when the user updates the device's settings.
-     * @param {object} event the onSettings event data
-     * @param {object} event.oldSettings The old settings object
-     * @param {object} event.newSettings The new settings object
-     * @param {string[]} event.changedKeys An array of keys changed since the previous version
-     * @returns {Promise<string|void>} return a custom message that will be displayed
+     * @param event the onSettings event data
+     * @param event.oldSettings The old settings object
+     * @param event.newSettings The new settings object
+     * @param event.changedKeys An array of keys changed since the previous version
+     * @returns A promise that resolves to a custom message that will be displayed or void.
      */
-    async onSettings({ oldSettings, newSettings, changedKeys }) {
-        // let settings = this.getSettings();
-        // clearInterval(this.CapabilityInterval);
-        // this.CapabilityInterval = setInterval(async () => {
-        //     this.log('setInternal: ', settings.update * 1000);
-        //     var DeviceAttributes = await client.getDeviceAttributes(data.uuid);
-        //     var DeviceInfo = await client.getDeviceInfo(data.uuid);
-        //     let result_fan_speed = filterSettings(
-        //         DeviceAttributes,
-        //         'fan_speed'
-        //     );
-        //     let result_brightness = filterSettings(
-        //         DeviceAttributes,
-        //         'brightness'
-        //     );
-        //     let result_child_lock = filterSettings(
-        //         DeviceAttributes,
-        //         'child_lock'
-        //     );
-        //     let result_filter_status = filterSettings(
-        //         DeviceAttributes,
-        //         'filter_status'
-        //     );
-        //     let result_wifi_status = filterSettings(
-        //         DeviceAttributes,
-        //         'wifi_status'
-        //     );
-        //     this.setCapabilityValue('fan_speed', result_fan_speed.currentValue);
-        //     this.setCapabilityValue(
-        //         'brightness',
-        //         parseInt(result_brightness.currentValue)
-        //     );
-        //     if (result_child_lock.currentValue) {
-        //         this.setCapabilityValue('child_lock', true);
-        //     } else {
-        //         this.setCapabilityValue('child_lock', false);
-        //     }
-
-        //     this.setCapabilityValue(
-        //         'last_retrival_date',
-        //         timeConverter(DeviceInfo.lastSyncDate)
-        //     );
-        //     if (result_wifi_status.currentValue == '1') {
-        //         this.setCapabilityValue('wifi_status', 'OK');
-        //     } else {
-        //         this.setCapabilityValue('wifi_status', 'Error');
-        //     }
-        //     this.setCapabilityValue(
-        //         'filter_status',
-        //         result_filter_status.currentValue
-        //     );
-        // }, settings.update * 1000);
-
+    async onSettings({
+        oldSettings,
+        newSettings,
+        changedKeys,
+    }: OnSettingsEvent): Promise<string | void> {
         this.log('BlueAir405ClassicDevice settings where changed');
     }
 
     /**
      * onRenamed is called when the user updates the device's name.
-     * This method can be used this to synchronise the name to the device.
-     * @param {string} name The new name
+     * This method can be used to synchronize the name to the device.
+     * @param name The new name
      */
-    async onRenamed(name) {
+    async onRenamed(name: string): Promise<void> {
         this.log('BlueAir405ClassicDevice was renamed');
     }
 
     /**
      * onDeleted is called when the user deleted the device.
      */
-    async onDeleted() {
-        clearInterval(this.CapabilityInterval);
-        clearInterval(this.SettingsInterval);
+    async onDeleted(): Promise<void> {
         this.log('BlueAir405ClassicDevice has been deleted');
     }
 }

@@ -1,8 +1,5 @@
 {
-  "1.0.1": {
-    "en": "First build"
-  },
-  "1.0.0": {
-    "en": "First release of the app."
-  }
+    "1.0.0": {
+        "en": "First release of the app."
+    }
 }

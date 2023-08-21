@@ -1,6 +1,5 @@
-'use strict';
-const { Driver } = require('homey');
-const { ApiClient } = require('blueair-client');
+import { Driver } from 'homey';
+import { ApiClient } from 'blueair-client';
 
 class BlueAir405ClassicDriver extends Driver {
     /**
@@ -10,27 +9,30 @@ class BlueAir405ClassicDriver extends Driver {
         this.log('BlueAir 405 Classic Driver has been initialized');
     }
 
-    async onPair(session) {
+    async onPair(session: any): Promise<void> {
         let username = '';
         let password = '';
         let status = true;
         // Pairing sequences
-        session.setHandler('login', async (data) => {
-            username = data.username;
-            password = data.password;
+        session.setHandler(
+            'login',
+            async (data: { username: string; password: string }) => {
+                username = data.username;
+                password = data.password;
 
-            try {
-                const client = new ApiClient(username, password);
-                await client.initialize();
-            } catch (e) {
-                this.log(e);
-                status = false;
+                try {
+                    const client = new ApiClient(username, password);
+                    await client.initialize();
+                } catch (e) {
+                    this.log(e);
+                    status = false;
+                }
+                // return true to continue adding the device if the login succeeded
+                // return false to indicate to the user the login attempt failed
+                // thrown errors will also be shown to the user
+                return status;
             }
-            // return true to continue adding the device if the login succeeded
-            // return false to indicate to the user the login attempt failed
-            // thrown errors will also be shown to the user
-            return status;
-        });
+        );
 
         session.setHandler('list_devices', async () => {
             try {
