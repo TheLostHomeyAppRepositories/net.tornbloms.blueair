@@ -1,9 +1,11 @@
 {
     "title": {
-        "en": "Set fan speed"
+        "en": "Set fan speed",
+        "se": "Sätt fläktens fart"
     },
     "titleFormatted": {
-        "en": "Set the fan speed to [[fanspeed]]"
+        "en": "Set the fan speed to [[fanspeed]]",
+        "en": "Sätt fläkten till farten [[fanspeed]]"
     },
     "platforms": ["local"],
     "args": [
@@ -14,31 +16,36 @@
                 {
                     "id": "auto",
                     "label": {
-                        "en": "Auto"
+                        "en": "Auto",
+                        "se": "Auto"
                     }
                 },
                 {
                     "id": "0",
                     "label": {
-                        "en": "0"
+                        "en": "0",
+                        "se": "0"
                     }
                 },
                 {
                     "id": "1",
                     "label": {
-                        "en": "1"
+                        "en": "1",
+                        "se": "1"
                     }
                 },
                 {
                     "id": "2",
                     "label": {
-                        "en": "2"
+                        "en": "2",
+                        "se": "2"
                     }
                 },
                 {
                     "id": "3",
                     "label": {
-                        "en": "3"
+                        "en": "3",
+                        "se": "3"
                     }
                 }
             ]

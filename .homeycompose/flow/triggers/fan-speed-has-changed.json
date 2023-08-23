@@ -1,13 +1,15 @@
 {
     "title": {
-        "en": "Fan speed has changed"
+        "en": "Fan speed has changed",
+        "se": "Fläktens fart har ändrats"
     },
     "titleFormatted": {
-        "en": "The fan speed has changed."
+        "en": "The fan speed has changed.",
+        "se": "Fläktens fart har ändrats"
     },
     "hint": {
         "en": "The fan speed has benn changed",
-        "se": "Fartn på fläkten är ändrad"
+        "se": "Farten på fläkten är ändrad"
     },
     "platforms": ["local"],
     "tokens": [
@@ -15,30 +17,36 @@
             "type": "string",
             "name": "device-name",
             "title": {
-                "en": "Device name"
+                "en": "Device name",
+                "se": "Enhetens namn"
             },
             "example": {
-                "en": "BlueAir 405 Classic"
+                "en": "BlueAir 405 Classic",
+                "se": "BlueAir 405 Classic"
             }
         },
         {
             "type": "string",
             "name": "device-uuid",
             "title": {
-                "en": "Device uuid"
+                "en": "Device uuid",
+                "se": "Enhetens uuid"
             },
             "example": {
-                "en": "2504776FFDC0BAB2"
+                "en": "2504776FFDC0BAB2",
+                "se": "2504776FFDC0BAB2"
             }
         },
         {
             "type": "string",
             "name": "fan speed",
             "title": {
-                "en": "fan speed"
+                "en": "fan speed",
+                "se": "Fläktensfart"
             },
             "example": {
-                "en": "3"
+                "en": "3",
+                "se": "3"
             }
         }
     ]

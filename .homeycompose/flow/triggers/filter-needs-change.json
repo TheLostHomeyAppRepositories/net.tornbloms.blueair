@@ -1,9 +1,11 @@
 {
     "title": {
-        "en": "Filter needs change."
+        "en": "Filter needs change.",
+        "se": "Filtret behöver bytas."
     },
     "titleFormatted": {
-        "en": "Filter needs change."
+        "en": "Filter needs change.",
+        "se": "Filtret behöver bytas."
     },
     "hint": {
         "en": "Normaly filter has a status OK but if it changes this flow wioll trigger.",
@@ -15,30 +17,36 @@
             "type": "string",
             "name": "device-name",
             "title": {
-                "en": "Device name"
+                "en": "Device name",
+                "se": "Enhetens namn"
             },
             "example": {
-                "en": "BlueAir 405 Classic"
+                "en": "BlueAir 405 Classic",
+                "se": "BlueAir 405 Classic"
             }
         },
         {
             "type": "string",
             "name": "device-uuid",
             "title": {
-                "en": "Device uuid"
+                "en": "Device uuid",
+                "se": "Enhetens uuid"
             },
             "example": {
-                "en": "2504776FFDC0BAB2"
+                "en": "2504776FFDC0BAB2",
+                "se": "2504776FFDC0BAB2"
             }
         },
         {
             "type": "string",
             "name": "device-response",
             "title": {
-                "en": "Device response"
+                "en": "Device response",
+                "se": "Enthetens svar"
             },
             "example": {
-                "en": "OK"
+                "en": "OK",
+                "se": "OK"
             }
         }
     ]

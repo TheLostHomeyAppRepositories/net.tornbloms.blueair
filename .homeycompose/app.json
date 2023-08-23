@@ -20,7 +20,8 @@
     },
     "images": {
         "small": "/assets/images/small.png",
-        "large": "/assets/images/large.png"
+        "large": "/assets/images/large.png",
+        "xlarge": "/assets/images/xlarge.png"
     },
     "author": {
         "name": "Mathias Törnblom",
@@ -53,5 +54,6 @@
     },
     "source": "https://github.com/mathiastornblom/net.tornbloms.blueair",
     "support": "mailto:mathias@tornbloms.net",
-    "homeyCommunityTopicId": 87805
+    "homeyCommunityTopicId": 87805,
+    "homepage": "https://github.com/mathiastornblom/net.tornbloms.blueair"
 }

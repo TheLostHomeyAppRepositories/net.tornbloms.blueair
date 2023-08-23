@@ -1,9 +1,11 @@
 {
     "title": {
-        "en": "Set brightness"
+        "en": "Set brightness",
+        "se": "Sätt ljusstyrkan"
     },
     "titleFormatted": {
-        "en": "Set the brightness to a [[brightness]]"
+        "en": "Set the brightness to a [[brightness]]",
+        "se": "Sätt ljusstyrkan till [[brightness]]"
     },
     "platforms": ["local"],
     "args": [
@@ -14,31 +16,36 @@
                 {
                     "id": "0",
                     "label": {
-                        "en": "0"
+                        "en": "0",
+                        "se": "0"
                     }
                 },
                 {
                     "id": "1",
                     "label": {
-                        "en": "1"
+                        "en": "1",
+                        "se": "1"
                     }
                 },
                 {
                     "id": "2",
                     "label": {
-                        "en": "2"
+                        "en": "2",
+                        "se": "22"
                     }
                 },
                 {
                     "id": "3",
                     "label": {
-                        "en": "3"
+                        "en": "3",
+                        "se": "3"
                     }
                 },
                 {
                     "id": "4",
                     "label": {
-                        "en": "4"
+                        "en": "4",
+                        "se": "4"
                     }
                 }
             ]
