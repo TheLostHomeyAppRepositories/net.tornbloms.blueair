@@ -318,9 +318,7 @@
       "platforms": [
         "local"
       ],
-      "connectivity": [
-        "cloud"
-      ],
+      "connectivity": [],
       "images": {
         "small": "/drivers/blueair-405-classic/assets/images/small.png",
         "large": "/drivers/blueair-405-classic/assets/images/large.png",

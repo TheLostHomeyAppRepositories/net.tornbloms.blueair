@@ -7,16 +7,19 @@
     "platforms": ["local"],
     "name": {
         "en": "BlueAir",
-        "se": "BlueAir"
+        "se": "BlueAir",
+        "sv": "BlueAir"
     },
     "description": {
-        "en": "BulueAir purifiers becuse you need a deep breth.",
-        "se": "BlueAir luftfilter, för att du behöver andas."
+        "en": "BuleAir purifiers becuse you need a deep breth.",
+        "se": "BlueAir luftfilter, för att du behöver andas.",
+        "sv": "BueAir luftrenare för att du behöver kunna andas fritt"
     },
     "category": ["climate"],
     "tags": {
         "en": ["purifier", "BlueAir", "air"],
-        "se": ["luftrenare", "BlueAir", "luft"]
+        "se": ["luftrenare", "BlueAir", "luft"],
+        "sv": ["luftrenare", "BlueAir", "luft"]
     },
     "images": {
         "small": "/assets/images/small.png",
