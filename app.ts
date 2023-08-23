@@ -1,6 +1,3 @@
-import sourceMapSupport from 'source-map-support';
-sourceMapSupport.install();
-
 import Homey from 'homey';
 
 class BlueAirApp extends Homey.App {
