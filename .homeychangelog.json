@@ -4,5 +4,8 @@
   },
   "1.0.1": {
     "en": "Changed language to TypeScript and added more Swedish translations."
+  },
+  "1.0.2": {
+    "en": "Removed lib source-map-support"
   }
 }
