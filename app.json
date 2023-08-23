@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "net.tornbloms.blueair",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#0C2F4F",
@@ -33,7 +33,8 @@
   },
   "images": {
     "small": "/assets/images/small.png",
-    "large": "/assets/images/large.png"
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
   },
   "author": {
     "name": "Mathias Törnblom",
@@ -66,18 +67,22 @@
   },
   "source": "https://github.com/mathiastornblom/net.tornbloms.blueair",
   "support": "mailto:mathias@tornbloms.net",
+  "homeyCommunityTopicId": 87805,
+  "homepage": "https://github.com/mathiastornblom/net.tornbloms.blueair",
   "flow": {
     "triggers": [
       {
         "title": {
-          "en": "Fan speed has changed"
+          "en": "Fan speed has changed",
+          "se": "Fläktens fart har ändrats"
         },
         "titleFormatted": {
-          "en": "The fan speed has changed."
+          "en": "The fan speed has changed.",
+          "se": "Fläktens fart har ändrats"
         },
         "hint": {
           "en": "The fan speed has benn changed",
-          "se": "Fartn på fläkten är ändrad"
+          "se": "Farten på fläkten är ändrad"
         },
         "platforms": [
           "local"
@@ -87,30 +92,36 @@
             "type": "string",
             "name": "device-name",
             "title": {
-              "en": "Device name"
+              "en": "Device name",
+              "se": "Enhetens namn"
             },
             "example": {
-              "en": "BlueAir 405 Classic"
+              "en": "BlueAir 405 Classic",
+              "se": "BlueAir 405 Classic"
             }
           },
           {
             "type": "string",
             "name": "device-uuid",
             "title": {
-              "en": "Device uuid"
+              "en": "Device uuid",
+              "se": "Enhetens uuid"
             },
             "example": {
-              "en": "2504776FFDC0BAB2"
+              "en": "2504776FFDC0BAB2",
+              "se": "2504776FFDC0BAB2"
             }
           },
           {
             "type": "string",
             "name": "fan speed",
             "title": {
-              "en": "fan speed"
+              "en": "fan speed",
+              "se": "Fläktensfart"
             },
             "example": {
-              "en": "3"
+              "en": "3",
+              "se": "3"
             }
           }
         ],
@@ -118,10 +129,12 @@
       },
       {
         "title": {
-          "en": "Filter needs change."
+          "en": "Filter needs change.",
+          "se": "Filtret behöver bytas."
         },
         "titleFormatted": {
-          "en": "Filter needs change."
+          "en": "Filter needs change.",
+          "se": "Filtret behöver bytas."
         },
         "hint": {
           "en": "Normaly filter has a status OK but if it changes this flow wioll trigger.",
@@ -135,30 +148,36 @@
             "type": "string",
             "name": "device-name",
             "title": {
-              "en": "Device name"
+              "en": "Device name",
+              "se": "Enhetens namn"
             },
             "example": {
-              "en": "BlueAir 405 Classic"
+              "en": "BlueAir 405 Classic",
+              "se": "BlueAir 405 Classic"
             }
           },
           {
             "type": "string",
             "name": "device-uuid",
             "title": {
-              "en": "Device uuid"
+              "en": "Device uuid",
+              "se": "Enhetens uuid"
             },
             "example": {
-              "en": "2504776FFDC0BAB2"
+              "en": "2504776FFDC0BAB2",
+              "se": "2504776FFDC0BAB2"
             }
           },
           {
             "type": "string",
             "name": "device-response",
             "title": {
-              "en": "Device response"
+              "en": "Device response",
+              "se": "Enthetens svar"
             },
             "example": {
-              "en": "OK"
+              "en": "OK",
+              "se": "OK"
             }
           }
         ],
@@ -168,10 +187,12 @@
     "actions": [
       {
         "title": {
-          "en": "Set brightness"
+          "en": "Set brightness",
+          "se": "Sätt ljusstyrkan"
         },
         "titleFormatted": {
-          "en": "Set the brightness to a [[brightness]]"
+          "en": "Set the brightness to a [[brightness]]",
+          "se": "Sätt ljusstyrkan till [[brightness]]"
         },
         "platforms": [
           "local"
@@ -184,31 +205,36 @@
               {
                 "id": "0",
                 "label": {
-                  "en": "0"
+                  "en": "0",
+                  "se": "0"
                 }
               },
               {
                 "id": "1",
                 "label": {
-                  "en": "1"
+                  "en": "1",
+                  "se": "1"
                 }
               },
               {
                 "id": "2",
                 "label": {
-                  "en": "2"
+                  "en": "2",
+                  "se": "22"
                 }
               },
               {
                 "id": "3",
                 "label": {
-                  "en": "3"
+                  "en": "3",
+                  "se": "3"
                 }
               },
               {
                 "id": "4",
                 "label": {
-                  "en": "4"
+                  "en": "4",
+                  "se": "4"
                 }
               }
             ]
@@ -218,10 +244,11 @@
       },
       {
         "title": {
-          "en": "Set fan speed"
+          "en": "Set fan speed",
+          "se": "Sätt fläktens fart"
         },
         "titleFormatted": {
-          "en": "Set the fan speed to [[fanspeed]]"
+          "en": "Sätt fläkten till farten [[fanspeed]]"
         },
         "platforms": [
           "local"
@@ -234,31 +261,36 @@
               {
                 "id": "auto",
                 "label": {
-                  "en": "Auto"
+                  "en": "Auto",
+                  "se": "Auto"
                 }
               },
               {
                 "id": "0",
                 "label": {
-                  "en": "0"
+                  "en": "0",
+                  "se": "0"
                 }
               },
               {
                 "id": "1",
                 "label": {
-                  "en": "1"
+                  "en": "1",
+                  "se": "1"
                 }
               },
               {
                 "id": "2",
                 "label": {
-                  "en": "2"
+                  "en": "2",
+                  "se": "2"
                 }
               },
               {
                 "id": "3",
                 "label": {
-                  "en": "3"
+                  "en": "3",
+                  "se": "3"
                 }
               }
             ]
@@ -271,7 +303,8 @@
   "drivers": [
     {
       "name": {
-        "en": "BlueAir 405 Classic"
+        "en": "BlueAir 405 Classic",
+        "sv": "BlueAir 405 Classic"
       },
       "class": "fan",
       "capabilities": [
@@ -285,7 +318,9 @@
       "platforms": [
         "local"
       ],
-      "connectivity": [],
+      "connectivity": [
+        "cloud"
+      ],
       "images": {
         "small": "/drivers/blueair-405-classic/assets/images/small.png",
         "large": "/drivers/blueair-405-classic/assets/images/large.png",
@@ -330,6 +365,17 @@
           "template": "add_devices"
         }
       ],
+      "energy": {
+        "approximation": {
+          "usageOff": 0,
+          "usageOn": 25
+        }
+      },
+      "capabilitiesOptions": {
+        "measure_power": {
+          "approximated": true
+        }
+      },
       "id": "blueair-405-classic",
       "settings": [
         {

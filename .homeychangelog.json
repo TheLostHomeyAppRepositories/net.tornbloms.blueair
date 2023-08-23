@@ -1,5 +1,8 @@
 {
-    "1.0.0": {
-        "en": "First release of the app."
-    }
+  "1.0.0": {
+    "en": "First release of the app."
+  },
+  "1.0.1": {
+    "en": "Changed language to TypeScript and added more Swedish translations."
+  }
 }
