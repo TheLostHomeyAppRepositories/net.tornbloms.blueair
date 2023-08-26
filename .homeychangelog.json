@@ -10,5 +10,11 @@
   },
   "1.0.3": {
     "en": "Removed lib and minor update to the Typescript conversion"
+  },
+  "2.0.0": {
+    "en": "New version released! We've introduced Dutch as a new language option and have also incorporated additional drivers. Due to the substantial overhaul that these changes entailed, it's necessary for you to delete your existing devices."
+  },
+  "2.0.1": {
+    "en": "Better handeling of login"
   }
 }

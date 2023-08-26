@@ -1,65 +1,81 @@
 {
-    "id": "net.tornbloms.blueair",
-    "version": "2.0.0",
-    "compatibility": ">=5.0.0",
-    "sdk": 3,
-    "brandColor": "#0C2F4F",
-    "platforms": ["local"],
-    "name": {
-        "en": "BlueAir",
-        "sv": "BlueAir",
-        "nl": "BlueAir"
-    },
-    "description": {
-        "en": "BlueAir purifiers because you need a deep breath.",
-        "sv": "BueAir luftrenare för att du behöver kunna andas fritt",
-        "nl": "BlueAir luchtreinigers, omdat je een diepe ademhaling verdient."
-    },
-    "category": ["climate"],
-    "tags": {
-        "en": ["purifier", "BlueAir", "air"],
-        "sv": ["luftrenare", "BlueAir", "luft"],
-        "nl": ["luchtreiniger", "BlueAir", "lucht"]
-    },
-    "images": {
-        "small": "/assets/images/small.png",
-        "large": "/assets/images/large.png",
-        "xlarge": "/assets/images/xlarge.png"
-    },
-    "author": {
-        "name": "Mathias Törnblom",
-        "email": "mathias@tornbloms.net"
-    },
-    "contributors": {
-        "developers": [
-            {
-                "name": "Mathias Törnblom"
-            }
-        ],
-        "translators": [
-            {
-                "name": "Mathias Törnblom"
-            },
-            {
-                "name": "Ad Bakker"
-            }
-        ]
-    },
-    "contributing": {
-        "donate": {
-            "paypal": {
-                "username": "mathiastornblom"
-            },
-            "githubSponsors": {
-                "username": "mathiastornblom"
-            }
-        }
-    },
-    "bugs": {
-        "url": "https://github.com/mathiastornblom/net.tornbloms.blueair/issues"
-    },
-    "source": "https://github.com/mathiastornblom/net.tornbloms.blueair",
-    "support": "mailto:mathias@tornbloms.net",
-    "homeyCommunityTopicId": 87805,
-    "homepage": "https://github.com/mathiastornblom/net.tornbloms.blueair"
+  "id": "net.tornbloms.blueair",
+  "version": "2.0.1",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "brandColor": "#0C2F4F",
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "BlueAir",
+    "sv": "BlueAir",
+    "nl": "BlueAir"
+  },
+  "description": {
+    "en": "BlueAir purifiers because you need a deep breath.",
+    "sv": "BueAir luftrenare för att du behöver kunna andas fritt.",
+    "nl": "BlueAir luchtreinigers, omdat je een diepe ademhaling verdient."
+  },
+  "category": [
+    "climate"
+  ],
+  "tags": {
+    "en": [
+      "purifier",
+      "BlueAir",
+      "air"
+    ],
+    "sv": [
+      "luftrenare",
+      "BlueAir",
+      "luft"
+    ],
+    "nl": [
+      "luchtreiniger",
+      "BlueAir",
+      "lucht"
+    ]
+  },
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Mathias Törnblom",
+    "email": "mathias@tornbloms.net"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Mathias Törnblom"
+      }
+    ],
+    "translators": [
+      {
+        "name": "Mathias Törnblom"
+      },
+      {
+        "name": "Ad Bakker"
+      }
+    ]
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "mathiastornblom"
+      },
+      "githubSponsors": {
+        "username": "mathiastornblom"
+      }
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/mathiastornblom/net.tornbloms.blueair/issues"
+  },
+  "source": "https://github.com/mathiastornblom/net.tornbloms.blueair",
+  "support": "mailto:mathias@tornbloms.net",
+  "homeyCommunityTopicId": 87805,
+  "homepage": "https://github.com/mathiastornblom/net.tornbloms.blueair"
 }
