@@ -1,51 +1,63 @@
 {
     "title": {
         "en": "Set fan speed",
-        "se": "Sätt fläktens fart"
+        "sv": "Sätt fläktens fart",
+        "nl": "Ventilatorsnelheid instellen"
     },
     "titleFormatted": {
         "en": "Set the fan speed to [[fanspeed]]",
-        "en": "Sätt fläkten till farten [[fanspeed]]"
+        "sv": "Sätt fläkten till farten [[fanspeed]]",
+        "nl": "Stel de ventilatorsnelheid in op [[fanspeed]]"
     },
     "platforms": ["local"],
     "args": [
         {
             "type": "dropdown",
             "name": "fanspeed",
+            "title": {
+                "en": "Fan speed",
+                "sv": "fläktfart",
+                "nl": "Ventilatorsnelheid"
+            },
             "values": [
                 {
                     "id": "auto",
                     "label": {
                         "en": "Auto",
-                        "se": "Auto"
+                        "se": "Auto",
+                        "nl": "Auto"
                     }
                 },
                 {
                     "id": "0",
                     "label": {
-                        "en": "0",
-                        "se": "0"
+                        "en": "0%",
+                        "se": "0%",
+                        "nl": "0%"
                     }
                 },
                 {
                     "id": "1",
                     "label": {
-                        "en": "1",
-                        "se": "1"
+                        "en": "25%",
+                        "se": "25%",
+                        "nl": "25%"
                     }
                 },
                 {
                     "id": "2",
                     "label": {
-                        "en": "2",
-                        "se": "2"
+                        "en": "50%",
+                        "se": "50%",
+                        "nl": "50%"
                     }
                 },
                 {
                     "id": "3",
                     "label": {
-                        "en": "3",
-                        "se": "3"
+                        "en": "100%",
+                        "se": "100%",
+                        "nl": "100%"
                     }
                 }
             ]

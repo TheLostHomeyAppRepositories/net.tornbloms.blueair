@@ -2,7 +2,8 @@
     "type": "boolean",
     "title": {
         "en": "Childlock",
-        "se": "Barnlås"
+        "sv": "Barnlås",
+        "nl": "Kinderbeveiliging"
     },
     "getable": true,
     "setable": true,

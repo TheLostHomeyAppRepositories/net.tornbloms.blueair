@@ -1,6 +1,6 @@
 {
     "type": "number",
-    "title": { "en": "Brightness", "se": "Ljusstyrka" },
+    "title": { "en": "Brightness", "sv": "Ljusstyrka", "nl": "Helderheid" },
     "uiComponent": "slider",
     "getable": true,
     "setable": true,

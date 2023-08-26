@@ -1,15 +1,18 @@
 {
     "title": {
         "en": "Filter needs change.",
-        "se": "Filtret behöver bytas."
+        "se": "Filtret behöver bytas.",
+        "nl": "Filter moet worden vervangen."
     },
     "titleFormatted": {
-        "en": "Filter needs change.",
-        "se": "Filtret behöver bytas."
+        "en": "The filter needs to be change.",
+        "se": "Filtret behöver bytas.",
+        "nl": "Het filter moet worden vervangen."
     },
     "hint": {
         "en": "Normaly filter has a status OK but if it changes this flow wioll trigger.",
-        "se": "Normalt status är OK."
+        "se": "Vanligtvis har filtret en status som OK, men om den ändras kommer denna flöde att utlösas.",
+        "nl": "Normaal gesproken heeft het filter een status van OK, maar als dit verandert, zal deze flow worden geactiveerd."
     },
     "platforms": ["local"],
     "tokens": [
@@ -18,23 +21,27 @@
             "name": "device-name",
             "title": {
                 "en": "Device name",
-                "se": "Enhetens namn"
+                "se": "Enhetsnamn",
+                "nl": "Apparaatnaam"
             },
             "example": {
                 "en": "BlueAir 405 Classic",
-                "se": "BlueAir 405 Classic"
+                "se": "BlueAir 405 Classic",
+                "nl": "BlueAir 405 Classic"
             }
         },
         {
             "type": "string",
             "name": "device-uuid",
             "title": {
-                "en": "Device uuid",
-                "se": "Enhetens uuid"
+                "en": "Device UUID",
+                "se": "Enhetens UUID",
+                "nl": "Apparaat UUID"
             },
             "example": {
                 "en": "2504776FFDC0BAB2",
-                "se": "2504776FFDC0BAB2"
+                "se": "2504776FFDC0BAB2",
+                "nl": "2504776FFDC0BAB2"
             }
         },
         {
@@ -42,11 +49,13 @@
             "name": "device-response",
             "title": {
                 "en": "Device response",
-                "se": "Enthetens svar"
+                "se": "Enthetens svar",
+                "nl": "Apparaatreactie"
             },
             "example": {
                 "en": "OK",
-                "se": "OK"
+                "se": "OK",
+                "nl": "OK"
             }
         }
     ]

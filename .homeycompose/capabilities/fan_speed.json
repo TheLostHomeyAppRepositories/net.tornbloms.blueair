@@ -2,7 +2,8 @@
     "type": "enum",
     "title": {
         "en": "Fan speed",
-        "se": "Fläktfart"
+        "sv": "Fläktfart",
+        "nl": "Ventilatorsnelheid"
     },
     "getable": true,
     "setable": true,
@@ -12,25 +13,33 @@
         {
             "id": "0",
             "title": {
-                "en": "Fan speed 0"
+                "en": "0%",
+                "sv": "0%",
+                "nl": "0%"
             }
         },
         {
             "id": "1",
             "title": {
-                "en": "Fan speed 1"
+                "en": "25%",
+                "sv": "25%",
+                "nl": "25%"
             }
         },
         {
             "id": "2",
             "title": {
-                "en": "Fan speed 2"
+                "en": "50%",
+                "sv": "50%",
+                "nl": "50%"
             }
         },
         {
             "id": "3",
             "title": {
-                "en": "Fan speed 3"
+                "en": "100%",
+                "sv": "100%",
+                "nl": "100%"
             }
         },
         {

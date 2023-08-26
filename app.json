@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "net.tornbloms.blueair",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#0C2F4F",
@@ -10,13 +10,13 @@
   ],
   "name": {
     "en": "BlueAir",
-    "se": "BlueAir",
-    "sv": "BlueAir"
+    "sv": "BlueAir",
+    "nl": "BlueAir"
   },
   "description": {
-    "en": "BuleAir purifiers becuse you need a deep breth.",
-    "se": "BlueAir luftfilter, för att du behöver andas.",
-    "sv": "BueAir luftrenare för att du behöver kunna andas fritt"
+    "en": "BlueAir purifiers because you need a deep breath.",
+    "sv": "BueAir luftrenare för att du behöver kunna andas fritt",
+    "nl": "BlueAir luchtreinigers, omdat je een diepe ademhaling verdient."
   },
   "category": [
     "climate"
@@ -27,15 +27,15 @@
       "BlueAir",
       "air"
     ],
-    "se": [
-      "luftrenare",
-      "BlueAir",
-      "luft"
-    ],
     "sv": [
       "luftrenare",
       "BlueAir",
       "luft"
+    ],
+    "nl": [
+      "luchtreiniger",
+      "BlueAir",
+      "lucht"
     ]
   },
   "images": {
@@ -56,6 +56,9 @@
     "translators": [
       {
         "name": "Mathias Törnblom"
+      },
+      {
+        "name": "Ad Bakker"
       }
     ]
   },
@@ -81,15 +84,18 @@
       {
         "title": {
           "en": "Fan speed has changed",
-          "se": "Fläktens fart har ändrats"
+          "se": "Fläktens fart har ändrats",
+          "nl": "De ventilatorsnelheid is veranderd"
         },
         "titleFormatted": {
           "en": "The fan speed has changed.",
-          "se": "Fläktens fart har ändrats"
+          "se": "Fläktens fart har ändrats",
+          "nl": "De ventilatorsnelheid is veranderd"
         },
         "hint": {
-          "en": "The fan speed has benn changed",
-          "se": "Farten på fläkten är ändrad"
+          "en": "The fan speed has been changed",
+          "se": "Farten på fläkten är ändrad",
+          "nl": "De ventilatorsnelheid is gewijzigd"
         },
         "platforms": [
           "local"
@@ -100,35 +106,41 @@
             "name": "device-name",
             "title": {
               "en": "Device name",
-              "se": "Enhetens namn"
+              "se": "Enhetsnamn",
+              "nl": "Apparaatnaam"
             },
             "example": {
               "en": "BlueAir 405 Classic",
-              "se": "BlueAir 405 Classic"
+              "se": "BlueAir 405 Classic",
+              "nl": "BlueAir 405 Classic"
             }
           },
           {
             "type": "string",
             "name": "device-uuid",
             "title": {
-              "en": "Device uuid",
-              "se": "Enhetens uuid"
+              "en": "Device UUID",
+              "se": "Enhetens UUID",
+              "nl": "Apparaat UUID"
             },
             "example": {
               "en": "2504776FFDC0BAB2",
-              "se": "2504776FFDC0BAB2"
+              "se": "2504776FFDC0BAB2",
+              "nl": "2504776FFDC0BAB2"
             }
           },
           {
             "type": "string",
             "name": "fan speed",
             "title": {
-              "en": "fan speed",
-              "se": "Fläktensfart"
+              "en": "Fan speed",
+              "se": "Fläktensfart",
+              "nl": "Ventilatorsnelheid"
             },
             "example": {
               "en": "3",
-              "se": "3"
+              "se": "3",
+              "nl": "3"
             }
           }
         ],
@@ -137,15 +149,18 @@
       {
         "title": {
           "en": "Filter needs change.",
-          "se": "Filtret behöver bytas."
+          "se": "Filtret behöver bytas.",
+          "nl": "Filter moet worden vervangen."
         },
         "titleFormatted": {
-          "en": "Filter needs change.",
-          "se": "Filtret behöver bytas."
+          "en": "The filter needs to be change.",
+          "se": "Filtret behöver bytas.",
+          "nl": "Het filter moet worden vervangen."
         },
         "hint": {
           "en": "Normaly filter has a status OK but if it changes this flow wioll trigger.",
-          "se": "Normalt status är OK."
+          "se": "Vanligtvis har filtret en status som OK, men om den ändras kommer denna flöde att utlösas.",
+          "nl": "Normaal gesproken heeft het filter een status van OK, maar als dit verandert, zal deze flow worden geactiveerd."
         },
         "platforms": [
           "local"
@@ -156,23 +171,27 @@
             "name": "device-name",
             "title": {
               "en": "Device name",
-              "se": "Enhetens namn"
+              "se": "Enhetsnamn",
+              "nl": "Apparaatnaam"
             },
             "example": {
               "en": "BlueAir 405 Classic",
-              "se": "BlueAir 405 Classic"
+              "se": "BlueAir 405 Classic",
+              "nl": "BlueAir 405 Classic"
             }
           },
           {
             "type": "string",
             "name": "device-uuid",
             "title": {
-              "en": "Device uuid",
-              "se": "Enhetens uuid"
+              "en": "Device UUID",
+              "se": "Enhetens UUID",
+              "nl": "Apparaat UUID"
             },
             "example": {
               "en": "2504776FFDC0BAB2",
-              "se": "2504776FFDC0BAB2"
+              "se": "2504776FFDC0BAB2",
+              "nl": "2504776FFDC0BAB2"
             }
           },
           {
@@ -180,11 +199,13 @@
             "name": "device-response",
             "title": {
               "en": "Device response",
-              "se": "Enthetens svar"
+              "se": "Enthetens svar",
+              "nl": "Apparaatreactie"
             },
             "example": {
               "en": "OK",
-              "se": "OK"
+              "se": "OK",
+              "nl": "OK"
             }
           }
         ],
@@ -195,11 +216,13 @@
       {
         "title": {
           "en": "Set brightness",
-          "se": "Sätt ljusstyrkan"
+          "se": "Sätt ljusstyrkan",
+          "nl": "Helderheid instellen"
         },
         "titleFormatted": {
           "en": "Set the brightness to a [[brightness]]",
-          "se": "Sätt ljusstyrkan till [[brightness]]"
+          "se": "Sätt ljusstyrkan till [[brightness]]",
+          "nl": "Stel de helderheid in op [[brightness]]"
         },
         "platforms": [
           "local"
@@ -208,33 +231,42 @@
           {
             "type": "dropdown",
             "name": "brightness",
+            "title": {
+              "en": "Brightness",
+              "se": "ljusstyrkan",
+              "nl": "Helderheid"
+            },
             "values": [
               {
                 "id": "0",
                 "label": {
                   "en": "0",
-                  "se": "0"
+                  "se": "0",
+                  "nl": "0"
                 }
               },
               {
                 "id": "1",
                 "label": {
                   "en": "1",
-                  "se": "1"
+                  "se": "1",
+                  "nl": "1"
                 }
               },
               {
                 "id": "2",
                 "label": {
                   "en": "2",
-                  "se": "22"
+                  "se": "2",
+                  "nl": "2"
                 }
               },
               {
                 "id": "3",
                 "label": {
                   "en": "3",
-                  "se": "3"
+                  "se": "3",
+                  "nl": "3"
                 }
               },
               {
@@ -252,10 +284,13 @@
       {
         "title": {
           "en": "Set fan speed",
-          "se": "Sätt fläktens fart"
+          "sv": "Sätt fläktens fart",
+          "nl": "Ventilatorsnelheid instellen"
         },
         "titleFormatted": {
-          "en": "Sätt fläkten till farten [[fanspeed]]"
+          "en": "Set the fan speed to [[fanspeed]]",
+          "sv": "Sätt fläkten till farten [[fanspeed]]",
+          "nl": "Stel de ventilatorsnelheid in op [[fanspeed]]"
         },
         "platforms": [
           "local"
@@ -264,40 +299,50 @@
           {
             "type": "dropdown",
             "name": "fanspeed",
+            "title": {
+              "en": "Fan speed",
+              "sv": "fläktfart",
+              "nl": "Ventilatorsnelheid"
+            },
             "values": [
               {
                 "id": "auto",
                 "label": {
                   "en": "Auto",
-                  "se": "Auto"
+                  "se": "Auto",
+                  "nl": "Auto"
                 }
               },
               {
                 "id": "0",
                 "label": {
-                  "en": "0",
-                  "se": "0"
+                  "en": "0%",
+                  "se": "0%",
+                  "nl": "0%"
                 }
               },
               {
                 "id": "1",
                 "label": {
-                  "en": "1",
-                  "se": "1"
+                  "en": "25%",
+                  "se": "25%",
+                  "nl": "25%"
                 }
               },
               {
                 "id": "2",
                 "label": {
-                  "en": "2",
-                  "se": "2"
+                  "en": "50%",
+                  "se": "50%",
+                  "nl": "50%"
                 }
               },
               {
                 "id": "3",
                 "label": {
-                  "en": "3",
-                  "se": "3"
+                  "en": "100%",
+                  "se": "100%",
+                  "nl": "100%"
                 }
               }
             ]
@@ -310,8 +355,9 @@
   "drivers": [
     {
       "name": {
-        "en": "BlueAir 405 Classic",
-        "sv": "BlueAir 405 Classic"
+        "en": "Classic",
+        "sv": "Classic",
+        "nl": "Classic"
       },
       "class": "fan",
       "capabilities": [
@@ -325,11 +371,13 @@
       "platforms": [
         "local"
       ],
-      "connectivity": [],
+      "connectivity": [
+        "cloud"
+      ],
       "images": {
-        "small": "/drivers/blueair-405-classic/assets/images/small.png",
-        "large": "/drivers/blueair-405-classic/assets/images/large.png",
-        "xlarge": "/drivers/blueair-405-classic/assets/images/xlarge.png"
+        "small": "/drivers/classic/assets/images/small.png",
+        "large": "/drivers/classic/assets/images/large.png",
+        "xlarge": "/drivers/classic/assets/images/xlarge.png"
       },
       "pair": [
         {
@@ -338,23 +386,29 @@
           "options": {
             "logo": "icon.svg",
             "title": {
-              "en": "Login to your account"
+              "en": "Login to your account",
+              "sv": "Logga in på ditt konto",
+              "nl": "Inloggen op uw account"
             },
             "usernameLabel": {
               "en": "E-mail address",
-              "se": "E-post adress"
+              "sv": "E-postadress",
+              "nl": "E-mailadres"
             },
             "usernamePlaceholder": {
               "en": "john@doe.com",
-              "se": "namn@domain.se"
+              "sv": "namn@domain.se",
+              "nl": "naam@voorbeeld.com"
             },
             "passwordLabel": {
               "en": "Password",
-              "se": "Lösenord"
+              "sv": "Lösenord",
+              "nl": "Wachtwoord"
             },
             "passwordPlaceholder": {
               "en": "Password",
-              "se": "Lösenord"
+              "sv": "Lösenord",
+              "nl": "Wachtwoord"
             }
           }
         },
@@ -381,13 +435,14 @@
           "approximated": true
         }
       },
-      "id": "blueair-405-classic",
+      "id": "classic",
       "settings": [
         {
           "type": "group",
           "label": {
             "en": "Login details",
-            "se": "Login detaljer"
+            "sv": "Login detaljer",
+            "nl": "Inloggegevens"
           },
           "children": [
             {
@@ -395,12 +450,14 @@
               "type": "text",
               "label": {
                 "en": "E-mail",
-                "se": "Epost"
+                "sv": "Epost",
+                "nl": "E-mail"
               },
               "value": "JohnDoe@domain.com",
               "hint": {
                 "en": "The email of the user.",
-                "se": "Epostadressen för användaren."
+                "sv": "Epostadressen för användaren.",
+                "nl": "De e-mail van de gebruiker."
               }
             },
             {
@@ -408,12 +465,14 @@
               "type": "text",
               "label": {
                 "en": "Password",
-                "se": "Lösenord"
+                "sv": "Lösenord",
+                "nl": "Wachtwoord"
               },
               "value": "Secret",
               "hint": {
                 "en": "The password of the user.",
-                "se": "Lösenordet för användaren"
+                "sv": "Lösenordet för användaren.",
+                "nl": "Het wachtwoord van de gebruiker."
               }
             }
           ]
@@ -422,20 +481,23 @@
           "type": "group",
           "label": {
             "en": "Device infomation",
-            "se": "Enhetsdetaljer"
+            "sv": "Enhetsdetaljer",
+            "nl": "Apparaatinformatie"
           },
           "children": [
             {
               "id": "uuid",
               "type": "label",
               "label": {
-                "en": "E-mail",
-                "se": "Epost"
+                "en": "UUID",
+                "sv": "UUID",
+                "nl": "UUID"
               },
               "value": "EE04776CEDC0BAB2",
               "hint": {
                 "en": "The uniqe id of the device.",
-                "se": "Unik identifierare för enheten."
+                "sv": "Unik identifierare för enheten.",
+                "nl": "De unieke id van het apparaat."
               }
             },
             {
@@ -443,12 +505,14 @@
               "type": "label",
               "label": {
                 "en": "Name",
-                "se": "Namn"
+                "sv": "Namn",
+                "nl": "Naam"
               },
               "value": "BlueAir 405 Classic",
               "hint": {
                 "en": "Name of the device",
-                "se": "Namn på enheten"
+                "sv": "Namn på enheten",
+                "nl": "Naam van het apparaat"
               }
             },
             {
@@ -456,12 +520,14 @@
               "type": "label",
               "label": {
                 "en": "Compatibility",
-                "se": "Kompabilitet"
+                "sv": "Kompabilitet",
+                "nl": "Compatibiliteit"
               },
               "value": "classic_405",
               "hint": {
                 "en": "Compatibility of the device",
-                "se": "Kompabilitet på enheten"
+                "sv": "Kompabilitet på enheten",
+                "nl": "Compatibiliteit van het apparaat"
               }
             },
             {
@@ -469,12 +535,14 @@
               "type": "label",
               "label": {
                 "en": "Model",
-                "se": "Model"
+                "sv": "Model",
+                "nl": "Model"
               },
               "value": "1.0.9",
               "hint": {
                 "en": "Model of the device",
-                "se": "Model på enheten"
+                "sv": "Model på enheten",
+                "nl": "Model van het apparaat"
               }
             },
             {
@@ -482,12 +550,14 @@
               "type": "label",
               "label": {
                 "en": "MAC",
-                "se": "MAC"
+                "sv": "MAC",
+                "nl": "MAC"
               },
               "value": "34EAE728765C",
               "hint": {
                 "en": "MAC address of the device",
-                "se": "MAC address på enheten"
+                "sv": "MAC address på enheten",
+                "nl": "MAC-adres van het apparaat"
               }
             },
             {
@@ -495,12 +565,14 @@
               "type": "label",
               "label": {
                 "en": "Firmware",
-                "se": "Firmware"
+                "sv": "Firmware",
+                "nl": "Firmware"
               },
               "value": "1.1.38",
               "hint": {
-                "en": "Verison of the firmware",
-                "se": "Version av programvara"
+                "en": "Version of the firmware",
+                "sv": "Version av programvara",
+                "nl": "Versie van de firmware"
               }
             },
             {
@@ -508,12 +580,14 @@
               "type": "label",
               "label": {
                 "en": "MCU Firmware",
-                "se": "MCU Firmware"
+                "sv": "MCU Firmware",
+                "nl": "MCU Firmware"
               },
               "value": "1.0.35",
               "hint": {
                 "en": "Version of the MCU Firmware",
-                "se": "Vesion på MCU Firmware"
+                "sv": "Vesion på MCU Firmware",
+                "nl": "Versie van de MCU-firmware"
               }
             },
             {
@@ -521,12 +595,14 @@
               "type": "label",
               "label": {
                 "en": "WLAN Driver",
-                "se": "WLAN Driver"
+                "sv": "WLAN Driver",
+                "nl": "WLAN-Driver"
               },
               "value": "V10",
               "hint": {
                 "en": "Version of the WLAN Driver",
-                "se": "Version av WLAN Driver"
+                "sv": "Version av WLAN Driver",
+                "nl": "Versie van de WLAN-driver"
               }
             },
             {
@@ -534,12 +610,14 @@
               "type": "label",
               "label": {
                 "en": "Last sync date",
-                "se": "Senaste sync"
+                "sv": "Senaste sync",
+                "nl": "Laatste synchronisatiedatum"
               },
               "value": "2000-01-01",
               "hint": {
                 "en": "Date for the latest sync",
-                "se": "Datum för senaste sync"
+                "sv": "Datum för senaste sync",
+                "nl": "Datum van de laatste synchronisatie"
               }
             },
             {
@@ -547,12 +625,14 @@
               "type": "label",
               "label": {
                 "en": "Installation date",
-                "se": "Installationsdatum"
+                "sv": "Installationsdatum",
+                "nl": "Installatiedatum"
               },
               "value": "2000-01-01",
               "hint": {
                 "en": "Date for the installation",
-                "se": "Datum för instalation"
+                "sv": "Datum för instalation",
+                "nl": "Datum van de installatie"
               }
             },
             {
@@ -560,12 +640,14 @@
               "type": "label",
               "label": {
                 "en": "Last calibration date",
-                "se": "Senaste kalibrering"
+                "sv": "Senaste kalibrering",
+                "nl": "Laatste kalibratiedatum"
               },
               "value": "2000-01-01",
               "hint": {
                 "en": "Date for the latest calibration",
-                "se": "Datum för senaste kalibrering"
+                "sv": "Datum för senaste kalibrering",
+                "nl": "Datum van de laatste kalibratie"
               }
             },
             {
@@ -573,12 +655,14 @@
               "type": "label",
               "label": {
                 "en": "initUsagePeriod",
-                "se": "initUsagePeriod"
+                "sv": "initUsagePeriod",
+                "nl": "initUsagePeriod"
               },
               "value": "0",
               "hint": {
                 "en": "initUsagePeriod",
-                "se": "initUsagePeriod"
+                "sv": "initUsagePeriod",
+                "nl": "initUsagePeriod"
               }
             },
             {
@@ -586,12 +670,14 @@
               "type": "label",
               "label": {
                 "en": "Reboot period",
-                "se": "Reboot period"
+                "sv": "Omstartsperiod",
+                "nl": "Herstartperiode"
               },
               "value": "10000",
               "hint": {
                 "en": "Reboot period",
-                "se": "Reboot period"
+                "sv": "Omstartsperiod",
+                "nl": "Herstartperiode"
               }
             },
             {
@@ -599,12 +685,14 @@
               "type": "label",
               "label": {
                 "en": "Location",
-                "se": "Rum"
+                "sv": "Rum",
+                "nl": "Ruimte"
               },
               "value": "kitchen",
               "hint": {
-                "en": "The location of the device",
-                "se": "I vilket rum finns enheten"
+                "en": "The room where the device is located.",
+                "sv": "I vilket rum finns enheten.",
+                "nl": "De ruimte waar het apparaat zich bevindt."
               }
             }
           ]
@@ -613,7 +701,8 @@
           "type": "group",
           "label": {
             "en": "Advanced settings",
-            "se": "Avancerade inställningar"
+            "sv": "Avancerade inställningar",
+            "nl": "Geavanceerde instellingen"
           },
           "children": [
             {
@@ -621,14 +710,762 @@
               "type": "number",
               "label": {
                 "en": "Update interval",
-                "se": "Uppdatera"
+                "sv": "Uppdatera",
+                "nl": "Update-interval"
               },
               "value": 10,
               "min": 10,
               "max": 60,
               "units": {
                 "en": "Seconds",
-                "se": "Sekunder"
+                "sv": "Sekunder",
+                "nl": "Seconden"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "DustMagnet",
+        "sv": "DustMagnet",
+        "nl": "DustMagnet"
+      },
+      "class": "fan",
+      "capabilities": [
+        "fan_speed",
+        "brightness",
+        "child_lock",
+        "last_retrival_date",
+        "wifi_status",
+        "filter_status"
+      ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/dustmagnet/assets/images/small.png",
+        "large": "/drivers/dustmagnet/assets/images/large.png",
+        "xlarge": "/drivers/dustmagnet/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "login_credentials",
+          "template": "login_credentials",
+          "options": {
+            "logo": "icon.svg",
+            "title": {
+              "en": "Login to your account",
+              "sv": "Logga in på ditt konto",
+              "nl": "Inloggen op uw account"
+            },
+            "usernameLabel": {
+              "en": "E-mail address",
+              "sv": "E-postadress",
+              "nl": "E-mailadres"
+            },
+            "usernamePlaceholder": {
+              "en": "john@doe.com",
+              "sv": "namn@domain.se",
+              "nl": "naam@voorbeeld.com"
+            },
+            "passwordLabel": {
+              "en": "Password",
+              "sv": "Lösenord",
+              "nl": "Wachtwoord"
+            },
+            "passwordPlaceholder": {
+              "en": "Password",
+              "sv": "Lösenord",
+              "nl": "Wachtwoord"
+            }
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "energy": {
+        "approximation": {
+          "usageOff": 0,
+          "usageOn": 25
+        }
+      },
+      "capabilitiesOptions": {
+        "measure_power": {
+          "approximated": true
+        }
+      },
+      "id": "dustmagnet",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Login details",
+            "sv": "Login detaljer",
+            "nl": "Inloggegevens"
+          },
+          "children": [
+            {
+              "id": "username",
+              "type": "text",
+              "label": {
+                "en": "E-mail",
+                "sv": "Epost",
+                "nl": "E-mail"
+              },
+              "value": "JohnDoe@domain.com",
+              "hint": {
+                "en": "The email of the user.",
+                "sv": "Epostadressen för användaren.",
+                "nl": "De e-mail van de gebruiker."
+              }
+            },
+            {
+              "id": "password",
+              "type": "text",
+              "label": {
+                "en": "Password",
+                "sv": "Lösenord",
+                "nl": "Wachtwoord"
+              },
+              "value": "Secret",
+              "hint": {
+                "en": "The password of the user.",
+                "sv": "Lösenordet för användaren.",
+                "nl": "Het wachtwoord van de gebruiker."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Device infomation",
+            "sv": "Enhetsdetaljer",
+            "nl": "Apparaatinformatie"
+          },
+          "children": [
+            {
+              "id": "uuid",
+              "type": "label",
+              "label": {
+                "en": "UUID",
+                "sv": "UUID",
+                "nl": "UUID"
+              },
+              "value": "EE04776CEDC0BAB2",
+              "hint": {
+                "en": "The uniqe id of the device.",
+                "sv": "Unik identifierare för enheten.",
+                "nl": "De unieke id van het apparaat."
+              }
+            },
+            {
+              "id": "name",
+              "type": "label",
+              "label": {
+                "en": "Name",
+                "sv": "Namn",
+                "nl": "Naam"
+              },
+              "value": "BlueAir DustMagnet 5210i",
+              "hint": {
+                "en": "Name of the device",
+                "sv": "Namn på enheten",
+                "nl": "Naam van het apparaat"
+              }
+            },
+            {
+              "id": "compatibility",
+              "type": "label",
+              "label": {
+                "en": "Compatibility",
+                "sv": "Kompabilitet",
+                "nl": "Compatibiliteit"
+              },
+              "value": "classic_405",
+              "hint": {
+                "en": "Compatibility of the device",
+                "sv": "Kompabilitet på enheten",
+                "nl": "Compatibiliteit van het apparaat"
+              }
+            },
+            {
+              "id": "model",
+              "type": "label",
+              "label": {
+                "en": "Model",
+                "sv": "Model",
+                "nl": "Model"
+              },
+              "value": "1.0.9",
+              "hint": {
+                "en": "Model of the device",
+                "sv": "Model på enheten",
+                "nl": "Model van het apparaat"
+              }
+            },
+            {
+              "id": "mac",
+              "type": "label",
+              "label": {
+                "en": "MAC",
+                "sv": "MAC",
+                "nl": "MAC"
+              },
+              "value": "34EAE728765C",
+              "hint": {
+                "en": "MAC address of the device",
+                "sv": "MAC address på enheten",
+                "nl": "MAC-adres van het apparaat"
+              }
+            },
+            {
+              "id": "firmware",
+              "type": "label",
+              "label": {
+                "en": "Firmware",
+                "sv": "Firmware",
+                "nl": "Firmware"
+              },
+              "value": "1.1.38",
+              "hint": {
+                "en": "Version of the firmware",
+                "sv": "Version av programvara",
+                "nl": "Versie van de firmware"
+              }
+            },
+            {
+              "id": "mcuFirmware",
+              "type": "label",
+              "label": {
+                "en": "MCU Firmware",
+                "sv": "MCU Firmware",
+                "nl": "MCU Firmware"
+              },
+              "value": "1.0.35",
+              "hint": {
+                "en": "Version of the MCU Firmware",
+                "sv": "Vesion på MCU Firmware",
+                "nl": "Versie van de MCU-firmware"
+              }
+            },
+            {
+              "id": "wlanDriver",
+              "type": "label",
+              "label": {
+                "en": "WLAN Driver",
+                "sv": "WLAN Driver",
+                "nl": "WLAN-Driver"
+              },
+              "value": "V10",
+              "hint": {
+                "en": "Version of the WLAN Driver",
+                "sv": "Version av WLAN Driver",
+                "nl": "Versie van de WLAN-driver"
+              }
+            },
+            {
+              "id": "lastSyncDate",
+              "type": "label",
+              "label": {
+                "en": "Last sync date",
+                "sv": "Senaste sync",
+                "nl": "Laatste synchronisatiedatum"
+              },
+              "value": "2000-01-01",
+              "hint": {
+                "en": "Date for the latest sync",
+                "sv": "Datum för senaste sync",
+                "nl": "Datum van de laatste synchronisatie"
+              }
+            },
+            {
+              "id": "installationDate",
+              "type": "label",
+              "label": {
+                "en": "Installation date",
+                "sv": "Installationsdatum",
+                "nl": "Installatiedatum"
+              },
+              "value": "2000-01-01",
+              "hint": {
+                "en": "Date for the installation",
+                "sv": "Datum för instalation",
+                "nl": "Datum van de installatie"
+              }
+            },
+            {
+              "id": "lastCalibrationDate",
+              "type": "label",
+              "label": {
+                "en": "Last calibration date",
+                "sv": "Senaste kalibrering",
+                "nl": "Laatste kalibratiedatum"
+              },
+              "value": "2000-01-01",
+              "hint": {
+                "en": "Date for the latest calibration",
+                "sv": "Datum för senaste kalibrering",
+                "nl": "Datum van de laatste kalibratie"
+              }
+            },
+            {
+              "id": "initUsagePeriod",
+              "type": "label",
+              "label": {
+                "en": "initUsagePeriod",
+                "sv": "initUsagePeriod",
+                "nl": "initUsagePeriod"
+              },
+              "value": "0",
+              "hint": {
+                "en": "initUsagePeriod",
+                "sv": "initUsagePeriod",
+                "nl": "initUsagePeriod"
+              }
+            },
+            {
+              "id": "rebootPeriod",
+              "type": "label",
+              "label": {
+                "en": "Reboot period",
+                "sv": "Omstartsperiod",
+                "nl": "Herstartperiode"
+              },
+              "value": "10000",
+              "hint": {
+                "en": "Reboot period",
+                "sv": "Omstartsperiod",
+                "nl": "Herstartperiode"
+              }
+            },
+            {
+              "id": "roomLocation",
+              "type": "label",
+              "label": {
+                "en": "Location",
+                "sv": "Rum",
+                "nl": "Ruimte"
+              },
+              "value": "kitchen",
+              "hint": {
+                "en": "The room where the device is located.",
+                "sv": "I vilket rum finns enheten.",
+                "nl": "De ruimte waar het apparaat zich bevindt."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Advanced settings",
+            "sv": "Avancerade inställningar",
+            "nl": "Geavanceerde instellingen"
+          },
+          "children": [
+            {
+              "id": "update",
+              "type": "number",
+              "label": {
+                "en": "Update interval",
+                "sv": "Uppdatera",
+                "nl": "Update-interval"
+              },
+              "value": 10,
+              "min": 10,
+              "max": 60,
+              "units": {
+                "en": "Seconds",
+                "sv": "Sekunder",
+                "nl": "Seconden"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "HealthProtect",
+        "sv": "HealthProtect",
+        "nl": "HealthProtect"
+      },
+      "class": "fan",
+      "capabilities": [
+        "fan_speed",
+        "brightness",
+        "child_lock",
+        "last_retrival_date",
+        "wifi_status",
+        "filter_status"
+      ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/healthprotect/assets/images/small.png",
+        "large": "/drivers/healthprotect/assets/images/large.png",
+        "xlarge": "/drivers/healthprotect/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "login_credentials",
+          "template": "login_credentials",
+          "options": {
+            "logo": "icon.svg",
+            "title": {
+              "en": "Login to your account",
+              "sv": "Logga in på ditt konto",
+              "nl": "Inloggen op uw account"
+            },
+            "usernameLabel": {
+              "en": "E-mail address",
+              "sv": "E-postadress",
+              "nl": "E-mailadres"
+            },
+            "usernamePlaceholder": {
+              "en": "john@doe.com",
+              "sv": "namn@domain.se",
+              "nl": "naam@voorbeeld.com"
+            },
+            "passwordLabel": {
+              "en": "Password",
+              "sv": "Lösenord",
+              "nl": "Wachtwoord"
+            },
+            "passwordPlaceholder": {
+              "en": "Password",
+              "sv": "Lösenord",
+              "nl": "Wachtwoord"
+            }
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "energy": {
+        "approximation": {
+          "usageOff": 0,
+          "usageOn": 25
+        }
+      },
+      "capabilitiesOptions": {
+        "measure_power": {
+          "approximated": true
+        }
+      },
+      "id": "healthprotect",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Login details",
+            "sv": "Login detaljer",
+            "nl": "Inloggegevens"
+          },
+          "children": [
+            {
+              "id": "username",
+              "type": "text",
+              "label": {
+                "en": "E-mail",
+                "sv": "Epost",
+                "nl": "E-mail"
+              },
+              "value": "JohnDoe@domain.com",
+              "hint": {
+                "en": "The email of the user.",
+                "sv": "Epostadressen för användaren.",
+                "nl": "De e-mail van de gebruiker."
+              }
+            },
+            {
+              "id": "password",
+              "type": "text",
+              "label": {
+                "en": "Password",
+                "sv": "Lösenord",
+                "nl": "Wachtwoord"
+              },
+              "value": "Secret",
+              "hint": {
+                "en": "The password of the user.",
+                "sv": "Lösenordet för användaren.",
+                "nl": "Het wachtwoord van de gebruiker."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Device infomation",
+            "sv": "Enhetsdetaljer",
+            "nl": "Apparaatinformatie"
+          },
+          "children": [
+            {
+              "id": "uuid",
+              "type": "label",
+              "label": {
+                "en": "UUID",
+                "sv": "UUID",
+                "nl": "UUID"
+              },
+              "value": "EE04776CEDC0BAB2",
+              "hint": {
+                "en": "The uniqe id of the device.",
+                "sv": "Unik identifierare för enheten.",
+                "nl": "De unieke id van het apparaat."
+              }
+            },
+            {
+              "id": "name",
+              "type": "label",
+              "label": {
+                "en": "Name",
+                "sv": "Namn",
+                "nl": "Naam"
+              },
+              "value": "BlueAir HealthProtect 7340i",
+              "hint": {
+                "en": "Name of the device",
+                "sv": "Namn på enheten",
+                "nl": "Naam van het apparaat"
+              }
+            },
+            {
+              "id": "compatibility",
+              "type": "label",
+              "label": {
+                "en": "Compatibility",
+                "sv": "Kompabilitet",
+                "nl": "Compatibiliteit"
+              },
+              "value": "classic_405",
+              "hint": {
+                "en": "Compatibility of the device",
+                "sv": "Kompabilitet på enheten",
+                "nl": "Compatibiliteit van het apparaat"
+              }
+            },
+            {
+              "id": "model",
+              "type": "label",
+              "label": {
+                "en": "Model",
+                "sv": "Model",
+                "nl": "Model"
+              },
+              "value": "1.0.9",
+              "hint": {
+                "en": "Model of the device",
+                "sv": "Model på enheten",
+                "nl": "Model van het apparaat"
+              }
+            },
+            {
+              "id": "mac",
+              "type": "label",
+              "label": {
+                "en": "MAC",
+                "sv": "MAC",
+                "nl": "MAC"
+              },
+              "value": "34EAE728765C",
+              "hint": {
+                "en": "MAC address of the device",
+                "sv": "MAC address på enheten",
+                "nl": "MAC-adres van het apparaat"
+              }
+            },
+            {
+              "id": "firmware",
+              "type": "label",
+              "label": {
+                "en": "Firmware",
+                "sv": "Firmware",
+                "nl": "Firmware"
+              },
+              "value": "1.1.38",
+              "hint": {
+                "en": "Version of the firmware",
+                "sv": "Version av programvara",
+                "nl": "Versie van de firmware"
+              }
+            },
+            {
+              "id": "mcuFirmware",
+              "type": "label",
+              "label": {
+                "en": "MCU Firmware",
+                "sv": "MCU Firmware",
+                "nl": "MCU Firmware"
+              },
+              "value": "1.0.35",
+              "hint": {
+                "en": "Version of the MCU Firmware",
+                "sv": "Vesion på MCU Firmware",
+                "nl": "Versie van de MCU-firmware"
+              }
+            },
+            {
+              "id": "wlanDriver",
+              "type": "label",
+              "label": {
+                "en": "WLAN Driver",
+                "sv": "WLAN Driver",
+                "nl": "WLAN-Driver"
+              },
+              "value": "V10",
+              "hint": {
+                "en": "Version of the WLAN Driver",
+                "sv": "Version av WLAN Driver",
+                "nl": "Versie van de WLAN-driver"
+              }
+            },
+            {
+              "id": "lastSyncDate",
+              "type": "label",
+              "label": {
+                "en": "Last sync date",
+                "sv": "Senaste sync",
+                "nl": "Laatste synchronisatiedatum"
+              },
+              "value": "2000-01-01",
+              "hint": {
+                "en": "Date for the latest sync",
+                "sv": "Datum för senaste sync",
+                "nl": "Datum van de laatste synchronisatie"
+              }
+            },
+            {
+              "id": "installationDate",
+              "type": "label",
+              "label": {
+                "en": "Installation date",
+                "sv": "Installationsdatum",
+                "nl": "Installatiedatum"
+              },
+              "value": "2000-01-01",
+              "hint": {
+                "en": "Date for the installation",
+                "sv": "Datum för instalation",
+                "nl": "Datum van de installatie"
+              }
+            },
+            {
+              "id": "lastCalibrationDate",
+              "type": "label",
+              "label": {
+                "en": "Last calibration date",
+                "sv": "Senaste kalibrering",
+                "nl": "Laatste kalibratiedatum"
+              },
+              "value": "2000-01-01",
+              "hint": {
+                "en": "Date for the latest calibration",
+                "sv": "Datum för senaste kalibrering",
+                "nl": "Datum van de laatste kalibratie"
+              }
+            },
+            {
+              "id": "initUsagePeriod",
+              "type": "label",
+              "label": {
+                "en": "initUsagePeriod",
+                "sv": "initUsagePeriod",
+                "nl": "initUsagePeriod"
+              },
+              "value": "0",
+              "hint": {
+                "en": "initUsagePeriod",
+                "sv": "initUsagePeriod",
+                "nl": "initUsagePeriod"
+              }
+            },
+            {
+              "id": "rebootPeriod",
+              "type": "label",
+              "label": {
+                "en": "Reboot period",
+                "sv": "Omstartsperiod",
+                "nl": "Herstartperiode"
+              },
+              "value": "10000",
+              "hint": {
+                "en": "Reboot period",
+                "sv": "Omstartsperiod",
+                "nl": "Herstartperiode"
+              }
+            },
+            {
+              "id": "roomLocation",
+              "type": "label",
+              "label": {
+                "en": "Location",
+                "sv": "Rum",
+                "nl": "Ruimte"
+              },
+              "value": "kitchen",
+              "hint": {
+                "en": "The room where the device is located.",
+                "sv": "I vilket rum finns enheten.",
+                "nl": "De ruimte waar het apparaat zich bevindt."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Advanced settings",
+            "sv": "Avancerade inställningar",
+            "nl": "Geavanceerde instellingen"
+          },
+          "children": [
+            {
+              "id": "update",
+              "type": "number",
+              "label": {
+                "en": "Update interval",
+                "sv": "Uppdatera",
+                "nl": "Update-interval"
+              },
+              "value": 10,
+              "min": 10,
+              "max": 60,
+              "units": {
+                "en": "Seconds",
+                "sv": "Sekunder",
+                "nl": "Seconden"
               }
             }
           ]
@@ -641,7 +1478,8 @@
       "type": "number",
       "title": {
         "en": "Brightness",
-        "se": "Ljusstyrka"
+        "sv": "Ljusstyrka",
+        "nl": "Helderheid"
       },
       "uiComponent": "slider",
       "getable": true,
@@ -655,7 +1493,8 @@
       "type": "boolean",
       "title": {
         "en": "Childlock",
-        "se": "Barnlås"
+        "sv": "Barnlås",
+        "nl": "Kinderbeveiliging"
       },
       "getable": true,
       "setable": true,
@@ -666,7 +1505,8 @@
       "type": "enum",
       "title": {
         "en": "Fan speed",
-        "se": "Fläktfart"
+        "sv": "Fläktfart",
+        "nl": "Ventilatorsnelheid"
       },
       "getable": true,
       "setable": true,
@@ -676,25 +1516,33 @@
         {
           "id": "0",
           "title": {
-            "en": "Fan speed 0"
+            "en": "0%",
+            "sv": "0%",
+            "nl": "0%"
           }
         },
         {
           "id": "1",
           "title": {
-            "en": "Fan speed 1"
+            "en": "25%",
+            "sv": "25%",
+            "nl": "25%"
           }
         },
         {
           "id": "2",
           "title": {
-            "en": "Fan speed 2"
+            "en": "50%",
+            "sv": "50%",
+            "nl": "50%"
           }
         },
         {
           "id": "3",
           "title": {
-            "en": "Fan speed 3"
+            "en": "100%",
+            "sv": "100%",
+            "nl": "100%"
           }
         },
         {
@@ -709,7 +1557,8 @@
       "type": "string",
       "title": {
         "en": "Filter status",
-        "se": "Filter status"
+        "se": "Filter status",
+        "nl": "Filter status"
       },
       "getable": true,
       "setable": false,
@@ -720,7 +1569,8 @@
       "type": "string",
       "title": {
         "en": "Latest update date",
-        "se": "Senast uppdaterad"
+        "sv": "Senast uppdaterad",
+        "nl": "Laatste bijgewerkte datum"
       },
       "getable": true,
       "setable": false,
@@ -731,7 +1581,8 @@
       "type": "string",
       "title": {
         "en": "Wi-Fi status",
-        "se": "Wi-Fi status"
+        "sv": "Wi-Fi status",
+        "nl": "Wi-Fi status"
       },
       "getable": true,
       "setable": false,

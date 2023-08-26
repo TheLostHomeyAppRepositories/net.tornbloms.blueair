@@ -2,7 +2,8 @@
     "type": "string",
     "title": {
         "en": "Latest update date",
-        "se": "Senast uppdaterad"
+        "sv": "Senast uppdaterad",
+        "nl": "Laatste bijgewerkte datum"
     },
     "getable": true,
     "setable": false,

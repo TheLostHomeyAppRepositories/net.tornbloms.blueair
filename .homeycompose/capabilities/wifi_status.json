@@ -2,7 +2,8 @@
     "type": "string",
     "title": {
         "en": "Wi-Fi status",
-        "se": "Wi-Fi status"
+        "sv": "Wi-Fi status",
+        "nl": "Wi-Fi status"
     },
     "getable": true,
     "setable": false,

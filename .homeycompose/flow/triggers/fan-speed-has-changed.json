@@ -1,15 +1,18 @@
 {
     "title": {
         "en": "Fan speed has changed",
-        "se": "Fläktens fart har ändrats"
+        "se": "Fläktens fart har ändrats",
+        "nl": "De ventilatorsnelheid is veranderd"
     },
     "titleFormatted": {
         "en": "The fan speed has changed.",
-        "se": "Fläktens fart har ändrats"
+        "se": "Fläktens fart har ändrats",
+        "nl": "De ventilatorsnelheid is veranderd"
     },
     "hint": {
-        "en": "The fan speed has benn changed",
-        "se": "Farten på fläkten är ändrad"
+        "en": "The fan speed has been changed",
+        "se": "Farten på fläkten är ändrad",
+        "nl": "De ventilatorsnelheid is gewijzigd"
     },
     "platforms": ["local"],
     "tokens": [
@@ -18,35 +21,41 @@
             "name": "device-name",
             "title": {
                 "en": "Device name",
-                "se": "Enhetens namn"
+                "se": "Enhetsnamn",
+                "nl": "Apparaatnaam"
             },
             "example": {
                 "en": "BlueAir 405 Classic",
-                "se": "BlueAir 405 Classic"
+                "se": "BlueAir 405 Classic",
+                 "nl": "BlueAir 405 Classic"
             }
         },
         {
             "type": "string",
             "name": "device-uuid",
             "title": {
-                "en": "Device uuid",
-                "se": "Enhetens uuid"
+                "en": "Device UUID",
+                "se": "Enhetens UUID",
+                "nl": "Apparaat UUID"
             },
             "example": {
                 "en": "2504776FFDC0BAB2",
-                "se": "2504776FFDC0BAB2"
+                "se": "2504776FFDC0BAB2",
+                "nl": "2504776FFDC0BAB2"
             }
         },
         {
             "type": "string",
             "name": "fan speed",
             "title": {
-                "en": "fan speed",
-                "se": "Fläktensfart"
+                "en": "Fan speed",
+                "se": "Fläktensfart",
+                "nl": "Ventilatorsnelheid"
             },
             "example": {
                 "en": "3",
-                "se": "3"
+                "se": "3",
+                "nl": "3"
             }
         }
     ]

@@ -1,7 +1,8 @@
 {
     "name": {
-        "en": "BlueAir 405 Classic",
-        "sv": "BlueAir 405 Classic"
+        "en": "HealthProtect",
+        "sv": "HealthProtect",
+        "nl": "HealthProtect"
     },
     "class": "fan",
     "capabilities": [
@@ -13,7 +14,7 @@
         "filter_status"
     ],
     "platforms": ["local"],
-    "connectivity": [],
+    "connectivity": ["cloud"],
     "images": {
         "small": "{{driverAssetsPath}}/images/small.png",
         "large": "{{driverAssetsPath}}/images/large.png",
@@ -26,23 +27,29 @@
             "options": {
                 "logo": "icon.svg",
                 "title": {
-                    "en": "Login to your account"
+                    "en": "Login to your account",
+                    "sv": "Logga in på ditt konto",
+                    "nl": "Inloggen op uw account"
                 },
                 "usernameLabel": {
                     "en": "E-mail address",
-                    "se": "E-post adress"
+                    "sv": "E-postadress",
+                    "nl": "E-mailadres"
                 },
                 "usernamePlaceholder": {
                     "en": "john@doe.com",
-                    "se": "namn@domain.se"
+                    "sv": "namn@domain.se",
+                    "nl": "naam@voorbeeld.com"
                 },
                 "passwordLabel": {
                     "en": "Password",
-                    "se": "Lösenord"
+                    "sv": "Lösenord",
+                    "nl": "Wachtwoord"
                 },
                 "passwordPlaceholder": {
                     "en": "Password",
-                    "se": "Lösenord"
+                    "sv": "Lösenord",
+                    "nl": "Wachtwoord"
                 }
             }
         },

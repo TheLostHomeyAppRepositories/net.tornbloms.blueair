@@ -51,7 +51,7 @@ function filterSettings(settings: Setting[], name: string): Setting | null {
     );
     return setting || null;
 }
-class BlueAir405ClassicDevice extends Device {
+class BlueAirDustMagnetDevice extends Device {
     private _savedfanspeed: Setting | null | undefined;
     /**
      * onInit is called when the device is initialized.
@@ -340,7 +340,7 @@ class BlueAir405ClassicDevice extends Device {
                 this.log('Changed brightness to:', value.brightness);
             });
 
-            this.log('BlueAir405ClassicDevice has been initialized');
+            this.log('BlueAirDustMagnetDevice has been initialized');
         } catch (e) {
             this.log(e);
         }
@@ -350,7 +350,7 @@ class BlueAir405ClassicDevice extends Device {
      * onAdded is called when the user adds the device, called just after pairing.
      */
     async onAdded(): Promise<void> {
-        this.log('BlueAir405ClassicDevice has been added');
+        this.log('BlueAirDustMagnetDevice has been added');
     }
 
     /**
@@ -374,7 +374,7 @@ class BlueAir405ClassicDevice extends Device {
         };
         changedKeys: string[];
     }): Promise<string | void> {
-        this.log('BlueAir405ClassicDevice settings where changed');
+        this.log('BlueAirDustMagnetDevice settings where changed');
     }
 
     /**
@@ -383,15 +383,15 @@ class BlueAir405ClassicDevice extends Device {
      * @param name The new name
      */
     async onRenamed(name: string): Promise<void> {
-        this.log('BlueAir405ClassicDevice was renamed');
+        this.log('BlueAirDustMagnetDevice was renamed');
     }
 
     /**
      * onDeleted is called when the user deleted the device.
      */
     async onDeleted(): Promise<void> {
-        this.log('BlueAir405ClassicDevice has been deleted');
+        this.log('BlueAirDustMagnetDevice has been deleted');
     }
 }
 
-module.exports = BlueAir405ClassicDevice;
+module.exports = BlueAirDustMagnetDevice;
