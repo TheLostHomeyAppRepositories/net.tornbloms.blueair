@@ -22,7 +22,7 @@ class BlueAirClassicDriver extends Driver {
 
                 try {
                     const client = new ApiClient(username, password);
-                    await client.initialize();
+                    status = await client.initialize(); // Use await here to correctly update the status
                 } catch (e) {
                     this.log(e);
                     status = false;
@@ -50,6 +50,7 @@ class BlueAirClassicDriver extends Driver {
                 if (!Array.isArray(devicesList)) {
                     throw new Error('devicesList is not an array');
                 }
+                this.log(devicesList);
 
                 // Initialize an empty array to store devices that meet the compatibility criteria
                 const compatibleDevices = [];
@@ -63,7 +64,7 @@ class BlueAirClassicDriver extends Driver {
                     if (
                         deviceInfo.compatibility
                             .toLowerCase()
-                            .includes('classic'.toLowerCase())
+                            .includes('classic')
                     ) {
                         // If the device is compatible, add its details to the compatibleDevices array
                         compatibleDevices.push({
