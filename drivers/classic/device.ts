@@ -8,49 +8,6 @@ interface Setting {
     name: string;
     [key: string]: any; // This allows for other properties in the setting object.
 }
-
-/**
- * Converts a UNIX timestamp to a human-readable date-time string.
- *
- * @param UNIX_timestamp - The UNIX timestamp to be converted.
- * @returns A string representation of the date and time in the format "YYYY-MM-DD HH:mm:ss".
- */
-function timeConverter(UNIX_timestamp: number): string {
-    const a: Date = new Date(UNIX_timestamp * 1000);
-
-    /**
-     * Helper function to ensure numbers are represented with two digits.
-     *
-     * @param n - The number to be padded.
-     * @returns A string representation of the number, padded with a leading zero if the number is less than 10.
-     */
-    function pad(n: number): string {
-        return n < 10 ? '0' + n : n.toString();
-    }
-
-    const year: number = a.getFullYear();
-    const month: string = pad(a.getMonth() + 1); // Add 1 to the month value because getMonth() is zero-based
-    const date: string = pad(a.getDate());
-    const hour: string = pad(a.getHours());
-    const min: string = pad(a.getMinutes());
-    const sec: string = pad(a.getSeconds());
-    const time: string =
-        year + '-' + month + '-' + date + ' ' + hour + ':' + min + ':' + sec;
-    return time;
-}
-
-/**
- * Filters the settings array to find a setting by its name.
- * @param settings - An array of settings to search through.
- * @param name - The name of the setting to search for.
- * @returns The found setting or null if not found.
- */
-function filterSettings(settings: Setting[], name: string): Setting | null {
-    const setting: Setting | undefined = settings.find(
-        (s: Setting) => s.name === name
-    );
-    return setting || null;
-}
 class BlueAirClassicDevice extends Device {
     private _savedfanspeed: Setting | null | undefined;
     /**
@@ -67,10 +24,16 @@ class BlueAirClassicDevice extends Device {
 
             var DeviceAttributes = await client.getDeviceAttributes(data.uuid);
             var DeviceInfo = await client.getDeviceInfo(data.uuid);
-            this._savedfanspeed = filterSettings(DeviceAttributes, 'fan_speed');
+            this._savedfanspeed = this.filterSettings(
+                DeviceAttributes,
+                'fan_speed'
+            );
 
             this.registerCapabilityListener('fan_speed', async (value) => {
-                const result = filterSettings(DeviceAttributes, 'fan_speed');
+                const result = this.filterSettings(
+                    DeviceAttributes,
+                    'fan_speed'
+                );
                 if (value == 'auto') {
                     this.log('Changed fan speed: Auto');
                     await client.setFanAuto(data.uuid, 'auto', 'auto', userId);
@@ -91,7 +54,10 @@ class BlueAirClassicDevice extends Device {
                 }
             });
             this.registerCapabilityListener('brightness', async (value) => {
-                const result = filterSettings(DeviceAttributes, 'brightness');
+                const result = this.filterSettings(
+                    DeviceAttributes,
+                    'brightness'
+                );
                 this.log('Changed brightness:', value);
                 await client.setBrightness(
                     data.uuid,
@@ -101,7 +67,10 @@ class BlueAirClassicDevice extends Device {
                 );
             });
             this.registerCapabilityListener('child_lock', async (value) => {
-                const result = filterSettings(DeviceAttributes, 'child_lock');
+                const result = this.filterSettings(
+                    DeviceAttributes,
+                    'child_lock'
+                );
                 if (value) {
                     this.log('Changed child lock:', value);
                     await client.setChildLock(
@@ -121,34 +90,34 @@ class BlueAirClassicDevice extends Device {
                 }
             });
 
-            let result_fan_speed = filterSettings(
+            let result_fan_speed = this.filterSettings(
                 DeviceAttributes,
                 'fan_speed'
             );
-            let result_brightness = filterSettings(
+            let result_brightness = this.filterSettings(
                 DeviceAttributes,
                 'brightness'
             );
-            let result_child_lock = filterSettings(
+            let result_child_lock = this.filterSettings(
                 DeviceAttributes,
                 'child_lock'
             );
-            let result_filter_status = filterSettings(
+            let result_filter_status = this.filterSettings(
                 DeviceAttributes,
                 'filter_status'
             );
-            let result_wifi_status = filterSettings(
+            let result_wifi_status = this.filterSettings(
                 DeviceAttributes,
                 'wifi_status'
             );
             this.setCapabilityValue(
                 'fan_speed',
                 result_fan_speed?.currentValue
-            );
+            ).catch(this.error);
             this.setCapabilityValue(
                 'brightness',
                 parseInt(result_brightness?.currentValue)
-            );
+            ).catch(this.error);
             if (result_child_lock?.currentValue == 1) {
                 this.setCapabilityValue('child_lock', true);
             } else {
@@ -157,12 +126,12 @@ class BlueAirClassicDevice extends Device {
 
             this.setCapabilityValue(
                 'last_retrival_date',
-                timeConverter(DeviceInfo.lastSyncDate)
-            );
+                this.timeConverter(DeviceInfo.lastSyncDate)
+            ).catch(this.error);
             if (result_wifi_status?.currentValue == '1') {
-                this.setCapabilityValue('wifi_status', 'OK');
+                this.setCapabilityValue('wifi_status', true);
             } else {
-                this.setCapabilityValue('wifi_status', 'Error');
+                this.setCapabilityValue('wifi_status', false);
             }
             this.setCapabilityValue(
                 'filter_status',
@@ -178,9 +147,11 @@ class BlueAirClassicDevice extends Device {
                 firmware: DeviceInfo.firmware,
                 mcuFirmware: DeviceInfo.mcuFirmware,
                 wlanDriver: DeviceInfo.wlanDriver,
-                lastSyncDate: timeConverter(DeviceInfo.lastSyncDate),
-                installationDate: timeConverter(DeviceInfo.installationDate),
-                lastCalibrationDate: timeConverter(
+                lastSyncDate: this.timeConverter(DeviceInfo.lastSyncDate),
+                installationDate: this.timeConverter(
+                    DeviceInfo.installationDate
+                ),
+                lastCalibrationDate: this.timeConverter(
                     DeviceInfo.lastCalibrationDate
                 ),
                 initUsagePeriod: String(DeviceInfo.initUsagePeriod),
@@ -194,48 +165,53 @@ class BlueAirClassicDevice extends Device {
                     data.uuid
                 );
                 var DeviceInfo = await client.getDeviceInfo(data.uuid);
-                let result_fan_speed = filterSettings(
+                let result_fan_speed = this.filterSettings(
                     DeviceAttributes,
                     'fan_speed'
                 );
-                let result_brightness = filterSettings(
+                let result_brightness = this.filterSettings(
                     DeviceAttributes,
                     'brightness'
                 );
-                let result_child_lock = filterSettings(
+                let result_child_lock = this.filterSettings(
                     DeviceAttributes,
                     'child_lock'
                 );
-                let result_filter_status = filterSettings(
+                let result_filter_status = this.filterSettings(
                     DeviceAttributes,
                     'filter_status'
                 );
-                let result_wifi_status = filterSettings(
+                let result_wifi_status = this.filterSettings(
                     DeviceAttributes,
                     'wifi_status'
                 );
                 this.setCapabilityValue(
                     'fan_speed',
                     result_fan_speed?.currentValue
-                );
+                ).catch(this.error);
                 this.setCapabilityValue(
                     'brightness',
                     parseInt(result_brightness?.currentValue)
-                );
+                ).catch(this.error);
                 if (result_child_lock?.currentValue == 1) {
-                    this.setCapabilityValue('child_lock', true);
+                    this.setCapabilityValue('child_lock', true).catch(
+                        this.error
+                    );
                 } else {
-                    this.setCapabilityValue('child_lock', false);
+                    this.setCapabilityValue('child_lock', false).catch(
+                        this.error
+                    );
                 }
-
                 this.setCapabilityValue(
                     'last_retrival_date',
-                    timeConverter(DeviceInfo.lastSyncDate)
-                );
+                    this.timeConverter(DeviceInfo.lastSyncDate)
+                ).catch(this.error);
                 if (result_wifi_status?.currentValue == '1') {
-                    this.setCapabilityValue('wifi_status', 'OK');
+                    this.setCapabilityValue('wifi_status', true).catch(
+                        this.error
+                    );
                 } else {
-                    this.setCapabilityValue('wifi_status', 'Error');
+                    this.setCapabilityValue('wifi_status', false);
                 }
                 this.setCapabilityValue(
                     'filter_status',
@@ -251,7 +227,7 @@ class BlueAirClassicDevice extends Device {
                     cardTriggerFilter.trigger({
                         'device-name': settings.name,
                         'device-uuid': settings.uuid,
-                        'fan speed': result_filter_status?.currentValue,
+                        'fan speed': result_fan_speed?.currentValue,
                     });
                     this._savedfanspeed = result_fan_speed;
                 }
@@ -267,11 +243,11 @@ class BlueAirClassicDevice extends Device {
                     firmware: DeviceInfo.firmware,
                     mcuFirmware: DeviceInfo.mcuFirmware,
                     wlanDriver: DeviceInfo.wlanDriver,
-                    lastSyncDate: timeConverter(DeviceInfo.lastSyncDate),
-                    installationDate: timeConverter(
+                    lastSyncDate: this.timeConverter(DeviceInfo.lastSyncDate),
+                    installationDate: this.timeConverter(
                         DeviceInfo.installationDate
                     ),
-                    lastCalibrationDate: timeConverter(
+                    lastCalibrationDate: this.timeConverter(
                         DeviceInfo.lastCalibrationDate
                     ),
                     initUsagePeriod: String(DeviceInfo.initUsagePeriod),
@@ -281,7 +257,7 @@ class BlueAirClassicDevice extends Device {
                 var DeviceAttributes = await client.getDeviceAttributes(
                     data.uuid
                 );
-                let result_filter_status = filterSettings(
+                let result_filter_status = this.filterSettings(
                     DeviceAttributes,
                     'filter_status'
                 );
@@ -391,6 +367,76 @@ class BlueAirClassicDevice extends Device {
      */
     async onDeleted(): Promise<void> {
         this.log('BlueAirClassicDevice has been deleted');
+    }
+
+    /**
+     * Converts a UNIX timestamp to a human-readable date-time string based on language.
+     *
+     * @param UNIX_timestamp - The UNIX timestamp to be converted.
+     * @returns A string representation of the date and time based on the language.
+     */
+    timeConverter(this: any, UNIX_timestamp: number): string {
+        const a: Date = new Date(UNIX_timestamp * 1000);
+
+        /**
+         * Helper function to ensure numbers are represented with two digits.
+         *
+         * @param n - The number to be padded.
+         * @returns A string representation of the number, padded with a leading zero if the number is less than 10.
+         */
+        function pad(n: number): string {
+            return n < 10 ? '0' + n : n.toString();
+        }
+
+        const year: number = a.getFullYear();
+        const month: string = pad(a.getMonth() + 1);
+        const date: string = pad(a.getDate());
+        const hour: string = pad(a.getHours());
+        const min: string = pad(a.getMinutes());
+        const sec: string = pad(a.getSeconds());
+
+        let time: string;
+        let lang = this.homey.i18n.getLanguage();
+        switch (lang) {
+            case 'en':
+                time = `${year}-${month}-${date} ${hour}:${min}:${sec}`;
+                break;
+            case 'nl':
+            case 'da':
+                time = `${date}-${month}-${year} ${hour}:${min}:${sec}`;
+                break;
+            case 'de':
+            case 'no':
+            case 'ru':
+                time = `${date}.${month}.${year} ${hour}:${min}:${sec}`;
+                break;
+            case 'fr':
+            case 'it':
+            case 'es':
+                time = `${date}/${month}/${year} ${hour}:${min}:${sec}`;
+                break;
+            case 'sv':
+            case 'pl':
+                time = `${year}-${month}-${date} ${hour}:${min}:${sec}`;
+                break;
+            default:
+                time = `${year}-${month}-${date} ${hour}:${min}:${sec}`; // Default format
+        }
+
+        return time;
+    }
+
+    /**
+     * Filters the settings array to find a setting by its name.
+     * @param settings - An array of settings to search through.
+     * @param name - The name of the setting to search for.
+     * @returns The found setting or null if not found.
+     */
+    filterSettings(settings: Setting[], name: string): Setting | null {
+        const setting: Setting | undefined = settings.find(
+            (s: Setting) => s.name === name
+        );
+        return setting || null;
     }
 }
 

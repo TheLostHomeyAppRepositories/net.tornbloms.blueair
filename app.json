@@ -463,7 +463,7 @@
             },
             {
               "id": "password",
-              "type": "text",
+              "type": "password",
               "label": {
                 "en": "Password",
                 "sv": "Lösenord",
@@ -733,6 +733,7 @@
         "sv": "DustMagnet",
         "nl": "DustMagnet"
       },
+      "deprecated": true,
       "class": "fan",
       "capabilities": [
         "fan_speed",
@@ -1106,6 +1107,7 @@
         "sv": "HealthProtect",
         "nl": "HealthProtect"
       },
+      "deprecated": true,
       "class": "fan",
       "capabilities": [
         "fan_speed",
@@ -1579,7 +1581,7 @@
       "icon": "/assets/images/clock.svg"
     },
     "wifi_status": {
-      "type": "string",
+      "type": "boolean",
       "title": {
         "en": "Wi-Fi status",
         "sv": "Wi-Fi status",

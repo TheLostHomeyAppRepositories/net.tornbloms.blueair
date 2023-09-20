@@ -4,6 +4,7 @@
         "sv": "HealthProtect",
         "nl": "HealthProtect"
     },
+    "deprecated": true,
     "class": "fan",
     "capabilities": [
         "fan_speed",

@@ -1,5 +1,4 @@
 import Homey from 'homey';
-
 class BlueAirApp extends Homey.App {
     /**
      * onInit is called when the app is initialized.

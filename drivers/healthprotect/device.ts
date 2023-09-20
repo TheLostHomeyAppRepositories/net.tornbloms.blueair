@@ -251,7 +251,7 @@ class BlueAirHealthProtectDevice extends Device {
                     cardTriggerFilter.trigger({
                         'device-name': settings.name,
                         'device-uuid': settings.uuid,
-                        'fan speed': result_filter_status?.currentValue,
+                        'fan speed': result_fan_speed?.currentValue,
                     });
                     this._savedfanspeed = result_fan_speed;
                 }

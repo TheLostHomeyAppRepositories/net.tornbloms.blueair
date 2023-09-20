@@ -4,6 +4,7 @@
         "sv": "DustMagnet",
         "nl": "DustMagnet"
     },
+    "deprecated": true,
     "class": "fan",
     "capabilities": [
         "fan_speed",

@@ -1,5 +1,5 @@
 {
-    "type": "string",
+    "type": "boolean",
     "title": {
         "en": "Wi-Fi status",
         "sv": "Wi-Fi status",

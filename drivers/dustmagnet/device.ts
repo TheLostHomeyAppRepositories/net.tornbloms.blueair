@@ -144,11 +144,11 @@ class BlueAirDustMagnetDevice extends Device {
             this.setCapabilityValue(
                 'fan_speed',
                 result_fan_speed?.currentValue
-            );
+            ).catch(this.error);
             this.setCapabilityValue(
                 'brightness',
                 parseInt(result_brightness?.currentValue)
-            );
+            ).catch(this.error);
             if (result_child_lock?.currentValue == 1) {
                 this.setCapabilityValue('child_lock', true);
             } else {
@@ -158,16 +158,21 @@ class BlueAirDustMagnetDevice extends Device {
             this.setCapabilityValue(
                 'last_retrival_date',
                 timeConverter(DeviceInfo.lastSyncDate)
-            );
+            ).catch(this.error);
             if (result_wifi_status?.currentValue == '1') {
-                this.setCapabilityValue('wifi_status', 'OK');
+                this.setCapabilityValue('wifi_status', true);
             } else {
-                this.setCapabilityValue('wifi_status', 'Error');
+                this.setCapabilityValue('wifi_status', false);
             }
-            this.setCapabilityValue(
-                'filter_status',
-                result_filter_status?.currentValue
-            );
+            if (result_filter_status?.currentValue == 'OK') {
+                this.setCapabilityValue('filter_status', true).catch(
+                    this.error
+                );
+            } else {
+                this.setCapabilityValue('filter_status', false).catch(
+                    this.error
+                );
+            }
 
             this.setSettings({
                 uuid: DeviceInfo.uuid,
@@ -217,25 +222,25 @@ class BlueAirDustMagnetDevice extends Device {
                 this.setCapabilityValue(
                     'fan_speed',
                     result_fan_speed?.currentValue
-                );
+                ).catch(this.error);
                 this.setCapabilityValue(
                     'brightness',
                     parseInt(result_brightness?.currentValue)
+                ).catch(this.error);
+                this.setCapabilityValue(
+                    'filter_status',
+                    result_filter_status?.currentValue
                 );
-                if (result_child_lock?.currentValue == 1) {
-                    this.setCapabilityValue('child_lock', true);
-                } else {
-                    this.setCapabilityValue('child_lock', false);
-                }
-
                 this.setCapabilityValue(
                     'last_retrival_date',
                     timeConverter(DeviceInfo.lastSyncDate)
-                );
+                ).catch(this.error);
                 if (result_wifi_status?.currentValue == '1') {
-                    this.setCapabilityValue('wifi_status', 'OK');
+                    this.setCapabilityValue('wifi_status', true).catch(
+                        this.error
+                    );
                 } else {
-                    this.setCapabilityValue('wifi_status', 'Error');
+                    this.setCapabilityValue(' wifi_status', false);
                 }
                 this.setCapabilityValue(
                     'filter_status',
@@ -251,7 +256,7 @@ class BlueAirDustMagnetDevice extends Device {
                     cardTriggerFilter.trigger({
                         'device-name': settings.name,
                         'device-uuid': settings.uuid,
-                        'fan speed': result_filter_status?.currentValue,
+                        'fan speed': result_fan_speed?.currentValue,
                     });
                     this._savedfanspeed = result_fan_speed;
                 }

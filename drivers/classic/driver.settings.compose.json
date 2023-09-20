@@ -20,7 +20,7 @@
             },
             {
                 "id": "password",
-                "type": "text",
+                "type": "password",
                 "label": {
                     "en": "Password",
                     "sv": "Lösenord",
