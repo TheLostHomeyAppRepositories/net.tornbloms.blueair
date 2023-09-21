@@ -1,6 +1,6 @@
 {
   "id": "net.tornbloms.blueair",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#0C2F4F",
