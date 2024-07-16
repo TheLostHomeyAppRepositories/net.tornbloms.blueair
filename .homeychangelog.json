@@ -19,5 +19,8 @@
   },
   "2.0.2": {
     "en": "Corrected date format for diffrent languages"
+  },
+  "2.0.3": {
+    "en": "Fixing craches"
   }
 }
