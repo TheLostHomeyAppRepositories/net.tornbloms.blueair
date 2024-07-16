@@ -22,5 +22,8 @@
   },
   "2.0.3": {
     "en": "Fixing craches"
+  },
+  "2.1.0": {
+    "en": "Had a fault in BlueAirClient using the wrong lib. now fixed"
   }
 }
