@@ -25,5 +25,8 @@
   },
   "2.1.0": {
     "en": "Had a fault in BlueAirClient using the wrong lib. now fixed"
+  },
+  "2.1.1": {
+    "en": "Retry added to the BlueAir-Client"
   }
 }
