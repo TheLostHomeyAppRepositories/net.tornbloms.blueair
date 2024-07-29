@@ -31,5 +31,8 @@
   },
   "2.1.2": {
     "en": "Prepering for new AWS support made some smaller changes"
+  },
+  "2.1.3": {
+    "en": "Bug fixes"
   }
 }
