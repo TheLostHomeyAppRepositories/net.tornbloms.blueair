@@ -28,5 +28,8 @@
   },
   "2.1.1": {
     "en": "Retry added to the BlueAir-Client"
+  },
+  "2.1.2": {
+    "en": "Prepering for new AWS support made some smaller changes"
   }
 }
