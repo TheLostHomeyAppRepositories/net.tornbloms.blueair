@@ -1,10 +1,27 @@
 {
-	"extends": "athom",
-	"rules": {
-		"indent": "off",
-		"padded-blocks": "off"
-	},
-	"engines": {
-		"node": ">=16.0.0"
-	}
+  "extends": "athom",
+  "rules": {
+    "indent": "off",
+    "padded-blocks": "off",
+    "node/no-unsupported-features/es-syntax": [
+      "error",
+      {
+        "ignores": ["modules"]
+      }
+    ],
+    "node/no-missing-import": [
+      "error",
+      {
+        "allowModules": ["homey"]
+      }
+    ]
+  },
+  "env": {
+    "es6": true,
+    "node": true // Specifierar att koden körs i Node.js-miljö
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module" // Tillåter användning av import/export
+  }
 }
