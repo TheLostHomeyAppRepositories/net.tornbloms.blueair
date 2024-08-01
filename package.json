@@ -17,10 +17,7 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
-    "blueair-client": "^1.2.7",
-    "blueairaws-client": "^1.0.13"
-  },
-  "engines": {
-    "node": ">=12.00.0"
+    "blueair-client": "^1.2.9",
+    "blueairaws-client": "^1.0.18"
   }
 }

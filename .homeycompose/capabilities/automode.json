@@ -1,0 +1,12 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Auto mode",
+    "sv": "Autoläge",
+    "nl": "Automatische modus"
+  },
+  "getable": true,
+  "setable": true,
+  "uiComponent": "toggle",
+  "icon": "/assets/images/automatic.svg"
+}

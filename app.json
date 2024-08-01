@@ -733,13 +733,12 @@
         "sv": "DustMagnet",
         "nl": "DustMagnet"
       },
-      "deprecated": true,
       "class": "fan",
       "capabilities": [
-        "fan_speed",
+        "fanspeed",
         "brightness",
         "child_lock",
-        "last_retrival_date",
+        "automode",
         "wifi_status",
         "filter_status"
       ],
@@ -883,26 +882,11 @@
                 "sv": "Namn",
                 "nl": "Naam"
               },
-              "value": "BlueAir DustMagnet 5210i",
+              "value": "BlueAir DustMagnet",
               "hint": {
                 "en": "Name of the device",
                 "sv": "Namn på enheten",
                 "nl": "Naam van het apparaat"
-              }
-            },
-            {
-              "id": "compatibility",
-              "type": "label",
-              "label": {
-                "en": "Compatibility",
-                "sv": "Kompabilitet",
-                "nl": "Compatibiliteit"
-              },
-              "value": "classic_405",
-              "hint": {
-                "en": "Compatibility of the device",
-                "sv": "Kompabilitet på enheten",
-                "nl": "Compatibiliteit van het apparaat"
               }
             },
             {
@@ -936,21 +920,6 @@
               }
             },
             {
-              "id": "firmware",
-              "type": "label",
-              "label": {
-                "en": "Firmware",
-                "sv": "Firmware",
-                "nl": "Firmware"
-              },
-              "value": "1.1.38",
-              "hint": {
-                "en": "Version of the firmware",
-                "sv": "Version av programvara",
-                "nl": "Versie van de firmware"
-              }
-            },
-            {
               "id": "mcuFirmware",
               "type": "label",
               "label": {
@@ -981,93 +950,18 @@
               }
             },
             {
-              "id": "lastSyncDate",
+              "id": "serial",
               "type": "label",
               "label": {
-                "en": "Last sync date",
-                "sv": "Senaste sync",
-                "nl": "Laatste synchronisatiedatum"
+                "en": "Serial",
+                "sv": "Serienummer",
+                "nl": "Serienummer"
               },
-              "value": "2000-01-01",
+              "value": "102938765378827653",
               "hint": {
-                "en": "Date for the latest sync",
-                "sv": "Datum för senaste sync",
-                "nl": "Datum van de laatste synchronisatie"
-              }
-            },
-            {
-              "id": "installationDate",
-              "type": "label",
-              "label": {
-                "en": "Installation date",
-                "sv": "Installationsdatum",
-                "nl": "Installatiedatum"
-              },
-              "value": "2000-01-01",
-              "hint": {
-                "en": "Date for the installation",
-                "sv": "Datum för instalation",
-                "nl": "Datum van de installatie"
-              }
-            },
-            {
-              "id": "lastCalibrationDate",
-              "type": "label",
-              "label": {
-                "en": "Last calibration date",
-                "sv": "Senaste kalibrering",
-                "nl": "Laatste kalibratiedatum"
-              },
-              "value": "2000-01-01",
-              "hint": {
-                "en": "Date for the latest calibration",
-                "sv": "Datum för senaste kalibrering",
-                "nl": "Datum van de laatste kalibratie"
-              }
-            },
-            {
-              "id": "initUsagePeriod",
-              "type": "label",
-              "label": {
-                "en": "initUsagePeriod",
-                "sv": "initUsagePeriod",
-                "nl": "initUsagePeriod"
-              },
-              "value": "0",
-              "hint": {
-                "en": "initUsagePeriod",
-                "sv": "initUsagePeriod",
-                "nl": "initUsagePeriod"
-              }
-            },
-            {
-              "id": "rebootPeriod",
-              "type": "label",
-              "label": {
-                "en": "Reboot period",
-                "sv": "Omstartsperiod",
-                "nl": "Herstartperiode"
-              },
-              "value": "10000",
-              "hint": {
-                "en": "Reboot period",
-                "sv": "Omstartsperiod",
-                "nl": "Herstartperiode"
-              }
-            },
-            {
-              "id": "roomLocation",
-              "type": "label",
-              "label": {
-                "en": "Location",
-                "sv": "Rum",
-                "nl": "Ruimte"
-              },
-              "value": "kitchen",
-              "hint": {
-                "en": "The room where the device is located.",
-                "sv": "I vilket rum finns enheten.",
-                "nl": "De ruimte waar het apparaat zich bevindt."
+                "en": "The serial number of the device.",
+                "sv": "Serienummer på enheten.",
+                "nl": "Serienummer van het apparaat."
               }
             }
           ]
@@ -1107,13 +1001,12 @@
         "sv": "HealthProtect",
         "nl": "HealthProtect"
       },
-      "deprecated": true,
       "class": "fan",
       "capabilities": [
-        "fan_speed",
+        "fanspeed",
         "brightness",
         "child_lock",
-        "last_retrival_date",
+        "automode",
         "wifi_status",
         "filter_status"
       ],
@@ -1257,26 +1150,11 @@
                 "sv": "Namn",
                 "nl": "Naam"
               },
-              "value": "BlueAir HealthProtect 7340i",
+              "value": "BlueAir HealthProtect",
               "hint": {
                 "en": "Name of the device",
                 "sv": "Namn på enheten",
                 "nl": "Naam van het apparaat"
-              }
-            },
-            {
-              "id": "compatibility",
-              "type": "label",
-              "label": {
-                "en": "Compatibility",
-                "sv": "Kompabilitet",
-                "nl": "Compatibiliteit"
-              },
-              "value": "classic_405",
-              "hint": {
-                "en": "Compatibility of the device",
-                "sv": "Kompabilitet på enheten",
-                "nl": "Compatibiliteit van het apparaat"
               }
             },
             {
@@ -1310,21 +1188,6 @@
               }
             },
             {
-              "id": "firmware",
-              "type": "label",
-              "label": {
-                "en": "Firmware",
-                "sv": "Firmware",
-                "nl": "Firmware"
-              },
-              "value": "1.1.38",
-              "hint": {
-                "en": "Version of the firmware",
-                "sv": "Version av programvara",
-                "nl": "Versie van de firmware"
-              }
-            },
-            {
               "id": "mcuFirmware",
               "type": "label",
               "label": {
@@ -1355,93 +1218,18 @@
               }
             },
             {
-              "id": "lastSyncDate",
+              "id": "serial",
               "type": "label",
               "label": {
-                "en": "Last sync date",
-                "sv": "Senaste sync",
-                "nl": "Laatste synchronisatiedatum"
+                "en": "Serial",
+                "sv": "Serienummer",
+                "nl": "Serienummer"
               },
-              "value": "2000-01-01",
+              "value": "102938765378827653",
               "hint": {
-                "en": "Date for the latest sync",
-                "sv": "Datum för senaste sync",
-                "nl": "Datum van de laatste synchronisatie"
-              }
-            },
-            {
-              "id": "installationDate",
-              "type": "label",
-              "label": {
-                "en": "Installation date",
-                "sv": "Installationsdatum",
-                "nl": "Installatiedatum"
-              },
-              "value": "2000-01-01",
-              "hint": {
-                "en": "Date for the installation",
-                "sv": "Datum för instalation",
-                "nl": "Datum van de installatie"
-              }
-            },
-            {
-              "id": "lastCalibrationDate",
-              "type": "label",
-              "label": {
-                "en": "Last calibration date",
-                "sv": "Senaste kalibrering",
-                "nl": "Laatste kalibratiedatum"
-              },
-              "value": "2000-01-01",
-              "hint": {
-                "en": "Date for the latest calibration",
-                "sv": "Datum för senaste kalibrering",
-                "nl": "Datum van de laatste kalibratie"
-              }
-            },
-            {
-              "id": "initUsagePeriod",
-              "type": "label",
-              "label": {
-                "en": "initUsagePeriod",
-                "sv": "initUsagePeriod",
-                "nl": "initUsagePeriod"
-              },
-              "value": "0",
-              "hint": {
-                "en": "initUsagePeriod",
-                "sv": "initUsagePeriod",
-                "nl": "initUsagePeriod"
-              }
-            },
-            {
-              "id": "rebootPeriod",
-              "type": "label",
-              "label": {
-                "en": "Reboot period",
-                "sv": "Omstartsperiod",
-                "nl": "Herstartperiode"
-              },
-              "value": "10000",
-              "hint": {
-                "en": "Reboot period",
-                "sv": "Omstartsperiod",
-                "nl": "Herstartperiode"
-              }
-            },
-            {
-              "id": "roomLocation",
-              "type": "label",
-              "label": {
-                "en": "Location",
-                "sv": "Rum",
-                "nl": "Ruimte"
-              },
-              "value": "kitchen",
-              "hint": {
-                "en": "The room where the device is located.",
-                "sv": "I vilket rum finns enheten.",
-                "nl": "De ruimte waar het apparaat zich bevindt."
+                "en": "The serial number of the device.",
+                "sv": "Serienummer på enheten.",
+                "nl": "Serienummer van het apparaat."
               }
             }
           ]
@@ -1477,6 +1265,18 @@
     }
   ],
   "capabilities": {
+    "automode": {
+      "type": "boolean",
+      "title": {
+        "en": "Auto mode",
+        "sv": "Autoläge",
+        "nl": "Automatische modus"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "toggle",
+      "icon": "/assets/images/automatic.svg"
+    },
     "brightness": {
       "type": "number",
       "title": {
@@ -1552,6 +1352,52 @@
           "id": "auto",
           "title": {
             "en": "Auto"
+          }
+        }
+      ]
+    },
+    "fanspeed": {
+      "type": "enum",
+      "title": {
+        "en": "Fan speed",
+        "sv": "Fläktfart",
+        "nl": "Ventilatorsnelheid"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "picker",
+      "uiQuickAction": true,
+      "values": [
+        {
+          "id": "0",
+          "title": {
+            "en": "0%",
+            "sv": "0%",
+            "nl": "0%"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "25%",
+            "sv": "25%",
+            "nl": "25%"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "50%",
+            "sv": "50%",
+            "nl": "50%"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "100%",
+            "sv": "100%",
+            "nl": "100%"
           }
         }
       ]

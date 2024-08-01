@@ -67,18 +67,19 @@ class BlueAirHealthProtectDriver extends Driver {
               if (deviceInfo.model.toLowerCase().includes('healthprotect')) {
                 // If the device is compatible, add its details to the compatibleDevices array
                 compatibleDevices.push({
-                  accountuuid,
-                  name: device.name,
+                  name: deviceInfo.name,
                   data: {
-                    uuid: device.uuid,
+                    accountuuid: devicesList[0].name,
+                    uuid: deviceInfo.id,
                     mac: device.mac,
                   },
                   store: {
-                    name: device.name,
+                    name: deviceInfo.name,
                   },
                   settings: {
                     username,
                     password,
+                    region: Region.EU,
                   },
                 });
               }

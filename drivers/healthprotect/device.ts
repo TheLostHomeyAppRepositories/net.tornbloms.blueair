@@ -38,20 +38,26 @@ class BlueAirHealthProtectDevice extends Device {
         Region.EU,
       );
       await client.initialize();
+      this.log('AccountUUID:', data.accountuuid);
 
-      const DeviceAttributes = await client.getDeviceStatus(
-        data.accountuuid,
+      const DeviceAttributes = await client.getDeviceStatus(data.accountuuid, [
         data.uuid,
-      );
-      const DeviceInfo = DeviceAttributes[0];
+      ]);
+      this.log('DeviceAttributes:', DeviceAttributes);
 
-      this._savedfanspeed = filterSettings(DeviceAttributes, 'fan_speed');
+      this._savedfanspeed = filterSettings(DeviceAttributes, 'fanspeed');
 
-      this.registerCapabilityListener('fan_speed', async (value) => {
-        const result = filterSettings(DeviceAttributes, 'fan_speed');
+      this.registerCapabilityListener('fanspeed', async (value) => {
+        const result = filterSettings(DeviceAttributes, 'fanspeed');
         this.log('Changed fan speed:', value);
         this.log('Filtered fan speed settings:', result);
-        await client.setFanAuto(data.uuid, true);
+        await client.setFanSpeed(data.uuid, value);
+      });
+      this.registerCapabilityListener('automode', async (value) => {
+        const result = filterSettings(DeviceAttributes, 'automode');
+        this.log('Changed automode:', value);
+        this.log('Filtered automode settings:', result);
+        await client.setFanAuto(data.uuid, value);
       });
       this.registerCapabilityListener('brightness', async (value) => {
         const result = filterSettings(DeviceAttributes, 'brightness');
@@ -60,141 +66,109 @@ class BlueAirHealthProtectDevice extends Device {
         await client.setBrightness(data.uuid, value);
       });
       this.registerCapabilityListener('child_lock', async (value) => {
-        const result = filterSettings(DeviceAttributes, 'child_lock');
+        const result = filterSettings(DeviceAttributes, 'childlock');
         this.log('Changed child lock:', value);
         this.log('Filtered child lock: settings:', result);
         await client.setChildLock(data.uuid, value);
       });
 
-      const resultFanSpeed = filterSettings(DeviceAttributes, 'fan_speed');
+      const resultFanSpeed = filterSettings(DeviceAttributes, 'fanspeed');
       const resultBrightness = filterSettings(DeviceAttributes, 'brightness');
-      const resultChildLock = filterSettings(DeviceAttributes, 'child_lock');
+      const resultChildLock = filterSettings(DeviceAttributes, 'childlock');
       const resultFilterStatus = filterSettings(
         DeviceAttributes,
-        'filter_status',
+        'filterusage',
       );
-      const resultWiFiStatus = filterSettings(DeviceAttributes, 'wifi_status');
-      this.setCapabilityValue('fan_speed', resultFanSpeed?.currentValue).catch(
+      const resultWiFiStatus = filterSettings(DeviceAttributes, 'online');
+
+      this.setCapabilityValue('fanspeed', resultFanSpeed).catch(this.error);
+      this.setCapabilityValue('brightness', resultBrightness).catch(this.error);
+      this.setCapabilityValue('child_lock', resultChildLock).catch(this.error);
+      this.setCapabilityValue('wifi_status', resultWiFiStatus).catch(
         this.error,
       );
-      this.setCapabilityValue(
-        'brightness',
-        parseInt(resultBrightness?.currentValue, 10),
-      ).catch(this.error);
-      if (resultChildLock?.currentValue === 1) {
-        this.setCapabilityValue('child_lock', true);
-      } else {
-        this.setCapabilityValue('child_lock', false);
-      }
-      if (resultWiFiStatus?.currentValue === '1') {
-        this.setCapabilityValue('wifi_status', true);
-      } else {
-        this.setCapabilityValue('wifi_status', false);
-      }
-      if (resultFilterStatus?.currentValue === 'OK') {
-        this.setCapabilityValue('filter_status', true).catch(this.error);
-      } else {
-        this.setCapabilityValue('filter_status', false).catch(this.error);
-      }
+      this.setCapabilityValue('filter_status', resultFilterStatus).catch(
+        this.error,
+      );
 
       this.setSettings({
-        uuid: DeviceInfo.id,
-        name: DeviceInfo.name,
-        // compatibility: DeviceInfo.compatibility,
-        model: DeviceInfo.model,
-        // mac: DeviceInfo.mac,
-        // firmware: DeviceInfo.firmware,
-        // mcuFirmware: DeviceInfo.mcuFirmware,
-        // wlanDriver: DeviceInfo.wlanDriver,
-        // lastSyncDate: timeConverter(DeviceInfo.lastSyncDate),
-        // installationDate: timeConverter(DeviceInfo.installationDate),
-        // lastCalibrationDate: timeConverter(DeviceInfo.lastCalibrationDate),
-        // initUsagePeriod: String(DeviceInfo.initUsagePeriod),
-        // rebootPeriod: String(DeviceInfo.rebootPeriod),
-        // roomLocation: DeviceInfo.roomLocation,
+        uuid: DeviceAttributes[0].id,
+        name: DeviceAttributes[0].name,
+        model: DeviceAttributes[0].model,
+        mac: DeviceAttributes[0].mac,
+        serial: DeviceAttributes[0].serial,
+        mcuFirmware: DeviceAttributes[0].mcu,
+        wlanDriver: DeviceAttributes[0].wifi,
       });
 
       setInterval(async () => {
         this.log('setInternal: ', settings.update * 1000);
         const DeviceAttributes = await client.getDeviceStatus(
           data.accountuuid,
-          data.uuid,
+          [data.uuid],
         );
-        // const DeviceInfo = DeviceAttributes[0];
 
-        // let resultFanSpeed = filterSettings(DeviceAttributes, 'fan_speed');
-        // let resultBrightness = filterSettings(DeviceAttributes, 'brightness');
-        // let resultChildLock = filterSettings(DeviceAttributes, 'child_lock');
-        // let resultFilterStatus = filterSettings(
-        //  DeviceAttributes,
-        //  'filter_status'
-        // );
-        const resultWiFiStatus = filterSettings(
+        const resultFanSpeed = filterSettings(DeviceAttributes, 'fanspeed');
+        const resultBrightness = filterSettings(DeviceAttributes, 'brightness');
+        const resultChildLock = filterSettings(DeviceAttributes, 'childlock');
+        const resultFilterStatus = filterSettings(
           DeviceAttributes,
-          'wifi_status',
+          'filterusage',
         );
-        this.setCapabilityValue(
-          'fan_speed',
-          resultFanSpeed?.currentValue,
-        ).catch(this.error);
-        this.setCapabilityValue(
-          'brightness',
-          parseInt(resultBrightness?.currentValue, 10),
-        ).catch(this.error);
-        this.setCapabilityValue(
-          'filter_status',
-          resultFilterStatus?.currentValue,
+        const resultWiFiStatus = filterSettings(DeviceAttributes, 'online');
+
+        this.setCapabilityValue('fanspeed', resultFanSpeed).catch(this.error);
+        this.setCapabilityValue('brightness', resultBrightness).catch(
+          this.error,
         );
-        if (resultWiFiStatus?.currentValue === '1') {
-          this.setCapabilityValue('wifi_status', true).catch(this.error);
-        } else {
-          this.setCapabilityValue(' wifi_status', false);
-        }
-        this.setCapabilityValue(
-          'filter_status',
-          resultFilterStatus?.currentValue,
+        this.setCapabilityValue('child_lock', resultChildLock).catch(
+          this.error,
         );
-        if (
-          this._savedfanspeed?.currentValue !== resultFanSpeed?.currentValue
-        ) {
+        this.setCapabilityValue('wifi_status', resultWiFiStatus).catch(
+          this.error,
+        );
+        this.setCapabilityValue('filter_status', resultFilterStatus).catch(
+          this.error,
+        );
+
+        if (this._savedfanspeed !== resultFanSpeed) {
           const cardTriggerFilter = this.homey.flow.getTriggerCard(
             'fan-speed-has-changed',
           );
           cardTriggerFilter.trigger({
             'device-name': settings.name,
             'device-uuid': settings.uuid,
-            'fan speed': resultFanSpeed?.currentValue,
+            'fan speed': resultFanSpeed,
           });
           this._savedfanspeed = resultFanSpeed;
         }
       }, settings.update * 1000);
 
       setInterval(async () => {
-        this.setSettings({
-          uuid: DeviceInfo.id,
-          name: DeviceInfo.name,
-          // compatibility: DeviceInfo.compatibility,
-          model: DeviceInfo.model,
-          // mac: DeviceInfo.mac,
-          // firmware: DeviceInfo.firmware,
-          // mcuFirmware: DeviceInfo.mcuFirmware,
-          // wlanDriver: DeviceInfo.wlanDriver,
-          // lastSyncDate: timeConverter(DeviceInfo.lastSyncDate),
-          // installationDate: timeConverter(DeviceInfo.installationDate),
-          // lastCalibrationDate: timeConverter(DeviceInfo.lastCalibrationDate),
-          // initUsagePeriod: String(DeviceInfo.initUsagePeriod),
-          // rebootPeriod: String(DeviceInfo.rebootPeriod),
-          // roomLocation: DeviceInfo.roomLocation,
-        });
         const DeviceAttributes = await client.getDeviceStatus(
           data.accountuuid,
-          data.uuid,
+          [data.uuid],
         );
+
+        this.setSettings({
+          uuid: DeviceAttributes[0].id,
+          name: DeviceAttributes[0].name,
+          model: DeviceAttributes[0].model,
+          mac: DeviceAttributes[0].mac,
+          serial: DeviceAttributes[0].serial,
+          mcuFirmware: DeviceAttributes[0].mcu,
+          wlanDriver: DeviceAttributes[0].wifi,
+        });
+
         const resultFilterStatus = filterSettings(
           DeviceAttributes,
-          'filter_status',
+          'filterusage',
         );
-        if (resultFilterStatus?.currentValue !== 'OK') {
+        if (
+          resultFilterStatus !== null &&
+          resultFilterStatus !== undefined &&
+          Number(resultFilterStatus) >= 95
+        ) {
           const cardTriggerFilter = this.homey.flow.getTriggerCard(
             'filter-needs-change',
           );
@@ -210,7 +184,7 @@ class BlueAirHealthProtectDevice extends Device {
       fancard.registerRunListener(async (value) => {
         this.log('Want to change the fan speed with value: ', value.fanspeed);
 
-        await client.setFanAuto(data.uuid, value.fanspeed);
+        await client.setFanSpeed(data.uuid, value.fanspeed);
         this.log('Changed fan speed to:', value.fanspeed);
       });
 

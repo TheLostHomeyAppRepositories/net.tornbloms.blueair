@@ -45,10 +45,10 @@ class BlueAirDustMagnetDevice extends Device {
       );
       const DeviceInfo = DeviceAttributes[0];
 
-      this._savedfanspeed = filterSettings(DeviceAttributes, 'fan_speed');
+      this._savedfanspeed = filterSettings(DeviceAttributes, 'fanspeed');
 
       this.registerCapabilityListener('fan_speed', async (value) => {
-        const result = filterSettings(DeviceAttributes, 'fan_speed');
+        const result = filterSettings(DeviceAttributes, 'fanspeed');
         this.log('Changed fan speed:', value);
         this.log('Filtered fan speed settings:', result);
         await client.setFanAuto(data.uuid, true);
