@@ -1,12 +1,12 @@
 {
-    "type": "string",
-    "title": {
-        "en": "Latest update date",
-        "sv": "Senast uppdaterad",
-        "nl": "Laatste bijgewerkte datum"
-    },
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor",
-    "icon": "/assets/images/clock.svg"
+  "type": "string",
+  "title": {
+    "en": "Latest update date",
+    "sv": "Senast uppdaterad",
+    "nl": "Laatste bijgewerkte datum"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/images/clock.svg"
 }

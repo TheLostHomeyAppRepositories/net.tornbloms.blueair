@@ -1,12 +1,12 @@
 {
-    "type": "boolean",
-    "title": {
-        "en": "Childlock",
-        "sv": "Barnlås",
-        "nl": "Kinderbeveiliging"
-    },
-    "getable": true,
-    "setable": true,
-    "uiComponent": "toggle",
-    "icon": "/assets/images/child-lock.svg"
+  "type": "boolean",
+  "title": {
+    "en": "Childlock",
+    "sv": "Barnlås",
+    "nl": "Kinderbeveiliging"
+  },
+  "getable": true,
+  "setable": true,
+  "uiComponent": "toggle",
+  "icon": "/assets/images/child-lock.svg"
 }

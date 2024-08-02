@@ -1,12 +1,12 @@
 {
-    "type": "string",
-    "title": {
-        "en": "Filter status",
-        "se": "Filter status",
-        "nl": "Filter status"
-    },
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor",
-    "icon": "/assets/images/air-filter.svg"
+  "type": "string",
+  "title": {
+    "en": "Filter status",
+    "se": "Filter status",
+    "nl": "Filter status"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/images/air-filter.svg"
 }

@@ -1,12 +1,12 @@
 {
-    "type": "boolean",
-    "title": {
-        "en": "Wi-Fi status",
-        "sv": "Wi-Fi status",
-        "nl": "Wi-Fi status"
-    },
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor",
-    "icon": "/assets/images/wifi.svg"
+  "type": "boolean",
+  "title": {
+    "en": "Wi-Fi status",
+    "sv": "Wi-Fi status",
+    "nl": "Wi-Fi status"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/images/wifi.svg"
 }

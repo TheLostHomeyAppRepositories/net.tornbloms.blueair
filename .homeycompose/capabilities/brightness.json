@@ -1,11 +1,11 @@
 {
-    "type": "number",
-    "title": { "en": "Brightness", "sv": "Ljusstyrka", "nl": "Helderheid" },
-    "uiComponent": "slider",
-    "getable": true,
-    "setable": true,
-    "min": 0,
-    "max": 4,
-    "step": 1,
-    "icon": "/assets/images/dim.svg"
+  "type": "number",
+  "title": { "en": "Brightness", "sv": "Ljusstyrka", "nl": "Helderheid" },
+  "uiComponent": "slider",
+  "getable": true,
+  "setable": true,
+  "min": 0,
+  "max": 4,
+  "step": 1,
+  "icon": "/assets/images/dim.svg"
 }
