@@ -18,6 +18,6 @@
   },
   "dependencies": {
     "blueair-client": "^1.2.9",
-    "blueairaws-client": "^1.0.18"
+    "blueairaws-client": "^1.0.20"
   }
 }

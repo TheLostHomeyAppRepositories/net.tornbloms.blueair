@@ -7,7 +7,7 @@
   "class": "fan",
   "capabilities": [
     "fanspeed",
-    "brightness",
+    "brightness2",
     "child_lock",
     "automode",
     "wifi_status",
