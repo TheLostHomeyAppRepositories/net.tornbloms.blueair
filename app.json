@@ -736,7 +736,7 @@
       "class": "fan",
       "capabilities": [
         "fanspeed",
-        "brightness",
+        "brightness2",
         "child_lock",
         "automode",
         "wifi_status",
@@ -1004,7 +1004,7 @@
       "class": "fan",
       "capabilities": [
         "fanspeed",
-        "brightness",
+        "brightness2",
         "child_lock",
         "automode",
         "wifi_status",
@@ -1289,6 +1289,21 @@
       "setable": true,
       "min": 0,
       "max": 4,
+      "step": 1,
+      "icon": "/assets/images/dim.svg"
+    },
+    "brightness2": {
+      "type": "number",
+      "title": {
+        "en": "Brightness",
+        "sv": "Ljusstyrka",
+        "nl": "Helderheid"
+      },
+      "uiComponent": "slider",
+      "getable": true,
+      "setable": true,
+      "min": 0,
+      "max": 100,
       "step": 1,
       "icon": "/assets/images/dim.svg"
     },
