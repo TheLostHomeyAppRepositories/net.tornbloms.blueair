@@ -37,5 +37,8 @@
   },
   "3.0.0": {
     "en": "Added support for HelthProtect and DustMagnet devices."
+  },
+  "3.0.1": {
+    "en": "OpenAI translation"
   }
 }
