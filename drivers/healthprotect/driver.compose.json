@@ -9,9 +9,16 @@
     "fanspeed",
     "brightness2",
     "child_lock",
+    "nightmode",
+    "standby",
     "automode",
     "wifi_status",
-    "filter_status"
+    "filter_status",
+    "measure_humidity",
+    "measure_pm1",
+    "measure_pm25",
+    "measure_pm10",
+    "measure_temperature"
   ],
   "platforms": ["local"],
   "connectivity": ["cloud"],

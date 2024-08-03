@@ -1,0 +1,62 @@
+{
+  "title": {
+    "en": "The temperature has changed",
+    "se": "Fuktigheten har ändrats",
+    "nl": "Vochtigheid is veranderd"
+  },
+  "titleFormatted": {
+    "en": "The temperature has changed.",
+    "se": "Fuktigheten har ändrats",
+    "nl": "Vochtigheid is veranderd"
+  },
+  "hint": {
+    "en": "The temperature has been changed",
+    "se": "Fuktigheten är ändrad",
+    "nl": "Vochtigheid gewijzigd"
+  },
+  "platforms": ["local"],
+  "tokens": [
+    {
+      "type": "string",
+      "name": "device-name",
+      "title": {
+        "en": "Device name",
+        "se": "Enhetsnamn",
+        "nl": "Apparaatnaam"
+      },
+      "example": {
+        "en": "BlueAir",
+        "se": "BlueAir",
+        "nl": "BlueAir"
+      }
+    },
+    {
+      "type": "string",
+      "name": "device-uuid",
+      "title": {
+        "en": "Device UUID",
+        "se": "Enhetens UUID",
+        "nl": "Apparaat UUID"
+      },
+      "example": {
+        "en": "2504776FFDC0BAB2",
+        "se": "2504776FFDC0BAB2",
+        "nl": "2504776FFDC0BAB2"
+      }
+    },
+    {
+      "type": "string",
+      "name": "humidity",
+      "title": {
+        "en": "Humidity",
+        "se": "Fuktighet",
+        "nl": "Vochtigheid"
+      },
+      "example": {
+        "en": "48",
+        "se": "48",
+        "nl": "48"
+      }
+    }
+  ]
+}

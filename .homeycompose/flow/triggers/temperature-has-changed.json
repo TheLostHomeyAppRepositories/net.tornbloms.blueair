@@ -1,0 +1,62 @@
+{
+  "title": {
+    "en": "The temperature has changed",
+    "se": "Temperaturen har ändrats",
+    "nl": "De temperatuur is veranderd"
+  },
+  "titleFormatted": {
+    "en": "The temperature has changed.",
+    "se": "Temperaturen har ändrats",
+    "nl": "De temperatuur is veranderd"
+  },
+  "hint": {
+    "en": "The temperature has been changed",
+    "se": "Temperaturen är ändrad",
+    "nl": "De temperatuuris gewijzigd"
+  },
+  "platforms": ["local"],
+  "tokens": [
+    {
+      "type": "string",
+      "name": "device-name",
+      "title": {
+        "en": "Device name",
+        "se": "Enhetsnamn",
+        "nl": "Apparaatnaam"
+      },
+      "example": {
+        "en": "BlueAir 405 Classic",
+        "se": "BlueAir 405 Classic",
+        "nl": "BlueAir 405 Classic"
+      }
+    },
+    {
+      "type": "string",
+      "name": "device-uuid",
+      "title": {
+        "en": "Device UUID",
+        "se": "Enhetens UUID",
+        "nl": "Apparaat UUID"
+      },
+      "example": {
+        "en": "2504776FFDC0BAB2",
+        "se": "2504776FFDC0BAB2",
+        "nl": "2504776FFDC0BAB2"
+      }
+    },
+    {
+      "type": "string",
+      "name": "temperature",
+      "title": {
+        "en": "Temperature",
+        "se": "Temperaturen",
+        "nl": "Temperatuur"
+      },
+      "example": {
+        "en": "20",
+        "se": "20",
+        "nl": "20"
+      }
+    }
+  ]
+}

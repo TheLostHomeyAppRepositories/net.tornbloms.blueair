@@ -1,9 +1,9 @@
 {
   "type": "string",
   "title": {
-    "en": "Filter status",
-    "se": "Filter status",
-    "nl": "Filter status"
+    "en": "Filter Life Remaining",
+    "se": "Filter livslängd kvar",
+    "nl": "Filterlevensduur over"
   },
   "getable": true,
   "setable": false,

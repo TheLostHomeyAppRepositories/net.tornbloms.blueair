@@ -1,0 +1,62 @@
+{
+  "title": {
+    "en": "PM 2.5 has changed",
+    "se": "PM 2.5 har ändrats",
+    "nl": "PM 2.5 is veranderd"
+  },
+  "titleFormatted": {
+    "en": "PM 2.5 has changed.",
+    "se": "PM 2.5 har ändrats",
+    "nl": "PM 2.5 is veranderd"
+  },
+  "hint": {
+    "en": "PM 2.5 has been changed",
+    "se": "PM 2.5 är ändrad",
+    "nl": "PM 2.5 is gewijzigd"
+  },
+  "platforms": ["local"],
+  "tokens": [
+    {
+      "type": "string",
+      "name": "device-name",
+      "title": {
+        "en": "Device name",
+        "se": "Enhetsnamn",
+        "nl": "Apparaatnaam"
+      },
+      "example": {
+        "en": "BlueAir",
+        "se": "BlueAir",
+        "nl": "BlueAir"
+      }
+    },
+    {
+      "type": "string",
+      "name": "device-uuid",
+      "title": {
+        "en": "Device UUID",
+        "se": "Enhetens UUID",
+        "nl": "Apparaat UUID"
+      },
+      "example": {
+        "en": "2504776FFDC0BAB2",
+        "se": "2504776FFDC0BAB2",
+        "nl": "2504776FFDC0BAB2"
+      }
+    },
+    {
+      "type": "string",
+      "name": "pm25",
+      "title": {
+        "en": "PM 2.5",
+        "se": "PM 2.5",
+        "nl": "PM 2.5"
+      },
+      "example": {
+        "en": "1",
+        "se": "1",
+        "nl": "1"
+      }
+    }
+  ]
+}

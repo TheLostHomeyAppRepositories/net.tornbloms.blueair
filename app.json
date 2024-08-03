@@ -210,6 +210,331 @@
           }
         ],
         "id": "filter-needs-change"
+      },
+      {
+        "title": {
+          "en": "The temperature has changed",
+          "se": "Fuktigheten har ändrats",
+          "nl": "Vochtigheid is veranderd"
+        },
+        "titleFormatted": {
+          "en": "The temperature has changed.",
+          "se": "Fuktigheten har ändrats",
+          "nl": "Vochtigheid is veranderd"
+        },
+        "hint": {
+          "en": "The temperature has been changed",
+          "se": "Fuktigheten är ändrad",
+          "nl": "Vochtigheid gewijzigd"
+        },
+        "platforms": [
+          "local"
+        ],
+        "tokens": [
+          {
+            "type": "string",
+            "name": "device-name",
+            "title": {
+              "en": "Device name",
+              "se": "Enhetsnamn",
+              "nl": "Apparaatnaam"
+            },
+            "example": {
+              "en": "BlueAir",
+              "se": "BlueAir",
+              "nl": "BlueAir"
+            }
+          },
+          {
+            "type": "string",
+            "name": "device-uuid",
+            "title": {
+              "en": "Device UUID",
+              "se": "Enhetens UUID",
+              "nl": "Apparaat UUID"
+            },
+            "example": {
+              "en": "2504776FFDC0BAB2",
+              "se": "2504776FFDC0BAB2",
+              "nl": "2504776FFDC0BAB2"
+            }
+          },
+          {
+            "type": "string",
+            "name": "humidity",
+            "title": {
+              "en": "Humidity",
+              "se": "Fuktighet",
+              "nl": "Vochtigheid"
+            },
+            "example": {
+              "en": "48",
+              "se": "48",
+              "nl": "48"
+            }
+          }
+        ],
+        "id": "humidity-has-changed"
+      },
+      {
+        "title": {
+          "en": "PM 1 has changed",
+          "se": "PM 1 har ändrats",
+          "nl": "PM 1 is veranderd"
+        },
+        "titleFormatted": {
+          "en": "PM 1 has changed.",
+          "se": "PM 1 har ändrats",
+          "nl": "PM 1 is veranderd"
+        },
+        "hint": {
+          "en": "PM 1 has been changed",
+          "se": "PM 1 är ändrad",
+          "nl": "PM 1 is gewijzigd"
+        },
+        "platforms": [
+          "local"
+        ],
+        "tokens": [
+          {
+            "type": "string",
+            "name": "device-name",
+            "title": {
+              "en": "Device name",
+              "se": "Enhetsnamn",
+              "nl": "Apparaatnaam"
+            },
+            "example": {
+              "en": "BlueAir",
+              "se": "BlueAir",
+              "nl": "BlueAir"
+            }
+          },
+          {
+            "type": "string",
+            "name": "device-uuid",
+            "title": {
+              "en": "Device UUID",
+              "se": "Enhetens UUID",
+              "nl": "Apparaat UUID"
+            },
+            "example": {
+              "en": "2504776FFDC0BAB2",
+              "se": "2504776FFDC0BAB2",
+              "nl": "2504776FFDC0BAB2"
+            }
+          },
+          {
+            "type": "string",
+            "name": "pm1",
+            "title": {
+              "en": "PM 1",
+              "se": "PM 1",
+              "nl": "PM 1"
+            },
+            "example": {
+              "en": "1",
+              "se": "1",
+              "nl": "1"
+            }
+          }
+        ],
+        "id": "PM1-has-changed"
+      },
+      {
+        "title": {
+          "en": "PM 10 has changed",
+          "se": "PM 10 har ändrats",
+          "nl": "PM 10 is veranderd"
+        },
+        "titleFormatted": {
+          "en": "PM 10 has changed.",
+          "se": "PM 10 har ändrats",
+          "nl": "PM 10 is veranderd"
+        },
+        "hint": {
+          "en": "PM 10 has been changed",
+          "se": "PM 10 är ändrad",
+          "nl": "PM 10 is gewijzigd"
+        },
+        "platforms": [
+          "local"
+        ],
+        "tokens": [
+          {
+            "type": "string",
+            "name": "device-name",
+            "title": {
+              "en": "Device name",
+              "se": "Enhetsnamn",
+              "nl": "Apparaatnaam"
+            },
+            "example": {
+              "en": "BlueAir",
+              "se": "BlueAir",
+              "nl": "BlueAir"
+            }
+          },
+          {
+            "type": "string",
+            "name": "device-uuid",
+            "title": {
+              "en": "Device UUID",
+              "se": "Enhetens UUID",
+              "nl": "Apparaat UUID"
+            },
+            "example": {
+              "en": "2504776FFDC0BAB2",
+              "se": "2504776FFDC0BAB2",
+              "nl": "2504776FFDC0BAB2"
+            }
+          },
+          {
+            "type": "string",
+            "name": "pm10",
+            "title": {
+              "en": "PM 10",
+              "se": "PM 10",
+              "nl": "PM 10"
+            },
+            "example": {
+              "en": "1",
+              "se": "1",
+              "nl": "1"
+            }
+          }
+        ],
+        "id": "PM10-has-changed"
+      },
+      {
+        "title": {
+          "en": "PM 2.5 has changed",
+          "se": "PM 2.5 har ändrats",
+          "nl": "PM 2.5 is veranderd"
+        },
+        "titleFormatted": {
+          "en": "PM 2.5 has changed.",
+          "se": "PM 2.5 har ändrats",
+          "nl": "PM 2.5 is veranderd"
+        },
+        "hint": {
+          "en": "PM 2.5 has been changed",
+          "se": "PM 2.5 är ändrad",
+          "nl": "PM 2.5 is gewijzigd"
+        },
+        "platforms": [
+          "local"
+        ],
+        "tokens": [
+          {
+            "type": "string",
+            "name": "device-name",
+            "title": {
+              "en": "Device name",
+              "se": "Enhetsnamn",
+              "nl": "Apparaatnaam"
+            },
+            "example": {
+              "en": "BlueAir",
+              "se": "BlueAir",
+              "nl": "BlueAir"
+            }
+          },
+          {
+            "type": "string",
+            "name": "device-uuid",
+            "title": {
+              "en": "Device UUID",
+              "se": "Enhetens UUID",
+              "nl": "Apparaat UUID"
+            },
+            "example": {
+              "en": "2504776FFDC0BAB2",
+              "se": "2504776FFDC0BAB2",
+              "nl": "2504776FFDC0BAB2"
+            }
+          },
+          {
+            "type": "string",
+            "name": "pm25",
+            "title": {
+              "en": "PM 2.5",
+              "se": "PM 2.5",
+              "nl": "PM 2.5"
+            },
+            "example": {
+              "en": "1",
+              "se": "1",
+              "nl": "1"
+            }
+          }
+        ],
+        "id": "PM25-has-changed"
+      },
+      {
+        "title": {
+          "en": "The temperature has changed",
+          "se": "Temperaturen har ändrats",
+          "nl": "De temperatuur is veranderd"
+        },
+        "titleFormatted": {
+          "en": "The temperature has changed.",
+          "se": "Temperaturen har ändrats",
+          "nl": "De temperatuur is veranderd"
+        },
+        "hint": {
+          "en": "The temperature has been changed",
+          "se": "Temperaturen är ändrad",
+          "nl": "De temperatuuris gewijzigd"
+        },
+        "platforms": [
+          "local"
+        ],
+        "tokens": [
+          {
+            "type": "string",
+            "name": "device-name",
+            "title": {
+              "en": "Device name",
+              "se": "Enhetsnamn",
+              "nl": "Apparaatnaam"
+            },
+            "example": {
+              "en": "BlueAir 405 Classic",
+              "se": "BlueAir 405 Classic",
+              "nl": "BlueAir 405 Classic"
+            }
+          },
+          {
+            "type": "string",
+            "name": "device-uuid",
+            "title": {
+              "en": "Device UUID",
+              "se": "Enhetens UUID",
+              "nl": "Apparaat UUID"
+            },
+            "example": {
+              "en": "2504776FFDC0BAB2",
+              "se": "2504776FFDC0BAB2",
+              "nl": "2504776FFDC0BAB2"
+            }
+          },
+          {
+            "type": "string",
+            "name": "temperature",
+            "title": {
+              "en": "Temperature",
+              "se": "Temperaturen",
+              "nl": "Temperatuur"
+            },
+            "example": {
+              "en": "20",
+              "se": "20",
+              "nl": "20"
+            }
+          }
+        ],
+        "id": "temperature-has-changed"
       }
     ],
     "actions": [
@@ -738,9 +1063,16 @@
         "fanspeed",
         "brightness2",
         "child_lock",
+        "nightmode",
+        "standby",
         "automode",
         "wifi_status",
-        "filter_status"
+        "filter_status",
+        "measure_humidity",
+        "measure_pm1",
+        "measure_pm25",
+        "measure_pm10",
+        "measure_temperature"
       ],
       "platforms": [
         "local"
@@ -1006,9 +1338,16 @@
         "fanspeed",
         "brightness2",
         "child_lock",
+        "nightmode",
+        "standby",
         "automode",
         "wifi_status",
-        "filter_status"
+        "filter_status",
+        "measure_humidity",
+        "measure_pm1",
+        "measure_pm25",
+        "measure_pm10",
+        "measure_temperature"
       ],
       "platforms": [
         "local"
@@ -1390,9 +1729,9 @@
     "filter_status": {
       "type": "string",
       "title": {
-        "en": "Filter status",
-        "se": "Filter status",
-        "nl": "Filter status"
+        "en": "Filter Life Remaining",
+        "se": "Filter livslängd kvar",
+        "nl": "Filterlevensduur over"
       },
       "getable": true,
       "setable": false,
@@ -1410,6 +1749,116 @@
       "setable": false,
       "uiComponent": "sensor",
       "icon": "/assets/images/clock.svg"
+    },
+    "measure_pm1": {
+      "type": "number",
+      "title": {
+        "en": "PM1",
+        "nl": "PM1",
+        "de": "PM1",
+        "fr": "PM1",
+        "it": "PM1",
+        "sv": "PM1",
+        "no": "PM1",
+        "es": "PM1",
+        "ru": "ТЧ 1",
+        "pl": "PM1",
+        "ko": "PM1"
+      },
+      "units": {
+        "en": "μg/m³",
+        "ru": "мкг/м³",
+        "ko": "μg/m³",
+        "no": "μg/m³"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Atmospheric particulate matter (μg/m³)",
+        "nl": "Deeltjesvormige luchtverontreiniging (μg/m³)",
+        "de": "Atmosphärischer Feinstaub (μg/m³)",
+        "fr": "Particules en suspension (μg/m³)",
+        "it": "Particolato atmosferico (μg/m³)",
+        "sv": "Atmosfäriskt partikelämne (μg/m³)",
+        "no": "Atmosfæriske partikler (μg/m³)",
+        "es": "Partículas atmosféricas (μg/m³)",
+        "da": "Atmosfæriske partikler (μg/m³)",
+        "ru": "Атмосферные твердые частицы (мкг/м³)",
+        "pl": "Pył zawieszony (μg/m³)",
+        "ko": "대기 중 미세입자 수(μg/m³)"
+      },
+      "chartType": "spline",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/images/measure_pm1.svg"
+    },
+    "measure_pm10": {
+      "type": "number",
+      "title": {
+        "en": "PM10",
+        "nl": "PM10",
+        "de": "PM10",
+        "fr": "PM10",
+        "it": "PM10",
+        "sv": "PM10",
+        "no": "PM10",
+        "es": "PM10",
+        "ru": "ТЧ 10",
+        "pl": "PM10",
+        "ko": "PM10"
+      },
+      "units": {
+        "en": "μg/m³",
+        "ru": "мкг/м³",
+        "ko": "μg/m³",
+        "no": "μg/m³"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Atmospheric particulate matter (μg/m³)",
+        "nl": "Deeltjesvormige luchtverontreiniging (μg/m³)",
+        "de": "Atmosphärischer Feinstaub (μg/m³)",
+        "fr": "Particules en suspension (μg/m³)",
+        "it": "Particolato atmosferico (μg/m³)",
+        "sv": "Atmosfäriskt partikelämne (μg/m³)",
+        "no": "Atmosfæriske partikler (μg/m³)",
+        "es": "Partículas atmosféricas (μg/m³)",
+        "da": "Atmosfæriske partikler (μg/m³)",
+        "ru": "Атмосферные твердые частицы (мкг/м³)",
+        "pl": "Pył zawieszony (μg/m³)",
+        "ko": "대기 중 미세입자 수(μg/m³)"
+      },
+      "chartType": "spline",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/images/measure_pm10.svg"
+    },
+    "nightmode": {
+      "type": "boolean",
+      "title": {
+        "en": "Night mode",
+        "sv": "Nattläge",
+        "nl": "Nachtmodus"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "toggle",
+      "icon": "/assets/images/night.svg"
+    },
+    "standby": {
+      "type": "boolean",
+      "title": {
+        "en": "Standby",
+        "sv": "Standby",
+        "nl": "Stand-by"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "toggle",
+      "icon": "/assets/images/standby.svg"
     },
     "wifi_status": {
       "type": "boolean",
