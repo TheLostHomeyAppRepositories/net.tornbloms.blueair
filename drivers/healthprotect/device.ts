@@ -1,7 +1,6 @@
 import { Device } from 'homey';
 import { BlueAirAwsClient } from 'blueairaws-client';
 import {
-  Region,
   BlueAirDeviceStatus,
   BlueAirDeviceState,
   BlueAirDeviceSensorData,
@@ -80,11 +79,7 @@ class BlueAirHealthProtectDevice extends Device {
 
     try {
       // Initialize the BlueAir client with user credentials and region
-      const client = new BlueAirAwsClient(
-        settings.username,
-        settings.password,
-        Region.EU,
-      );
+      const client = new BlueAirAwsClient(settings.username, settings.password);
       await client.initialize(); // Initialize the client to authenticate and prepare for API requests
       this.log('AccountUUID:', data.accountuuid);
 

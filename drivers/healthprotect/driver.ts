@@ -22,7 +22,7 @@ class BlueAirHealthProtectDriver extends Driver {
         password = data.password;
 
         try {
-          const client = new BlueAirAwsClient(username, password, Region.EU);
+          const client = new BlueAirAwsClient(username, password);
           return await client.initialize(); // Use await here to correctly update the status
         } catch (e) {
           this.log(e);
@@ -35,7 +35,7 @@ class BlueAirHealthProtectDriver extends Driver {
     session.setHandler('list_devices', async () => {
       try {
         // Create a new API client instance with the provided username and password
-        const client = new BlueAirAwsClient(username, password, Region.EU);
+        const client = new BlueAirAwsClient(username, password);
 
         // Initialize the API client
         if (await client.initialize()) {
