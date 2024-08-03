@@ -38,13 +38,7 @@
   "3.0.0": {
     "en": "Added support for HelthProtect and DustMagnet devices."
   },
-  "3.0.1": {
-    "en": "OpenAI translation"
-  },
-  "3.0.2": {
-    "en": "Fixed automatic region"
-  },
-  "3.0.3": {
-    "en": "Bug in settings casued the publish to fail"
+  "3.1.0": {
+    "en": "Reverted out translations"
   }
 }

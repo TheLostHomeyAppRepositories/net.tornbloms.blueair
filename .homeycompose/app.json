@@ -1,12 +1,10 @@
 {
   "id": "net.tornbloms.blueair",
-  "version": "3.0.3",
+  "version": "3.1.0",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#0C2F4F",
-  "platforms": [
-    "local"
-  ],
+  "platforms": ["local"],
   "name": {
     "en": "BlueAir",
     "sv": "BlueAir",
@@ -35,70 +33,20 @@
     "ru": "Очистители BlueAir, потому что вам нужно глубоко дышать.",
     "ko": "BlueAir 공기청정기, 깊은 숨을 쉬어야 하니까요."
   },
-  "category": [
-    "climate"
-  ],
+  "category": ["climate"],
   "tags": {
-    "en": [
-      "purifier",
-      "BlueAir",
-      "air"
-    ],
-    "sv": [
-      "luftrenare",
-      "BlueAir",
-      "luft"
-    ],
-    "nl": [
-      "luchtreiniger",
-      "BlueAir",
-      "lucht"
-    ],
-    "da": [
-      "luftrenser",
-      "BlueAir",
-      "luft"
-    ],
-    "de": [
-      "Reiniger",
-      "BlueAir",
-      "Luft"
-    ],
-    "es": [
-      "purificador",
-      "BlueAir",
-      "aire"
-    ],
-    "fr": [
-      "purificateur",
-      "BlueAir",
-      "air"
-    ],
-    "it": [
-      "purificatore",
-      "BlueAir",
-      "aria"
-    ],
-    "no": [
-      "luftrenser",
-      "BlueAir",
-      "luft"
-    ],
-    "pl": [
-      "oczyszczacz",
-      "BlueAir",
-      "powietrze"
-    ],
-    "ru": [
-      "очиститель",
-      "BlueAir",
-      "воздух"
-    ],
-    "ko": [
-      "공기청정기",
-      "BlueAir",
-      "공기"
-    ]
+    "en": ["purifier", "BlueAir", "air"],
+    "sv": ["luftrenare", "BlueAir", "luft"],
+    "nl": ["luchtreiniger", "BlueAir", "lucht"],
+    "da": ["luftrenser", "BlueAir", "luft"],
+    "de": ["Reiniger", "BlueAir", "Luft"],
+    "es": ["purificador", "BlueAir", "aire"],
+    "fr": ["purificateur", "BlueAir", "air"],
+    "it": ["purificatore", "BlueAir", "aria"],
+    "no": ["luftrenser", "BlueAir", "luft"],
+    "pl": ["oczyszczacz", "BlueAir", "powietrze"],
+    "ru": ["очиститель", "BlueAir", "воздух"],
+    "ko": ["공기청정기", "BlueAir", "공기"]
   },
   "images": {
     "small": "/assets/images/small.png",
