@@ -43,5 +43,8 @@
   },
   "3.0.2": {
     "en": "Fixed automatic region"
+  },
+  "3.0.3": {
+    "en": "Bug in settings casued the publish to fail"
   }
 }
