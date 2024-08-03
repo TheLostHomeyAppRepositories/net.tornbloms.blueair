@@ -2,19 +2,51 @@
   "title": {
     "en": "The temperature has changed",
     "se": "Fuktigheten har ändrats",
-    "nl": "Vochtigheid is veranderd"
+    "nl": "Vochtigheid is veranderd",
+    "da": "Temperaturen er ændret",
+    "de": "Die Temperatur hat sich geändert",
+    "es": "La temperatura ha cambiado",
+    "fr": "La température a changé",
+    "it": "La temperatura è cambiata",
+    "no": "Temperaturen har endret seg",
+    "sv": "Temperaturen har ändrats",
+    "pl": "Temperatura się zmieniła",
+    "ru": "Температура изменилась",
+    "ko": "온도가 변했습니다"
   },
   "titleFormatted": {
     "en": "The temperature has changed.",
     "se": "Fuktigheten har ändrats",
-    "nl": "Vochtigheid is veranderd"
+    "nl": "Vochtigheid is veranderd",
+    "da": "Temperaturen er ændret.",
+    "de": "Die Temperatur hat sich geändert.",
+    "es": "La temperatura ha cambiado.",
+    "fr": "La température a changé.",
+    "it": "La temperatura è cambiata.",
+    "no": "Temperaturen har endret seg.",
+    "sv": "Temperaturen har ändrats.",
+    "pl": "Temperatura się zmieniła.",
+    "ru": "Температура изменилась.",
+    "ko": "온도가 변했습니다."
   },
   "hint": {
     "en": "The temperature has been changed",
     "se": "Fuktigheten är ändrad",
-    "nl": "Vochtigheid gewijzigd"
+    "nl": "Vochtigheid gewijzigd",
+    "da": "Temperaturen er blevet ændret",
+    "de": "Die Temperatur wurde geändert",
+    "es": "La temperatura se ha cambiado",
+    "fr": "La température a été changée",
+    "it": "La temperatura è stata cambiata",
+    "no": "Temperaturen har blitt endret",
+    "sv": "Temperaturen har ändrats",
+    "pl": "Temperatura została zmieniona",
+    "ru": "Температура была изменена",
+    "ko": "온도가 변경되었습니다"
   },
-  "platforms": ["local"],
+  "platforms": [
+    "local"
+  ],
   "tokens": [
     {
       "type": "string",
@@ -22,7 +54,17 @@
       "title": {
         "en": "Device name",
         "se": "Enhetsnamn",
-        "nl": "Apparaatnaam"
+        "nl": "Apparaatnaam",
+        "da": "Enhedsnavn",
+        "de": "Gerätename",
+        "es": "Nombre del dispositivo",
+        "fr": "Nom de l'appareil",
+        "it": "Nome del dispositivo",
+        "no": "Enhetsnavn",
+        "sv": "Enhetsnamn",
+        "pl": "Nazwa urządzenia",
+        "ru": "Имя устройства",
+        "ko": "기기 이름"
       },
       "example": {
         "en": "BlueAir",
@@ -36,7 +78,17 @@
       "title": {
         "en": "Device UUID",
         "se": "Enhetens UUID",
-        "nl": "Apparaat UUID"
+        "nl": "Apparaat UUID",
+        "da": "Enhed UUID",
+        "de": "Gerät UUID",
+        "es": "UUID del dispositivo",
+        "fr": "UUID de l'appareil",
+        "it": "UUID del dispositivo",
+        "no": "Enhet UUID",
+        "sv": "Enhetens UUID",
+        "pl": "UUID urządzenia",
+        "ru": "UUID устройства",
+        "ko": "기기 UUID"
       },
       "example": {
         "en": "2504776FFDC0BAB2",
@@ -50,7 +102,17 @@
       "title": {
         "en": "Humidity",
         "se": "Fuktighet",
-        "nl": "Vochtigheid"
+        "nl": "Vochtigheid",
+        "da": "Fugtighed",
+        "de": "Feuchtigkeit",
+        "es": "Humedad",
+        "fr": "Humidité",
+        "it": "Umidità",
+        "no": "Fuktighet",
+        "sv": "Fuktighet",
+        "pl": "Wilgotność",
+        "ru": "Влажность",
+        "ko": "습도"
       },
       "example": {
         "en": "48",

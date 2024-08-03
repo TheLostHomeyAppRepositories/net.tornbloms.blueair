@@ -3,7 +3,16 @@
   "title": {
     "en": "Wi-Fi status",
     "sv": "Wi-Fi status",
-    "nl": "Wi-Fi status"
+    "nl": "Wi-Fi status",
+    "da": "Wi-Fi-status",
+    "de": "Wi-Fi-Status",
+    "es": "Estado de Wi-Fi",
+    "fr": "État du Wi-Fi",
+    "it": "Stato Wi-Fi",
+    "no": "Wi-Fi-status",
+    "pl": "Stan Wi-Fi",
+    "ru": "Статус Wi-Fi",
+    "ko": "Wi-Fi 상태"
   },
   "getable": true,
   "setable": false,

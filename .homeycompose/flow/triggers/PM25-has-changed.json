@@ -2,19 +2,51 @@
   "title": {
     "en": "PM 2.5 has changed",
     "se": "PM 2.5 har ändrats",
-    "nl": "PM 2.5 is veranderd"
+    "nl": "PM 2.5 is veranderd",
+    "da": "PM 2.5 er ændret",
+    "de": "PM 2.5 hat sich geändert",
+    "es": "PM 2.5 ha cambiado",
+    "fr": "PM 2.5 a changé",
+    "it": "PM 2.5 è cambiato",
+    "no": "PM 2.5 har endret seg",
+    "sv": "PM 2.5 har ändrats",
+    "pl": "PM 2.5 się zmieniło",
+    "ru": "PM 2.5 изменился",
+    "ko": "PM 2.5이 변경되었습니다"
   },
   "titleFormatted": {
     "en": "PM 2.5 has changed.",
     "se": "PM 2.5 har ändrats",
-    "nl": "PM 2.5 is veranderd"
+    "nl": "PM 2.5 is veranderd",
+    "da": "PM 2.5 er ændret.",
+    "de": "PM 2.5 hat sich geändert.",
+    "es": "PM 2.5 ha cambiado.",
+    "fr": "PM 2.5 a changé.",
+    "it": "PM 2.5 è cambiato.",
+    "no": "PM 2.5 har endret seg.",
+    "sv": "PM 2.5 har ändrats.",
+    "pl": "PM 2.5 się zmieniło.",
+    "ru": "PM 2.5 изменился.",
+    "ko": "PM 2.5이 변경되었습니다."
   },
   "hint": {
     "en": "PM 2.5 has been changed",
     "se": "PM 2.5 är ändrad",
-    "nl": "PM 2.5 is gewijzigd"
+    "nl": "PM 2.5 is gewijzigd",
+    "da": "PM 2.5 er blevet ændret",
+    "de": "PM 2.5 wurde geändert",
+    "es": "PM 2.5 ha sido cambiado",
+    "fr": "PM 2.5 a été changé",
+    "it": "PM 2.5 è stato cambiato",
+    "no": "PM 2.5 har blitt endret",
+    "sv": "PM 2.5 är ändrad",
+    "pl": "PM 2.5 został zmieniony",
+    "ru": "PM 2.5 был изменен",
+    "ko": "PM 2.5이 변경되었습니다"
   },
-  "platforms": ["local"],
+  "platforms": [
+    "local"
+  ],
   "tokens": [
     {
       "type": "string",
@@ -22,7 +54,17 @@
       "title": {
         "en": "Device name",
         "se": "Enhetsnamn",
-        "nl": "Apparaatnaam"
+        "nl": "Apparaatnaam",
+        "da": "Enhedsnavn",
+        "de": "Gerätename",
+        "es": "Nombre del dispositivo",
+        "fr": "Nom de l'appareil",
+        "it": "Nome del dispositivo",
+        "no": "Enhetsnavn",
+        "sv": "Enhetsnamn",
+        "pl": "Nazwa urządzenia",
+        "ru": "Имя устройства",
+        "ko": "장치 이름"
       },
       "example": {
         "en": "BlueAir",
@@ -36,7 +78,17 @@
       "title": {
         "en": "Device UUID",
         "se": "Enhetens UUID",
-        "nl": "Apparaat UUID"
+        "nl": "Apparaat UUID",
+        "da": "Enhedens UUID",
+        "de": "Geräte-UUID",
+        "es": "UUID del dispositivo",
+        "fr": "UUID de l'appareil",
+        "it": "UUID del dispositivo",
+        "no": "Enhetens UUID",
+        "sv": "Enhetens UUID",
+        "pl": "UUID urządzenia",
+        "ru": "UUID устройства",
+        "ko": "장치 UUID"
       },
       "example": {
         "en": "2504776FFDC0BAB2",

@@ -3,7 +3,16 @@
   "title": {
     "en": "Auto mode",
     "sv": "Autoläge",
-    "nl": "Automatische modus"
+    "nl": "Automatische modus",
+    "da": "Automatisk tilstand",
+    "de": "Automatikmodus",
+    "es": "Modo automático",
+    "fr": "Mode automatique",
+    "it": "Modalità automatica",
+    "no": "Automodus",
+    "pl": "Tryb automatyczny",
+    "ru": "Автоматический режим",
+    "ko": "자동 모드"
   },
   "getable": true,
   "setable": true,

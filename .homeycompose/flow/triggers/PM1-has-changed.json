@@ -2,19 +2,51 @@
   "title": {
     "en": "PM 1 has changed",
     "se": "PM 1 har ändrats",
-    "nl": "PM 1 is veranderd"
+    "nl": "PM 1 is veranderd",
+    "da": "PM 1 er ændret",
+    "de": "PM 1 hat sich geändert",
+    "es": "PM 1 ha cambiado",
+    "fr": "PM 1 a changé",
+    "it": "PM 1 è cambiato",
+    "no": "PM 1 er endret",
+    "sv": "PM 1 har ändrats",
+    "pl": "PM 1 został zmieniony",
+    "ru": "PM 1 изменился",
+    "ko": "PM 1이 변경되었습니다"
   },
   "titleFormatted": {
     "en": "PM 1 has changed.",
     "se": "PM 1 har ändrats",
-    "nl": "PM 1 is veranderd"
+    "nl": "PM 1 is veranderd",
+    "da": "PM 1 er ændret.",
+    "de": "PM 1 hat sich geändert.",
+    "es": "PM 1 ha cambiado.",
+    "fr": "PM 1 a changé.",
+    "it": "PM 1 è cambiato.",
+    "no": "PM 1 er endret.",
+    "sv": "PM 1 har ändrats.",
+    "pl": "PM 1 został zmieniony.",
+    "ru": "PM 1 изменился.",
+    "ko": "PM 1이 변경되었습니다."
   },
   "hint": {
     "en": "PM 1 has been changed",
     "se": "PM 1 är ändrad",
-    "nl": "PM 1 is gewijzigd"
+    "nl": "PM 1 is gewijzigd",
+    "da": "PM 1 er blevet ændret",
+    "de": "PM 1 wurde geändert",
+    "es": "PM 1 ha sido cambiado",
+    "fr": "PM 1 a été modifié",
+    "it": "PM 1 è stato cambiato",
+    "no": "PM 1 har blitt endret",
+    "sv": "PM 1 är ändrad",
+    "pl": "PM 1 został zmieniony",
+    "ru": "PM 1 был изменён",
+    "ko": "PM 1이 변경되었습니다"
   },
-  "platforms": ["local"],
+  "platforms": [
+    "local"
+  ],
   "tokens": [
     {
       "type": "string",
@@ -22,7 +54,17 @@
       "title": {
         "en": "Device name",
         "se": "Enhetsnamn",
-        "nl": "Apparaatnaam"
+        "nl": "Apparaatnaam",
+        "da": "Enhedsnavn",
+        "de": "Gerätename",
+        "es": "Nombre del dispositivo",
+        "fr": "Nom de l'appareil",
+        "it": "Nome del dispositivo",
+        "no": "Enhetsnavn",
+        "sv": "Enhetsnamn",
+        "pl": "Nazwa urządzenia",
+        "ru": "Название устройства",
+        "ko": "장치 이름"
       },
       "example": {
         "en": "BlueAir",
@@ -36,7 +78,17 @@
       "title": {
         "en": "Device UUID",
         "se": "Enhetens UUID",
-        "nl": "Apparaat UUID"
+        "nl": "Apparaat UUID",
+        "da": "Enhedens UUID",
+        "de": "UUID des Geräts",
+        "es": "UUID del dispositivo",
+        "fr": "UUID de l'appareil",
+        "it": "UUID del dispositivo",
+        "no": "Enhetens UUID",
+        "sv": "Enhetens UUID",
+        "pl": "UUID urządzenia",
+        "ru": "UUID устройства",
+        "ko": "장치 UUID"
       },
       "example": {
         "en": "2504776FFDC0BAB2",
@@ -50,7 +102,17 @@
       "title": {
         "en": "PM 1",
         "se": "PM 1",
-        "nl": "PM 1"
+        "nl": "PM 1",
+        "da": "PM 1",
+        "de": "PM 1",
+        "es": "PM 1",
+        "fr": "PM 1",
+        "it": "PM 1",
+        "no": "PM 1",
+        "sv": "PM 1",
+        "pl": "PM 1",
+        "ru": "PM 1",
+        "ko": "PM 1"
       },
       "example": {
         "en": "1",

@@ -3,7 +3,16 @@
   "title": {
     "en": "Standby",
     "sv": "Standby",
-    "nl": "Stand-by"
+    "nl": "Stand-by",
+    "da": "Standby",
+    "de": "Bereitschaft",
+    "es": "Espera",
+    "fr": "Veille",
+    "it": "Attesa",
+    "no": "Standby",
+    "pl": "Czekaj",
+    "ru": "Режим ожидания",
+    "ko": "대기 상태"
   },
   "getable": true,
   "setable": true,

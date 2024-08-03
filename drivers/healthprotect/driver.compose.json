@@ -20,8 +20,12 @@
     "measure_pm10",
     "measure_temperature"
   ],
-  "platforms": ["local"],
-  "connectivity": ["cloud"],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "cloud"
+  ],
   "images": {
     "small": "{{driverAssetsPath}}/images/small.png",
     "large": "{{driverAssetsPath}}/images/large.png",
@@ -36,27 +40,72 @@
         "title": {
           "en": "Login to your account",
           "sv": "Logga in på ditt konto",
-          "nl": "Inloggen op uw account"
+          "nl": "Inloggen op uw account",
+          "da": "Log ind på din konto",
+          "de": "Melde dich bei deinem Konto an",
+          "es": "Inicia sesión en tu cuenta",
+          "fr": "Connectez-vous à votre compte",
+          "it": "Accedi al tuo account",
+          "no": "Logg inn på kontoen din",
+          "pl": "Zaloguj się na swoje konto",
+          "ru": "Войдите в свой аккаунт",
+          "ko": "계정에 로그인하세요"
         },
         "usernameLabel": {
           "en": "E-mail address",
           "sv": "E-postadress",
-          "nl": "E-mailadres"
+          "nl": "E-mailadres",
+          "da": "E-mailadresse",
+          "de": "E-Mail-Adresse",
+          "es": "Dirección de correo electrónico",
+          "fr": "Adresse e-mail",
+          "it": "Indirizzo e-mail",
+          "no": "E-postadresse",
+          "pl": "Adres e-mail",
+          "ru": "Электронная почта",
+          "ko": "이메일 주소"
         },
         "usernamePlaceholder": {
           "en": "john@doe.com",
           "sv": "namn@domain.se",
-          "nl": "naam@voorbeeld.com"
+          "nl": "naam@voorbeeld.com",
+          "da": "navn@domæne.dk",
+          "de": "name@domain.de",
+          "es": "nombre@dominio.es",
+          "fr": "nom@domaine.fr",
+          "it": "nome@dominio.it",
+          "no": "navn@domene.no",
+          "pl": "nazwa@domena.pl",
+          "ru": "имя@домен.ру",
+          "ko": "이름@도메인.코.kr"
         },
         "passwordLabel": {
           "en": "Password",
           "sv": "Lösenord",
-          "nl": "Wachtwoord"
+          "nl": "Wachtwoord",
+          "da": "Adgangskode",
+          "de": "Passwort",
+          "es": "Contraseña",
+          "fr": "Mot de passe",
+          "it": "Password",
+          "no": "Passord",
+          "pl": "Hasło",
+          "ru": "Пароль",
+          "ko": "비밀번호"
         },
         "passwordPlaceholder": {
           "en": "Password",
           "sv": "Lösenord",
-          "nl": "Wachtwoord"
+          "nl": "Wachtwoord",
+          "da": "Adgangskode",
+          "de": "Passwort",
+          "es": "Contraseña",
+          "fr": "Mot de passe",
+          "it": "Password",
+          "no": "Passord",
+          "pl": "Hasło",
+          "ru": "Пароль",
+          "ko": "비밀번호"
         }
       }
     },

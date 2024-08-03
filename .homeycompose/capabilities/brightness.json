@@ -1,6 +1,19 @@
 {
   "type": "number",
-  "title": { "en": "Brightness", "sv": "Ljusstyrka", "nl": "Helderheid" },
+  "title": {
+    "en": "Brightness",
+    "sv": "Ljusstyrka",
+    "nl": "Helderheid",
+    "da": "Lysstyrke",
+    "de": "Helligkeit",
+    "es": "Brillo",
+    "fr": "Luminosité",
+    "it": "Luminosità",
+    "no": "Lysstyrke",
+    "pl": "Jasność",
+    "ru": "Яркость",
+    "ko": "밝기"
+  },
   "uiComponent": "slider",
   "getable": true,
   "setable": true,

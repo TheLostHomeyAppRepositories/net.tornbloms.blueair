@@ -3,7 +3,16 @@
   "title": {
     "en": "Childlock",
     "sv": "Barnlås",
-    "nl": "Kinderbeveiliging"
+    "nl": "Kinderbeveiliging",
+    "da": "Børnesikring",
+    "de": "Kindersicherung",
+    "es": "Bloqueo para niños",
+    "fr": "Verrouillage enfant",
+    "it": "Blocco bambini",
+    "no": "Barnesikring",
+    "pl": "Blokada dziecięca",
+    "ru": "Детский замок",
+    "ko": "차일드락"
   },
   "getable": true,
   "setable": true,

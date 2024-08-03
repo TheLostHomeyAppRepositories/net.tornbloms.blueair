@@ -3,7 +3,16 @@
   "title": {
     "en": "Night mode",
     "sv": "Nattläge",
-    "nl": "Nachtmodus"
+    "nl": "Nachtmodus",
+    "da": "Nat-tilstand",
+    "de": "Nachtmodus",
+    "es": "Modo nocturno",
+    "fr": "Mode nuit",
+    "it": "Modalità notturna",
+    "no": "Nattmodus",
+    "pl": "Tryb nocny",
+    "ru": "Ночной режим",
+    "ko": "야간 모드"
   },
   "getable": true,
   "setable": true,
