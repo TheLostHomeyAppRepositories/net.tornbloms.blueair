@@ -34,5 +34,8 @@
   },
   "2.1.3": {
     "en": "Bug fixes"
+  },
+  "3.0.0": {
+    "en": "Added support for HelthProtect and DustMagnet devices."
   }
 }
