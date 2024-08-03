@@ -2,7 +2,15 @@
   "name": {
     "en": "HealthProtect",
     "sv": "HealthProtect",
-    "nl": "HealthProtect"
+    "nl": "HealthProtect",
+    "de": "HealthProtect",
+    "da": "HealthProtect",
+    "es": "HealthProtect",
+    "fr": "HealthProtect",
+    "it": "HealthProtect",
+    "no": "HealthProtect",
+    "pl": "HealthProtect",
+    "ru": "HealthProtect"
   },
   "class": "fan",
   "capabilities": [
@@ -20,12 +28,8 @@
     "measure_pm10",
     "measure_temperature"
   ],
-  "platforms": [
-    "local"
-  ],
-  "connectivity": [
-    "cloud"
-  ],
+  "platforms": ["local"],
+  "connectivity": ["cloud"],
   "images": {
     "small": "{{driverAssetsPath}}/images/small.png",
     "large": "{{driverAssetsPath}}/images/large.png",
