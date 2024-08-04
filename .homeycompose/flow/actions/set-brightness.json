@@ -2,14 +2,36 @@
   "title": {
     "en": "Set brightness",
     "se": "Sätt ljusstyrkan",
-    "nl": "Helderheid instellen"
+    "nl": "Helderheid instellen",
+    "da": "Indstil lysstyrke",
+    "de": "Helligkeit einstellen",
+    "es": "Ajustar brillo",
+    "fr": "Réglage de la luminosité",
+    "it": "Imposta luminosità",
+    "no": "Sett lysstyrke",
+    "sv": "Ställ in ljusstyrkan",
+    "pl": "Ustaw jasność",
+    "ru": "Установить яркость",
+    "ko": "밝기 설정"
   },
   "titleFormatted": {
     "en": "Set the brightness to a [[brightness]]",
     "se": "Sätt ljusstyrkan till [[brightness]]",
-    "nl": "Stel de helderheid in op [[brightness]]"
+    "nl": "Stel de helderheid in op [[brightness]]",
+    "da": "Indstil lysstyrken til [[brightness]]",
+    "de": "Helligkeit auf [[brightness]] einstellen",
+    "es": "Ajusta el brillo a [[brightness]]",
+    "fr": "Réglez la luminosité sur [[brightness]]",
+    "it": "Imposta la luminosità su [[brightness]]",
+    "no": "Sett lysstyrken til [[brightness]]",
+    "sv": "Ställ in ljusstyrkan till [[brightness]]",
+    "pl": "Ustaw jasność na [[brightness]]",
+    "ru": "Установите яркость на [[brightness]]",
+    "ko": "[[brightness]] 밝기로 설정"
   },
-  "platforms": ["local"],
+  "platforms": [
+    "local"
+  ],
   "args": [
     {
       "type": "dropdown",
@@ -17,7 +39,17 @@
       "title": {
         "en": "Brightness",
         "se": "ljusstyrkan",
-        "nl": "Helderheid"
+        "nl": "Helderheid",
+        "da": "Lysstyrke",
+        "de": "Helligkeit",
+        "es": "Brillo",
+        "fr": "Luminosité",
+        "it": "Luminosità",
+        "no": "Lysstyrke",
+        "sv": "Ljusstyrka",
+        "pl": "Jasność",
+        "ru": "Яркость",
+        "ko": "밝기"
       },
       "values": [
         {
@@ -25,7 +57,17 @@
           "label": {
             "en": "0%",
             "se": "0%",
-            "nl": "0%"
+            "nl": "0%",
+            "da": "0%",
+            "de": "0%",
+            "es": "0%",
+            "fr": "0%",
+            "it": "0%",
+            "no": "0%",
+            "sv": "0%",
+            "pl": "0%",
+            "ru": "0%",
+            "ko": "0%"
           }
         },
         {
@@ -33,7 +75,17 @@
           "label": {
             "en": "25%",
             "se": "25%",
-            "nl": "25%"
+            "nl": "25%",
+            "da": "25%",
+            "de": "25%",
+            "es": "25%",
+            "fr": "25%",
+            "it": "25%",
+            "no": "25%",
+            "sv": "25%",
+            "pl": "25%",
+            "ru": "25%",
+            "ko": "25%"
           }
         },
         {
@@ -41,7 +93,17 @@
           "label": {
             "en": "50%",
             "se": "50%",
-            "nl": "50%"
+            "nl": "50%",
+            "da": "50%",
+            "de": "50%",
+            "es": "50%",
+            "fr": "50%",
+            "it": "50%",
+            "no": "50%",
+            "sv": "50%",
+            "pl": "50%",
+            "ru": "50%",
+            "ko": "50%"
           }
         },
         {
@@ -49,7 +111,17 @@
           "label": {
             "en": "75%",
             "se": "75%",
-            "nl": "75%"
+            "nl": "75%",
+            "da": "75%",
+            "de": "75%",
+            "es": "75%",
+            "fr": "75%",
+            "it": "75%",
+            "no": "75%",
+            "sv": "75%",
+            "pl": "75%",
+            "ru": "75%",
+            "ko": "75%"
           }
         },
         {
@@ -57,7 +129,17 @@
           "label": {
             "en": "100%",
             "se": "100%",
-            "nl": "100%"
+            "nl": "100%",
+            "da": "100%",
+            "de": "100%",
+            "es": "100%",
+            "fr": "100%",
+            "it": "100%",
+            "no": "100%",
+            "sv": "100%",
+            "pl": "100%",
+            "ru": "100%",
+            "ko": "100%"
           }
         }
       ]
