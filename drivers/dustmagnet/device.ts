@@ -560,6 +560,25 @@ class BlueAirDustMagnetDevice extends Device {
         }
       }, 60000);
 
+      // Register action card listeners for controlling brightness
+      const brightnesscard = this.homey.flow.getActionCard('set-brightness2');
+      brightnesscard.registerRunListener(async (value) => {
+        this.log(
+          'Want to change the brightness with value: ',
+          value.brightness,
+        );
+        await client.setBrightness(data.uuid, value.brightness);
+        this.log('Changed brightness to:', value.brightness);
+      });
+
+      // Register action card listeners for controlling fan speed
+      const fancard = this.homey.flow.getActionCard('set-fan-speed2');
+      fancard.registerRunListener(async (value) => {
+        this.log('Want to change the fan speed with value: ', value.fanspeed);
+        await client.setFanSpeed(data.uuid, value.brightness);
+        this.log('Changed fan speed:', value.fanspeed);
+      });
+
       this.log('BlueAirDustMagnetDevice has been initialized');
     } catch (e) {
       this.error('Error during initialization:', e); // Log any initialization errors
