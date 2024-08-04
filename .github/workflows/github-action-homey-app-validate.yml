@@ -1,14 +1,24 @@
-
 on:
   push:
   pull_request:
 
 jobs:  
-    main:
-      name: Validate Homey App
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v3
-        - uses: athombv/github-action-homey-app-validate@master
-          with:
-            level: verified
+  main:
+    name: Validate Homey App
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      # Install Node.js and dependencies
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # or the version specified in your project
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Validate Homey App
+        uses: athombv/github-action-homey-app-validate@master
+        with:
+          level: verified
