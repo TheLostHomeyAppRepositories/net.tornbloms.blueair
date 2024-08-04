@@ -3,6 +3,8 @@
   "noImplicitAny": false,
   "compilerOptions": {
     "allowJs": true,
+    "esModuleInterop": true,
+    "typeRoots": ["./node_modules/@types", "types"],
     "outDir": ".homeybuild/"
   }
 }
