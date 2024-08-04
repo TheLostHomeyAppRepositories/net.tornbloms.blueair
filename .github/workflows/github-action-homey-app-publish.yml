@@ -1,20 +1,31 @@
-
 on:
   workflow_dispatch:
 
 jobs:  
-    main:
-      name: Update App Version
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v3
-        
-        - name: Publish
-          uses: athombv/github-action-homey-app-publish@master
-          id: publish
-          with:
-            personal_access_token: ${{ secrets.HOMEY_PAT }}
+  main:
+    name: Publish Homey App
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
 
-        - name: URL
-          run: |
-            echo "Manage your app at ${{ steps.publish.outputs.url }}." >> $GITHUB_STEP_SUMMARY
+      # Ensure Node.js and npm are set up (optional)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Ensure compatibility
+
+      # Optional: Validate Homey App before publishing
+      - name: Validate Homey App
+        uses: athombv/github-action-homey-app-validate@master
+        with:
+          level: verified
+
+      - name: Publish Homey App
+        uses: athombv/github-action-homey-app-publish@master
+        id: publish
+        with:
+          personal_access_token: ${{ secrets.HOMEY_PAT }}
+
+      - name: Output Management URL
+        run: |
+          echo "Manage your app at ${{ steps.publish.outputs.url }}." >> $GITHUB_STEP_SUMMARY

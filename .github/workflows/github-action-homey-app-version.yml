@@ -1,4 +1,3 @@
-
 on:
   workflow_dispatch:
     inputs:
@@ -17,26 +16,34 @@ on:
         required: true
 
 jobs:  
-    main:
-      name: Update App Version
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v3
-        
-        - name: Update App Version
-          uses: athombv/github-action-homey-app-version@master
-          id: update_app_version
-          with:
-            version: ${{ inputs.version }}
-            changelog: ${{ inputs.changelog }}
+  main:
+    name: Update App Version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
 
-        - name: Commit & Push
-          run: |
-            git config --local user.email "sysadmin+githubactions@athom.com"
-            git config --local user.name "Homey Github Actions Bot"
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # ensure compatibility
 
-            git add -A
-            git commit -m "Update Homey App Version to v${{ steps.update_app_version.outputs.version }}"
-            git tag "v${{ steps.update_app_version.outputs.version }}"
+      - name: Install dependencies
+        run: npm install
 
-            git push origin HEAD --tags
+      - name: Update App Version
+        uses: athombv/github-action-homey-app-version@master
+        id: update_app_version
+        with:
+          version: ${{ inputs.version }}
+          changelog: ${{ inputs.changelog }}
+
+      - name: Commit & Push
+        run: |
+          git config --local user.email "sysadmin+githubactions@athom.com"
+          git config --local user.name "Homey Github Actions Bot"
+
+          git add -A
+          git commit -m "Update Homey App Version to v${{ steps.update_app_version.outputs.version }}"
+          git tag "v${{ steps.update_app_version.outputs.version }}"
+
+          git push origin HEAD --tags
