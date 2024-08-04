@@ -13,7 +13,7 @@
     "ru": "HealthProtect",
     "ko": "HealthProtect"
   },
-  "class": "fan",
+  "class": "airpurifier",
   "capabilities": [
     "fanspeed",
     "brightness2",

@@ -13,7 +13,7 @@
     "ru": "DustMagnet",
     "ko": "DustMagnet"
   },
-  "class": "fan",
+  "class": "airpurifier",
   "capabilities": [
     "fanspeed",
     "brightness2",

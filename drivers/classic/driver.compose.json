@@ -12,7 +12,7 @@
     "pl": "Classic",
     "ru": "Classic"
   },
-  "class": "fan",
+  "class": "airpurifier",
   "capabilities": [
     "fan_speed",
     "brightness",
