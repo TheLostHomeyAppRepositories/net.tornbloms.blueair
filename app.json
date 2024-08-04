@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "net.tornbloms.blueair",
-  "version": "3.1.2",
+  "version": "3.1.3",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#0C2F4F",
@@ -1162,6 +1162,62 @@
       },
       {
         "title": {
+          "en": "Set brightness",
+          "nl": "Helderheid instellen",
+          "da": "Indstil lysstyrke",
+          "de": "Helligkeit einstellen",
+          "es": "Ajustar el brillo",
+          "fr": "Régler la luminosité",
+          "it": "Imposta la luminosità",
+          "no": "Still inn lysstyrke",
+          "sv": "Ställ in ljusstyrka",
+          "pl": "Ustaw jasność",
+          "ru": "Настроить яркость",
+          "ko": "밝기 설정"
+        },
+        "titleFormatted": {
+          "en": "Set the brightness to a [[brightness]]",
+          "nl": "Stel de helderheid in op [[brightness]]",
+          "da": "Indstil lysstyrken til [[brightness]]",
+          "de": "Helligkeit auf [[brightness]] einstellen",
+          "es": "Ajustar el brillo a [[brightness]]",
+          "fr": "Réglez la luminosité sur [[brightness]]",
+          "it": "Imposta la luminosità su [[brightness]]",
+          "no": "Still lysstyrken til [[brightness]]",
+          "sv": "Ställ in ljusstyrkan på [[brightness]]",
+          "pl": "Ustaw jasność na [[brightness]]",
+          "ru": "Настроить яркость до [[brightness]]",
+          "ko": "[[brightness]]로 밝기 설정"
+        },
+        "args": [
+          {
+            "type": "range",
+            "name": "brightness",
+            "title": {
+              "en": "Brightness",
+              "nl": "Helderheid",
+              "da": "Lysstyrke",
+              "de": "Helligkeit",
+              "es": "Brillo",
+              "fr": "Luminosité",
+              "it": "Luminosità",
+              "no": "Lysstyrke",
+              "sv": "Ljusstyrka",
+              "pl": "Jasność",
+              "ru": "Яркость",
+              "ko": "밝기"
+            },
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "labelMultiplier": 1,
+            "labelDecimals": 0
+          }
+        ],
+        "id": "set-brightness2"
+      },
+      {
+        "title": {
           "en": "Set fan speed",
           "sv": "Sätt fläktens fart",
           "nl": "Ventilatorsnelheid instellen",
@@ -1216,7 +1272,16 @@
                 "label": {
                   "en": "Auto",
                   "se": "Auto",
-                  "nl": "Auto"
+                  "nl": "Auto",
+                  "da": "Auto",
+                  "de": "Auto",
+                  "es": "Auto",
+                  "fr": "Auto",
+                  "it": "Auto",
+                  "no": "Auto",
+                  "pl": "Auto",
+                  "ru": "Авто",
+                  "ko": "자동"
                 }
               },
               {
@@ -1224,7 +1289,16 @@
                 "label": {
                   "en": "0%",
                   "se": "0%",
-                  "nl": "0%"
+                  "nl": "0%",
+                  "da": "0%",
+                  "de": "0%",
+                  "es": "0%",
+                  "fr": "0%",
+                  "it": "0%",
+                  "no": "0%",
+                  "pl": "0%",
+                  "ru": "0%",
+                  "ko": "0%"
                 }
               },
               {
@@ -1232,7 +1306,16 @@
                 "label": {
                   "en": "25%",
                   "se": "25%",
-                  "nl": "25%"
+                  "nl": "25%",
+                  "da": "25%",
+                  "de": "25%",
+                  "es": "25%",
+                  "fr": "25%",
+                  "it": "25%",
+                  "no": "25%",
+                  "pl": "25%",
+                  "ru": "25%",
+                  "ko": "25%"
                 }
               },
               {
@@ -1240,7 +1323,16 @@
                 "label": {
                   "en": "50%",
                   "se": "50%",
-                  "nl": "50%"
+                  "nl": "50%",
+                  "da": "50%",
+                  "de": "50%",
+                  "es": "50%",
+                  "fr": "50%",
+                  "it": "50%",
+                  "no": "50%",
+                  "pl": "50%",
+                  "ru": "50%",
+                  "ko": "50%"
                 }
               },
               {
@@ -1248,13 +1340,92 @@
                 "label": {
                   "en": "100%",
                   "se": "100%",
-                  "nl": "100%"
+                  "nl": "100%",
+                  "da": "100%",
+                  "de": "100%",
+                  "es": "100%",
+                  "fr": "100%",
+                  "it": "100%",
+                  "no": "100%",
+                  "pl": "100%",
+                  "ru": "100%",
+                  "ko": "100%"
                 }
               }
             ]
           }
         ],
         "id": "set-fan-speed"
+      },
+      {
+        "title": {
+          "en": "Set fan speed",
+          "nl": "Stel de ventilatorsnelheid in",
+          "da": "Indstil blæserhastighed",
+          "de": "Lüftergeschwindigkeit einstellen",
+          "es": "Ajustar velocidad del ventilador",
+          "fr": "Définir la vitesse du ventilateur",
+          "it": "Imposta la velocità della ventola",
+          "no": "Still inn viftehastighet",
+          "sv": "Ställ in fläkthastighet",
+          "pl": "Ustaw prędkość wentylatora",
+          "ru": "Установить скорость вентиляторов",
+          "ko": "팬 속도 설정"
+        },
+        "titleFormatted": {
+          "en": "Set the fan speed to [[fanspeed]]",
+          "nl": "Stel de ventilatorsnelheid in op [[fanspeed]]",
+          "da": "Indstil blæserhastigheden til [[fanspeed]]",
+          "de": "Lüftergeschwindigkeit auf [[fanspeed]] einstellen",
+          "es": "Ajustar velocidad del ventilador a [[fanspeed]]",
+          "fr": "Définir la vitesse du ventilateur sur [[fanspeed]]",
+          "it": "Imposta la velocità della ventola a [[fanspeed]]",
+          "no": "Still inn viftehastigheten til [[fanspeed]]",
+          "sv": "Ställ in fläkthastigheten till [[fanspeed]]",
+          "pl": "Ustaw prędkość wentylatora na [[fanspeed]]",
+          "ru": "Установить скорость вентиляторов на [[fanspeed]]",
+          "ko": "팬 속도를 [[fanspeed]]로 설정"
+        },
+        "args": [
+          {
+            "type": "range",
+            "name": "fanspeed",
+            "title": {
+              "en": "Air speed",
+              "nl": "Luchtsnelheid",
+              "da": "Lufthastighed",
+              "de": "Luftgeschwindigkeit",
+              "es": "Velocidad del aire",
+              "fr": "Vitesse de l'air",
+              "it": "Velocità dell'aria",
+              "no": "Lufthastighet",
+              "sv": "Lufthastighet",
+              "pl": "Prędkość powietrza",
+              "ru": "Скорость воздуха",
+              "ko": "공기 속도"
+            },
+            "placeholder": {
+              "en": "in percent",
+              "nl": "in procenten",
+              "da": "i procent",
+              "de": "in Prozent",
+              "es": "en porcentaje",
+              "fr": "en pourcentage",
+              "it": "in percentuale",
+              "no": "i prosent",
+              "sv": "i procent",
+              "pl": "w procentach",
+              "ru": "в процентах",
+              "ko": "퍼센트로"
+            },
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "labelMultiplier": 1,
+            "labelDecimals": 0
+          }
+        ],
+        "id": "set-fan-speed2"
       }
     ]
   },
@@ -2875,7 +3046,16 @@
           "title": {
             "en": "0%",
             "sv": "0%",
-            "nl": "0%"
+            "nl": "0%",
+            "da": "0%",
+            "de": "0%",
+            "es": "0%",
+            "fr": "0%",
+            "it": "0%",
+            "no": "0%",
+            "pl": "0%",
+            "ru": "0%",
+            "ko": "0%"
           }
         },
         {
@@ -2883,7 +3063,16 @@
           "title": {
             "en": "25%",
             "sv": "25%",
-            "nl": "25%"
+            "nl": "25%",
+            "da": "25%",
+            "de": "25%",
+            "es": "25%",
+            "fr": "25%",
+            "it": "25%",
+            "no": "25%",
+            "pl": "25%",
+            "ru": "25%",
+            "ko": "25%"
           }
         },
         {
@@ -2891,7 +3080,16 @@
           "title": {
             "en": "50%",
             "sv": "50%",
-            "nl": "50%"
+            "nl": "50%",
+            "da": "50%",
+            "de": "50%",
+            "es": "50%",
+            "fr": "50%",
+            "it": "50%",
+            "no": "50%",
+            "pl": "50%",
+            "ru": "50%",
+            "ko": "50%"
           }
         },
         {
@@ -2899,7 +3097,16 @@
           "title": {
             "en": "100%",
             "sv": "100%",
-            "nl": "100%"
+            "nl": "100%",
+            "da": "100%",
+            "de": "100%",
+            "es": "100%",
+            "fr": "100%",
+            "it": "100%",
+            "no": "100%",
+            "pl": "100%",
+            "ru": "100%",
+            "ko": "100%"
           }
         },
         {
