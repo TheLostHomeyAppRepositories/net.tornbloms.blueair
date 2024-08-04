@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "net.tornbloms.blueair",
-  "version": "3.1.3",
+  "version": "3.1.4",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#0C2F4F",
@@ -1013,19 +1013,109 @@
     "actions": [
       {
         "title": {
-          "en": "Set brightness",
-          "se": "Sätt ljusstyrkan",
-          "nl": "Helderheid instellen",
-          "da": "Indstil lysstyrke",
-          "de": "Helligkeit einstellen",
-          "es": "Ajustar brillo",
-          "fr": "Réglage de la luminosité",
-          "it": "Imposta luminosità",
-          "no": "Sett lysstyrke",
-          "sv": "Ställ in ljusstyrkan",
-          "pl": "Ustaw jasność",
-          "ru": "Установить яркость",
-          "ko": "밝기 설정"
+          "en": "Set automatic",
+          "nl": "Automatisch instellen",
+          "da": "Indstil automatisk",
+          "de": "Automatisch einstellen",
+          "es": "Configurar automático",
+          "fr": "Configurer automatique",
+          "it": "Imposta automatico",
+          "no": "Sett automatisk",
+          "sv": "Ställ in automatisk",
+          "pl": "Ustaw automatycznie",
+          "ru": "Установить автоматическое",
+          "ko": "자동 설정"
+        },
+        "titleFormatted": {
+          "en": "Set the automatic to a [[automatic]]",
+          "nl": "Stel de automatische in op een [[automatic]]",
+          "da": "Indstil den automatiske til en [[automatic]]",
+          "de": "Stellen Sie den Automatikmodus auf [[automatic]]",
+          "es": "Configurar el automático a [[automatic]]",
+          "fr": "Configurer l'automatique sur [[automatic]]",
+          "it": "Imposta l'automatico su [[automatic]]",
+          "no": "Sett den automatiske til en [[automatic]]",
+          "sv": "Ställ in den automatiska till en [[automatic]]",
+          "pl": "Ustaw automatyczność na [[automatic]]",
+          "ru": "Настройка автоматического на [[automatic]]",
+          "ko": "자동을 [[automatic]]으로 설정"
+        },
+        "platforms": [
+          "local"
+        ],
+        "args": [
+          {
+            "type": "dropdown",
+            "name": "automatic",
+            "title": {
+              "en": "Automatic",
+              "nl": "Automatisch",
+              "da": "Automatisk",
+              "de": "Automatisch",
+              "es": "Automático",
+              "fr": "Automatique",
+              "it": "Automatico",
+              "no": "Automatisk",
+              "sv": "Automatisk",
+              "pl": "Automatyczny",
+              "ru": "Автоматический",
+              "ko": "자동"
+            },
+            "values": [
+              {
+                "id": "true",
+                "label": {
+                  "en": "On",
+                  "nl": "Aan",
+                  "da": "Til",
+                  "de": "Ein",
+                  "es": "Encendido",
+                  "fr": "Activé",
+                  "it": "Acceso",
+                  "no": "På",
+                  "sv": "På",
+                  "pl": "Włączony",
+                  "ru": "Вкл",
+                  "ko": "켜짐"
+                }
+              },
+              {
+                "id": "false",
+                "label": {
+                  "en": "Off",
+                  "nl": "Uit",
+                  "da": "Fra",
+                  "de": "Aus",
+                  "es": "Apagado",
+                  "fr": "Désactivé",
+                  "it": "Spento",
+                  "no": "Av",
+                  "sv": "Av",
+                  "pl": "Wyłączony",
+                  "ru": "Выкл",
+                  "ko": "꺼짐"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "set-automatic2"
+      },
+      {
+        "title": {
+          "en": "Set brightness (classic)",
+          "se": "Sätt ljusstyrkan (classic)",
+          "nl": "Helderheid instellen (classic)",
+          "da": "Indstil lysstyrke (classic)",
+          "de": "Helligkeit einstellen (classic)",
+          "es": "Ajustar brillo (classic)",
+          "fr": "Réglage de la luminosité (classic)",
+          "it": "Imposta luminosità (classic)",
+          "no": "Sett lysstyrke (classic)",
+          "sv": "Ställ in ljusstyrkan (classic)",
+          "pl": "Ustaw jasność (classic)",
+          "ru": "Установить яркость (classic)",
+          "ko": "밝기 설정 (classic)"
         },
         "titleFormatted": {
           "en": "Set the brightness to a [[brightness]]",
@@ -1218,18 +1308,198 @@
       },
       {
         "title": {
-          "en": "Set fan speed",
-          "sv": "Sätt fläktens fart",
-          "nl": "Ventilatorsnelheid instellen",
-          "da": "Indstil blæserhastighed",
-          "de": "Lüftergeschwindigkeit einstellen",
-          "es": "Ajustar la velocidad del ventilador",
-          "fr": "Régler la vitesse du ventilateur",
-          "it": "Imposta la velocità della ventola",
-          "no": "Sett viftehastighet",
-          "pl": "Ustaw prędkość wentylatora",
-          "ru": "Установить скорость вентилятора",
-          "ko": "팬 속도 설정"
+          "en": "Set child lock (clasic)",
+          "nl": "Kinderslot instellen (klassiek)",
+          "da": "Indstil børnesikring (klassisk)",
+          "de": "Kindersicherung einstellen (klassisch)",
+          "es": "Configurar bloqueo infantil (clásico)",
+          "fr": "Définir le verrouillage enfant (classique)",
+          "it": "Imposta blocco bambino (classico)",
+          "no": "Still inn barnesikring (klassisk)",
+          "sv": "Ställ in barnlås (klassisk)",
+          "pl": "Ustaw blokadę dla dzieci (klasyczny)",
+          "ru": "Установите замок для детей (классический)",
+          "ko": "아동 잠금 설정 (클래식)"
+        },
+        "titleFormatted": {
+          "en": "Set the child lock to a [[childlock]]",
+          "nl": "Stel het kinderslot in op een [[childlock]]",
+          "da": "Indstil børnesikringen til en [[childlock]]",
+          "de": "Stellen Sie die Kindersicherung auf [[childlock]] ein",
+          "es": "Configura el bloqueo infantil en [[childlock]]",
+          "fr": "Réglez le verrouillage enfant sur [[childlock]]",
+          "it": "Imposta il blocco bambino su [[childlock]]",
+          "no": "Still inn barnesikringen til [[childlock]]",
+          "sv": "Ställ in barnlåset till [[childlock]]",
+          "pl": "Ustaw blokadę dla dzieci na [[childlock]]",
+          "ru": "Установите детский замок на [[childlock]]",
+          "ko": "어린이 잠금 장치를 [[childlock]]로 설정하세요"
+        },
+        "platforms": [
+          "local"
+        ],
+        "args": [
+          {
+            "type": "dropdown",
+            "name": "childlock",
+            "title": {
+              "en": "Child lock",
+              "nl": "Kinderslot",
+              "da": "Børnesikring",
+              "de": "Kindersicherung",
+              "es": "Bloqueo infantil",
+              "fr": "Verrouillage enfant",
+              "it": "Blocco bambino",
+              "no": "Barnesikring",
+              "sv": "Barnlås",
+              "pl": "Blokada dla dzieci",
+              "ru": "Детский замок",
+              "ko": "아동 잠금 장치"
+            },
+            "values": [
+              {
+                "id": "true",
+                "label": {
+                  "en": "On",
+                  "nl": "Aan",
+                  "da": "Til",
+                  "de": "Ein",
+                  "es": "Encendido",
+                  "fr": "Activé",
+                  "it": "Acceso",
+                  "no": "På",
+                  "sv": "På",
+                  "pl": "Włączone",
+                  "ru": "Вкл",
+                  "ko": "켜짐"
+                }
+              },
+              {
+                "id": "false",
+                "label": {
+                  "en": "Off",
+                  "nl": "Uit",
+                  "da": "Fra",
+                  "de": "Aus",
+                  "es": "Apagado",
+                  "fr": "Désactivé",
+                  "it": "Spento",
+                  "no": "Av",
+                  "sv": "Av",
+                  "pl": "Wyłączone",
+                  "ru": "Выкл",
+                  "ko": "꺼짐"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "set-childlock"
+      },
+      {
+        "title": {
+          "en": "Set child lock",
+          "nl": "Kinderslot instellen",
+          "da": "Indstil børnelåsen",
+          "de": "Kindersicherung einstellen",
+          "es": "Configurar el bloqueo infantil",
+          "fr": "Configurer le verrouillage enfant",
+          "it": "Imposta blocco bambini",
+          "no": "Sett barnesikring",
+          "sv": "Ställ in barnlåset",
+          "pl": "Ustaw blokadę rodzicielską",
+          "ru": "Установить детский замок",
+          "ko": "아동 잠금 설정"
+        },
+        "titleFormatted": {
+          "en": "Set the child lock to a [[childlock]]",
+          "nl": "Stel het kinderslot in op een [[childlock]]",
+          "da": "Indstil børnelåsen til en [[childlock]]",
+          "de": "Stellen Sie die Kindersicherung auf [[childlock]] ein",
+          "es": "Configura el bloqueo infantil a [[childlock]]",
+          "fr": "Réglez le verrouillage enfant sur [[childlock]]",
+          "it": "Imposta il blocco bambini su [[childlock]]",
+          "no": "Sett barnesikringen til [[childlock]]",
+          "sv": "Ställ in barnlåset till [[childlock]]",
+          "pl": "Ustaw blokadę rodzicielską na [[childlock]]",
+          "ru": "Установите детский замок на [[childlock]]",
+          "ko": "[[childlock]] 로 아동 잠금을 설정합니다"
+        },
+        "platforms": [
+          "local"
+        ],
+        "args": [
+          {
+            "type": "dropdown",
+            "name": "childlock",
+            "title": {
+              "en": "Child lock",
+              "nl": "Kinderslot",
+              "da": "Børnelås",
+              "de": "Kindersicherung",
+              "es": "Bloqueo infantil",
+              "fr": "Verrouillage enfant",
+              "it": "Blocco bambini",
+              "no": "Barnesikring",
+              "sv": "Barnlås",
+              "pl": "Blokada rodzicielska",
+              "ru": "Детский замок",
+              "ko": "아동 잠금"
+            },
+            "values": [
+              {
+                "id": "true",
+                "label": {
+                  "en": "On",
+                  "nl": "Aan",
+                  "da": "Til",
+                  "de": "Ein",
+                  "es": "Activado",
+                  "fr": "Activé",
+                  "it": "Acceso",
+                  "no": "På",
+                  "sv": "På",
+                  "pl": "Włączone",
+                  "ru": "Вкл",
+                  "ko": "켜짐"
+                }
+              },
+              {
+                "id": "false",
+                "label": {
+                  "en": "Off",
+                  "nl": "Uit",
+                  "da": "Fra",
+                  "de": "Aus",
+                  "es": "Desactivado",
+                  "fr": "Désactivé",
+                  "it": "Spento",
+                  "no": "Av",
+                  "sv": "Av",
+                  "pl": "Wyłączone",
+                  "ru": "Выкл",
+                  "ko": "꺼짐"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "set-childlock2"
+      },
+      {
+        "title": {
+          "en": "Set fan speed (classic)",
+          "sv": "Sätt fläktens fart (classic)",
+          "nl": "Ventilatorsnelheid instellen (classic)",
+          "da": "Indstil blæserhastighed (classic)",
+          "de": "Lüftergeschwindigkeit einstellen (classic)",
+          "es": "Ajustar la velocidad del ventilador (classic)",
+          "fr": "Régler la vitesse du ventilateur (classic)",
+          "it": "Imposta la velocità della ventola (classic)",
+          "no": "Sett viftehastighet (classic)",
+          "pl": "Ustaw prędkość wentylatora (classic)",
+          "ru": "Установить скорость вентилятора (classic)",
+          "ko": "팬 속도 설정 (classic)"
         },
         "titleFormatted": {
           "en": "Set the fan speed to [[fanspeed]]",
@@ -1360,30 +1630,30 @@
       {
         "title": {
           "en": "Set fan speed",
-          "nl": "Stel de ventilatorsnelheid in",
+          "sv": "Sätt fläktens fart",
+          "nl": "Ventilatorsnelheid instellen",
           "da": "Indstil blæserhastighed",
           "de": "Lüftergeschwindigkeit einstellen",
-          "es": "Ajustar velocidad del ventilador",
-          "fr": "Définir la vitesse du ventilateur",
+          "es": "Ajustar la velocidad del ventilador",
+          "fr": "Régler la vitesse du ventilateur",
           "it": "Imposta la velocità della ventola",
-          "no": "Still inn viftehastighet",
-          "sv": "Ställ in fläkthastighet",
+          "no": "Sett viftehastighet",
           "pl": "Ustaw prędkość wentylatora",
-          "ru": "Установить скорость вентиляторов",
+          "ru": "Установить скорость вентилятора",
           "ko": "팬 속도 설정"
         },
         "titleFormatted": {
           "en": "Set the fan speed to [[fanspeed]]",
+          "sv": "Sätt fläkten till farten [[fanspeed]]",
           "nl": "Stel de ventilatorsnelheid in op [[fanspeed]]",
           "da": "Indstil blæserhastigheden til [[fanspeed]]",
-          "de": "Lüftergeschwindigkeit auf [[fanspeed]] einstellen",
-          "es": "Ajustar velocidad del ventilador a [[fanspeed]]",
-          "fr": "Définir la vitesse du ventilateur sur [[fanspeed]]",
-          "it": "Imposta la velocità della ventola a [[fanspeed]]",
-          "no": "Still inn viftehastigheten til [[fanspeed]]",
-          "sv": "Ställ in fläkthastigheten till [[fanspeed]]",
+          "de": "Stellen Sie die Lüftergeschwindigkeit auf [[fanspeed]] ein",
+          "es": "Ajusta la velocidad del ventilador a [[fanspeed]]",
+          "fr": "Réglez la vitesse du ventilateur sur [[fanspeed]]",
+          "it": "Imposta la velocità della ventola su [[fanspeed]]",
+          "no": "Sett viftehastigheten til [[fanspeed]]",
           "pl": "Ustaw prędkość wentylatora na [[fanspeed]]",
-          "ru": "Установить скорость вентиляторов на [[fanspeed]]",
+          "ru": "Установите скорость вентилятора на [[fanspeed]]",
           "ko": "팬 속도를 [[fanspeed]]로 설정"
         },
         "args": [
@@ -1404,20 +1674,6 @@
               "ru": "Скорость воздуха",
               "ko": "공기 속도"
             },
-            "placeholder": {
-              "en": "in percent",
-              "nl": "in procenten",
-              "da": "i procent",
-              "de": "in Prozent",
-              "es": "en porcentaje",
-              "fr": "en pourcentage",
-              "it": "in percentuale",
-              "no": "i prosent",
-              "sv": "i procent",
-              "pl": "w procentach",
-              "ru": "в процентах",
-              "ko": "퍼센트로"
-            },
             "min": 0,
             "max": 100,
             "step": 1,
@@ -1426,6 +1682,186 @@
           }
         ],
         "id": "set-fan-speed2"
+      },
+      {
+        "title": {
+          "en": "Set night mode",
+          "nl": "Nachtmodus instellen",
+          "da": "Indstil nattilstand",
+          "de": "Nachtmodus einstellen",
+          "es": "Activar modo nocturno",
+          "fr": "Activer le mode nuit",
+          "it": "Imposta modalità notturna",
+          "no": "Still inn nattmodus",
+          "sv": "Ställ in nattläge",
+          "pl": "Ustaw tryb nocny",
+          "ru": "Установить ночной режим",
+          "ko": "야간 모드 설정"
+        },
+        "titleFormatted": {
+          "en": "Set the night mode to a [[nightmode]]",
+          "nl": "Stel de nachtmodus in op een [[nightmode]]",
+          "da": "Indstil nattilstanden til en [[nightmode]]",
+          "de": "Stellen Sie den Nachtmodus auf ein [[nightmode]]",
+          "es": "Establecer el modo nocturno a un [[nightmode]]",
+          "fr": "Réglez le mode nuit sur un [[nightmode]]",
+          "it": "Imposta la modalità notturna su [[nightmode]]",
+          "no": "Still inn nattmodus til en [[nightmode]]",
+          "sv": "Ställ in nattläget till [[nightmode]]",
+          "pl": "Ustaw tryb nocny na [[nightmode]]",
+          "ru": "Установите ночной режим на [[nightmode]]",
+          "ko": "[[nightmode]] 야간 모드 설정"
+        },
+        "platforms": [
+          "local"
+        ],
+        "args": [
+          {
+            "type": "dropdown",
+            "name": "nightmode",
+            "title": {
+              "en": "Night mode",
+              "nl": "Nachtmodus",
+              "da": "Nattilstand",
+              "de": "Nachtmodus",
+              "es": "Modo nocturno",
+              "fr": "Mode nuit",
+              "it": "Modalità notturna",
+              "no": "Nattmodus",
+              "sv": "Nattläge",
+              "pl": "Tryb nocny",
+              "ru": "Ночной режим",
+              "ko": "야간 모드"
+            },
+            "values": [
+              {
+                "id": "true",
+                "label": {
+                  "en": "On",
+                  "nl": "Aan",
+                  "da": "Tændt",
+                  "de": "Ein",
+                  "es": "Encendido",
+                  "fr": "Activé",
+                  "it": "Acceso",
+                  "no": "På",
+                  "sv": "På",
+                  "pl": "Włączony",
+                  "ru": "Включено",
+                  "ko": "켜짐"
+                }
+              },
+              {
+                "id": "false",
+                "label": {
+                  "en": "Off",
+                  "nl": "Uit",
+                  "da": "Slukket",
+                  "de": "Aus",
+                  "es": "Apagado",
+                  "fr": "Désactivé",
+                  "it": "Spento",
+                  "no": "Av",
+                  "sv": "Av",
+                  "pl": "Wyłączony",
+                  "ru": "Выключено",
+                  "ko": "꺼짐"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "set-nightmode2"
+      },
+      {
+        "title": {
+          "en": "Set standby mode",
+          "nl": "Stand-by modus instellen",
+          "da": "Indstil standby-tilstand",
+          "de": "Standby-Modus einstellen",
+          "es": "Establecer modo de espera",
+          "fr": "Définir le mode veille",
+          "it": "Imposta la modalità standby",
+          "no": "Sett standby-modus",
+          "sv": "Ställ in standby-läge",
+          "pl": "Ustaw tryb gotowości",
+          "ru": "Установить режим ожидания",
+          "ko": "대기 모드 설정"
+        },
+        "titleFormatted": {
+          "en": "Set the standby mode to a [[standby]]",
+          "nl": "Zet de stand-bymodus op [[standby]]",
+          "da": "Indstil standby-tilstand til [[standby]]",
+          "de": "Den Standby-Modus auf [[standby]] einstellen",
+          "es": "Establecer el modo de espera a [[standby]]",
+          "fr": "Définir le mode veille sur [[standby]]",
+          "it": "Imposta la modalità standby su [[standby]]",
+          "no": "Sett standby-modus til [[standby]]",
+          "sv": "Ställ in standby-läge till [[standby]]",
+          "pl": "Ustaw tryb gotowości na [[standby]]",
+          "ru": "Установите режим ожидания на [[standby]]",
+          "ko": "[[standby]] 대기 모드로 설정"
+        },
+        "platforms": [
+          "local"
+        ],
+        "args": [
+          {
+            "type": "dropdown",
+            "name": "standby",
+            "title": {
+              "en": "Standby",
+              "nl": "Stand-by",
+              "da": "Standby",
+              "de": "Standby",
+              "es": "Espera",
+              "fr": "Veille",
+              "it": "Standby",
+              "no": "Standby",
+              "sv": "Standby",
+              "pl": "Gotowość",
+              "ru": "Ожидание",
+              "ko": "대기"
+            },
+            "values": [
+              {
+                "id": "true",
+                "label": {
+                  "en": "On",
+                  "nl": "Aan",
+                  "da": "Til",
+                  "de": "Ein",
+                  "es": "Encendido",
+                  "fr": "Activé",
+                  "it": "Acceso",
+                  "no": "På",
+                  "sv": "På",
+                  "pl": "Włącz",
+                  "ru": "Вкл",
+                  "ko": "켜짐"
+                }
+              },
+              {
+                "id": "false",
+                "label": {
+                  "en": "Off",
+                  "nl": "Uit",
+                  "da": "Fra",
+                  "de": "Aus",
+                  "es": "Apagado",
+                  "fr": "Désactivé",
+                  "it": "Spento",
+                  "no": "Av",
+                  "sv": "Av",
+                  "pl": "Wyłącz",
+                  "ru": "Выкл",
+                  "ko": "꺼짐"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "set-standby2"
       }
     ]
   },
@@ -3122,7 +3558,8 @@
             "sv": "Auto",
             "pl": "Auto",
             "ru": "Авто",
-            "ko": "자동"
+            "ko": "자동",
+            "nl": "Auto"
           }
         }
       ]
