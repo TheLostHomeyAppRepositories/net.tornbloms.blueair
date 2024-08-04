@@ -579,6 +579,38 @@ class BlueAirDustMagnetDevice extends Device {
         this.log('Changed fan speed:', value.fanspeed);
       });
 
+      // Register action card listeners for controlling automatic
+      const autocard = this.homey.flow.getActionCard('set-automatic2');
+      autocard.registerRunListener(async (value) => {
+        this.log('Want to change the automatic with value: ', value.automatic);
+        await client.setFanAuto(data.uuid, value.automatic);
+        this.log('Changed automatic:', value.automatic);
+      });
+
+      // Register action card listeners for controlling night mode
+      const nightmodecard = this.homey.flow.getActionCard('set-nightmode2');
+      nightmodecard.registerRunListener(async (value) => {
+        this.log('Want to change the night mode with value: ', value.nightmode);
+        await client.setNightMode(data.uuid, value.nightmode);
+        this.log('Changed night mode:', value.nightmode);
+      });
+
+      // Register action card listeners for controlling standby
+      const standbycard = this.homey.flow.getActionCard('set-standby2');
+      standbycard.registerRunListener(async (value) => {
+        this.log('Want to change the standby with value: ', value.standby);
+        await client.setStandby(data.uuid, value.standby);
+        this.log('Changed standby:', value.standby);
+      });
+
+      // Register action card listeners for controlling child lock
+      const childlockcard = this.homey.flow.getActionCard('set-childlock2');
+      childlockcard.registerRunListener(async (value) => {
+        this.log('Want to change the child lock with value: ', value.childlock);
+        await client.setChildLock(data.uuid, value.childlock);
+        this.log('Changed child lock:', value.childlock);
+      });
+
       this.log('BlueAirDustMagnetDevice has been initialized');
     } catch (e) {
       this.error('Error during initialization:', e); // Log any initialization errors

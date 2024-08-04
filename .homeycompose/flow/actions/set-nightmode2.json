@@ -1,0 +1,89 @@
+{
+  "title": {
+    "en": "Set night mode",
+    "nl": "Nachtmodus instellen",
+    "da": "Indstil nattilstand",
+    "de": "Nachtmodus einstellen",
+    "es": "Activar modo nocturno",
+    "fr": "Activer le mode nuit",
+    "it": "Imposta modalità notturna",
+    "no": "Still inn nattmodus",
+    "sv": "Ställ in nattläge",
+    "pl": "Ustaw tryb nocny",
+    "ru": "Установить ночной режим",
+    "ko": "야간 모드 설정"
+  },
+  "titleFormatted": {
+    "en": "Set the night mode to a [[nightmode]]",
+    "nl": "Stel de nachtmodus in op een [[nightmode]]",
+    "da": "Indstil nattilstanden til en [[nightmode]]",
+    "de": "Stellen Sie den Nachtmodus auf ein [[nightmode]]",
+    "es": "Establecer el modo nocturno a un [[nightmode]]",
+    "fr": "Réglez le mode nuit sur un [[nightmode]]",
+    "it": "Imposta la modalità notturna su [[nightmode]]",
+    "no": "Still inn nattmodus til en [[nightmode]]",
+    "sv": "Ställ in nattläget till [[nightmode]]",
+    "pl": "Ustaw tryb nocny na [[nightmode]]",
+    "ru": "Установите ночной режим на [[nightmode]]",
+    "ko": "[[nightmode]] 야간 모드 설정"
+  },
+  "platforms": [
+    "local"
+  ],
+  "args": [
+    {
+      "type": "dropdown",
+      "name": "nightmode",
+      "title": {
+        "en": "Night mode",
+        "nl": "Nachtmodus",
+        "da": "Nattilstand",
+        "de": "Nachtmodus",
+        "es": "Modo nocturno",
+        "fr": "Mode nuit",
+        "it": "Modalità notturna",
+        "no": "Nattmodus",
+        "sv": "Nattläge",
+        "pl": "Tryb nocny",
+        "ru": "Ночной режим",
+        "ko": "야간 모드"
+      },
+      "values": [
+        {
+          "id": "true",
+          "label": {
+            "en": "On",
+            "nl": "Aan",
+            "da": "Tændt",
+            "de": "Ein",
+            "es": "Encendido",
+            "fr": "Activé",
+            "it": "Acceso",
+            "no": "På",
+            "sv": "På",
+            "pl": "Włączony",
+            "ru": "Включено",
+            "ko": "켜짐"
+          }
+        },
+        {
+          "id": "false",
+          "label": {
+            "en": "Off",
+            "nl": "Uit",
+            "da": "Slukket",
+            "de": "Aus",
+            "es": "Apagado",
+            "fr": "Désactivé",
+            "it": "Spento",
+            "no": "Av",
+            "sv": "Av",
+            "pl": "Wyłączony",
+            "ru": "Выключено",
+            "ko": "꺼짐"
+          }
+        }
+      ]
+    }
+  ]
+}

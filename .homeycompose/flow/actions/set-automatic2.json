@@ -1,0 +1,89 @@
+{
+  "title": {
+    "en": "Set automatic",
+    "nl": "Automatisch instellen",
+    "da": "Indstil automatisk",
+    "de": "Automatisch einstellen",
+    "es": "Configurar automático",
+    "fr": "Configurer automatique",
+    "it": "Imposta automatico",
+    "no": "Sett automatisk",
+    "sv": "Ställ in automatisk",
+    "pl": "Ustaw automatycznie",
+    "ru": "Установить автоматическое",
+    "ko": "자동 설정"
+  },
+  "titleFormatted": {
+    "en": "Set the automatic to a [[automatic]]",
+    "nl": "Stel de automatische in op een [[automatic]]",
+    "da": "Indstil den automatiske til en [[automatic]]",
+    "de": "Stellen Sie den Automatikmodus auf [[automatic]]",
+    "es": "Configurar el automático a [[automatic]]",
+    "fr": "Configurer l'automatique sur [[automatic]]",
+    "it": "Imposta l'automatico su [[automatic]]",
+    "no": "Sett den automatiske til en [[automatic]]",
+    "sv": "Ställ in den automatiska till en [[automatic]]",
+    "pl": "Ustaw automatyczność na [[automatic]]",
+    "ru": "Настройка автоматического на [[automatic]]",
+    "ko": "자동을 [[automatic]]으로 설정"
+  },
+  "platforms": [
+    "local"
+  ],
+  "args": [
+    {
+      "type": "dropdown",
+      "name": "automatic",
+      "title": {
+        "en": "Automatic",
+        "nl": "Automatisch",
+        "da": "Automatisk",
+        "de": "Automatisch",
+        "es": "Automático",
+        "fr": "Automatique",
+        "it": "Automatico",
+        "no": "Automatisk",
+        "sv": "Automatisk",
+        "pl": "Automatyczny",
+        "ru": "Автоматический",
+        "ko": "자동"
+      },
+      "values": [
+        {
+          "id": "true",
+          "label": {
+            "en": "On",
+            "nl": "Aan",
+            "da": "Til",
+            "de": "Ein",
+            "es": "Encendido",
+            "fr": "Activé",
+            "it": "Acceso",
+            "no": "På",
+            "sv": "På",
+            "pl": "Włączony",
+            "ru": "Вкл",
+            "ko": "켜짐"
+          }
+        },
+        {
+          "id": "false",
+          "label": {
+            "en": "Off",
+            "nl": "Uit",
+            "da": "Fra",
+            "de": "Aus",
+            "es": "Apagado",
+            "fr": "Désactivé",
+            "it": "Spento",
+            "no": "Av",
+            "sv": "Av",
+            "pl": "Wyłączony",
+            "ru": "Выкл",
+            "ko": "꺼짐"
+          }
+        }
+      ]
+    }
+  ]
+}

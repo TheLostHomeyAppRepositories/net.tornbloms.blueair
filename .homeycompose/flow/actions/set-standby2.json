@@ -1,0 +1,89 @@
+{
+  "title": {
+    "en": "Set standby mode",
+    "nl": "Stand-by modus instellen",
+    "da": "Indstil standby-tilstand",
+    "de": "Standby-Modus einstellen",
+    "es": "Establecer modo de espera",
+    "fr": "Définir le mode veille",
+    "it": "Imposta la modalità standby",
+    "no": "Sett standby-modus",
+    "sv": "Ställ in standby-läge",
+    "pl": "Ustaw tryb gotowości",
+    "ru": "Установить режим ожидания",
+    "ko": "대기 모드 설정"
+  },
+  "titleFormatted": {
+    "en": "Set the standby mode to a [[standby]]",
+    "nl": "Zet de stand-bymodus op [[standby]]",
+    "da": "Indstil standby-tilstand til [[standby]]",
+    "de": "Den Standby-Modus auf [[standby]] einstellen",
+    "es": "Establecer el modo de espera a [[standby]]",
+    "fr": "Définir le mode veille sur [[standby]]",
+    "it": "Imposta la modalità standby su [[standby]]",
+    "no": "Sett standby-modus til [[standby]]",
+    "sv": "Ställ in standby-läge till [[standby]]",
+    "pl": "Ustaw tryb gotowości na [[standby]]",
+    "ru": "Установите режим ожидания на [[standby]]",
+    "ko": "[[standby]] 대기 모드로 설정"
+  },
+  "platforms": [
+    "local"
+  ],
+  "args": [
+    {
+      "type": "dropdown",
+      "name": "standby",
+      "title": {
+        "en": "Standby",
+        "nl": "Stand-by",
+        "da": "Standby",
+        "de": "Standby",
+        "es": "Espera",
+        "fr": "Veille",
+        "it": "Standby",
+        "no": "Standby",
+        "sv": "Standby",
+        "pl": "Gotowość",
+        "ru": "Ожидание",
+        "ko": "대기"
+      },
+      "values": [
+        {
+          "id": "true",
+          "label": {
+            "en": "On",
+            "nl": "Aan",
+            "da": "Til",
+            "de": "Ein",
+            "es": "Encendido",
+            "fr": "Activé",
+            "it": "Acceso",
+            "no": "På",
+            "sv": "På",
+            "pl": "Włącz",
+            "ru": "Вкл",
+            "ko": "켜짐"
+          }
+        },
+        {
+          "id": "false",
+          "label": {
+            "en": "Off",
+            "nl": "Uit",
+            "da": "Fra",
+            "de": "Aus",
+            "es": "Apagado",
+            "fr": "Désactivé",
+            "it": "Spento",
+            "no": "Av",
+            "sv": "Av",
+            "pl": "Wyłącz",
+            "ru": "Выкл",
+            "ko": "꺼짐"
+          }
+        }
+      ]
+    }
+  ]
+}

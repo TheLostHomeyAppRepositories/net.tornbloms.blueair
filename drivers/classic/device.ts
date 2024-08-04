@@ -322,6 +322,19 @@ class BlueAirClassicDevice extends Device {
         this.log('Changed brightness to:', value.brightness);
       });
 
+            // Register action card listeners for controlling child lock
+      const childlockcard = this.homey.flow.getActionCard('set-childlock');
+      childlockcard.registerRunListener(async (value) => {
+        this.log('Want to change the child lock with value: ', value.childlock);
+                await client.setChildLock(
+          data.uuid,
+          value.brightness,
+          value.brightness,
+          userId,
+        );
+        this.log('Changed child lock:', value.childlock);
+      });
+
       this.log('BlueAirClassicDevice has been initialized'); // Log device initialization
     } catch (e) {
       this.log('Error during initialization:', e); // Log any initialization errors
