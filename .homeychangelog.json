@@ -52,5 +52,8 @@
   },
   "3.1.4": {
     "en": "Added new action cards for all models."
+  },
+  "3.1.5": {
+    "en": "Now supporting version 12 and above. added new airpurifier driver class"
   }
 }
