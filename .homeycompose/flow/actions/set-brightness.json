@@ -1,18 +1,18 @@
 {
   "title": {
-    "en": "Set brightness",
-    "se": "Sätt ljusstyrkan",
-    "nl": "Helderheid instellen",
-    "da": "Indstil lysstyrke",
-    "de": "Helligkeit einstellen",
-    "es": "Ajustar brillo",
-    "fr": "Réglage de la luminosité",
-    "it": "Imposta luminosità",
-    "no": "Sett lysstyrke",
-    "sv": "Ställ in ljusstyrkan",
-    "pl": "Ustaw jasność",
-    "ru": "Установить яркость",
-    "ko": "밝기 설정"
+    "en": "Set brightness (classic)",
+    "se": "Sätt ljusstyrkan (classic)",
+    "nl": "Helderheid instellen (classic)",
+    "da": "Indstil lysstyrke (classic)",
+    "de": "Helligkeit einstellen (classic)",
+    "es": "Ajustar brillo (classic)",
+    "fr": "Réglage de la luminosité (classic)",
+    "it": "Imposta luminosità (classic)",
+    "no": "Sett lysstyrke (classic)",
+    "sv": "Ställ in ljusstyrkan (classic)",
+    "pl": "Ustaw jasność (classic)",
+    "ru": "Установить яркость (classic)",
+    "ko": "밝기 설정 (classic)"
   },
   "titleFormatted": {
     "en": "Set the brightness to a [[brightness]]",

@@ -1,17 +1,17 @@
 {
   "title": {
-    "en": "Set fan speed",
-    "sv": "Sätt fläktens fart",
-    "nl": "Ventilatorsnelheid instellen",
-    "da": "Indstil blæserhastighed",
-    "de": "Lüftergeschwindigkeit einstellen",
-    "es": "Ajustar la velocidad del ventilador",
-    "fr": "Régler la vitesse du ventilateur",
-    "it": "Imposta la velocità della ventola",
-    "no": "Sett viftehastighet",
-    "pl": "Ustaw prędkość wentylatora",
-    "ru": "Установить скорость вентилятора",
-    "ko": "팬 속도 설정"
+    "en": "Set fan speed (classic)",
+    "sv": "Sätt fläktens fart (classic)",
+    "nl": "Ventilatorsnelheid instellen (classic)",
+    "da": "Indstil blæserhastighed (classic)",
+    "de": "Lüftergeschwindigkeit einstellen (classic)",
+    "es": "Ajustar la velocidad del ventilador (classic)",
+    "fr": "Régler la vitesse du ventilateur (classic)",
+    "it": "Imposta la velocità della ventola (classic)",
+    "no": "Sett viftehastighet (classic)",
+    "pl": "Ustaw prędkość wentylatora (classic)",
+    "ru": "Установить скорость вентилятора (classic)",
+    "ko": "팬 속도 설정 (classic)"
   },
   "titleFormatted": {
     "en": "Set the fan speed to [[fanspeed]]",
