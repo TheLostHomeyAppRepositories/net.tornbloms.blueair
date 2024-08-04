@@ -2,36 +2,14 @@
   "title": {
     "en": "Set brightness",
     "se": "Sätt ljusstyrkan",
-    "nl": "Helderheid instellen",
-    "da": "Indstil lysstyrke",
-    "de": "Helligkeit einstellen",
-    "es": "Ajustar el brillo",
-    "fr": "Régler la luminosité",
-    "it": "Imposta la luminosità",
-    "no": "Still inn lysstyrken",
-    "sv": "Ställ in ljusstyrkan",
-    "pl": "Ustaw jasność",
-    "ru": "Установить яркость",
-    "ko": "밝기 설정"
+    "nl": "Helderheid instellen"
   },
   "titleFormatted": {
     "en": "Set the brightness to a [[brightness]]",
     "se": "Sätt ljusstyrkan till [[brightness]]",
-    "nl": "Stel de helderheid in op [[brightness]]",
-    "da": "Indstil lysstyrken til [[brightness]]",
-    "de": "Stelle die Helligkeit auf [[brightness]]",
-    "es": "Ajusta el brillo a [[brightness]]",
-    "fr": "Réglez la luminosité sur [[brightness]]",
-    "it": "Imposta la luminosità a [[brightness]]",
-    "no": "Sett lysstyrken til [[brightness]]",
-    "sv": "Ställ in ljusstyrkan på [[brightness]]",
-    "pl": "Ustaw jasność na [[brightness]]",
-    "ru": "Установите яркость на [[brightness]]",
-    "ko": "[[brightness]] 밝기로 설정"
+    "nl": "Stel de helderheid in op [[brightness]]"
   },
-  "platforms": [
-    "local"
-  ],
+  "platforms": ["local"],
   "args": [
     {
       "type": "dropdown",
@@ -39,17 +17,7 @@
       "title": {
         "en": "Brightness",
         "se": "ljusstyrkan",
-        "nl": "Helderheid",
-        "da": "Lysstyrke",
-        "de": "Helligkeit",
-        "es": "Brillo",
-        "fr": "Luminosité",
-        "it": "Luminosità",
-        "no": "Lysstyrke",
-        "sv": "Ljusstyrka",
-        "pl": "Jasność",
-        "ru": "Яркость",
-        "ko": "밝기"
+        "nl": "Helderheid"
       },
       "values": [
         {

@@ -2,34 +2,14 @@
   "title": {
     "en": "Set fan speed",
     "sv": "Sätt fläktens fart",
-    "nl": "Ventilatorsnelheid instellen",
-    "da": "Indstil blæserhastighed",
-    "de": "Lüftergeschwindigkeit einstellen",
-    "es": "Configurar la velocidad del ventilador",
-    "fr": "Réglez la vitesse du ventilateur",
-    "it": "Imposta la velocità della ventola",
-    "no": "Still inn viftehastighet",
-    "pl": "Ustaw prędkość wentylatora",
-    "ru": "Настроить скорость вентилятора",
-    "ko": "팬 속도 설정"
+    "nl": "Ventilatorsnelheid instellen"
   },
   "titleFormatted": {
     "en": "Set the fan speed to [[fanspeed]]",
     "sv": "Sätt fläkten till farten [[fanspeed]]",
-    "nl": "Stel de ventilatorsnelheid in op [[fanspeed]]",
-    "da": "Indstil blæserhastigheden til [[fanspeed]]",
-    "de": "Stellen Sie die Lüftergeschwindigkeit auf [[fanspeed]] ein",
-    "es": "Configura la velocidad del ventilador a [[fanspeed]]",
-    "fr": "Réglez la vitesse du ventilateur à [[fanspeed]]",
-    "it": "Imposta la velocità della ventola su [[fanspeed]]",
-    "no": "Still viftehastigheten til [[fanspeed]]",
-    "pl": "Ustaw prędkość wentylatora na [[fanspeed]]",
-    "ru": "Установите скорость вентилятора на [[fanspeed]]",
-    "ko": "팬 속도를 [[fanspeed]]로 설정"
+    "nl": "Stel de ventilatorsnelheid in op [[fanspeed]]"
   },
-  "platforms": [
-    "local"
-  ],
+  "platforms": ["local"],
   "args": [
     {
       "type": "dropdown",
@@ -37,16 +17,7 @@
       "title": {
         "en": "Fan speed",
         "sv": "fläktfart",
-        "nl": "Ventilatorsnelheid",
-        "da": "Blæserhastighed",
-        "de": "Lüftergeschwindigkeit",
-        "es": "Velocidad del ventilador",
-        "fr": "Vitesse du ventilateur",
-        "it": "Velocità della ventola",
-        "no": "Viftehastighet",
-        "pl": "Prędkość wentylatora",
-        "ru": "Скорость вентилятора",
-        "ko": "팬 속도"
+        "nl": "Ventilatorsnelheid"
       },
       "values": [
         {
@@ -54,16 +25,7 @@
           "label": {
             "en": "Auto",
             "se": "Auto",
-            "nl": "Auto",
-            "da": "Auto",
-            "de": "Auto",
-            "es": "Auto",
-            "fr": "Auto",
-            "it": "Auto",
-            "no": "Auto",
-            "pl": "Auto",
-            "ru": "Авто",
-            "ko": "자동"
+            "nl": "Auto"
           }
         },
         {
@@ -71,16 +33,7 @@
           "label": {
             "en": "0%",
             "se": "0%",
-            "nl": "0%",
-            "da": "0%",
-            "de": "0%",
-            "es": "0%",
-            "fr": "0%",
-            "it": "0%",
-            "no": "0%",
-            "pl": "0%",
-            "ru": "0%",
-            "ko": "0%"
+            "nl": "0%"
           }
         },
         {
@@ -88,16 +41,7 @@
           "label": {
             "en": "25%",
             "se": "25%",
-            "nl": "25%",
-            "da": "25%",
-            "de": "25%",
-            "es": "25%",
-            "fr": "25%",
-            "it": "25%",
-            "no": "25%",
-            "pl": "25%",
-            "ru": "25%",
-            "ko": "25%"
+            "nl": "25%"
           }
         },
         {
@@ -105,16 +49,7 @@
           "label": {
             "en": "50%",
             "se": "50%",
-            "nl": "50%",
-            "da": "50%",
-            "de": "50%",
-            "es": "50%",
-            "fr": "50%",
-            "it": "50%",
-            "no": "50%",
-            "pl": "50%",
-            "ru": "50%",
-            "ko": "50%"
+            "nl": "50%"
           }
         },
         {
@@ -122,16 +57,7 @@
           "label": {
             "en": "100%",
             "se": "100%",
-            "nl": "100%",
-            "da": "100%",
-            "de": "100%",
-            "es": "100%",
-            "fr": "100%",
-            "it": "100%",
-            "no": "100%",
-            "pl": "100%",
-            "ru": "100%",
-            "ko": "100%"
+            "nl": "100%"
           }
         }
       ]

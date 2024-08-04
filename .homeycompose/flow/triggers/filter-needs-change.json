@@ -2,51 +2,19 @@
   "title": {
     "en": "Filter needs change.",
     "se": "Filtret behöver bytas.",
-    "nl": "Filter moet worden vervangen.",
-    "da": "Filter skal ændres.",
-    "de": "Filter muss gewechselt werden.",
-    "es": "El filtro necesita ser cambiado.",
-    "fr": "Le filtre doit être changé.",
-    "it": "Il filtro deve essere cambiato.",
-    "no": "Filter må skiftes.",
-    "sv": "Filtret behöver bytas.",
-    "pl": "Filtr wymaga wymiany.",
-    "ru": "Фильтр нужно заменить.",
-    "ko": "필터를 교체해야 합니다."
+    "nl": "Filter moet worden vervangen."
   },
   "titleFormatted": {
     "en": "The filter needs to be change.",
     "se": "Filtret behöver bytas.",
-    "nl": "Het filter moet worden vervangen.",
-    "da": "Filteret skal ændres.",
-    "de": "Der Filter muss gewechselt werden.",
-    "es": "El filtro necesita ser cambiado.",
-    "fr": "Le filtre doit être changé.",
-    "it": "Il filtro deve essere cambiato.",
-    "no": "Filteret må skiftes.",
-    "sv": "Filtret behöver bytas.",
-    "pl": "Filtr wymaga wymiany.",
-    "ru": "Фильтр нужно заменить.",
-    "ko": "필터를 교체해야 합니다."
+    "nl": "Het filter moet worden vervangen."
   },
   "hint": {
     "en": "Normaly filter has a status OK but if it changes this flow wioll trigger.",
     "se": "Vanligtvis har filtret en status som OK, men om den ändras kommer denna flöde att utlösas.",
-    "nl": "Normaal gesproken heeft het filter een status van OK, maar als dit verandert, zal deze flow worden geactiveerd.",
-    "da": "Normalt har filteret status OK, men hvis det ændrer sig, vil denne flow blive udløst.",
-    "de": "Normalerweise hat der Filter den Status OK, aber wenn sich das ändert, wird dieser Fluss ausgelöst.",
-    "es": "Normalmente, el filtro tiene el estado OK, pero si cambia, este flujo se activará.",
-    "fr": "Normalement, le filtre a un statut OK, mais si cela change, ce flux se déclenchera.",
-    "it": "Normalmente il filtro ha uno stato OK, ma se cambia, questo flusso verrà attivato.",
-    "no": "Normalt har filteret status OK, men hvis det endrer seg, vil denne flyten utløses.",
-    "sv": "Vanligtvis har filtret en status som OK, men om den ändras kommer denna flöde att utlösas.",
-    "pl": "Zazwyczaj filtr ma status OK, ale jeśli się zmieni, ten przepływ się uruchomi.",
-    "ru": "Обычно фильтр имеет статус OK, но если это изменится, этот поток сработает.",
-    "ko": "필터는 정상 상태를 나타내지만 변경되면 이 흐름이 작동합니다."
+    "nl": "Normaal gesproken heeft het filter een status van OK, maar als dit verandert, zal deze flow worden geactiveerd."
   },
-  "platforms": [
-    "local"
-  ],
+  "platforms": ["local"],
   "tokens": [
     {
       "type": "string",
@@ -54,17 +22,7 @@
       "title": {
         "en": "Device name",
         "se": "Enhetsnamn",
-        "nl": "Apparaatnaam",
-        "da": "Enhedsnavn",
-        "de": "Gerätename",
-        "es": "Nombre del dispositivo",
-        "fr": "Nom de l'appareil",
-        "it": "Nome del dispositivo",
-        "no": "Enhetsnavn",
-        "sv": "Enhetsnamn",
-        "pl": "Nazwa urządzenia",
-        "ru": "Имя устройства",
-        "ko": "장치 이름"
+        "nl": "Apparaatnaam"
       },
       "example": {
         "en": "BlueAir 405 Classic",
@@ -78,17 +36,7 @@
       "title": {
         "en": "Device UUID",
         "se": "Enhetens UUID",
-        "nl": "Apparaat UUID",
-        "da": "Enhedens UUID",
-        "de": "Geräte-UUID",
-        "es": "UUID del dispositivo",
-        "fr": "UUID de l'appareil",
-        "it": "UUID del dispositivo",
-        "no": "Enhetens UUID",
-        "sv": "Enhetens UUID",
-        "pl": "UUID urządzenia",
-        "ru": "UUID устройства",
-        "ko": "장치 UUID"
+        "nl": "Apparaat UUID"
       },
       "example": {
         "en": "2504776FFDC0BAB2",
@@ -102,17 +50,7 @@
       "title": {
         "en": "Device response",
         "se": "Enthetens svar",
-        "nl": "Apparaatreactie",
-        "da": "Enhedens svar",
-        "de": "Geräteantwort",
-        "es": "Respuesta del dispositivo",
-        "fr": "Réponse de l'appareil",
-        "it": "Risposta del dispositivo",
-        "no": "Enhetens respons",
-        "sv": "Enhetens svar",
-        "pl": "Odpowiedź urządzenia",
-        "ru": "Ответ устройства",
-        "ko": "장치 응답"
+        "nl": "Apparaatreactie"
       },
       "example": {
         "en": "OK",

@@ -5,6 +5,7 @@
   "sdk": 3,
   "brandColor": "#0C2F4F",
   "platforms": ["local"],
+  "platforms": ["local"],
   "name": {
     "en": "BlueAir",
     "sv": "BlueAir",
@@ -22,31 +23,13 @@
   "description": {
     "en": "BlueAir purifiers because you need a deep breath.",
     "sv": "BueAir luftrenare för att du behöver kunna andas fritt.",
-    "nl": "BlueAir luchtreinigers, omdat je een diepe ademhaling verdient.",
-    "da": "BlueAir luftrensere, fordi du har brug for at trække vejret dybt.",
-    "de": "BlueAir Reiniger, weil du einen tiefen Atemzug brauchst.",
-    "es": "Purificadores BlueAir, porque necesitas respirar hondo.",
-    "fr": "Purificateurs BlueAir parce que vous avez besoin de respirer profondément.",
-    "it": "Purificatori BlueAir perché hai bisogno di un respiro profondo.",
-    "no": "BlueAir luftrensere fordi du trenger å ta et dypt pust.",
-    "pl": "Oczyszczacze BlueAir, ponieważ potrzebujesz głębokiego oddechu.",
-    "ru": "Очистители BlueAir, потому что вам нужно глубоко дышать.",
-    "ko": "BlueAir 공기청정기, 깊은 숨을 쉬어야 하니까요."
+    "nl": "BlueAir luchtreinigers, omdat je een diepe ademhaling verdient."
   },
   "category": ["climate"],
   "tags": {
     "en": ["purifier", "BlueAir", "air"],
     "sv": ["luftrenare", "BlueAir", "luft"],
-    "nl": ["luchtreiniger", "BlueAir", "lucht"],
-    "da": ["luftrenser", "BlueAir", "luft"],
-    "de": ["Reiniger", "BlueAir", "Luft"],
-    "es": ["purificador", "BlueAir", "aire"],
-    "fr": ["purificateur", "BlueAir", "air"],
-    "it": ["purificatore", "BlueAir", "aria"],
-    "no": ["luftrenser", "BlueAir", "luft"],
-    "pl": ["oczyszczacz", "BlueAir", "powietrze"],
-    "ru": ["очиститель", "BlueAir", "воздух"],
-    "ko": ["공기청정기", "BlueAir", "공기"]
+    "nl": ["luchtreiniger", "BlueAir", "lucht"]
   },
   "images": {
     "small": "/assets/images/small.png",
