@@ -1880,7 +1880,7 @@
         "pl": "Classic",
         "ru": "Classic"
       },
-      "class": "fan",
+      "class": "airpurifier",
       "capabilities": [
         "fan_speed",
         "brightness",
@@ -2307,7 +2307,7 @@
         "ru": "DustMagnet",
         "ko": "DustMagnet"
       },
-      "class": "fan",
+      "class": "airpurifier",
       "capabilities": [
         "fanspeed",
         "brightness2",
@@ -2843,7 +2843,7 @@
         "ru": "HealthProtect",
         "ko": "HealthProtect"
       },
-      "class": "fan",
+      "class": "airpurifier",
       "capabilities": [
         "fanspeed",
         "brightness2",
