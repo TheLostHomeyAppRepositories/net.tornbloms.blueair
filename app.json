@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "net.tornbloms.blueair",
-  "version": "3.1.5",
+  "version": "3.1.6",
   "compatibility": ">=12.0.0",
   "sdk": 3,
   "brandColor": "#0C2F4F",
@@ -1008,6 +1008,121 @@
           }
         ],
         "id": "temperature-has-changed"
+      },
+      {
+        "title": {
+          "en": "tVOC has changed",
+          "nl": "tVOC is veranderd",
+          "da": "tVOC er ændret",
+          "de": "tVOC hat sich geändert",
+          "es": "tVOC ha cambiado",
+          "fr": "tVOC a changé",
+          "it": "tVOC è cambiato",
+          "no": "tVOC har endret seg",
+          "sv": "tVOC har ändrats",
+          "pl": "tVOC się zmienił",
+          "ru": "tVOC изменился",
+          "ko": "tVOC가 변경되었습니다"
+        },
+        "titleFormatted": {
+          "en": "tVOC has changed.",
+          "nl": "tVOC is veranderd.",
+          "da": "tVOC er ændret.",
+          "de": "tVOC hat sich geändert.",
+          "es": "tVOC ha cambiado.",
+          "fr": "tVOC a changé.",
+          "it": "tVOC è cambiato.",
+          "no": "tVOC har endret seg.",
+          "sv": "tVOC har ändrats.",
+          "pl": "tVOC się zmienił.",
+          "ru": "tVOC изменился.",
+          "ko": "tVOC가 변경되었습니다."
+        },
+        "hint": {
+          "en": "tVOC has been changed",
+          "nl": "tVOC is veranderd",
+          "da": "tVOC er blevet ændret",
+          "de": "tVOC wurde geändert",
+          "es": "tVOC ha cambiado",
+          "fr": "tVOC a été changé",
+          "it": "tVOC è stato cambiato",
+          "no": "tVOC har blitt endret",
+          "sv": "tVOC har ändrats",
+          "pl": "tVOC został zmieniony",
+          "ru": "tVOC был изменен",
+          "ko": "tVOC가 변경되었습니다"
+        },
+        "platforms": [
+          "local"
+        ],
+        "tokens": [
+          {
+            "type": "string",
+            "name": "device-name",
+            "title": {
+              "en": "Device name",
+              "nl": "Apparaatnaam",
+              "da": "Enhedsnavn",
+              "de": "Gerätename",
+              "es": "Nombre del dispositivo",
+              "fr": "Nom de l'appareil",
+              "it": "Nome del dispositivo",
+              "no": "Enhetsnavn",
+              "sv": "Enhetsnamn",
+              "pl": "Nazwa urządzenia",
+              "ru": "Имя устройства",
+              "ko": "장치 이름"
+            },
+            "example": {
+              "en": "BlueAir"
+            }
+          },
+          {
+            "type": "string",
+            "name": "device-uuid",
+            "title": {
+              "en": "Device UUID",
+              "nl": "Apparaat-UUID",
+              "da": "Enheds-UUID",
+              "de": "Geräte-UUID",
+              "es": "UUID del dispositivo",
+              "fr": "UUID de l'appareil",
+              "it": "UUID del dispositivo",
+              "no": "Enhets-UUID",
+              "sv": "Enhets-UUID",
+              "pl": "UUID urządzenia",
+              "ru": "UUID устройства",
+              "ko": "장치 UUID"
+            },
+            "example": {
+              "en": "2504776FFDC0BAB2"
+            }
+          },
+          {
+            "type": "string",
+            "name": "tvoc",
+            "title": {
+              "en": "tVOC",
+              "nl": "tVOC",
+              "da": "tVOC",
+              "de": "tVOC",
+              "es": "tVOC",
+              "fr": "tVOC",
+              "it": "tVOC",
+              "no": "tVOC",
+              "sv": "tVOC",
+              "pl": "tVOC",
+              "ru": "tVOC",
+              "ko": "tVOC"
+            },
+            "example": {
+              "en": "1",
+              "se": "1",
+              "nl": "1"
+            }
+          }
+        ],
+        "id": "tVOC-has-changed"
       }
     ],
     "actions": [
@@ -1878,7 +1993,8 @@
         "it": "Classic",
         "no": "Classic",
         "pl": "Classic",
-        "ru": "Classic"
+        "ru": "Classic",
+        "ko": "Classic"
       },
       "class": "airpurifier",
       "capabilities": [
@@ -2321,6 +2437,7 @@
         "measure_pm1",
         "measure_pm25",
         "measure_pm10",
+        "measure_tVOC",
         "measure_temperature"
       ],
       "platforms": [
@@ -2857,6 +2974,7 @@
         "measure_pm1",
         "measure_pm25",
         "measure_pm10",
+        "measure_tVOC",
         "measure_temperature"
       ],
       "platforms": [
@@ -3735,6 +3853,58 @@
       "setable": false,
       "uiComponent": "sensor",
       "icon": "/assets/images/measure_pm10.svg"
+    },
+    "measure_tVOC": {
+      "type": "number",
+      "title": {
+        "en": "tVOC",
+        "nl": "tVOC",
+        "da": "tVOC",
+        "de": "tVOC",
+        "es": "tVOC",
+        "fr": "tVOC",
+        "it": "tVOC",
+        "no": "tVOC",
+        "sv": "tVOC",
+        "pl": "tVOC",
+        "ru": "tVOC",
+        "ko": "tVOC"
+      },
+      "units": {
+        "en": "ppm³",
+        "nl": "ppm³",
+        "da": "ppm³",
+        "de": "ppm³",
+        "es": "ppm³",
+        "fr": "ppm³",
+        "it": "ppm³",
+        "no": "ppm³",
+        "sv": "ppm³",
+        "pl": "ppm³",
+        "ru": "ppm³",
+        "ko": "ppm³"
+      },
+      "insights": true,
+      "desc": {
+        "en": "tVOC, Total volatile organic compounds, a wide range of organic chemical compounds (ppm)",
+        "nl": "tVOC, Totale vluchtige organische stoffen, een breed scala aan organische chemische verbindingen (ppm)",
+        "da": "tVOC, Total flygtige organiske forbindelser, en bred vifte af organiske kemiske forbindelser (ppm)",
+        "de": "tVOC, Gesamtmenge flüchtiger organischer Verbindungen, eine breite Palette organischer chemischer Verbindungen (ppm)",
+        "es": "tVOC, Compuestos orgánicos volátiles totales, una amplia gama de compuestos químicos orgánicos (ppm)",
+        "fr": "tVOC, Composés organiques volatils totaux, une large gamme de composés chimiques organiques (ppm)",
+        "it": "tVOC, Composti organici volatili totali, una vasta gamma di composti chimici organici (ppm)",
+        "no": "tVOC, Total flyktige organiske forbindelser, et bredt spekter av organiske kjemiske forbindelser (ppm)",
+        "sv": "tVOC, Totala flyktiga organiska föreningar, ett brett spektrum av organiska kemiska föreningar (ppm)",
+        "pl": "tVOC, Całkowite lotne związki organiczne, szeroka gama organicznych związków chemicznych (ppm)",
+        "ru": "tVOC, Совокупный объём летучих органических соединений, широкий спектр органических химических соединений (ppm)",
+        "ko": "tVOC, 총 휘발성 유기 화합물, 다양한 유기 화학 화합물 (ppm)"
+      },
+      "chartType": "spline",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/images/measure_dust.svg"
     },
     "nightmode": {
       "type": "boolean",
