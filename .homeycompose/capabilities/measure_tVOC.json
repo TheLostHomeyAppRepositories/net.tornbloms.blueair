@@ -1,0 +1,39 @@
+{
+  "type": "number",
+  "title": {
+    "en": "tVOC"
+  },
+  "units": {
+    "en": "ppm³"
+  },
+  "insights": true,
+  "desc": {
+    "en": "tVOC, Total volatile organic compounds, a wide range of organic chemical compounds (ppm)"
+  },
+  "chartType": "spline",
+  "decimals": 2,
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/images/measure_dust.svg",
+  "$flow": {
+    "triggers": [
+      {
+        "id": "measure_tVOC_changed",
+        "title": {
+          "en": "The tVOC value has changed"
+        },
+        "tokens": [
+          {
+            "name": "measure_tVOC",
+            "title": {
+              "en": "tVOC"
+            },
+            "type": "number",
+            "example": 2
+          }
+        ]
+      }
+    ]
+  }
+}

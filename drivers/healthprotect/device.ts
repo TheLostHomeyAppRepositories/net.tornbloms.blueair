@@ -56,6 +56,7 @@ class BlueAirHealthProtectDevice extends Device {
   private savedPM1: Setting | null = null; // Store the last known PM1 value
   private savedPM25: Setting | null = null; // Store the last known PM2.5 value
   private savedPM10: Setting | null = null; // Store the last known PM10 value
+  private savedtVOC: Setting | null = null; // Store the last known tVOC value
   private savedHumidity: Setting | null = null; // Store the last known humidity value
   private savedTemperature: Setting | null = null; // Store the last known temperature value
   private savedFilterStatus: string | null = null; // Store the last known filter status percentage with % character
@@ -96,8 +97,8 @@ class BlueAirHealthProtectDevice extends Device {
       this.savedPM1 = filterSettings(DeviceAttributes, 'pm1');
       this.savedPM25 = filterSettings(DeviceAttributes, 'pm2_5');
       this.savedPM10 = filterSettings(DeviceAttributes, 'pm10');
-      this.savedFilterStatus =
-        this.calculateRemainingFilterLife(DeviceAttributes);
+      this.savedtVOC = filterSettings(DeviceAttributes, 'tvoc');
+      this.savedFilterStatus = this.calculateRemainingFilterLife(DeviceAttributes);
 
       // Register capability listeners to handle user interactions
 
@@ -238,6 +239,7 @@ class BlueAirHealthProtectDevice extends Device {
       const resultPM1 = filterSettings(DeviceAttributes, 'pm1');
       const resultPM25 = filterSettings(DeviceAttributes, 'pm2_5');
       const resultPM10 = filterSettings(DeviceAttributes, 'pm10');
+      const resulttVOC = filterSettings(DeviceAttributes, 'tvoc');
       const resultBrightness = filterSettings(DeviceAttributes, 'brightness');
       const resultChildLock = filterSettings(DeviceAttributes, 'childlock');
       const resultNightMode = filterSettings(DeviceAttributes, 'nightmode');
@@ -256,6 +258,7 @@ class BlueAirHealthProtectDevice extends Device {
       this.log('Initial PM1:', resultPM1);
       this.log('Initial PM2.5:', resultPM25);
       this.log('Initial PM10:', resultPM10);
+      this.log('Initial tVOC:', resulttVOC);
       this.log('Initial brightness:', resultBrightness);
       this.log('Initial child_lock:', resultChildLock);
       this.log('Initial night mode:', resultNightMode);
@@ -294,6 +297,11 @@ class BlueAirHealthProtectDevice extends Device {
       this.setCapabilityValue(
         'measure_pm10',
         Number(resultPM10?.value ?? 0), // Parse PM10 value as a number
+      ).catch(this.error);
+
+      this.setCapabilityValue(
+        'measure_tVOC',
+        Number(resulttVOC?.value ?? 0), // Parse PM10 value as a number
       ).catch(this.error);
 
       this.setCapabilityValue(
@@ -365,6 +373,7 @@ class BlueAirHealthProtectDevice extends Device {
         const resultPM1 = filterSettings(DeviceAttributes, 'pm1');
         const resultPM25 = filterSettings(DeviceAttributes, 'pm2_5');
         const resultPM10 = filterSettings(DeviceAttributes, 'pm10');
+        const resulttVOC = filterSettings(DeviceAttributes, 'tvoc');
         const resultBrightness = filterSettings(DeviceAttributes, 'brightness');
         const resultChildLock = filterSettings(DeviceAttributes, 'childlock');
         const resultNightMode = filterSettings(DeviceAttributes, 'nightmode');
@@ -383,6 +392,7 @@ class BlueAirHealthProtectDevice extends Device {
         this.log('Updated PM1:', resultPM1);
         this.log('Updated PM2.5:', resultPM25);
         this.log('Updated PM10:', resultPM10);
+        this.log('Updated tVOC:', resulttVOC);
         this.log('Updated brightness:', resultBrightness);
         this.log('Updated child_lock:', resultChildLock);
         this.log('Updated night mode:', resultNightMode);
@@ -407,6 +417,10 @@ class BlueAirHealthProtectDevice extends Device {
         this.setCapabilityValue(
           'measure_pm1',
           Number(resultPM1?.value ?? 0),
+        ).catch(this.error);
+        this.setCapabilityValue(
+          'measure_tVOC',
+          Number(resulttVOC?.value ?? 0),
         ).catch(this.error);
         this.setCapabilityValue(
           'measure_pm25',
@@ -464,7 +478,8 @@ class BlueAirHealthProtectDevice extends Device {
           cardTriggerFilter.trigger({
             'device-name': settings.name,
             'device-uuid': settings.uuid,
-            humidity: resultHumidity?.value ?? 0,
+            'humidity new': resultHumidity?.value ?? 0,
+            'humidity old': this.savedHumidity?.value ?? 0,
           });
           this.savedHumidity = resultHumidity;
         }
@@ -475,7 +490,8 @@ class BlueAirHealthProtectDevice extends Device {
           cardTriggerFilter.trigger({
             'device-name': settings.name,
             'device-uuid': settings.uuid,
-            temperature: resultTemperature?.value ?? 0,
+            'temperatur new': resultTemperature?.value ?? 0,
+            'temperature old': this.savedTemperature?.value ?? 0,
           });
           this.savedTemperature = resultTemperature;
         }
@@ -485,7 +501,8 @@ class BlueAirHealthProtectDevice extends Device {
           cardTriggerFilter.trigger({
             'device-name': settings.name,
             'device-uuid': settings.uuid,
-            PM1: resultPM1?.value,
+            'PM1 new': resultPM1?.value,
+            'PM1 old': this.savedPM1?.value,
           });
           this.savedPM1 = resultPM1;
         }
@@ -495,7 +512,8 @@ class BlueAirHealthProtectDevice extends Device {
           cardTriggerFilter.trigger({
             'device-name': settings.name,
             'device-uuid': settings.uuid,
-            PM1: resultPM25?.value ?? 0,
+            'PM25 new': resultPM25?.value ?? 0,
+            'PM25 old': this.savedPM25?.value ?? 0,
           });
           this.savedPM25 = resultPM25;
         }
@@ -505,11 +523,22 @@ class BlueAirHealthProtectDevice extends Device {
           cardTriggerFilter.trigger({
             'device-name': settings.name,
             'device-uuid': settings.uuid,
-            PM1: resultPM10?.value ?? 0,
+            'PM10 new': resultPM10?.value ?? 0,
+            'PM10 old': this.savedPM10?.value ?? 0,
           });
           this.savedPM10 = resultPM10;
         }
-
+        if (this.savedtVOC?.value !== resulttVOC?.value) {
+          const cardTriggerFilter =
+            this.homey.flow.getTriggerCard('tVOC-has-changed');
+          cardTriggerFilter.trigger({
+            'device-name': settings.name,
+            'device-uuid': settings.uuid,
+            'tVOC new': resulttVOC?.value ?? 0,
+            'tVOC old': this.savedtVOC?.value ?? 0,
+          });
+          this.savedPM10 = resultPM10;
+        }
         // Trigger filter status change card if there's a change
         const currentFilterStatus =
           this.calculateRemainingFilterLife(DeviceAttributes);

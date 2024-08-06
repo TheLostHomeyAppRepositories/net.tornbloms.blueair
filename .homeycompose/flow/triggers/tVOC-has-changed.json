@@ -1,0 +1,48 @@
+{
+  "title": {
+    "en": "tVOC has changed"
+  },
+  "titleFormatted": {
+    "en": "tVOC has changed."
+  },
+  "hint": {
+    "en": "tVOC has been changed"
+  },
+  "platforms": [
+    "local"
+  ],
+  "tokens": [
+    {
+      "type": "string",
+      "name": "device-name",
+      "title": {
+        "en": "Device name"
+      },
+      "example": {
+        "en": "BlueAir"
+      }
+    },
+    {
+      "type": "string",
+      "name": "device-uuid",
+      "title": {
+        "en": "Device UUID"
+      },
+      "example": {
+        "en": "2504776FFDC0BAB2"
+      }
+    },
+    {
+      "type": "string",
+      "name": "tvoc",
+      "title": {
+        "en": "tVOC"
+      },
+      "example": {
+        "en": "1",
+        "se": "1",
+        "nl": "1"
+      }
+    }
+  ]
+}
