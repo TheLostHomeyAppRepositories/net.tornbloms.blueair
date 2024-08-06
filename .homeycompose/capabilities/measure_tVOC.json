@@ -1,14 +1,47 @@
 {
   "type": "number",
   "title": {
-    "en": "tVOC"
+    "en": "tVOC",
+    "nl": "tVOC",
+    "da": "tVOC",
+    "de": "tVOC",
+    "es": "tVOC",
+    "fr": "tVOC",
+    "it": "tVOC",
+    "no": "tVOC",
+    "sv": "tVOC",
+    "pl": "tVOC",
+    "ru": "tVOC",
+    "ko": "tVOC"
   },
   "units": {
-    "en": "ppm³"
+    "en": "ppm³",
+    "nl": "ppm³",
+    "da": "ppm³",
+    "de": "ppm³",
+    "es": "ppm³",
+    "fr": "ppm³",
+    "it": "ppm³",
+    "no": "ppm³",
+    "sv": "ppm³",
+    "pl": "ppm³",
+    "ru": "ppm³",
+    "ko": "ppm³"
   },
   "insights": true,
   "desc": {
-    "en": "tVOC, Total volatile organic compounds, a wide range of organic chemical compounds (ppm)"
+    "en": "tVOC, Total volatile organic compounds, a wide range of organic chemical compounds (ppm)",
+    "nl": "tVOC, Totale vluchtige organische stoffen, een breed scala aan organische chemische verbindingen (ppm)",
+    "da": "tVOC, Total flygtige organiske forbindelser, en bred vifte af organiske kemiske forbindelser (ppm)",
+    "de": "tVOC, Gesamtmenge flüchtiger organischer Verbindungen, eine breite Palette organischer chemischer Verbindungen (ppm)",
+    "es": "tVOC, Compuestos orgánicos volátiles totales, una amplia gama de compuestos químicos orgánicos (ppm)",
+    "fr": "tVOC, Composés organiques volatils totaux, une large gamme de composés chimiques organiques (ppm)",
+    "it": "tVOC, Composti organici volatili totali, una vasta gamma di composti chimici organici (ppm)",
+    "no": "tVOC, Total flyktige organiske forbindelser, et bredt spekter av organiske kjemiske forbindelser (ppm)",
+    "sv": "tVOC, Totala flyktiga organiska föreningar, ett brett spektrum av organiska kemiska föreningar (ppm)",
+    "pl": "tVOC, Całkowite lotne związki organiczne, szeroka gama organicznych związków chemicznych (ppm)",
+    "ru": "tVOC, Совокупный объём летучих органических соединений, широкий спектр органических химических соединений (ppm)",
+    "ko": "tVOC, 총 휘발성 유기 화합물, 다양한 유기 화학 화합물 (ppm)"
   },
   "chartType": "spline",
   "decimals": 2,
@@ -21,13 +54,35 @@
       {
         "id": "measure_tVOC_changed",
         "title": {
-          "en": "The tVOC value has changed"
+          "en": "The tVOC value has changed",
+          "nl": "De tVOC-waarde is veranderd",
+          "da": "tVOC-værdien er ændret",
+          "de": "Der tVOC-Wert hat sich geändert",
+          "es": "El valor tVOC ha cambiado",
+          "fr": "La valeur tVOC a changé",
+          "it": "Il valore di tVOC è cambiato",
+          "no": "tVOC-verdien har endret seg",
+          "sv": "tVOC-värdet har ändrats",
+          "pl": "Wartość tVOC została zmieniona",
+          "ru": "Значение tVOC изменилось",
+          "ko": "tVOC 값이 변경되었습니다"
         },
         "tokens": [
           {
             "name": "measure_tVOC",
             "title": {
-              "en": "tVOC"
+              "en": "tVOC",
+              "nl": "tVOC",
+              "da": "tVOC",
+              "de": "tVOC",
+              "es": "tVOC",
+              "fr": "tVOC",
+              "it": "tVOC",
+              "no": "tVOC",
+              "sv": "tVOC",
+              "pl": "tVOC",
+              "ru": "tVOC",
+              "ko": "tVOC"
             },
             "type": "number",
             "example": 2

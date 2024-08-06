@@ -10,7 +10,8 @@
     "it": "Classic",
     "no": "Classic",
     "pl": "Classic",
-    "ru": "Classic"
+    "ru": "Classic",
+    "ko": "Classic"
   },
   "class": "airpurifier",
   "capabilities": [
