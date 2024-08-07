@@ -1122,6 +1122,560 @@
         "id": "tVOC-has-changed"
       }
     ],
+    "conditions": [
+      {
+        "title": {
+          "en": "pm1 measurement",
+          "nl": "pm1 meting",
+          "da": "pm1 måling",
+          "de": "pm1 Messung",
+          "es": "medición de pm1",
+          "fr": "mesure pm1",
+          "it": "misurazione pm1",
+          "no": "pm1 måling",
+          "sv": "pm1 mätning",
+          "pl": "pomiar pm1",
+          "ru": "измерение pm1",
+          "ko": "pm1 측정"
+        },
+        "titleFormatted": {
+          "en": "pm1 level [[argument_main]]",
+          "nl": "pm1 niveau [[argument_main]]",
+          "da": "pm1 niveau [[argument_main]]",
+          "de": "pm1 Niveau [[argument_main]]",
+          "es": "nivel de pm1 [[argument_main]]",
+          "fr": "niveau pm1 [[argument_main]]",
+          "it": "livello pm1 [[argument_main]]",
+          "no": "pm1 nivå [[argument_main]]",
+          "sv": "pm1 nivå [[argument_main]]",
+          "pl": "poziom pm1 [[argument_main]]",
+          "ru": "уровень pm1 [[argument_main]]",
+          "ko": "pm1 수준 [[argument_main]]"
+        },
+        "hint": {
+          "en": "pm1 measurement",
+          "nl": "pm1 meting",
+          "da": "pm1 måling",
+          "de": "pm1 Messung",
+          "es": "medición de pm1",
+          "fr": "mesure pm1",
+          "it": "misurazione pm1",
+          "no": "pm1 måling",
+          "sv": "pm1 mätning",
+          "pl": "pomiar pm1",
+          "ru": "измерение pm1",
+          "ko": "pm1 측정"
+        },
+        "args": [
+          {
+            "name": "argument_main",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "excelent",
+                "label": {
+                  "en": "excelent, score below 10 µg/m³",
+                  "nl": "excellent, scoor onder de 10 µg/m³",
+                  "da": "fremragende, score under 10 µg/m³",
+                  "de": "ausgezeichnet, Wert unter 10 µg/m³",
+                  "es": "excelente, puntuación por debajo de 10 µg/m³",
+                  "fr": "excellent, score en dessous de 10 µg/m³",
+                  "it": "eccellente, punteggio inferiore a 10 µg/m³",
+                  "no": "utmerket, score under 10 µg/m³",
+                  "sv": "utmärkt, poäng under 10 µg/m³",
+                  "pl": "doskonały, wynik poniżej 10 µg/m³",
+                  "ru": "превосходно, результат ниже 10 мкг/м³",
+                  "ko": "우수, 10 µg/m³ 이하"
+                }
+              },
+              {
+                "id": "good",
+                "label": {
+                  "en": "good, score between 11 and 20 µg/m³",
+                  "nl": "goed, score tussen 11 en 20 µg/m³",
+                  "da": "godt, score mellem 11 og 20 µg/m³",
+                  "de": "gut, Wert zwischen 11 und 20 µg/m³",
+                  "es": "bueno, puntuación entre 11 y 20 µg/m³",
+                  "fr": "bon, score entre 11 et 20 µg/m³",
+                  "it": "buono, punteggio tra 11 e 20 µg/m³",
+                  "no": "bra, score mellom 11 og 20 µg/m³",
+                  "sv": "bra, poäng mellan 11 och 20 µg/m³",
+                  "pl": "dobry, wynik między 11 a 20 µg/m³",
+                  "ru": "хорошо, результат между 11 и 20 мкг/м³",
+                  "ko": "양호, 11에서 20 µg/m³ 사이"
+                }
+              },
+              {
+                "id": "fair",
+                "label": {
+                  "en": "average, between 21 and 30 µg/m³",
+                  "nl": "gemiddeld, tussen 21 en 30 µg/m³",
+                  "da": "gennemsnit, mellem 21 og 30 µg/m³",
+                  "de": "durchschnittlich, zwischen 21 und 30 µg/m³",
+                  "es": "regular, entre 21 y 30 µg/m³",
+                  "fr": "moyen, entre 21 et 30 µg/m³",
+                  "it": "nella media, tra 21 e 30 µg/m³",
+                  "no": "gjennomsnittlig, mellom 21 og 30 µg/m³",
+                  "sv": "genomsnittlig, mellan 21 och 30 µg/m³",
+                  "pl": "średni, między 21 a 30 µg/m³",
+                  "ru": "средний, между 21 и 30 мкг/м³",
+                  "ko": "보통, 21에서 30 µg/m³ 사이"
+                }
+              },
+              {
+                "id": "poor",
+                "label": {
+                  "en": "poor, between 31 and 40 µg/m³",
+                  "nl": "slecht, tussen 31 en 40 µg/m³",
+                  "da": "dårlig, mellem 31 og 40 µg/m³",
+                  "de": "schlecht, zwischen 31 und 40 µg/m³",
+                  "es": "malo, entre 31 y 40 µg/m³",
+                  "fr": "médiocre, entre 31 et 40 µg/m³",
+                  "it": "scarso, tra 31 e 40 µg/m³",
+                  "no": "dårlig, mellom 31 og 40 µg/m³",
+                  "sv": "dålig, mellan 31 och 40 µg/m³",
+                  "pl": "słaby, między 31 a 40 µg/m³",
+                  "ru": "плохо, между 31 и 40 мкг/м³",
+                  "ko": "나쁨, 31에서 40 µg/m³ 사이"
+                }
+              },
+              {
+                "id": "verypoor",
+                "label": {
+                  "en": "very poor, above 40 µg/m³",
+                  "nl": "zeer slecht, boven de 40 µg/m³",
+                  "da": "meget dårlig, over 40 µg/m³",
+                  "de": "sehr schlecht, über 40 µg/m³",
+                  "es": "muy malo, por encima de 40 µg/m³",
+                  "fr": "très mauvais, au-dessus de 40 µg/m³",
+                  "it": "molto scarso, sopra 40 µg/m³",
+                  "no": "veldig dårlig, over 40 µg/m³",
+                  "sv": "mycket dålig, över 40 µg/m³",
+                  "pl": "bardzo słaby, powyżej 40 µg/m³",
+                  "ru": "очень плохо, выше 40 мкг/м³",
+                  "ko": "매우 나쁨, 40 µg/m³ 이상"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "score_pm1"
+      },
+      {
+        "title": {
+          "en": "pm10 measurement",
+          "nl": "pm10 meting",
+          "da": "pm10 måling",
+          "de": "pm10 Messung",
+          "es": "medición de pm10",
+          "fr": "mesure de pm10",
+          "it": "misurazione pm10",
+          "no": "pm10-måling",
+          "sv": "pm10-mätning",
+          "pl": "pm10 pomiar",
+          "ru": "измерение pm10",
+          "ko": "pm10 측정"
+        },
+        "titleFormatted": {
+          "en": "pm10 level [[argument_main]]",
+          "nl": "pm10 niveau [[argument_main]]",
+          "da": "pm10 niveau [[argument_main]]",
+          "de": "pm10 Niveau [[argument_main]]",
+          "es": "nivel de pm10 [[argument_main]]",
+          "fr": "niveau de pm10 [[argument_main]]",
+          "it": "livello di pm10 [[argument_main]]",
+          "no": "pm10-nivå [[argument_main]]",
+          "sv": "pm10-nivå [[argument_main]]",
+          "pl": "poziom pm10 [[argument_main]]",
+          "ru": "уровень pm10 [[argument_main]]",
+          "ko": "pm10 수준 [[argument_main]]"
+        },
+        "hint": {
+          "en": "pm10 measurement",
+          "nl": "pm10 meting",
+          "da": "pm10 måling",
+          "de": "pm10 Messung",
+          "es": "medición de pm10",
+          "fr": "mesure de pm10",
+          "it": "misurazione pm10",
+          "no": "pm10-måling",
+          "sv": "pm10-mätning",
+          "pl": "pm10 pomiar",
+          "ru": "измерение pm10",
+          "ko": "pm10 측정"
+        },
+        "args": [
+          {
+            "name": "argument_main",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "excelent",
+                "label": {
+                  "en": "excelent, score below 20 µg/m³",
+                  "nl": "uitstekend, score onder 20 µg/m³",
+                  "da": "fremragende, score under 20 µg/m³",
+                  "de": "ausgezeichnet, Wert unter 20 µg/m³",
+                  "es": "excelente, puntuación por debajo de 20 µg/m³",
+                  "fr": "excellent, score en dessous de 20 µg/m³",
+                  "it": "eccellente, punteggio sotto i 20 µg/m³",
+                  "no": "utmerket, poengsum under 20 µg/m³",
+                  "sv": "utmärkt, poäng under 20 µg/m³",
+                  "pl": "doskonały, wynik poniżej 20 µg/m³",
+                  "ru": "отлично, менее 20 µг/м³",
+                  "ko": "우수, 20 µg/m³ 이하"
+                }
+              },
+              {
+                "id": "good",
+                "label": {
+                  "en": "good, score between 20 and 50 µg/m³",
+                  "nl": "goed, score tussen 20 en 50 µg/m³",
+                  "da": "godt, score mellem 20 og 50 µg/m³",
+                  "de": "gut, Wert zwischen 20 und 50 µg/m³",
+                  "es": "bueno, puntuación entre 20 y 50 µg/m³",
+                  "fr": "bon, score entre 20 et 50 µg/m³",
+                  "it": "buono, punteggio tra 20 e 50 µg/m³",
+                  "no": "god, poengsum mellom 20 og 50 µg/m³",
+                  "sv": "bra, poäng mellan 20 och 50 µg/m³",
+                  "pl": "dobry, wynik między 20 a 50 µg/m³",
+                  "ru": "хорошо, между 20 и 50 µг/м³",
+                  "ko": "좋음, 20에서 50 µg/m³ 사이"
+                }
+              },
+              {
+                "id": "fair",
+                "label": {
+                  "en": "average, between 50 and 100 µg/m³",
+                  "nl": "gemiddeld, tussen 50 en 100 µg/m³",
+                  "da": "gennemsnitlig, mellem 50 og 100 µg/m³",
+                  "de": "durchschnittlich, zwischen 50 und 100 µg/m³",
+                  "es": "regular, entre 50 y 100 µg/m³",
+                  "fr": "moyen, entre 50 et 100 µg/m³",
+                  "it": "medio, tra 50 e 100 µg/m³",
+                  "no": "gjennomsnittlig, mellom 50 og 100 µg/m³",
+                  "sv": "genomsnittlig, mellan 50 och 100 µg/m³",
+                  "pl": "średni, między 50 a 100 µg/m³",
+                  "ru": "средний, между 50 и 100 µг/м³",
+                  "ko": "보통, 50에서 100 µg/m³ 사이"
+                }
+              },
+              {
+                "id": "poor",
+                "label": {
+                  "en": "poor, between 100 and 300 µg/m³",
+                  "nl": "slecht, tussen 100 en 300 µg/m³",
+                  "da": "dårlig, mellem 100 og 300 µg/m³",
+                  "de": "schlecht, zwischen 100 und 300 µg/m³",
+                  "es": "malo, entre 100 y 300 µg/m³",
+                  "fr": "pauvre, entre 100 et 300 µg/m³",
+                  "it": "scarso, tra 100 e 300 µg/m³",
+                  "no": "dårlig, mellom 100 og 300 µg/m³",
+                  "sv": "dålig, mellan 100 och 300 µg/m³",
+                  "pl": "słaby, między 100 a 300 µg/m³",
+                  "ru": "плохо, между 100 и 300 µг/м³",
+                  "ko": "나쁨, 100에서 300 µg/m³ 사이"
+                }
+              },
+              {
+                "id": "verypoor",
+                "label": {
+                  "en": "very poor, above 300 µg/m³",
+                  "nl": "zeer slecht, boven 300 µg/m³",
+                  "da": "meget dårlig, over 300 µg/m³",
+                  "de": "sehr schlecht, über 300 µg/m³",
+                  "es": "muy malo, por encima de 300 µg/m³",
+                  "fr": "très mauvais, au-dessus de 300 µg/m³",
+                  "it": "molto scarso, sopra i 300 µg/m³",
+                  "no": "svært dårlig, over 300 µg/m³",
+                  "sv": "mycket dålig, över 300 µg/m³",
+                  "pl": "bardzo słaby, powyżej 300 µg/m³",
+                  "ru": "очень плохо, выше 300 µг/м³",
+                  "ko": "매우 나쁨, 300 µg/m³ 이상"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "score_pm10"
+      },
+      {
+        "title": {
+          "en": "pm2.5 measurement",
+          "nl": "pm2.5 meting",
+          "da": "pm2.5 måling",
+          "de": "pm2.5 Messung",
+          "es": "medición pm2.5",
+          "fr": "mesure pm2.5",
+          "it": "misurazione pm2.5",
+          "no": "pm2.5 måling",
+          "sv": "pm2.5 mätning",
+          "pl": "pomiar pm2.5",
+          "ru": "измерение pm2.5",
+          "ko": "pm2.5 측정"
+        },
+        "titleFormatted": {
+          "en": "pm2.5 level [[argument_main]]",
+          "nl": "pm2.5 niveau [[argument_main]]",
+          "da": "pm2.5 niveau [[argument_main]]",
+          "de": "pm2.5 Niveau [[argument_main]]",
+          "es": "nivel de pm2.5 [[argument_main]]",
+          "fr": "niveau de pm2.5 [[argument_main]]",
+          "it": "livello di pm2.5 [[argument_main]]",
+          "no": "pm2.5 nivå [[argument_main]]",
+          "sv": "pm2.5 nivå [[argument_main]]",
+          "pl": "poziom pm2.5 [[argument_main]]",
+          "ru": "уровень pm2.5 [[argument_main]]",
+          "ko": "pm2.5 수준 [[argument_main]]"
+        },
+        "hint": {
+          "en": "pm2.5 measurement",
+          "nl": "pm2.5 meting",
+          "da": "pm2.5 måling",
+          "de": "pm2.5 Messung",
+          "es": "medición pm2.5",
+          "fr": "mesure pm2.5",
+          "it": "misurazione pm2.5",
+          "no": "pm2.5 måling",
+          "sv": "pm2.5 mätning",
+          "pl": "pomiar pm2.5",
+          "ru": "измерение pm2.5",
+          "ko": "pm2.5 측정"
+        },
+        "args": [
+          {
+            "name": "argument_main",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "excelent",
+                "label": {
+                  "en": "excelent, score below 12 µg/m³",
+                  "nl": "uitstekend, score onder 12 µg/m³",
+                  "da": "fremragende, score under 12 µg/m³",
+                  "de": "ausgezeichnet, Wert unter 12 µg/m³",
+                  "es": "excelente, puntuación por debajo de 12 µg/m³",
+                  "fr": "excellent, score inférieur à 12 µg/m³",
+                  "it": "eccellente, punteggio sotto 12 µg/m³",
+                  "no": "utmerket, poengsum under 12 µg/m³",
+                  "sv": "utmärkt, poäng under 12 µg/m³",
+                  "pl": "doskonały, wynik poniżej 12 µg/m³",
+                  "ru": "отлично, показатель ниже 12 мкг/м³",
+                  "ko": "우수한, 12 µg/m³ 이하 점수"
+                }
+              },
+              {
+                "id": "good",
+                "label": {
+                  "en": "good, score between 12.1 and 35.4 µg/m³",
+                  "nl": "goed, score tussen 12.1 en 35.4 µg/m³",
+                  "da": "god, score mellem 12,1 og 35,4 µg/m³",
+                  "de": "gut, Wert zwischen 12,1 und 35,4 µg/m³",
+                  "es": "bueno, puntuación entre 12.1 y 35.4 µg/m³",
+                  "fr": "bon, score entre 12,1 et 35,4 µg/m³",
+                  "it": "buono, punteggio tra 12,1 e 35,4 µg/m³",
+                  "no": "god, poengsum mellom 12,1 og 35,4 µg/m³",
+                  "sv": "bra, poäng mellan 12,1 och 35,4 µg/m³",
+                  "pl": "dobry, wynik między 12,1 a 35,4 µg/m³",
+                  "ru": "хорошо, показатель между 12,1 и 35,4 мкг/м³",
+                  "ko": "좋음, 12.1 µg/m³과 35.4 µg/m³ 사이 점수"
+                }
+              },
+              {
+                "id": "fair",
+                "label": {
+                  "en": "average, between 35.5 and 55.4 µg/m³",
+                  "nl": "gemiddeld, tussen 35.5 en 55.4 µg/m³",
+                  "da": "gennemsnitlig, mellem 35,5 og 55,4 µg/m³",
+                  "de": "durchschnittlich, zwischen 35,5 und 55,4 µg/m³",
+                  "es": "regular, entre 35.5 y 55.4 µg/m³",
+                  "fr": "moyen, entre 35,5 et 55,4 µg/m³",
+                  "it": "medio, tra 35,5 e 55,4 µg/m³",
+                  "no": "gjennomsnittlig, mellom 35,5 og 55,4 µg/m³",
+                  "sv": "genomsnittlig, mellan 35,5 och 55,4 µg/m³",
+                  "pl": "średni, między 35,5 a 55,4 µg/m³",
+                  "ru": "средне, между 35,5 и 55,4 мкг/м³",
+                  "ko": "보통, 35.5 µg/m³과 55.4 µg/m³ 사이"
+                }
+              },
+              {
+                "id": "poor",
+                "label": {
+                  "en": "poor, between 55.5 and 150.4 µg/m³",
+                  "nl": "slecht, tussen 55.5 en 150.4 µg/m³",
+                  "da": "dårlig, mellem 55,5 og 150,4 µg/m³",
+                  "de": "schlecht, zwischen 55,5 und 150,4 µg/m³",
+                  "es": "pobre, entre 55.5 y 150.4 µg/m³",
+                  "fr": "médiocre, entre 55,5 et 150,4 µg/m³",
+                  "it": "scarso, tra 55,5 e 150,4 µg/m³",
+                  "no": "dårlig, mellom 55,5 og 150,4 µg/m³",
+                  "sv": "dålig, mellan 55,5 och 150,4 µg/m³",
+                  "pl": "słaby, między 55,5 a 150,4 µg/m³",
+                  "ru": "плохо, между 55,5 и 150,4 мкг/м³",
+                  "ko": "나쁨, 55.5 µg/m³과 150.4 µg/m³ 사이"
+                }
+              },
+              {
+                "id": "verypoor",
+                "label": {
+                  "en": "very poor, above 150.5 µg/m³",
+                  "nl": "zeer slecht, boven 150.5 µg/m³",
+                  "da": "meget dårlig, over 150,5 µg/m³",
+                  "de": "sehr schlecht, über 150,5 µg/m³",
+                  "es": "muy pobre, por encima de 150.5 µg/m³",
+                  "fr": "très mauvais, au-dessus de 150,5 µg/m³",
+                  "it": "molto scarso, sopra 150,5 µg/m³",
+                  "no": "svært dårlig, over 150,5 µg/m³",
+                  "sv": "väldigt dålig, över 150,5 µg/m³",
+                  "pl": "bardzo słaby, powyżej 150,5 µg/m³",
+                  "ru": "очень плохо, выше 150,5 мкг/м³",
+                  "ko": "매우 나쁨, 150.5 µg/m³ 이상"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "score_pm25"
+      },
+      {
+        "title": {
+          "en": "tVOC measurement",
+          "nl": "tVOC meting",
+          "da": "tVOC måling",
+          "de": "tVOC Messung",
+          "es": "medición de tVOC",
+          "fr": "mesure de tVOC",
+          "it": "misurazione tVOC",
+          "no": "tVOC måling",
+          "sv": "tVOC mätning",
+          "pl": "pomiar tVOC",
+          "ru": "измерение tVOC",
+          "ko": "tVOC 측정"
+        },
+        "titleFormatted": {
+          "en": "tVOC level [[argument_main]]",
+          "nl": "tVOC-niveau [[argument_main]]",
+          "da": "tVOC-niveau [[argument_main]]",
+          "de": "tVOC-Niveau [[argument_main]]",
+          "es": "nivel de tVOC [[argument_main]]",
+          "fr": "niveau de tVOC [[argument_main]]",
+          "it": "livello tVOC [[argument_main]]",
+          "no": "tVOC-nivå [[argument_main]]",
+          "sv": "tVOC-nivå [[argument_main]]",
+          "pl": "poziom tVOC [[argument_main]]",
+          "ru": "уровень tVOC [[argument_main]]",
+          "ko": "tVOC 수준 [[argument_main]]"
+        },
+        "hint": {
+          "en": "tVOC measurement",
+          "nl": "tVOC meting",
+          "da": "tVOC måling",
+          "de": "tVOC Messung",
+          "es": "medición de tVOC",
+          "fr": "mesure de tVOC",
+          "it": "misurazione tVOC",
+          "no": "tVOC måling",
+          "sv": "tVOC mätning",
+          "pl": "pomiar tVOC",
+          "ru": "измерение tVOC",
+          "ko": "tVOC 측정"
+        },
+        "args": [
+          {
+            "name": "argument_main",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "excelent",
+                "label": {
+                  "en": "excelent, score below 65 µg/m³",
+                  "nl": "uitstekend, score onder 65 µg/m³",
+                  "da": "fremragende, score under 65 µg/m³",
+                  "de": "ausgezeichnet, Wert unter 65 µg/m³",
+                  "es": "excelente, puntuación por debajo de 65 µg/m³",
+                  "fr": "excellent, score inférieur à 65 µg/m³",
+                  "it": "eccellente, punteggio sotto 65 µg/m³",
+                  "no": "utmerket, score under 65 µg/m³",
+                  "sv": "utmärkt, poäng under 65 µg/m³",
+                  "pl": "doskonały, wynik poniżej 65 µg/m³",
+                  "ru": "отлично, показатель ниже 65 мкг/м³",
+                  "ko": "우수, 65 µg/m³ 이하 점수"
+                }
+              },
+              {
+                "id": "good",
+                "label": {
+                  "en": "good, score between 66 and 220 µg/m³",
+                  "nl": "goed, score tussen 66 en 220 µg/m³",
+                  "da": "god, score mellem 66 og 220 µg/m³",
+                  "de": "gut, Wert zwischen 66 und 220 µg/m³",
+                  "es": "bueno, puntuación entre 66 y 220 µg/m³",
+                  "fr": "bon, score entre 66 et 220 µg/m³",
+                  "it": "buono, punteggio tra 66 e 220 µg/m³",
+                  "no": "god, score mellom 66 og 220 µg/m³",
+                  "sv": "bra, poäng mellan 66 och 220 µg/m³",
+                  "pl": "dobry, wynik między 66 a 220 µg/m³",
+                  "ru": "хорошо, показатель между 66 и 220 мкг/м³",
+                  "ko": "좋음, 66과 220 µg/m³ 사이 점수"
+                }
+              },
+              {
+                "id": "fair",
+                "label": {
+                  "en": "average, between 221 and 660 µg/m³",
+                  "nl": "gemiddeld, tussen 221 en 660 µg/m³",
+                  "da": "gennemsnitligt, mellem 221 og 660 µg/m³",
+                  "de": "durchschnittlich, zwischen 221 und 660 µg/m³",
+                  "es": "promedio, entre 221 y 660 µg/m³",
+                  "fr": "moyen, entre 221 et 660 µg/m³",
+                  "it": "medio, tra 221 e 660 µg/m³",
+                  "no": "gjennomsnittlig, mellom 221 og 660 µg/m³",
+                  "sv": "genomsnittlig, mellan 221 och 660 µg/m³",
+                  "pl": "średni, między 221 a 660 µg/m³",
+                  "ru": "средний, между 221 и 660 мкг/м³",
+                  "ko": "보통, 221과 660 µg/m³ 사이"
+                }
+              },
+              {
+                "id": "poor",
+                "label": {
+                  "en": "poor, between 661 and 2200 µg/m³",
+                  "nl": "slecht, tussen 661 en 2200 µg/m³",
+                  "da": "dårlig, mellem 661 og 2200 µg/m³",
+                  "de": "schlecht, zwischen 661 und 2200 µg/m³",
+                  "es": "pobre, entre 661 y 2200 µg/m³",
+                  "fr": "médiocre, entre 661 et 2200 µg/m³",
+                  "it": "scadente, tra 661 e 2200 µg/m³",
+                  "no": "dårlig, mellom 661 og 2200 µg/m³",
+                  "sv": "dålig, mellan 661 och 2200 µg/m³",
+                  "pl": "słaby, między 661 a 2200 µg/m³",
+                  "ru": "плохо, между 661 и 2200 мкг/м³",
+                  "ko": "불량, 661과 2200 µg/m³ 사이"
+                }
+              },
+              {
+                "id": "verypoor",
+                "label": {
+                  "en": "very poor, above 2200 µg/m³",
+                  "nl": "zeer slecht, boven 2200 µg/m³",
+                  "da": "meget dårlig, over 2200 µg/m³",
+                  "de": "sehr schlecht, über 2200 µg/m³",
+                  "es": "muy pobre, por encima de 2200 µg/m³",
+                  "fr": "très mauvais, au-dessus de 2200 µg/m³",
+                  "it": "molto scadente, sopra 2200 µg/m³",
+                  "no": "svært dårlig, over 2200 µg/m³",
+                  "sv": "mycket dålig, över 2200 µg/m³",
+                  "pl": "bardzo słaby, powyżej 2200 µg/m³",
+                  "ru": "очень плохо, больше 2200 мкг/м³",
+                  "ko": "매우 불량, 2200 µg/m³ 이상"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "score_tvoc"
+      }
+    ],
     "actions": [
       {
         "title": {
@@ -1156,6 +1710,11 @@
           "local"
         ],
         "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=dustmagnet|healthprotect"
+          },
           {
             "type": "dropdown",
             "name": "automatic",
@@ -1248,6 +1807,11 @@
           "local"
         ],
         "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=classic|dustmagnet|healthprotect"
+          },
           {
             "type": "dropdown",
             "name": "brightness",
@@ -1393,6 +1957,11 @@
         },
         "args": [
           {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=dustmagnet|healthprotect"
+          },
+          {
             "type": "range",
             "name": "brightness",
             "title": {
@@ -1451,6 +2020,11 @@
           "local"
         ],
         "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=classic"
+          },
           {
             "type": "dropdown",
             "name": "childlock",
@@ -1542,6 +2116,11 @@
         ],
         "args": [
           {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=dustmagnet|healthprotect"
+          },
+          {
             "type": "dropdown",
             "name": "childlock",
             "title": {
@@ -1631,6 +2210,11 @@
           "local"
         ],
         "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=classic"
+          },
           {
             "type": "dropdown",
             "name": "fanspeed",
@@ -1770,6 +2354,11 @@
         },
         "args": [
           {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=dustmagnet|healthprotect"
+          },
+          {
             "type": "range",
             "name": "fanspeed",
             "title": {
@@ -1828,6 +2417,11 @@
           "local"
         ],
         "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=dustmagnet|healthprotect"
+          },
           {
             "type": "dropdown",
             "name": "nightmode",
@@ -1918,6 +2512,11 @@
           "local"
         ],
         "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=dustmagnet|healthprotect"
+          },
           {
             "type": "dropdown",
             "name": "standby",
@@ -3500,6 +4099,7 @@
       "getable": true,
       "setable": true,
       "uiComponent": "toggle",
+      "uiQuickAction": true,
       "icon": "/assets/images/automatic.svg"
     },
     "brightness": {
@@ -3519,6 +4119,7 @@
         "ko": "밝기"
       },
       "uiComponent": "slider",
+      "uiQuickAction": true,
       "getable": true,
       "setable": true,
       "min": 0,
@@ -3543,6 +4144,7 @@
         "ko": "밝기"
       },
       "uiComponent": "slider",
+      "uiQuickAction": true,
       "getable": true,
       "setable": true,
       "min": 0,
@@ -3569,6 +4171,7 @@
       "getable": true,
       "setable": true,
       "uiComponent": "toggle",
+      "uiQuickAction": false,
       "icon": "/assets/images/child-lock.svg"
     },
     "fan_speed": {
@@ -3702,7 +4305,8 @@
       "max": 100,
       "decimals": 0,
       "units": "%",
-      "uiComponent": "slider"
+      "uiComponent": "slider",
+      "uiQuickAction": true
     },
     "filter_status": {
       "type": "string",
@@ -3747,35 +4351,73 @@
       "uiComponent": "sensor",
       "icon": "/assets/images/clock.svg"
     },
+    "measure_humidity": {
+      "type": "number",
+      "title": {
+        "en": "Current Humidity value",
+        "nl": "Huidige luchtvochtigheidswaarde",
+        "da": "Aktuel fugtighedsværdi",
+        "de": "Aktueller Feuchtigkeitswert",
+        "es": "Valor de humedad actual",
+        "fr": "Valeur actuelle de l'humidité",
+        "it": "Valore attuale di umidità",
+        "no": "Nåværende fuktighetsverdi",
+        "sv": "Aktuellt fuktighetsvärde",
+        "pl": "Aktualna wartość wilgotności",
+        "ru": "Текущее значение влажности",
+        "ko": "현재 습도 값"
+      },
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "%",
+        "nl": "%",
+        "da": "%",
+        "de": "%",
+        "es": "%",
+        "fr": "%",
+        "it": "%",
+        "no": "%",
+        "sv": "%",
+        "pl": "%",
+        "ru": "%",
+        "ko": "%"
+      },
+      "min": 1,
+      "max": 99,
+      "decimals": 0,
+      "insights": true,
+      "icon": "/assets/images/measure_humidity.svg"
+    },
     "measure_pm1": {
       "type": "number",
       "title": {
-        "en": "PM1",
-        "nl": "PM1",
-        "de": "PM1",
-        "fr": "PM1",
-        "it": "PM1",
-        "sv": "PM1",
-        "no": "PM1",
-        "es": "PM1",
-        "ru": "ТЧ 1",
-        "pl": "PM1",
-        "ko": "PM1",
-        "da": "PM1"
+        "en": "Current PM1 value",
+        "nl": "Huidige PM1-waarde",
+        "da": "Nuværende PM1-værdi",
+        "de": "Aktueller PM1-Wert",
+        "es": "Valor actual de PM1",
+        "fr": "Valeur actuelle de PM1",
+        "it": "Valore attuale di PM1",
+        "no": "Nåværende PM1-verdi",
+        "sv": "Nuvarande PM1-värde",
+        "pl": "Aktualna wartość PM1",
+        "ru": "Текущий уровень PM1",
+        "ko": "현재 PM1 수치"
       },
       "units": {
         "en": "μg/m³",
-        "ru": "мкг/м³",
-        "ko": "μg/m³",
-        "no": "μg/m³",
         "nl": "μg/m³",
         "da": "μg/m³",
         "de": "μg/m³",
         "es": "μg/m³",
         "fr": "μg/m³",
         "it": "μg/m³",
+        "no": "μg/m³",
         "sv": "μg/m³",
-        "pl": "μg/m³"
+        "pl": "μg/m³",
+        "ru": "μg/m³",
+        "ko": "μg/m³"
       },
       "insights": true,
       "desc": {
@@ -3793,7 +4435,9 @@
         "ko": "대기 중 미세입자 수(μg/m³)"
       },
       "chartType": "spline",
-      "decimals": 2,
+      "min": 0,
+      "max": 999,
+      "decimals": 0,
       "getable": true,
       "setable": false,
       "uiComponent": "sensor",
@@ -3802,32 +4446,30 @@
     "measure_pm10": {
       "type": "number",
       "title": {
-        "en": "PM10",
-        "nl": "PM10",
-        "de": "PM10",
-        "fr": "PM10",
-        "it": "PM10",
-        "sv": "PM10",
-        "no": "PM10",
-        "es": "PM10",
-        "ru": "ТЧ 10",
-        "pl": "PM10",
-        "ko": "PM10",
-        "da": "PM10"
+        "en": "Current PM10 value",
+        "da": "Nuværende PM10-værdi",
+        "de": "Aktueller PM10-Wert",
+        "es": "Valor actual de PM10",
+        "fr": "Valeur actuelle de PM10",
+        "it": "Valore attuale di PM10",
+        "no": "Nåværende PM10-verdi",
+        "sv": "Nuvarande PM10-värde",
+        "pl": "Aktualna wartość PM10",
+        "ru": "Текущее значение ТЧ 10",
+        "ko": "현재 PM10 값"
       },
       "units": {
         "en": "μg/m³",
-        "ru": "мкг/м³",
-        "ko": "μg/m³",
-        "no": "μg/m³",
-        "nl": "μg/m³",
         "da": "μg/m³",
         "de": "μg/m³",
         "es": "μg/m³",
         "fr": "μg/m³",
         "it": "μg/m³",
+        "no": "μg/m³",
         "sv": "μg/m³",
-        "pl": "μg/m³"
+        "pl": "μg/m³",
+        "ru": "мкг/м³",
+        "ko": "μg/m³"
       },
       "insights": true,
       "desc": {
@@ -3845,31 +4487,123 @@
         "ko": "대기 중 미세입자 수(μg/m³)"
       },
       "chartType": "spline",
-      "decimals": 2,
+      "min": 0,
+      "max": 999,
+      "decimals": 0,
       "getable": true,
       "setable": false,
       "uiComponent": "sensor",
       "icon": "/assets/images/measure_pm10.svg"
     },
+    "measure_pm25": {
+      "type": "number",
+      "title": {
+        "en": "Current PM2.5 value",
+        "nl": "Huidige PM2.5-waarde",
+        "da": "Nuværende PM2.5-værdi",
+        "de": "Aktueller PM2.5-Wert",
+        "es": "Valor actual de PM2.5",
+        "fr": "Valeur actuelle de PM2.5",
+        "it": "Valore corrente di PM2.5",
+        "no": "Nåværende PM2.5-verdi",
+        "sv": "Nuvarande PM2.5-värde",
+        "pl": "Aktualna wartość PM2.5",
+        "ru": "Текущая величина PM2.5",
+        "ko": "현재 PM2.5 값"
+      },
+      "units": {
+        "en": "μg/m³",
+        "nl": "μg/m³",
+        "da": "μg/m³",
+        "de": "μg/m³",
+        "es": "μg/m³",
+        "fr": "μg/m³",
+        "it": "μg/m³",
+        "no": "μg/m³",
+        "sv": "μg/m³",
+        "pl": "μg/m³",
+        "ru": "мкг/м³",
+        "ko": "μg/m³"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Atmospheric particulate matter (μg/m³)",
+        "nl": "Atmosferische deeltjes (μg/m³)",
+        "da": "Atmosfærisk partikelmateriale (μg/m³)",
+        "de": "Atmosphärischer Feinstaub (μg/m³)",
+        "es": "Partículas atmosféricas (μg/m³)",
+        "fr": "Matière particulaire atmosphérique (μg/m³)",
+        "it": "Materiale particolato atmosferico (μg/m³)",
+        "no": "Atmosfæriske partikler (μg/m³)",
+        "sv": "Atmosfäriska partiklar (μg/m³)",
+        "pl": "Pył zawieszony (μg/m³)",
+        "ru": "Атмосферные твердые частицы (мкг/м³)",
+        "ko": "대기 중 미립자 (μg/m³)"
+      },
+      "chartType": "spline",
+      "min": 0,
+      "max": 999,
+      "decimals": 0,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/images/measure_pm1.svg"
+    },
+    "measure_temperature": {
+      "type": "number",
+      "title": {
+        "en": "Current temperature value",
+        "nl": "Huidige temperatuurwaarde",
+        "da": "Aktuel temperaturværdi",
+        "de": "Aktueller Temperaturwert",
+        "es": "Valor actual de temperatura",
+        "fr": "Valeur actuelle de température",
+        "it": "Valore attuale della temperatura",
+        "no": "Gjeldende temperaturverdi",
+        "sv": "Aktuell temperaturvärde",
+        "pl": "Aktualna wartość temperatury",
+        "ru": "Текущее значение температуры",
+        "ko": "현재 온도 값"
+      },
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "C",
+        "nl": "C",
+        "da": "C",
+        "de": "C",
+        "es": "C",
+        "fr": "C",
+        "it": "C",
+        "no": "C",
+        "sv": "C",
+        "pl": "C",
+        "ru": "C",
+        "ko": "C"
+      },
+      "min": -10,
+      "max": 50,
+      "decimals": 0,
+      "insights": true,
+      "icon": "/assets/images/measure_temperature.svg"
+    },
     "measure_tVOC": {
       "type": "number",
       "title": {
-        "en": "tVOC",
-        "nl": "tVOC",
-        "da": "tVOC",
-        "de": "tVOC",
-        "es": "tVOC",
-        "fr": "tVOC",
-        "it": "tVOC",
-        "no": "tVOC",
-        "sv": "tVOC",
-        "pl": "tVOC",
-        "ru": "tVOC",
-        "ko": "tVOC"
+        "en": "Current tVOC value",
+        "da": "Nuværende tVOC-værdi",
+        "de": "Aktueller tVOC-Wert",
+        "es": "Valor actual de tVOC",
+        "fr": "Valeur actuelle de tVOC",
+        "it": "Valore corrente di tVOC",
+        "no": "Nåværende tVOC-verdi",
+        "sv": "Nuvarande tVOC-värde",
+        "pl": "Aktualna wartość tVOC",
+        "ru": "Текущее значение tVOC",
+        "ko": "현재 tVOC 값"
       },
       "units": {
         "en": "ppm³",
-        "nl": "ppm³",
         "da": "ppm³",
         "de": "ppm³",
         "es": "ppm³",
@@ -3897,7 +4631,9 @@
         "ko": "tVOC, 총 휘발성 유기 화합물, 다양한 유기 화학 화합물 (ppm)"
       },
       "chartType": "spline",
-      "decimals": 2,
+      "min": 0,
+      "max": 9999,
+      "decimals": 0,
       "getable": true,
       "setable": false,
       "uiComponent": "sensor",

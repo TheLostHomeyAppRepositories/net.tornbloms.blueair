@@ -15,6 +15,7 @@
     "ko": "밝기"
   },
   "uiComponent": "slider",
+  "uiQuickAction": true,
   "getable": true,
   "setable": true,
   "min": 0,

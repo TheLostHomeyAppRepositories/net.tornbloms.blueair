@@ -1,0 +1,137 @@
+{
+  "title": {
+    "en": "pm2.5 measurement",
+    "nl": "pm2.5 meting",
+    "da": "pm2.5 måling",
+    "de": "pm2.5 Messung",
+    "es": "medición pm2.5",
+    "fr": "mesure pm2.5",
+    "it": "misurazione pm2.5",
+    "no": "pm2.5 måling",
+    "sv": "pm2.5 mätning",
+    "pl": "pomiar pm2.5",
+    "ru": "измерение pm2.5",
+    "ko": "pm2.5 측정"
+  },
+  "titleFormatted": {
+    "en": "pm2.5 level [[argument_main]]",
+    "nl": "pm2.5 niveau [[argument_main]]",
+    "da": "pm2.5 niveau [[argument_main]]",
+    "de": "pm2.5 Niveau [[argument_main]]",
+    "es": "nivel de pm2.5 [[argument_main]]",
+    "fr": "niveau de pm2.5 [[argument_main]]",
+    "it": "livello di pm2.5 [[argument_main]]",
+    "no": "pm2.5 nivå [[argument_main]]",
+    "sv": "pm2.5 nivå [[argument_main]]",
+    "pl": "poziom pm2.5 [[argument_main]]",
+    "ru": "уровень pm2.5 [[argument_main]]",
+    "ko": "pm2.5 수준 [[argument_main]]"
+  },
+  "hint": {
+    "en": "pm2.5 measurement",
+    "nl": "pm2.5 meting",
+    "da": "pm2.5 måling",
+    "de": "pm2.5 Messung",
+    "es": "medición pm2.5",
+    "fr": "mesure pm2.5",
+    "it": "misurazione pm2.5",
+    "no": "pm2.5 måling",
+    "sv": "pm2.5 mätning",
+    "pl": "pomiar pm2.5",
+    "ru": "измерение pm2.5",
+    "ko": "pm2.5 측정"
+  },
+  "args": [
+    {
+      "name": "argument_main",
+      "type": "dropdown",
+      "values": [
+        {
+          "id": "excelent",
+          "label": {
+            "en": "excelent, score below 12 µg/m³",
+            "nl": "uitstekend, score onder 12 µg/m³",
+            "da": "fremragende, score under 12 µg/m³",
+            "de": "ausgezeichnet, Wert unter 12 µg/m³",
+            "es": "excelente, puntuación por debajo de 12 µg/m³",
+            "fr": "excellent, score inférieur à 12 µg/m³",
+            "it": "eccellente, punteggio sotto 12 µg/m³",
+            "no": "utmerket, poengsum under 12 µg/m³",
+            "sv": "utmärkt, poäng under 12 µg/m³",
+            "pl": "doskonały, wynik poniżej 12 µg/m³",
+            "ru": "отлично, показатель ниже 12 мкг/м³",
+            "ko": "우수한, 12 µg/m³ 이하 점수"
+          }
+        },
+        {
+          "id": "good",
+          "label": {
+            "en": "good, score between 12.1 and 35.4 µg/m³",
+            "nl": "goed, score tussen 12.1 en 35.4 µg/m³",
+            "da": "god, score mellem 12,1 og 35,4 µg/m³",
+            "de": "gut, Wert zwischen 12,1 und 35,4 µg/m³",
+            "es": "bueno, puntuación entre 12.1 y 35.4 µg/m³",
+            "fr": "bon, score entre 12,1 et 35,4 µg/m³",
+            "it": "buono, punteggio tra 12,1 e 35,4 µg/m³",
+            "no": "god, poengsum mellom 12,1 og 35,4 µg/m³",
+            "sv": "bra, poäng mellan 12,1 och 35,4 µg/m³",
+            "pl": "dobry, wynik między 12,1 a 35,4 µg/m³",
+            "ru": "хорошо, показатель между 12,1 и 35,4 мкг/м³",
+            "ko": "좋음, 12.1 µg/m³과 35.4 µg/m³ 사이 점수"
+          }
+        },
+        {
+          "id": "fair",
+          "label": {
+            "en": "average, between 35.5 and 55.4 µg/m³",
+            "nl": "gemiddeld, tussen 35.5 en 55.4 µg/m³",
+            "da": "gennemsnitlig, mellem 35,5 og 55,4 µg/m³",
+            "de": "durchschnittlich, zwischen 35,5 und 55,4 µg/m³",
+            "es": "regular, entre 35.5 y 55.4 µg/m³",
+            "fr": "moyen, entre 35,5 et 55,4 µg/m³",
+            "it": "medio, tra 35,5 e 55,4 µg/m³",
+            "no": "gjennomsnittlig, mellom 35,5 og 55,4 µg/m³",
+            "sv": "genomsnittlig, mellan 35,5 och 55,4 µg/m³",
+            "pl": "średni, między 35,5 a 55,4 µg/m³",
+            "ru": "средне, между 35,5 и 55,4 мкг/м³",
+            "ko": "보통, 35.5 µg/m³과 55.4 µg/m³ 사이"
+          }
+        },
+        {
+          "id": "poor",
+          "label": {
+            "en": "poor, between 55.5 and 150.4 µg/m³",
+            "nl": "slecht, tussen 55.5 en 150.4 µg/m³",
+            "da": "dårlig, mellem 55,5 og 150,4 µg/m³",
+            "de": "schlecht, zwischen 55,5 und 150,4 µg/m³",
+            "es": "pobre, entre 55.5 y 150.4 µg/m³",
+            "fr": "médiocre, entre 55,5 et 150,4 µg/m³",
+            "it": "scarso, tra 55,5 e 150,4 µg/m³",
+            "no": "dårlig, mellom 55,5 og 150,4 µg/m³",
+            "sv": "dålig, mellan 55,5 och 150,4 µg/m³",
+            "pl": "słaby, między 55,5 a 150,4 µg/m³",
+            "ru": "плохо, между 55,5 и 150,4 мкг/м³",
+            "ko": "나쁨, 55.5 µg/m³과 150.4 µg/m³ 사이"
+          }
+        },
+        {
+          "id": "verypoor",
+          "label": {
+            "en": "very poor, above 150.5 µg/m³",
+            "nl": "zeer slecht, boven 150.5 µg/m³",
+            "da": "meget dårlig, over 150,5 µg/m³",
+            "de": "sehr schlecht, über 150,5 µg/m³",
+            "es": "muy pobre, por encima de 150.5 µg/m³",
+            "fr": "très mauvais, au-dessus de 150,5 µg/m³",
+            "it": "molto scarso, sopra 150,5 µg/m³",
+            "no": "svært dårlig, over 150,5 µg/m³",
+            "sv": "väldigt dålig, över 150,5 µg/m³",
+            "pl": "bardzo słaby, powyżej 150,5 µg/m³",
+            "ru": "очень плохо, выше 150,5 мкг/м³",
+            "ko": "매우 나쁨, 150.5 µg/m³ 이상"
+          }
+        }
+      ]
+    }
+  ]
+}

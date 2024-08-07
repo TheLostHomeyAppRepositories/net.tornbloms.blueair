@@ -32,6 +32,11 @@
   ],
   "args": [
     {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=dustmagnet|healthprotect"
+    },
+    {
       "type": "dropdown",
       "name": "childlock",
       "title": {

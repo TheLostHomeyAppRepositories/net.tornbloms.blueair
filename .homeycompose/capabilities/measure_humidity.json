@@ -1,0 +1,38 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Current Humidity value",
+    "nl": "Huidige luchtvochtigheidswaarde",
+    "da": "Aktuel fugtighedsværdi",
+    "de": "Aktueller Feuchtigkeitswert",
+    "es": "Valor de humedad actual",
+    "fr": "Valeur actuelle de l'humidité",
+    "it": "Valore attuale di umidità",
+    "no": "Nåværende fuktighetsverdi",
+    "sv": "Aktuellt fuktighetsvärde",
+    "pl": "Aktualna wartość wilgotności",
+    "ru": "Текущее значение влажности",
+    "ko": "현재 습도 값"
+  },
+  "getable": true,
+  "setable": false,
+  "units": {
+    "en": "%",
+    "nl": "%",
+    "da": "%",
+    "de": "%",
+    "es": "%",
+    "fr": "%",
+    "it": "%",
+    "no": "%",
+    "sv": "%",
+    "pl": "%",
+    "ru": "%",
+    "ko": "%"
+  },
+  "min": 1,
+  "max": 99,
+  "decimals": 0,
+  "insights": true,
+  "icon": "/assets/images/measure_humidity.svg"
+}

@@ -1,0 +1,137 @@
+{
+  "title": {
+    "en": "pm10 measurement",
+    "nl": "pm10 meting",
+    "da": "pm10 måling",
+    "de": "pm10 Messung",
+    "es": "medición de pm10",
+    "fr": "mesure de pm10",
+    "it": "misurazione pm10",
+    "no": "pm10-måling",
+    "sv": "pm10-mätning",
+    "pl": "pm10 pomiar",
+    "ru": "измерение pm10",
+    "ko": "pm10 측정"
+  },
+  "titleFormatted": {
+    "en": "pm10 level [[argument_main]]",
+    "nl": "pm10 niveau [[argument_main]]",
+    "da": "pm10 niveau [[argument_main]]",
+    "de": "pm10 Niveau [[argument_main]]",
+    "es": "nivel de pm10 [[argument_main]]",
+    "fr": "niveau de pm10 [[argument_main]]",
+    "it": "livello di pm10 [[argument_main]]",
+    "no": "pm10-nivå [[argument_main]]",
+    "sv": "pm10-nivå [[argument_main]]",
+    "pl": "poziom pm10 [[argument_main]]",
+    "ru": "уровень pm10 [[argument_main]]",
+    "ko": "pm10 수준 [[argument_main]]"
+  },
+  "hint": {
+    "en": "pm10 measurement",
+    "nl": "pm10 meting",
+    "da": "pm10 måling",
+    "de": "pm10 Messung",
+    "es": "medición de pm10",
+    "fr": "mesure de pm10",
+    "it": "misurazione pm10",
+    "no": "pm10-måling",
+    "sv": "pm10-mätning",
+    "pl": "pm10 pomiar",
+    "ru": "измерение pm10",
+    "ko": "pm10 측정"
+  },
+  "args": [
+    {
+      "name": "argument_main",
+      "type": "dropdown",
+      "values": [
+        {
+          "id": "excelent",
+          "label": {
+            "en": "excelent, score below 20 µg/m³",
+            "nl": "uitstekend, score onder 20 µg/m³",
+            "da": "fremragende, score under 20 µg/m³",
+            "de": "ausgezeichnet, Wert unter 20 µg/m³",
+            "es": "excelente, puntuación por debajo de 20 µg/m³",
+            "fr": "excellent, score en dessous de 20 µg/m³",
+            "it": "eccellente, punteggio sotto i 20 µg/m³",
+            "no": "utmerket, poengsum under 20 µg/m³",
+            "sv": "utmärkt, poäng under 20 µg/m³",
+            "pl": "doskonały, wynik poniżej 20 µg/m³",
+            "ru": "отлично, менее 20 µг/м³",
+            "ko": "우수, 20 µg/m³ 이하"
+          }
+        },
+        {
+          "id": "good",
+          "label": {
+            "en": "good, score between 20 and 50 µg/m³",
+            "nl": "goed, score tussen 20 en 50 µg/m³",
+            "da": "godt, score mellem 20 og 50 µg/m³",
+            "de": "gut, Wert zwischen 20 und 50 µg/m³",
+            "es": "bueno, puntuación entre 20 y 50 µg/m³",
+            "fr": "bon, score entre 20 et 50 µg/m³",
+            "it": "buono, punteggio tra 20 e 50 µg/m³",
+            "no": "god, poengsum mellom 20 og 50 µg/m³",
+            "sv": "bra, poäng mellan 20 och 50 µg/m³",
+            "pl": "dobry, wynik między 20 a 50 µg/m³",
+            "ru": "хорошо, между 20 и 50 µг/м³",
+            "ko": "좋음, 20에서 50 µg/m³ 사이"
+          }
+        },
+        {
+          "id": "fair",
+          "label": {
+            "en": "average, between 50 and 100 µg/m³",
+            "nl": "gemiddeld, tussen 50 en 100 µg/m³",
+            "da": "gennemsnitlig, mellem 50 og 100 µg/m³",
+            "de": "durchschnittlich, zwischen 50 und 100 µg/m³",
+            "es": "regular, entre 50 y 100 µg/m³",
+            "fr": "moyen, entre 50 et 100 µg/m³",
+            "it": "medio, tra 50 e 100 µg/m³",
+            "no": "gjennomsnittlig, mellom 50 og 100 µg/m³",
+            "sv": "genomsnittlig, mellan 50 och 100 µg/m³",
+            "pl": "średni, między 50 a 100 µg/m³",
+            "ru": "средний, между 50 и 100 µг/м³",
+            "ko": "보통, 50에서 100 µg/m³ 사이"
+          }
+        },
+        {
+          "id": "poor",
+          "label": {
+            "en": "poor, between 100 and 300 µg/m³",
+            "nl": "slecht, tussen 100 en 300 µg/m³",
+            "da": "dårlig, mellem 100 og 300 µg/m³",
+            "de": "schlecht, zwischen 100 und 300 µg/m³",
+            "es": "malo, entre 100 y 300 µg/m³",
+            "fr": "pauvre, entre 100 et 300 µg/m³",
+            "it": "scarso, tra 100 e 300 µg/m³",
+            "no": "dårlig, mellom 100 og 300 µg/m³",
+            "sv": "dålig, mellan 100 och 300 µg/m³",
+            "pl": "słaby, między 100 a 300 µg/m³",
+            "ru": "плохо, между 100 и 300 µг/м³",
+            "ko": "나쁨, 100에서 300 µg/m³ 사이"
+          }
+        },
+        {
+          "id": "verypoor",
+          "label": {
+            "en": "very poor, above 300 µg/m³",
+            "nl": "zeer slecht, boven 300 µg/m³",
+            "da": "meget dårlig, over 300 µg/m³",
+            "de": "sehr schlecht, über 300 µg/m³",
+            "es": "muy malo, por encima de 300 µg/m³",
+            "fr": "très mauvais, au-dessus de 300 µg/m³",
+            "it": "molto scarso, sopra i 300 µg/m³",
+            "no": "svært dårlig, over 300 µg/m³",
+            "sv": "mycket dålig, över 300 µg/m³",
+            "pl": "bardzo słaby, powyżej 300 µg/m³",
+            "ru": "очень плохо, выше 300 µг/м³",
+            "ko": "매우 나쁨, 300 µg/m³ 이상"
+          }
+        }
+      ]
+    }
+  ]
+}

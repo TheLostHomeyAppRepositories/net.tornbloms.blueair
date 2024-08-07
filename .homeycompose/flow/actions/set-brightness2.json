@@ -29,6 +29,11 @@
   },
   "args": [
     {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=dustmagnet|healthprotect"
+    },
+    {
       "type": "range",
       "name": "brightness",
       "title": {

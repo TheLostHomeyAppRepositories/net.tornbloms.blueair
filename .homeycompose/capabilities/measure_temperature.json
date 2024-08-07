@@ -1,0 +1,38 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Current temperature value",
+    "nl": "Huidige temperatuurwaarde",
+    "da": "Aktuel temperaturværdi",
+    "de": "Aktueller Temperaturwert",
+    "es": "Valor actual de temperatura",
+    "fr": "Valeur actuelle de température",
+    "it": "Valore attuale della temperatura",
+    "no": "Gjeldende temperaturverdi",
+    "sv": "Aktuell temperaturvärde",
+    "pl": "Aktualna wartość temperatury",
+    "ru": "Текущее значение температуры",
+    "ko": "현재 온도 값"
+  },
+  "getable": true,
+  "setable": false,
+  "units": {
+    "en": "C",
+    "nl": "C",
+    "da": "C",
+    "de": "C",
+    "es": "C",
+    "fr": "C",
+    "it": "C",
+    "no": "C",
+    "sv": "C",
+    "pl": "C",
+    "ru": "C",
+    "ko": "C"
+  },
+  "min": -10,
+  "max": 50,
+  "decimals": 0,
+  "insights": true,
+  "icon": "/assets/images/measure_temperature.svg"
+}

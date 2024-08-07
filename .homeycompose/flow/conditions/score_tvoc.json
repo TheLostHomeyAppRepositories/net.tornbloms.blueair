@@ -1,0 +1,137 @@
+{
+  "title": {
+    "en": "tVOC measurement",
+    "nl": "tVOC meting",
+    "da": "tVOC måling",
+    "de": "tVOC Messung",
+    "es": "medición de tVOC",
+    "fr": "mesure de tVOC",
+    "it": "misurazione tVOC",
+    "no": "tVOC måling",
+    "sv": "tVOC mätning",
+    "pl": "pomiar tVOC",
+    "ru": "измерение tVOC",
+    "ko": "tVOC 측정"
+  },
+  "titleFormatted": {
+    "en": "tVOC level [[argument_main]]",
+    "nl": "tVOC-niveau [[argument_main]]",
+    "da": "tVOC-niveau [[argument_main]]",
+    "de": "tVOC-Niveau [[argument_main]]",
+    "es": "nivel de tVOC [[argument_main]]",
+    "fr": "niveau de tVOC [[argument_main]]",
+    "it": "livello tVOC [[argument_main]]",
+    "no": "tVOC-nivå [[argument_main]]",
+    "sv": "tVOC-nivå [[argument_main]]",
+    "pl": "poziom tVOC [[argument_main]]",
+    "ru": "уровень tVOC [[argument_main]]",
+    "ko": "tVOC 수준 [[argument_main]]"
+  },
+  "hint": {
+    "en": "tVOC measurement",
+    "nl": "tVOC meting",
+    "da": "tVOC måling",
+    "de": "tVOC Messung",
+    "es": "medición de tVOC",
+    "fr": "mesure de tVOC",
+    "it": "misurazione tVOC",
+    "no": "tVOC måling",
+    "sv": "tVOC mätning",
+    "pl": "pomiar tVOC",
+    "ru": "измерение tVOC",
+    "ko": "tVOC 측정"
+  },
+  "args": [
+    {
+      "name": "argument_main",
+      "type": "dropdown",
+      "values": [
+        {
+          "id": "excelent",
+          "label": {
+            "en": "excelent, score below 65 µg/m³",
+            "nl": "uitstekend, score onder 65 µg/m³",
+            "da": "fremragende, score under 65 µg/m³",
+            "de": "ausgezeichnet, Wert unter 65 µg/m³",
+            "es": "excelente, puntuación por debajo de 65 µg/m³",
+            "fr": "excellent, score inférieur à 65 µg/m³",
+            "it": "eccellente, punteggio sotto 65 µg/m³",
+            "no": "utmerket, score under 65 µg/m³",
+            "sv": "utmärkt, poäng under 65 µg/m³",
+            "pl": "doskonały, wynik poniżej 65 µg/m³",
+            "ru": "отлично, показатель ниже 65 мкг/м³",
+            "ko": "우수, 65 µg/m³ 이하 점수"
+          }
+        },
+        {
+          "id": "good",
+          "label": {
+            "en": "good, score between 66 and 220 µg/m³",
+            "nl": "goed, score tussen 66 en 220 µg/m³",
+            "da": "god, score mellem 66 og 220 µg/m³",
+            "de": "gut, Wert zwischen 66 und 220 µg/m³",
+            "es": "bueno, puntuación entre 66 y 220 µg/m³",
+            "fr": "bon, score entre 66 et 220 µg/m³",
+            "it": "buono, punteggio tra 66 e 220 µg/m³",
+            "no": "god, score mellom 66 og 220 µg/m³",
+            "sv": "bra, poäng mellan 66 och 220 µg/m³",
+            "pl": "dobry, wynik między 66 a 220 µg/m³",
+            "ru": "хорошо, показатель между 66 и 220 мкг/м³",
+            "ko": "좋음, 66과 220 µg/m³ 사이 점수"
+          }
+        },
+        {
+          "id": "fair",
+          "label": {
+            "en": "average, between 221 and 660 µg/m³",
+            "nl": "gemiddeld, tussen 221 en 660 µg/m³",
+            "da": "gennemsnitligt, mellem 221 og 660 µg/m³",
+            "de": "durchschnittlich, zwischen 221 und 660 µg/m³",
+            "es": "promedio, entre 221 y 660 µg/m³",
+            "fr": "moyen, entre 221 et 660 µg/m³",
+            "it": "medio, tra 221 e 660 µg/m³",
+            "no": "gjennomsnittlig, mellom 221 og 660 µg/m³",
+            "sv": "genomsnittlig, mellan 221 och 660 µg/m³",
+            "pl": "średni, między 221 a 660 µg/m³",
+            "ru": "средний, между 221 и 660 мкг/м³",
+            "ko": "보통, 221과 660 µg/m³ 사이"
+          }
+        },
+        {
+          "id": "poor",
+          "label": {
+            "en": "poor, between 661 and 2200 µg/m³",
+            "nl": "slecht, tussen 661 en 2200 µg/m³",
+            "da": "dårlig, mellem 661 og 2200 µg/m³",
+            "de": "schlecht, zwischen 661 und 2200 µg/m³",
+            "es": "pobre, entre 661 y 2200 µg/m³",
+            "fr": "médiocre, entre 661 et 2200 µg/m³",
+            "it": "scadente, tra 661 e 2200 µg/m³",
+            "no": "dårlig, mellom 661 og 2200 µg/m³",
+            "sv": "dålig, mellan 661 och 2200 µg/m³",
+            "pl": "słaby, między 661 a 2200 µg/m³",
+            "ru": "плохо, между 661 и 2200 мкг/м³",
+            "ko": "불량, 661과 2200 µg/m³ 사이"
+          }
+        },
+        {
+          "id": "verypoor",
+          "label": {
+            "en": "very poor, above 2200 µg/m³",
+            "nl": "zeer slecht, boven 2200 µg/m³",
+            "da": "meget dårlig, over 2200 µg/m³",
+            "de": "sehr schlecht, über 2200 µg/m³",
+            "es": "muy pobre, por encima de 2200 µg/m³",
+            "fr": "très mauvais, au-dessus de 2200 µg/m³",
+            "it": "molto scadente, sopra 2200 µg/m³",
+            "no": "svært dårlig, over 2200 µg/m³",
+            "sv": "mycket dålig, över 2200 µg/m³",
+            "pl": "bardzo słaby, powyżej 2200 µg/m³",
+            "ru": "очень плохо, больше 2200 мкг/м³",
+            "ko": "매우 불량, 2200 µg/m³ 이상"
+          }
+        }
+      ]
+    }
+  ]
+}
