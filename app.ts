@@ -1,4 +1,5 @@
 import Homey from 'homey';
+
 const { Log } = require('homey-log');
 
 class BlueAirApp extends Homey.App {

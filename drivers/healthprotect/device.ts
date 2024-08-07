@@ -47,6 +47,14 @@ function filterSettings(
   return null; // Return null if the item is not found in any device
 }
 
+enum AirQuality {
+  Excellent = 'excellent',
+  Good = 'good',
+  Fair = 'fair',
+  Poor = 'poor',
+  VeryPoor = 'verypoor',
+}
+
 /**
  * Represents the BlueAir HealthProtect device.
  * This class is responsible for managing the device's capabilities and settings within the Homey app.
@@ -64,6 +72,130 @@ class BlueAirHealthProtectDevice extends Device {
   // Define interval ID properties to store interval identifiers
   private intervalId1: ReturnType<typeof setInterval> | null = null; // For the first setInterval
   private intervalId2: ReturnType<typeof setInterval> | null = null; // For the second setInterval
+
+  /**
+   * Converts a PM2.5 index value to an AirQuality category.
+   *
+   * This function evaluates the PM2.5 index value and returns the corresponding
+   * air quality category based on predefined thresholds.
+   *
+   * @param index - The PM2.5 index value, representing the concentration of particles
+   *                less than 1 micrometer in diameter in the air.
+   * @returns An AirQuality enum value representing the air quality category.
+   */
+  private conditionScorePm25ToString(index: number): AirQuality {
+    // Check if the PM1 index is greater than 40, indicating 'Very Poor' air quality
+    if (index > 150.4) {
+      return AirQuality.VeryPoor;
+    }
+    // Check if the PM1 index is greater than 31, indicating 'Poor' air quality
+    if (index > 55.4) {
+      return AirQuality.Poor;
+    }
+    // Check if the PM1 index is greater than 21, indicating 'Fair' air quality
+    if (index > 35.4) {
+      return AirQuality.Fair;
+    }
+    // Check if the PM1 index is greater than 11, indicating 'Good' air quality
+    if (index > 12) {
+      return AirQuality.Good;
+    }
+    // If none of the above conditions are met, the air quality is 'Excellent'
+    return AirQuality.Excellent;
+  }
+
+  /**
+   * Converts a PM1 index value to an AirQuality category.
+   *
+   * This function evaluates the PM1 index value and returns the corresponding
+   * air quality category based on predefined thresholds.
+   *
+   * @param index - The PM1 index value, representing the concentration of particles
+   *                less than 1 micrometer in diameter in the air.
+   * @returns An AirQuality enum value representing the air quality category.
+   */
+  private conditionScorePm1ToString(index: number): AirQuality {
+    // Check if the PM1 index is greater than 40, indicating 'Very Poor' air quality
+    if (index > 40) {
+      return AirQuality.VeryPoor;
+    }
+    // Check if the PM1 index is greater than 31, indicating 'Poor' air quality
+    if (index > 31) {
+      return AirQuality.Poor;
+    }
+    // Check if the PM1 index is greater than 21, indicating 'Fair' air quality
+    if (index > 21) {
+      return AirQuality.Fair;
+    }
+    // Check if the PM1 index is greater than 11, indicating 'Good' air quality
+    if (index > 11) {
+      return AirQuality.Good;
+    }
+    // If none of the above conditions are met, the air quality is 'Excellent'
+    return AirQuality.Excellent;
+  }
+
+  /**
+   * Converts a PM10 index value to an AirQuality category.
+   *
+   * This function evaluates the PM10 index value and returns the corresponding
+   * air quality category based on predefined thresholds.
+   *
+   * @param index - The PM10 index value, representing the concentration of particles
+   *                less than 10 micrometers in diameter in the air.
+   * @returns An AirQuality enum value representing the air quality category.
+   */
+  private conditionScorePm10ToString(index: number): AirQuality {
+    // Check if the PM10 index is greater than 300, indicating 'Very Poor' air quality
+    if (index > 300) {
+      return AirQuality.VeryPoor;
+    }
+    // Check if the PM10 index is greater than 100, indicating 'Poor' air quality
+    if (index > 100) {
+      return AirQuality.Poor;
+    }
+    // Check if the PM10 index is greater than 50, indicating 'Fair' air quality
+    if (index > 50) {
+      return AirQuality.Fair;
+    }
+    // Check if the PM10 index is greater than 20, indicating 'Good' air quality
+    if (index > 20) {
+      return AirQuality.Good;
+    }
+    // If none of the above conditions are met, the air quality is 'Excellent'
+    return AirQuality.Excellent;
+  }
+
+  /**
+   * Converts a tVOC index value to an AirQuality category.
+   *
+   * This function evaluates the tVOC index value and returns the corresponding
+   * air quality category based on predefined thresholds.
+   *
+   * @param index - The tVOC index value, representing the concentration of total
+   *                volatile organic compounds in the air.
+   * @returns An AirQuality enum value representing the air quality category.
+   */
+  private conditionScoretVOCToString(index: number): AirQuality {
+    // Check if the tVOC index is greater than 2200, indicating 'Very Poor' air quality
+    if (index > 2200) {
+      return AirQuality.VeryPoor;
+    }
+    // Check if the tVOC index is greater than 660, indicating 'Poor' air quality
+    if (index > 660) {
+      return AirQuality.Poor;
+    }
+    // Check if the tVOC index is greater than 220, indicating 'Fair' air quality
+    if (index > 220) {
+      return AirQuality.Fair;
+    }
+    // Check if the tVOC index is greater than 20, indicating 'Good' air quality
+    if (index > 20) {
+      return AirQuality.Good;
+    }
+    // If none of the above conditions are met, the air quality is 'Excellent'
+    return AirQuality.Excellent;
+  }
 
   /**
    * onInit is called when the device is initialized.
@@ -98,7 +230,8 @@ class BlueAirHealthProtectDevice extends Device {
       this.savedPM25 = filterSettings(DeviceAttributes, 'pm2_5');
       this.savedPM10 = filterSettings(DeviceAttributes, 'pm10');
       this.savedtVOC = filterSettings(DeviceAttributes, 'tvoc');
-      this.savedFilterStatus = this.calculateRemainingFilterLife(DeviceAttributes);
+      this.savedFilterStatus =
+        this.calculateRemainingFilterLife(DeviceAttributes);
 
       // Register capability listeners to handle user interactions
 
@@ -642,6 +775,43 @@ class BlueAirHealthProtectDevice extends Device {
         await client.setChildLock(data.uuid, value.childlock);
         this.log('Changed child lock:', value.childlock);
       });
+
+      this.homey.flow
+        .getConditionCard('score_pm25')
+        .registerRunListener(async (args, state) => {
+          const result =
+            this.conditionScorePm25ToString(
+              this.getCapabilityValue('measure_pm25'),
+            ) === args.argument_main;
+          return Promise.resolve(result);
+        });
+              this.homey.flow
+                .getConditionCard('score_pm1')
+                .registerRunListener(async (args, state) => {
+                  const result =
+                    this.conditionScorePm1ToString(
+                      this.getCapabilityValue('measure_pm1'),
+                    ) === args.argument_main;
+                  return Promise.resolve(result);
+                });
+                      this.homey.flow
+                        .getConditionCard('score_pm10')
+                        .registerRunListener(async (args, state) => {
+                          const result =
+                            this.conditionScorePm10ToString(
+                              this.getCapabilityValue('measure_pm10'),
+                            ) === args.argument_main;
+                          return Promise.resolve(result);
+                        });
+                              this.homey.flow
+                                .getConditionCard('score_tVOC')
+                                .registerRunListener(async (args, state) => {
+                                  const result =
+                                    this.conditionScoretVOCToString(
+                                      this.getCapabilityValue('measure_tVOC'),
+                                    ) === args.argument_main;
+                                  return Promise.resolve(result);
+                                });
 
       this.log('BlueAirHealthProtectDevice has been initialized');
     } catch (e) {

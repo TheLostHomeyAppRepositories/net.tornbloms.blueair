@@ -47,9 +47,9 @@
       "type": "dropdown",
       "values": [
         {
-          "id": "excelent",
+          "id": "excellent",
           "label": {
-            "en": "excelent, score below 10 µg/m³",
+            "en": "excellent, score below 10 µg/m³",
             "nl": "excellent, scoor onder de 10 µg/m³",
             "da": "fremragende, score under 10 µg/m³",
             "de": "ausgezeichnet, Wert unter 10 µg/m³",
