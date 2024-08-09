@@ -1172,9 +1172,9 @@
             "type": "dropdown",
             "values": [
               {
-                "id": "excelent",
+                "id": "excellent",
                 "label": {
-                  "en": "excelent, score below 10 µg/m³",
+                  "en": "excellent, score below 10 µg/m³",
                   "nl": "excellent, scoor onder de 10 µg/m³",
                   "da": "fremragende, score under 10 µg/m³",
                   "de": "ausgezeichnet, Wert unter 10 µg/m³",
@@ -1310,9 +1310,9 @@
             "type": "dropdown",
             "values": [
               {
-                "id": "excelent",
+                "id": "excellent",
                 "label": {
-                  "en": "excelent, score below 20 µg/m³",
+                  "en": "excellent, score below 20 µg/m³",
                   "nl": "uitstekend, score onder 20 µg/m³",
                   "da": "fremragende, score under 20 µg/m³",
                   "de": "ausgezeichnet, Wert unter 20 µg/m³",
@@ -1448,9 +1448,9 @@
             "type": "dropdown",
             "values": [
               {
-                "id": "excelent",
+                "id": "excellent",
                 "label": {
-                  "en": "excelent, score below 12 µg/m³",
+                  "en": "excellent, score below 12 µg/m³",
                   "nl": "uitstekend, score onder 12 µg/m³",
                   "da": "fremragende, score under 12 µg/m³",
                   "de": "ausgezeichnet, Wert unter 12 µg/m³",
@@ -1586,9 +1586,9 @@
             "type": "dropdown",
             "values": [
               {
-                "id": "excelent",
+                "id": "excellent",
                 "label": {
-                  "en": "excelent, score below 65 µg/m³",
+                  "en": "excellent, score below 65 µg/m³",
                   "nl": "uitstekend, score onder 65 µg/m³",
                   "da": "fremragende, score under 65 µg/m³",
                   "de": "ausgezeichnet, Wert unter 65 µg/m³",
@@ -1673,7 +1673,7 @@
             ]
           }
         ],
-        "id": "score_tvoc"
+        "id": "score_tVOC"
       }
     ],
     "actions": [

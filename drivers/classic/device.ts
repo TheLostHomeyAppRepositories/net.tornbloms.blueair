@@ -31,6 +31,22 @@ class BlueAirClassicDevice extends Device {
     const data = this.getData(); // Retrieve device-specific data (e.g., UUID)
     const userId = this.getStoreValue('userId'); // Retrieve user ID from Homey's storage
 
+    // Add capabilities if they are not already present
+    const capabilities = [
+    'fan_speed',
+    'brightness',
+    'child_lock',
+    'last_retrival_date',
+    'wifi_status',
+    'filter_statu',
+  ];
+
+    for (const capability of capabilities) {
+      if (!this.hasCapability(capability)) {
+        await this.addCapability(capability);
+      }
+    }
+
     try {
       // Initialize the API client for BlueAir with the username and password from settings
       const client = new ApiClient(settings.username, settings.password);
@@ -322,11 +338,11 @@ class BlueAirClassicDevice extends Device {
         this.log('Changed brightness to:', value.brightness);
       });
 
-            // Register action card listeners for controlling child lock
+      // Register action card listeners for controlling child lock
       const childlockcard = this.homey.flow.getActionCard('set-childlock');
       childlockcard.registerRunListener(async (value) => {
         this.log('Want to change the child lock with value: ', value.childlock);
-                await client.setChildLock(
+        await client.setChildLock(
           data.uuid,
           value.brightness,
           value.brightness,
