@@ -45,6 +45,19 @@
     {
       "name": "argument_main",
       "type": "dropdown",
+      "title": {
+        "en": "Level",
+        "da": "Niveau",
+        "de": "Niveau",
+        "es": "Nivel",
+        "fr": "Niveau",
+        "it": "Livello",
+        "no": "Nivå",
+        "sv": "Nivå",
+        "pl": "Poziom",
+        "ru": "Уровень",
+        "ko": "수준"
+      },
       "values": [
         {
           "id": "excellent",
