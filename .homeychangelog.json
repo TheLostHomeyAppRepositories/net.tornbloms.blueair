@@ -67,5 +67,8 @@
   },
   "3.1.9": {
     "en": "Updated to Homey 3.6.2 and removed some pesky bugs."
+  },
+  "3.1.10": {
+    "en": "Fix in classic capabilities"
   }
 }

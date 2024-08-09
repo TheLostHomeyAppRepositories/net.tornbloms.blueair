@@ -38,7 +38,7 @@ class BlueAirClassicDevice extends Device {
     'child_lock',
     'last_retrival_date',
     'wifi_status',
-    'filter_statu',
+    'filter_status',
   ];
 
     for (const capability of capabilities) {
