@@ -70,5 +70,8 @@
   },
   "3.1.10": {
     "en": "Fix in classic capabilities"
+  },
+  "3.1.11": {
+    "en": "Removed faulty code in the classic driver"
   }
 }
