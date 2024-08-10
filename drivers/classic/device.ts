@@ -280,24 +280,6 @@ class BlueAirClassicDevice extends Device {
             rebootPeriod: String(DeviceInfo.rebootPeriod),
             roomLocation: DeviceInfo.roomLocation,
           });
-
-          const DeviceAttributes = await client.getDeviceAttributes(data.uuid);
-          const resultFilterStatus = this.filterSettings(
-            DeviceAttributes,
-            'filter_status',
-          );
-
-          // Trigger a flow card if the filter status indicates a need for change
-          if (resultFilterStatus?.currentValue !== 'OK') {
-            const cardTriggerFilter = this.homey.flow.getTriggerCard(
-              'filter-needs-change',
-            );
-            cardTriggerFilter.trigger({
-              'device-name': settings.name,
-              'device-uuid': settings.uuid,
-              'device-response': resultFilterStatus?.currentValue,
-            });
-          }
         } catch (error) {
           this.log('Error in interval 2:', error); // Log any errors encountered
         }
