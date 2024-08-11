@@ -73,5 +73,8 @@
   },
   "3.1.11": {
     "en": "Removed faulty code in the classic driver"
+  },
+  "3.1.12": {
+    "en": "Filter has changed was not taking care of properly"
   }
 }
