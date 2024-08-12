@@ -44,7 +44,7 @@
   "chartType": "spline",
   "min": 0,
   "max": 999,
-  "decimals": 0,
+  "decimals": 2,
   "getable": true,
   "setable": false,
   "uiComponent": "sensor",

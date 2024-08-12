@@ -50,7 +50,6 @@ function filterSettings(
 /**
  * Enum representing different air quality levels.
  */
-
 // eslint-disable-next-line no-unused-vars
 enum AirQuality {
   // eslint-disable-next-line no-unused-vars
@@ -86,9 +85,6 @@ class BlueAirDustMagnetDevice extends Device {
   /**
    * Converts a PM2.5 index value to an AirQuality category.
    *
-   * This function evaluates the PM2.5 index value and returns the corresponding
-   * air quality category based on predefined thresholds.
-   *
    * @param index - The PM2.5 index value, representing the concentration of particles
    *                less than 2.5 micrometers in diameter in the air.
    * @returns An AirQuality enum value representing the air quality category.
@@ -111,9 +107,6 @@ class BlueAirDustMagnetDevice extends Device {
 
   /**
    * Converts a PM1 index value to an AirQuality category.
-   *
-   * This function evaluates the PM1 index value and returns the corresponding
-   * air quality category based on predefined thresholds.
    *
    * @param index - The PM1 index value, representing the concentration of particles
    *                less than 1 micrometer in diameter in the air.
@@ -138,9 +131,6 @@ class BlueAirDustMagnetDevice extends Device {
   /**
    * Converts a PM10 index value to an AirQuality category.
    *
-   * This function evaluates the PM10 index value and returns the corresponding
-   * air quality category based on predefined thresholds.
-   *
    * @param index - The PM10 index value, representing the concentration of particles
    *                less than 10 micrometers in diameter in the air.
    * @returns An AirQuality enum value representing the air quality category.
@@ -163,9 +153,6 @@ class BlueAirDustMagnetDevice extends Device {
 
   /**
    * Converts a tVOC index value to an AirQuality category.
-   *
-   * This function evaluates the tVOC index value and returns the corresponding
-   * air quality category based on predefined thresholds.
    *
    * @param index - The tVOC index value, representing the concentration of total
    *                volatile organic compounds in the air.
@@ -415,7 +402,6 @@ class BlueAirDustMagnetDevice extends Device {
       this.log('Initial automode:', resultAutoMode);
 
       // Set initial capability values, converting to correct types as needed
-      // The initial values are fetched and set for each capability.
       this.setCapabilityValue(
         'fanspeed',
         Number(resultFanSpeed?.value ?? 0), // Parse fan speed as a number
@@ -611,81 +597,117 @@ class BlueAirDustMagnetDevice extends Device {
           const cardTriggerFilter = this.homey.flow.getTriggerCard(
             'fan-speed-has-changed',
           );
-          cardTriggerFilter.trigger({
-            'device-name': settings.name,
-            'device-uuid': settings.uuid,
-            'fan speed': resultFanSpeed?.value ?? 0,
-          });
+          cardTriggerFilter
+            .trigger({
+              'device-name': String(settings.name ?? 'Unknown Device'),
+              'device-uuid': String(settings.uuid ?? 'Unknown UUID'),
+              'fan speed': Number(resultFanSpeed?.value ?? 0),
+            })
+            .catch((err) => this.error(
+                'Failed to trigger fan-speed-has-changed flow card',
+                err,
+              ));
           this.savedfanspeed = resultFanSpeed; // Update saved fan speed
         }
+
+        // Trigger humidity change card if there's a change
         if (this.savedHumidity?.value !== resultHumidity?.value) {
           const cardTriggerFilter = this.homey.flow.getTriggerCard(
             'humidity-has-changed',
           );
-          cardTriggerFilter.trigger({
-            'device-name': settings.name,
-            'device-uuid': settings.uuid,
-            'humidity new': resultHumidity?.value ?? 0,
-            'humidity old': this.savedHumidity?.value ?? 0,
-          });
+          cardTriggerFilter
+            .trigger({
+              'device-name': String(settings.name ?? 'Unknown Device'),
+              'device-uuid': String(settings.uuid ?? 'Unknown UUID'),
+              'humidity new': Number(resultHumidity?.value ?? 0),
+              'humidity old': Number(this.savedHumidity?.value ?? 0),
+            })
+            .catch((err) => this.error(
+                'Failed to trigger humidity-has-changed flow card',
+                err,
+              ));
           this.savedHumidity = resultHumidity;
         }
+
+        // Trigger temperature change card if there's a change
         if (this.savedTemperature?.value !== resultTemperature?.value) {
           const cardTriggerFilter = this.homey.flow.getTriggerCard(
             'temperature-has-changed',
           );
-          cardTriggerFilter.trigger({
-            'device-name': settings.name,
-            'device-uuid': settings.uuid,
-            'temperature new': resultTemperature?.value ?? 0,
-            'temperature old': this.savedTemperature?.value ?? 0,
-          });
+          cardTriggerFilter
+            .trigger({
+              'device-name': String(settings.name ?? 'Unknown Device'),
+              'device-uuid': String(settings.uuid ?? 'Unknown UUID'),
+              'temperature new': Number(resultTemperature?.value ?? 0),
+              'temperature old': Number(this.savedTemperature?.value ?? 0),
+            })
+            .catch((err) => this.error(
+                'Failed to trigger temperature-has-changed flow card',
+                err,
+              ));
           this.savedTemperature = resultTemperature;
         }
+
+        // Trigger PM1 change card if there's a change
         if (this.savedPM1?.value !== resultPM1?.value) {
           const cardTriggerFilter =
             this.homey.flow.getTriggerCard('PM1-has-changed');
-          cardTriggerFilter.trigger({
-            'device-name': settings.name,
-            'device-uuid': settings.uuid,
-            'PM1 new': resultPM1?.value,
-            'PM1 old': this.savedPM1?.value,
-          });
+          cardTriggerFilter
+            .trigger({
+              'device-name': String(settings.name ?? 'Unknown Device'),
+              'device-uuid': String(settings.uuid ?? 'Unknown UUID'),
+              'PM1 new': Number(resultPM1?.value ?? 0),
+              'PM1 old': Number(this.savedPM1?.value ?? 0),
+            })
+            .catch((err) => this.error('Failed to trigger PM1-has-changed flow card', err));
           this.savedPM1 = resultPM1;
         }
+
+        // Trigger PM2.5 change card if there's a change
         if (this.savedPM25?.value !== resultPM25?.value) {
           const cardTriggerFilter =
             this.homey.flow.getTriggerCard('PM25-has-changed');
-          cardTriggerFilter.trigger({
-            'device-name': settings.name,
-            'device-uuid': settings.uuid,
-            'PM25 new': resultPM25?.value ?? 0,
-            'PM25 old': this.savedPM25?.value ?? 0,
-          });
+          cardTriggerFilter
+            .trigger({
+              'device-name': String(settings.name ?? 'Unknown Device'),
+              'device-uuid': String(settings.uuid ?? 'Unknown UUID'),
+              'PM25 new': Number(resultPM25?.value ?? 0),
+              'PM25 old': Number(this.savedPM25?.value ?? 0),
+            })
+            .catch((err) => this.error('Failed to trigger PM25-has-changed flow card', err));
           this.savedPM25 = resultPM25;
         }
+
+        // Trigger PM10 change card if there's a change
         if (this.savedPM10?.value !== resultPM10?.value) {
           const cardTriggerFilter =
             this.homey.flow.getTriggerCard('PM10-has-changed');
-          cardTriggerFilter.trigger({
-            'device-name': settings.name,
-            'device-uuid': settings.uuid,
-            'PM10 new': resultPM10?.value ?? 0,
-            'PM10 old': this.savedPM10?.value ?? 0,
-          });
+          cardTriggerFilter
+            .trigger({
+              'device-name': String(settings.name ?? 'Unknown Device'),
+              'device-uuid': String(settings.uuid ?? 'Unknown UUID'),
+              'PM10 new': Number(resultPM10?.value ?? 0),
+              'PM10 old': Number(this.savedPM10?.value ?? 0),
+            })
+            .catch((err) => this.error('Failed to trigger PM10-has-changed flow card', err));
           this.savedPM10 = resultPM10;
         }
+
+        // Trigger tVOC change card if there's a change
         if (this.savedtVOC?.value !== resulttVOC?.value) {
           const cardTriggerFilter =
             this.homey.flow.getTriggerCard('tVOC-has-changed');
-          cardTriggerFilter.trigger({
-            'device-name': settings.name,
-            'device-uuid': settings.uuid,
-            'tVOC new': resulttVOC?.value ?? 0,
-            'tVOC old': this.savedtVOC?.value ?? 0,
-          });
-          this.savedPM10 = resultPM10;
+          cardTriggerFilter
+            .trigger({
+              'device-name': String(settings.name ?? 'Unknown Device'),
+              'device-uuid': String(settings.uuid ?? 'Unknown UUID'),
+              'tVOC new': Number(resulttVOC?.value ?? 0),
+              'tVOC old': Number(this.savedtVOC?.value ?? 0),
+            })
+            .catch((err) => this.error('Failed to trigger tVOC-has-changed flow card', err));
+          this.savedtVOC = resulttVOC;
         }
+
         // Trigger filter status change card if there's a change
         const currentFilterStatus =
           this.calculateRemainingFilterLife(DeviceAttributes);
@@ -693,11 +715,16 @@ class BlueAirDustMagnetDevice extends Device {
           const cardTriggerFilter = this.homey.flow.getTriggerCard(
             'filter-status-has-changed',
           );
-          cardTriggerFilter.trigger({
-            'device-name': settings.name,
-            'device-uuid': settings.uuid,
-            'filter life remaining': currentFilterStatus,
-          });
+          cardTriggerFilter
+            .trigger({
+              'device-name': String(settings.name ?? 'Unknown Device'),
+              'device-uuid': String(settings.uuid ?? 'Unknown UUID'),
+              'filter life remaining': String(currentFilterStatus ?? 'Unknown'),
+            })
+            .catch((err) => this.error(
+                'Failed to trigger filter-status-has-changed flow card',
+                err,
+              ));
           this.savedFilterStatus = currentFilterStatus;
         }
       }, settings.update * 1000);
@@ -731,11 +758,13 @@ class BlueAirDustMagnetDevice extends Device {
           const cardTriggerFilter = this.homey.flow.getTriggerCard(
             'filter-needs-change',
           );
-          cardTriggerFilter.trigger({
-            'device-name': settings.name,
-            'device-uuid': settings.uuid,
-            'device-response': resultFilterStatus,
-          });
+          cardTriggerFilter
+            .trigger({
+              'device-name': String(settings.name ?? 'Unknown Device'),
+              'device-uuid': String(settings.uuid ?? 'Unknown UUID'),
+              'device-response': String(resultFilterStatus ?? 'Unknown'),
+            })
+            .catch((err) => this.error('Failed to trigger filter-needs-change flow card', err));
         }
       }, 60000);
 
