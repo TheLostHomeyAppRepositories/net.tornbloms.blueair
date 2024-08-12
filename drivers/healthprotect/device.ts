@@ -5,6 +5,12 @@ import {
   BlueAirDeviceState,
   BlueAirDeviceSensorData,
 } from 'blueairaws-client/dist/Consts';
+import {
+  conditionScorePm25ToString,
+  conditionScorePm1ToString,
+  conditionScorePm10ToString,
+  conditionScoretVOCToString,
+} from '../BlueAirAwsUtils.ts';
 
 /**
  * Represents a setting object.
@@ -48,23 +54,6 @@ function filterSettings(
 }
 
 /**
- * Enum representing different air quality levels.
- */
- // eslint-disable-next-line no-unused-vars
-enum AirQuality {
-  // eslint-disable-next-line no-unused-vars
-  Excellent = 'excellent',
-  // eslint-disable-next-line no-unused-vars
-  Good = 'good',
-  // eslint-disable-next-line no-unused-vars
-  Fair = 'fair',
-  // eslint-disable-next-line no-unused-vars
-  Poor = 'poor',
-  // eslint-disable-next-line no-unused-vars
-  VeryPoor = 'verypoor',
-}
-
-/**
  * Represents the BlueAir HealthProtect device.
  * This class is responsible for managing the device's capabilities and settings within the Homey app.
  */
@@ -81,98 +70,6 @@ class BlueAirHealthProtectDevice extends Device {
   // Define interval ID properties to store interval identifiers
   private intervalId1: ReturnType<typeof setInterval> | null = null; // For the first setInterval
   private intervalId2: ReturnType<typeof setInterval> | null = null; // For the second setInterval
-
-  /**
-   * Converts a PM2.5 index value to an AirQuality category.
-   *
-   * @param index - The PM2.5 index value, representing the concentration of particles
-   *                less than 2.5 micrometers in diameter in the air.
-   * @returns An AirQuality enum value representing the air quality category.
-   */
-  private conditionScorePm25ToString(index: number): AirQuality {
-    if (index > 150.4) {
-      return AirQuality.VeryPoor;
-    }
-    if (index > 55.4) {
-      return AirQuality.Poor;
-    }
-    if (index > 35.4) {
-      return AirQuality.Fair;
-    }
-    if (index > 12) {
-      return AirQuality.Good;
-    }
-    return AirQuality.Excellent;
-  }
-
-  /**
-   * Converts a PM1 index value to an AirQuality category.
-   *
-   * @param index - The PM1 index value, representing the concentration of particles
-   *                less than 1 micrometer in diameter in the air.
-   * @returns An AirQuality enum value representing the air quality category.
-   */
-  private conditionScorePm1ToString(index: number): AirQuality {
-    if (index > 40) {
-      return AirQuality.VeryPoor;
-    }
-    if (index > 31) {
-      return AirQuality.Poor;
-    }
-    if (index > 21) {
-      return AirQuality.Fair;
-    }
-    if (index > 11) {
-      return AirQuality.Good;
-    }
-    return AirQuality.Excellent;
-  }
-
-  /**
-   * Converts a PM10 index value to an AirQuality category.
-   *
-   * @param index - The PM10 index value, representing the concentration of particles
-   *                less than 10 micrometers in diameter in the air.
-   * @returns An AirQuality enum value representing the air quality category.
-   */
-  private conditionScorePm10ToString(index: number): AirQuality {
-    if (index > 300) {
-      return AirQuality.VeryPoor;
-    }
-    if (index > 100) {
-      return AirQuality.Poor;
-    }
-    if (index > 50) {
-      return AirQuality.Fair;
-    }
-    if (index > 20) {
-      return AirQuality.Good;
-    }
-    return AirQuality.Excellent;
-  }
-
-  /**
-   * Converts a tVOC index value to an AirQuality category.
-   *
-   * @param index - The tVOC index value, representing the concentration of total
-   *                volatile organic compounds in the air.
-   * @returns An AirQuality enum value representing the air quality category.
-   */
-  private conditionScoretVOCToString(index: number): AirQuality {
-    if (index > 2200) {
-      return AirQuality.VeryPoor;
-    }
-    if (index > 660) {
-      return AirQuality.Poor;
-    }
-    if (index > 220) {
-      return AirQuality.Fair;
-    }
-    if (index > 20) {
-      return AirQuality.Good;
-    }
-    return AirQuality.Excellent;
-  }
 
   /**
    * onInit is called when the device is initialized.
@@ -824,7 +721,7 @@ class BlueAirHealthProtectDevice extends Device {
         .getConditionCard('score_pm25')
         .registerRunListener(async (args, state) => {
           const result =
-            this.conditionScorePm25ToString(
+            conditionScorePm25ToString(
               this.getCapabilityValue('measure_pm25'),
             ) === args.argument_main;
           return Promise.resolve(result);
@@ -833,7 +730,7 @@ class BlueAirHealthProtectDevice extends Device {
         .getConditionCard('score_pm1')
         .registerRunListener(async (args, state) => {
           const result =
-            this.conditionScorePm1ToString(
+            conditionScorePm1ToString(
               this.getCapabilityValue('measure_pm1'),
             ) === args.argument_main;
           return Promise.resolve(result);
@@ -842,7 +739,7 @@ class BlueAirHealthProtectDevice extends Device {
         .getConditionCard('score_pm10')
         .registerRunListener(async (args, state) => {
           const result =
-            this.conditionScorePm10ToString(
+            conditionScorePm10ToString(
               this.getCapabilityValue('measure_pm10'),
             ) === args.argument_main;
           return Promise.resolve(result);
@@ -851,7 +748,7 @@ class BlueAirHealthProtectDevice extends Device {
         .getConditionCard('score_tVOC')
         .registerRunListener(async (args, state) => {
           const result =
-            this.conditionScoretVOCToString(
+            conditionScoretVOCToString(
               this.getCapabilityValue('measure_tVOC'),
             ) === args.argument_main;
           return Promise.resolve(result);
