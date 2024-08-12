@@ -79,5 +79,8 @@
   },
   "3.1.13": {
     "en": "Got some bad values triggering some of the flow cards sometimes. and added decimals to some values"
+  },
+  "3.1.14": {
+    "en": "Split of fuctions to other fils that are common to HealthProtect and DustMagnet"
   }
 }
