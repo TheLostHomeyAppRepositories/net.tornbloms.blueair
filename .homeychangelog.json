@@ -76,5 +76,8 @@
   },
   "3.1.12": {
     "en": "Filter has changed was not taking care of properly"
+  },
+  "3.1.13": {
+    "en": "Got some bad values triggering some of the flow cards sometimes. and added decimals to some values"
   }
 }
