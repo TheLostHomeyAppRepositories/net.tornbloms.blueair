@@ -1,6 +1,8 @@
 {
-  "extends": "@tsconfig/node16/tsconfig.json",
+  "extends": "@tsconfig/node18/tsconfig.json",
   "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
     "allowJs": true,
     "esModuleInterop": true,
     "outDir": ".homeybuild/",
@@ -13,7 +15,7 @@
     "skipLibCheck": true, // Skips type checking of declaration files, speeds up compilation
     "forceConsistentCasingInFileNames": true, // Ensures file names are consistently cased
     "allowImportingTsExtensions": true,
-    "noEmit": true 
+    "noEmit": true
   },
   "include": ["src/**/*.ts", "drivers/**/*.ts"], // Adjust according to your project structure
   "exclude": ["node_modules", ".homeybuild"]
