@@ -82,5 +82,8 @@
   },
   "3.1.14": {
     "en": "Split of fuctions to other fils that are common to HealthProtect and DustMagnet"
+  },
+  "3.1.15": {
+    "en": "Fixes in the underlying APIs"
   }
 }
