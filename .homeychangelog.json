@@ -91,5 +91,8 @@
   },
   "3.1.17": {
     "en": "Corrected some error logging and compiling error"
+  },
+  "3.1.18": {
+    "en": "filter-needs-change card changed"
   }
 }
