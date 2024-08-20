@@ -1,1 +1,5 @@
-{}
+{
+  "error_user_locked_out": "The user is locked out. Please reset your password or contact support.",
+  "error_login_failed": "Login failed. Please check your credentials and try again.",
+  "error_list_devices_failed": "Failed to list devices."
+}

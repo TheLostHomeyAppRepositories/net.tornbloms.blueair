@@ -25,9 +25,14 @@ class BlueAirClassicDriver extends Driver {
           return await client.initialize(); // Use await here to correctly update the status
         } catch (e) {
           this.log(e);
-          return false;
+          // check if the error is related to user beeing locked out
+          if (e instanceof Error && e.message.includes('User is locked out')) {
+            return { error: this.homey.__('error_user_locked_out') };
+          } else {
+            return { error: this.homey.__('error_login_failed') };
+          }
         }
-      },
+      }
     );
 
     // Define a session handler for listing devices
@@ -83,7 +88,7 @@ class BlueAirClassicDriver extends Driver {
       } catch (error) {
         // Log any errors that occur during the process
         this.log('Error listing devices:', error);
-        return { error: 'Failed to list devices' };
+        return { error: this.homey.__('error_list_devices_failed') };
       }
     });
   }

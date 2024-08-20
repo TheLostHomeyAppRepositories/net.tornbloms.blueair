@@ -1,4 +1,4 @@
-import BlueAirAwsBaseDriver from '../BlueAirAwsBaseDriver.ts';
+import BlueAirAwsBaseDriver from '../BlueAirAwsBaseDriver';
 
 class BlueAirDustMagnetDriver extends BlueAirAwsBaseDriver {
   protected deviceModelFilter = 'dustmagnet';
@@ -12,4 +12,4 @@ class BlueAirDustMagnetDriver extends BlueAirAwsBaseDriver {
   }
 }
 
-export default BlueAirDustMagnetDriver;
+module.exports = BlueAirDustMagnetDriver;

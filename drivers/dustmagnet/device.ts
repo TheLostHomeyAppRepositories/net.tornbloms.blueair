@@ -10,7 +10,7 @@ import {
   conditionScorePm1ToString,
   conditionScorePm10ToString,
   conditionScoretVOCToString,
-} from '../BlueAirAwsUtils.ts';
+} from '../BlueAirAwsUtils';
 
 /**
  * Represents a setting object.

@@ -2,7 +2,7 @@ import { Driver } from 'homey';
 import { BlueAirAwsClient } from 'blueairaws-client';
 import { Region } from 'blueairaws-client/dist/Consts';
 
-export default abstract class BlueAirAwsBaseDriver extends Driver {
+abstract class BlueAirAwsBaseDriver extends Driver {
   protected abstract deviceModelFilter: string;
 
   /**
@@ -33,7 +33,7 @@ export default abstract class BlueAirAwsBaseDriver extends Driver {
           this.log(e);
           return false;
         }
-      },
+      }
     );
 
     session.setHandler('list_devices', async () => {
@@ -51,7 +51,7 @@ export default abstract class BlueAirAwsBaseDriver extends Driver {
             devicesList,
             client,
             username,
-            password,
+            password
           );
 
           return compatibleDevices;
@@ -76,7 +76,7 @@ export default abstract class BlueAirAwsBaseDriver extends Driver {
     devicesList: any[],
     client: BlueAirAwsClient,
     username: string,
-    password: string,
+    password: string
   ) {
     const compatibleDevices = [];
     const accountuuid = devicesList[0].name;
@@ -110,3 +110,5 @@ export default abstract class BlueAirAwsBaseDriver extends Driver {
     return compatibleDevices;
   }
 }
+
+export default BlueAirAwsBaseDriver;

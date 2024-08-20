@@ -10,7 +10,7 @@ import {
   conditionScorePm1ToString,
   conditionScorePm10ToString,
   conditionScoretVOCToString,
-} from '../BlueAirAwsUtils.ts';
+} from '../BlueAirAwsUtils';
 
 /**
  * Represents a setting object.
@@ -29,7 +29,7 @@ interface Setting {
  */
 function filterSettings(
   devices: BlueAirDeviceStatus[],
-  itemName: string,
+  itemName: string
 ): Setting | null {
   for (const device of devices) {
     // Check if itemName exists in the state
@@ -81,7 +81,7 @@ class BlueAirHealthProtectDevice extends Device {
 
     this.log(
       'Initializing BlueAirHealthProtect Device with settings:',
-      settings,
+      settings
     );
 
     // Add capabilities if they are not already present
@@ -141,13 +141,13 @@ class BlueAirHealthProtectDevice extends Device {
         // Re-fetch updated device status after setting the new value
         const updatedDeviceAttributes = await client.getDeviceStatus(
           data.accountuuid,
-          [data.uuid],
+          [data.uuid]
         );
         const result = filterSettings(updatedDeviceAttributes, 'fanspeed');
 
         // Update the capability with the latest value from the device
         this.setCapabilityValue('fanspeed', Number(result?.value ?? 0)).catch(
-          this.error,
+          this.error
         );
 
         // Log and debug the result from the API call
@@ -162,13 +162,13 @@ class BlueAirHealthProtectDevice extends Device {
         // Re-fetch updated device status after setting the new value
         const updatedDeviceAttributes = await client.getDeviceStatus(
           data.accountuuid,
-          [data.uuid],
+          [data.uuid]
         );
         const result = filterSettings(updatedDeviceAttributes, 'automode');
 
         // Update the capability with the latest value from the device
         this.setCapabilityValue('automode', result?.value === 'true').catch(
-          this.error,
+          this.error
         );
 
         // Log and debug the result from the API call
@@ -183,14 +183,14 @@ class BlueAirHealthProtectDevice extends Device {
         // Re-fetch updated device status after setting the new value
         const updatedDeviceAttributes = await client.getDeviceStatus(
           data.accountuuid,
-          [data.uuid],
+          [data.uuid]
         );
         const result = filterSettings(updatedDeviceAttributes, 'brightness');
 
         // Update the capability with the latest value from the device
         this.setCapabilityValue(
           'brightness2',
-          Number(result?.value ?? 0),
+          Number(result?.value ?? 0)
         ).catch(this.error);
 
         // Log and debug the result from the API call
@@ -205,13 +205,13 @@ class BlueAirHealthProtectDevice extends Device {
         // Re-fetch updated device status after setting the new value
         const updatedDeviceAttributes = await client.getDeviceStatus(
           data.accountuuid,
-          [data.uuid],
+          [data.uuid]
         );
         const result = filterSettings(updatedDeviceAttributes, 'childlock');
 
         // Update the capability with the latest value from the device
         this.setCapabilityValue('child_lock', result?.value === 'true').catch(
-          this.error,
+          this.error
         );
 
         // Log and debug the result from the API call
@@ -226,13 +226,13 @@ class BlueAirHealthProtectDevice extends Device {
         // Re-fetch updated device status after setting the new value
         const updatedDeviceAttributes = await client.getDeviceStatus(
           data.accountuuid,
-          [data.uuid],
+          [data.uuid]
         );
         const result = filterSettings(updatedDeviceAttributes, 'nightmode');
 
         // Update the capability with the latest value from the device
         this.setCapabilityValue('nightmode', result?.value === 'true').catch(
-          this.error,
+          this.error
         );
 
         // Log and debug the result from the API call
@@ -248,13 +248,13 @@ class BlueAirHealthProtectDevice extends Device {
         // Re-fetch updated device status after setting the new value
         const updatedDeviceAttributes = await client.getDeviceStatus(
           data.accountuuid,
-          [data.uuid],
+          [data.uuid]
         );
         const result = filterSettings(updatedDeviceAttributes, 'standby');
 
         // Update the capability with the latest value from the device
         this.setCapabilityValue('standby', result?.value === 'false').catch(
-          this.error,
+          this.error
         );
         // Use `result?.value === 'false'` to reflect "on" when standby is `false`
 
@@ -277,7 +277,7 @@ class BlueAirHealthProtectDevice extends Device {
       const resultStandby = filterSettings(DeviceAttributes, 'standby');
       const resultFilterStatus = filterSettings(
         DeviceAttributes,
-        'filterusage',
+        'filterusage'
       );
       const resultWiFiStatus = filterSettings(DeviceAttributes, 'online');
       const resultAutoMode = filterSettings(DeviceAttributes, 'automode'); // Fetch automode
@@ -301,72 +301,72 @@ class BlueAirHealthProtectDevice extends Device {
       // Set initial capability values, converting to correct types as needed
       this.setCapabilityValue(
         'fanspeed',
-        Number(resultFanSpeed?.value ?? 0), // Parse fan speed as a number
+        Number(resultFanSpeed?.value ?? 0) // Parse fan speed as a number
       ).catch(this.error);
 
       this.setCapabilityValue(
         'measure_humidity',
-        Number(resultHumidity?.value ?? 0), // Parse humidity as a number
+        Number(resultHumidity?.value ?? 0) // Parse humidity as a number
       ).catch(this.error);
 
       this.setCapabilityValue(
         'measure_temperature',
-        Number(resultTemperature?.value ?? 0), // Parse temperature as a number
+        Number(resultTemperature?.value ?? 0) // Parse temperature as a number
       ).catch(this.error);
 
       this.setCapabilityValue(
         'measure_pm1',
-        Number(resultPM1?.value ?? 0), // Parse PM1 value as a number
+        Number(resultPM1?.value ?? 0) // Parse PM1 value as a number
       ).catch(this.error);
 
       this.setCapabilityValue(
         'measure_pm25',
-        Number(resultPM25?.value ?? 0), // Parse PM2.5 value as a number
+        Number(resultPM25?.value ?? 0) // Parse PM2.5 value as a number
       ).catch(this.error);
 
       this.setCapabilityValue(
         'measure_pm10',
-        Number(resultPM10?.value ?? 0), // Parse PM10 value as a number
+        Number(resultPM10?.value ?? 0) // Parse PM10 value as a number
       ).catch(this.error);
 
       this.setCapabilityValue(
         'measure_tVOC',
-        Number(resulttVOC?.value ?? 0), // Parse tVOC value as a number
+        Number(resulttVOC?.value ?? 0) // Parse tVOC value as a number
       ).catch(this.error);
 
       this.setCapabilityValue(
         'brightness2',
-        Number(resultBrightness?.value ?? 0), // Parse brightness as a number
+        Number(resultBrightness?.value ?? 0) // Parse brightness as a number
       ).catch(this.error);
 
       this.setCapabilityValue(
         'child_lock',
-        resultChildLock?.value === 'true', // Convert child lock status to a boolean
+        resultChildLock?.value === 'true' // Convert child lock status to a boolean
       ).catch(this.error);
 
       this.setCapabilityValue(
         'nightmode',
-        resultNightMode?.value === 'true', // Convert night mode status to a boolean
+        resultNightMode?.value === 'true' // Convert night mode status to a boolean
       ).catch(this.error);
 
       this.setCapabilityValue(
         'standby',
-        resultStandby?.value === 'false', // Invert logic for standby
+        resultStandby?.value === 'false' // Invert logic for standby
       ).catch(this.error);
 
       this.setCapabilityValue(
         'wifi_status',
-        resultWiFiStatus?.value === 'true', // Convert WiFi status to a boolean
+        resultWiFiStatus?.value === 'true' // Convert WiFi status to a boolean
       ).catch(this.error);
 
       this.setCapabilityValue(
         'filter_status',
-        this.calculateRemainingFilterLife(DeviceAttributes), // Calculate and set the remaining filter life
+        this.calculateRemainingFilterLife(DeviceAttributes) // Calculate and set the remaining filter life
       ).catch(this.error);
 
       this.setCapabilityValue(
         'automode',
-        resultAutoMode?.value === 'true', // Convert automode status to a boolean
+        resultAutoMode?.value === 'true' // Convert automode status to a boolean
       ).catch(this.error);
 
       // Store device information in settings
@@ -384,13 +384,13 @@ class BlueAirHealthProtectDevice extends Device {
       this.intervalId1 = setInterval(async () => {
         this.log(
           'Executing periodic update at interval:',
-          settings.update * 1000,
+          settings.update * 1000
         );
 
         // Fetch updated device attributes
         const DeviceAttributes = await client.getDeviceStatus(
           data.accountuuid,
-          [data.uuid],
+          [data.uuid]
         );
 
         // Fetch updated states for each capability
@@ -398,7 +398,7 @@ class BlueAirHealthProtectDevice extends Device {
         const resultHumidity = filterSettings(DeviceAttributes, 'humidity');
         const resultTemperature = filterSettings(
           DeviceAttributes,
-          'temperature',
+          'temperature'
         );
         const resultPM1 = filterSettings(DeviceAttributes, 'pm1');
         const resultPM25 = filterSettings(DeviceAttributes, 'pm2_5');
@@ -410,7 +410,7 @@ class BlueAirHealthProtectDevice extends Device {
         const resultStandby = filterSettings(DeviceAttributes, 'standby');
         const resultFilterStatus = filterSettings(
           DeviceAttributes,
-          'filterusage',
+          'filterusage'
         );
         const resultWiFiStatus = filterSettings(DeviceAttributes, 'online');
         const resultAutoMode = filterSettings(DeviceAttributes, 'automode'); // Fetch automode
@@ -434,65 +434,65 @@ class BlueAirHealthProtectDevice extends Device {
         // Update capabilities with new values
         this.setCapabilityValue(
           'fanspeed',
-          Number(resultFanSpeed?.value ?? 0),
+          Number(resultFanSpeed?.value ?? 0)
         ).catch(this.error);
         this.setCapabilityValue(
           'measure_humidity',
-          Number(resultHumidity?.value ?? 0),
+          Number(resultHumidity?.value ?? 0)
         ).catch(this.error);
         this.setCapabilityValue(
           'measure_temperature',
-          Number(resultTemperature?.value ?? 0),
+          Number(resultTemperature?.value ?? 0)
         ).catch(this.error);
         this.setCapabilityValue(
           'measure_pm1',
-          Number(resultPM1?.value ?? 0),
+          Number(resultPM1?.value ?? 0)
         ).catch(this.error);
         this.setCapabilityValue(
           'measure_tVOC',
-          Number(resulttVOC?.value ?? 0),
+          Number(resulttVOC?.value ?? 0)
         ).catch(this.error);
         this.setCapabilityValue(
           'measure_pm25',
-          Number(resultPM25?.value ?? 0),
+          Number(resultPM25?.value ?? 0)
         ).catch(this.error);
         this.setCapabilityValue(
           'measure_pm10',
-          Number(resultPM10?.value ?? 0),
+          Number(resultPM10?.value ?? 0)
         ).catch(this.error);
         this.setCapabilityValue(
           'brightness2',
-          Number(resultBrightness?.value ?? 0),
+          Number(resultBrightness?.value ?? 0)
         ).catch(this.error);
         this.setCapabilityValue(
           'child_lock',
-          resultChildLock?.value === 'true',
+          resultChildLock?.value === 'true'
         ).catch(this.error);
         this.setCapabilityValue(
           'nightmode',
-          resultNightMode?.value === 'true',
+          resultNightMode?.value === 'true'
         ).catch(this.error);
         this.setCapabilityValue(
           'standby',
-          resultStandby?.value === 'false', // Invert logic for standby
+          resultStandby?.value === 'false' // Invert logic for standby
         ).catch(this.error);
         this.setCapabilityValue(
           'wifi_status',
-          resultWiFiStatus?.value === 'true',
+          resultWiFiStatus?.value === 'true'
         ).catch(this.error);
         this.setCapabilityValue(
           'filter_status',
-          this.calculateRemainingFilterLife(DeviceAttributes),
+          this.calculateRemainingFilterLife(DeviceAttributes)
         ).catch(this.error);
         this.setCapabilityValue(
           'automode',
-          resultAutoMode?.value === 'true',
+          resultAutoMode?.value === 'true'
         ).catch(this.error); // Update automode
 
         // Trigger fan speed change card if there's a change
         if (this.savedfanspeed?.value !== resultFanSpeed?.value) {
           const cardTriggerFilter = this.homey.flow.getTriggerCard(
-            'fan-speed-has-changed',
+            'fan-speed-has-changed'
           );
           cardTriggerFilter
             .trigger({
@@ -500,17 +500,19 @@ class BlueAirHealthProtectDevice extends Device {
               'device-uuid': String(settings.uuid ?? 'Unknown UUID'),
               'fan speed': Number(resultFanSpeed?.value ?? 0),
             })
-            .catch((err) => this.error(
+            .catch((err) =>
+              this.error(
                 'Failed to trigger fan-speed-has-changed flow card',
-                err,
-              ));
+                err
+              )
+            );
           this.savedfanspeed = resultFanSpeed; // Update saved fan speed
         }
 
         // Trigger humidity change card if there's a change
         if (this.savedHumidity?.value !== resultHumidity?.value) {
           const cardTriggerFilter = this.homey.flow.getTriggerCard(
-            'humidity-has-changed',
+            'humidity-has-changed'
           );
           cardTriggerFilter
             .trigger({
@@ -519,17 +521,19 @@ class BlueAirHealthProtectDevice extends Device {
               'humidity new': Number(resultHumidity?.value ?? 0),
               'humidity old': Number(this.savedHumidity?.value ?? 0),
             })
-            .catch((err) => this.error(
+            .catch((err) =>
+              this.error(
                 'Failed to trigger humidity-has-changed flow card',
-                err,
-              ));
+                err
+              )
+            );
           this.savedHumidity = resultHumidity;
         }
 
         // Trigger temperature change card if there's a change
         if (this.savedTemperature?.value !== resultTemperature?.value) {
           const cardTriggerFilter = this.homey.flow.getTriggerCard(
-            'temperature-has-changed',
+            'temperature-has-changed'
           );
           cardTriggerFilter
             .trigger({
@@ -538,10 +542,12 @@ class BlueAirHealthProtectDevice extends Device {
               'temperature new': Number(resultTemperature?.value ?? 0),
               'temperature old': Number(this.savedTemperature?.value ?? 0),
             })
-            .catch((err) => this.error(
+            .catch((err) =>
+              this.error(
                 'Failed to trigger temperature-has-changed flow card',
-                err,
-              ));
+                err
+              )
+            );
           this.savedTemperature = resultTemperature;
         }
 
@@ -556,7 +562,9 @@ class BlueAirHealthProtectDevice extends Device {
               'PM1 new': Number(resultPM1?.value ?? 0),
               'PM1 old': Number(this.savedPM1?.value ?? 0),
             })
-            .catch((err) => this.error('Failed to trigger PM1-has-changed flow card', err));
+            .catch((err) =>
+              this.error('Failed to trigger PM1-has-changed flow card', err)
+            );
           this.savedPM1 = resultPM1;
         }
 
@@ -571,7 +579,9 @@ class BlueAirHealthProtectDevice extends Device {
               'PM25 new': Number(resultPM25?.value ?? 0),
               'PM25 old': Number(this.savedPM25?.value ?? 0),
             })
-            .catch((err) => this.error('Failed to trigger PM25-has-changed flow card', err));
+            .catch((err) =>
+              this.error('Failed to trigger PM25-has-changed flow card', err)
+            );
           this.savedPM25 = resultPM25;
         }
 
@@ -586,7 +596,9 @@ class BlueAirHealthProtectDevice extends Device {
               'PM10 new': Number(resultPM10?.value ?? 0),
               'PM10 old': Number(this.savedPM10?.value ?? 0),
             })
-            .catch((err) => this.error('Failed to trigger PM10-has-changed flow card', err));
+            .catch((err) =>
+              this.error('Failed to trigger PM10-has-changed flow card', err)
+            );
           this.savedPM10 = resultPM10;
         }
 
@@ -601,7 +613,9 @@ class BlueAirHealthProtectDevice extends Device {
               'tVOC new': Number(resulttVOC?.value ?? 0),
               'tVOC old': Number(this.savedtVOC?.value ?? 0),
             })
-            .catch((err) => this.error('Failed to trigger tVOC-has-changed flow card', err));
+            .catch((err) =>
+              this.error('Failed to trigger tVOC-has-changed flow card', err)
+            );
           this.savedtVOC = resulttVOC;
         }
 
@@ -610,7 +624,7 @@ class BlueAirHealthProtectDevice extends Device {
           this.calculateRemainingFilterLife(DeviceAttributes);
         if (this.savedFilterStatus !== currentFilterStatus) {
           const cardTriggerFilter = this.homey.flow.getTriggerCard(
-            'filter-status-has-changed',
+            'filter-status-has-changed'
           );
           cardTriggerFilter
             .trigger({
@@ -618,10 +632,12 @@ class BlueAirHealthProtectDevice extends Device {
               'device-uuid': String(settings.uuid ?? 'Unknown UUID'),
               'filter life remaining': String(currentFilterStatus ?? 'Unknown'),
             })
-            .catch((err) => this.error(
+            .catch((err) =>
+              this.error(
                 'Failed to trigger filter-status-has-changed flow card',
-                err,
-              ));
+                err
+              )
+            );
           this.savedFilterStatus = currentFilterStatus;
         }
       }, settings.update * 1000);
@@ -630,7 +646,7 @@ class BlueAirHealthProtectDevice extends Device {
       this.intervalId2 = setInterval(async () => {
         const DeviceAttributes = await client.getDeviceStatus(
           data.accountuuid,
-          [data.uuid],
+          [data.uuid]
         );
 
         // Update device settings for monitoring
@@ -653,7 +669,7 @@ class BlueAirHealthProtectDevice extends Device {
           parseInt(resultFilterStatus, 10) <= 5 // Check if the remaining filter life is 5% or less
         ) {
           const cardTriggerFilter = this.homey.flow.getTriggerCard(
-            'filter-needs-change',
+            'filter-needs-change'
           );
           cardTriggerFilter
             .trigger({
@@ -661,7 +677,9 @@ class BlueAirHealthProtectDevice extends Device {
               'device-uuid': String(settings.uuid ?? 'Unknown UUID'),
               'device-response': String(resultFilterStatus ?? 'Unknown'),
             })
-            .catch((err) => this.error('Failed to trigger filter-needs-change flow card', err));
+            .catch((err) =>
+              this.error('Failed to trigger filter-needs-change flow card', err)
+            );
         }
       }, 60000);
 
@@ -670,7 +688,7 @@ class BlueAirHealthProtectDevice extends Device {
       brightnesscard.registerRunListener(async (value) => {
         this.log(
           'Want to change the brightness with value: ',
-          value.brightness,
+          value.brightness
         );
         await client.setBrightness(data.uuid, value.brightness);
         this.log('Changed brightness to:', value.brightness);
@@ -722,7 +740,7 @@ class BlueAirHealthProtectDevice extends Device {
         .registerRunListener(async (args, state) => {
           const result =
             conditionScorePm25ToString(
-              this.getCapabilityValue('measure_pm25'),
+              this.getCapabilityValue('measure_pm25')
             ) === args.argument_main;
           return Promise.resolve(result);
         });
@@ -731,7 +749,7 @@ class BlueAirHealthProtectDevice extends Device {
         .registerRunListener(async (args, state) => {
           const result =
             conditionScorePm1ToString(
-              this.getCapabilityValue('measure_pm1'),
+              this.getCapabilityValue('measure_pm1')
             ) === args.argument_main;
           return Promise.resolve(result);
         });
@@ -740,7 +758,7 @@ class BlueAirHealthProtectDevice extends Device {
         .registerRunListener(async (args, state) => {
           const result =
             conditionScorePm10ToString(
-              this.getCapabilityValue('measure_pm10'),
+              this.getCapabilityValue('measure_pm10')
             ) === args.argument_main;
           return Promise.resolve(result);
         });
@@ -749,7 +767,7 @@ class BlueAirHealthProtectDevice extends Device {
         .registerRunListener(async (args, state) => {
           const result =
             conditionScoretVOCToString(
-              this.getCapabilityValue('measure_tVOC'),
+              this.getCapabilityValue('measure_tVOC')
             ) === args.argument_main;
           return Promise.resolve(result);
         });
@@ -766,7 +784,7 @@ class BlueAirHealthProtectDevice extends Device {
    * @returns The percentage of filter life remaining as a string with a % character.
    */
   private calculateRemainingFilterLife(
-    devices: BlueAirDeviceStatus[],
+    devices: BlueAirDeviceStatus[]
   ): string | null {
     const filterUsage = filterSettings(devices, 'filterusage'); // Fetch filter usage setting
     if (filterUsage && filterUsage.value) {

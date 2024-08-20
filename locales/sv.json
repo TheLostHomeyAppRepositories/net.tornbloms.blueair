@@ -1,1 +1,5 @@
-{}
+{
+  "error_user_locked_out": "Användaren är utelåst. Vänligen återställ ditt lösenord eller kontakta support.",
+  "error_login_failed": "Inloggningen misslyckades. Kontrollera dina uppgifter och försök igen.",
+  "error_list_devices_failed": "Kunde inte lista enheter."
+}

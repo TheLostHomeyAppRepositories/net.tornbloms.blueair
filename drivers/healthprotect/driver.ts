@@ -1,4 +1,4 @@
-import BlueAirAwsBaseDriver from '../BlueAirAwsBaseDriver.ts';
+import BlueAirAwsBaseDriver from '../BlueAirAwsBaseDriver';
 
 class BlueAirHealthProtectDriver extends BlueAirAwsBaseDriver {
   protected deviceModelFilter = 'healthprotect';
@@ -12,4 +12,4 @@ class BlueAirHealthProtectDriver extends BlueAirAwsBaseDriver {
   }
 }
 
-export default BlueAirHealthProtectDriver;
+module.exports = BlueAirHealthProtectDriver;
