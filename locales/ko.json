@@ -1,1 +1,5 @@
-{}
+{
+  "error_user_locked_out": "사용자가 잠겼습니다. 비밀번호를 재설정하거나 지원팀에 문의하세요.",
+  "error_login_failed": "로그인 실패. 자격 증명을 확인하고 다시 시도하십시오.",
+  "error_list_devices_failed": "장치를 나열하지 못했습니다."
+}

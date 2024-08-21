@@ -1,1 +1,5 @@
-{}
+{
+  "error_user_locked_out": "De gebruiker is buitengesloten. Reset uw wachtwoord of neem contact op met support.",
+  "error_login_failed": "Inloggen mislukt. Controleer uw inloggegevens en probeer het opnieuw.",
+  "error_list_devices_failed": "Kan apparaten niet weergeven."
+}

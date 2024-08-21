@@ -1,1 +1,5 @@
-{}
+{
+  "error_user_locked_out": "L'utente è bloccato. Reimposta la tua password o contatta il supporto.",
+  "error_login_failed": "Accesso fallito. Controlla le tue credenziali e riprova.",
+  "error_list_devices_failed": "Impossibile elencare i dispositivi."
+}

@@ -14,18 +14,18 @@
     "ko": "습도가 변경되었습니다"
   },
   "titleFormatted": {
-    "en": "The humidity has changed.",
+    "en": "The humidity has changed",
     "se": "Fuktigheten har ändrats",
-    "da": "Luftfugtigheden er ændret.",
-    "de": "Die Luftfeuchtigkeit hat sich geändert.",
-    "es": "La humedad ha cambiado.",
-    "fr": "L'humidité a changé.",
-    "it": "L'umidità è cambiata.",
-    "no": "Fuktigheten har endret seg.",
-    "sv": "Fuktigheten har ändrats.",
-    "pl": "Wilgotność się zmieniła.",
-    "ru": "Влажность изменилась.",
-    "ko": "습도가 변경되었습니다."
+    "da": "Luftfugtigheden er ændret",
+    "de": "Die Luftfeuchtigkeit hat sich geändert",
+    "es": "La humedad ha cambiado",
+    "fr": "L'humidité a changé",
+    "it": "L'umidità è cambiata",
+    "no": "Fuktigheten har endret seg",
+    "sv": "Fuktigheten har ändrats",
+    "pl": "Wilgotność się zmieniła",
+    "ru": "Влажность изменилась",
+    "ko": "습도가 변경되었습니다"
   },
   "hint": {
     "en": "The humidity has been changed",
@@ -41,9 +41,7 @@
     "ru": "Влажность была изменена",
     "ko": "습도가 변경되었습니다"
   },
-  "platforms": [
-    "local"
-  ],
+  "platforms": ["local"],
   "tokens": [
     {
       "type": "string",

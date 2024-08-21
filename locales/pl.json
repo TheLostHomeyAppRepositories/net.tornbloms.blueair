@@ -1,1 +1,5 @@
-{}
+{
+  "error_user_locked_out": "Użytkownik jest zablokowany. Zresetuj hasło lub skontaktuj się z pomocą techniczną.",
+  "error_login_failed": "Logowanie nie powiodło się. Sprawdź swoje dane uwierzytelniające i spróbuj ponownie.",
+  "error_list_devices_failed": "Nie udało się wyświetlić listy urządzeń."
+}

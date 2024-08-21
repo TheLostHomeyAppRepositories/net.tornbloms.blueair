@@ -1,1 +1,5 @@
-{}
+{
+  "error_user_locked_out": "L'utilisateur est verrouillé. Veuillez réinitialiser votre mot de passe ou contacter le support.",
+  "error_login_failed": "Échec de la connexion. Veuillez vérifier vos identifiants et réessayer.",
+  "error_list_devices_failed": "Échec de la liste des appareils."
+}

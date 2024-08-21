@@ -15,19 +15,19 @@
     "ko": "팬 속도가 변경되었습니다"
   },
   "titleFormatted": {
-    "en": "The fan speed has changed.",
+    "en": "The fan speed has changed",
     "se": "Fläktens fart har ändrats",
     "nl": "De ventilatorsnelheid is veranderd",
-    "da": "Ventilatorhastigheden er ændret.",
-    "de": "Die Lüftergeschwindigkeit hat sich geändert.",
-    "es": "La velocidad del ventilador ha cambiado.",
-    "fr": "La vitesse du ventilateur a changé.",
-    "it": "La velocità della ventola è cambiata.",
-    "no": "Viftehastigheten har endret seg.",
-    "sv": "Fläktens fart har ändrats.",
-    "pl": "Prędkość wentylatora została zmieniona.",
-    "ru": "Скорость вентилятора изменилась.",
-    "ko": "팬 속도가 변경되었습니다."
+    "da": "Ventilatorhastigheden er ændret",
+    "de": "Die Lüftergeschwindigkeit hat sich geändert",
+    "es": "La velocidad del ventilador ha cambiado",
+    "fr": "La vitesse du ventilateur a changé",
+    "it": "La velocità della ventola è cambiata",
+    "no": "Viftehastigheten har endret seg",
+    "sv": "Fläktens fart har ändrats",
+    "pl": "Prędkość wentylatora została zmieniona",
+    "ru": "Скорость вентилятора изменилась",
+    "ko": "팬 속도가 변경되었습니다"
   },
   "hint": {
     "en": "The fan speed has been changed",
@@ -44,9 +44,7 @@
     "ru": "Скорость вентилятора была изменена",
     "ko": "팬 속도가 변경되었습니다"
   },
-  "platforms": [
-    "local"
-  ],
+  "platforms": ["local"],
   "tokens": [
     {
       "type": "string",

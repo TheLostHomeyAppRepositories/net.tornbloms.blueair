@@ -15,19 +15,19 @@
     "ko": "온도가 변했습니다"
   },
   "titleFormatted": {
-    "en": "The temperature has changed.",
+    "en": "The temperature has changed",
     "se": "Temperaturen har ändrats",
     "nl": "De temperatuur is veranderd",
-    "da": "Temperaturen er ændret.",
-    "de": "Die Temperatur hat sich geändert.",
-    "es": "La temperatura ha cambiado.",
-    "fr": "La température a changé.",
-    "it": "La temperatura è cambiata.",
-    "no": "Temperaturen har endret seg.",
-    "sv": "Temperaturen har ändrats.",
-    "pl": "Temperatura się zmieniła.",
-    "ru": "Температура изменилась.",
-    "ko": "온도가 변했습니다."
+    "da": "Temperaturen er ændret",
+    "de": "Die Temperatur hat sich geändert",
+    "es": "La temperatura ha cambiado",
+    "fr": "La température a changé",
+    "it": "La temperatura è cambiata",
+    "no": "Temperaturen har endret seg",
+    "sv": "Temperaturen har ändrats",
+    "pl": "Temperatura się zmieniła",
+    "ru": "Температура изменилась",
+    "ko": "온도가 변했습니다"
   },
   "hint": {
     "en": "The temperature has been changed",
@@ -44,9 +44,7 @@
     "ru": "Температура была изменена",
     "ko": "온도가 변경되었습니다"
   },
-  "platforms": [
-    "local"
-  ],
+  "platforms": ["local"],
   "tokens": [
     {
       "type": "string",

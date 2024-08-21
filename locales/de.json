@@ -1,1 +1,5 @@
-{}
+{
+  "error_user_locked_out": "Der Benutzer ist gesperrt. Bitte setzen Sie Ihr Passwort zurück oder kontaktieren Sie den Support.",
+  "error_login_failed": "Anmeldung fehlgeschlagen. Bitte überprüfen Sie Ihre Anmeldeinformationen und versuchen Sie es erneut.",
+  "error_list_devices_failed": "Geräteliste konnte nicht abgerufen werden."
+}

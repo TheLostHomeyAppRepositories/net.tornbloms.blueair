@@ -1,1 +1,5 @@
-{}
+{
+  "error_user_locked_out": "Brugeren er låst ude. Nulstil venligst din adgangskode eller kontakt support.",
+  "error_login_failed": "Login mislykkedes. Kontroller dine legitimationsoplysninger og prøv igen.",
+  "error_list_devices_failed": "Kunne ikke liste enheder."
+}

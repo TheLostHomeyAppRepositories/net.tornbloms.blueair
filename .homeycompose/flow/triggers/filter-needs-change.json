@@ -1,32 +1,32 @@
 {
   "title": {
-    "en": "Filter needs change.",
-    "se": "Filtret behöver bytas.",
-    "nl": "Filter moet worden vervangen.",
-    "da": "Filteret skal skiftes.",
-    "de": "Filter muss gewechselt werden.",
-    "es": "El filtro necesita cambiarse.",
-    "fr": "Le filtre doit être changé.",
-    "it": "Il filtro deve essere cambiato.",
-    "no": "Filteret må skiftes.",
-    "sv": "Filtret behöver bytas.",
-    "pl": "Filtr wymaga zmiany.",
-    "ru": "Требуется замена фильтра.",
+    "en": "Filter needs change",
+    "se": "Filtret behöver bytas",
+    "nl": "Filter moet worden vervangen",
+    "da": "Filteret skal skiftes",
+    "de": "Filter muss gewechselt werden",
+    "es": "El filtro necesita cambiarse",
+    "fr": "Le filtre doit être changé",
+    "it": "Il filtro deve essere cambiato",
+    "no": "Filteret må skiftes",
+    "sv": "Filtret behöver bytas",
+    "pl": "Filtr wymaga zmiany",
+    "ru": "Требуется замена фильтра",
     "ko": "필터 교체가 필요합니다."
   },
   "titleFormatted": {
-    "en": "The filter needs to be change.",
-    "se": "Filtret behöver bytas.",
-    "nl": "Het filter moet worden vervangen.",
-    "da": "Filteret skal skiftes.",
-    "de": "Der Filter muss gewechselt werden.",
-    "es": "El filtro necesita ser cambiado.",
-    "fr": "Le filtre doit être changé.",
-    "it": "Il filtro deve essere cambiato.",
-    "no": "Filteret må skiftes.",
-    "sv": "Filtret behöver bytas.",
-    "pl": "Filtr należy wymienić.",
-    "ru": "Фильтр нужно заменить.",
+    "en": "The filter needs to be changed",
+    "se": "Filtret behöver bytas",
+    "nl": "Het filter moet worden vervangen",
+    "da": "Filteret skal skiftes",
+    "de": "Der Filter muss gewechselt werden",
+    "es": "El filtro necesita ser cambiado",
+    "fr": "Le filtre doit être changé",
+    "it": "Il filtro deve essere cambiato",
+    "no": "Filteret må skiftes",
+    "sv": "Filtret behöver bytas",
+    "pl": "Filtr należy wymienić",
+    "ru": "Фильтр нужно заменить",
     "ko": "필터를 교체해야 합니다."
   },
   "hint": {
@@ -44,9 +44,7 @@
     "ru": "Обычно статус фильтра ОК, но если он изменится, этот поток будет запущен.",
     "ko": "일반적으로 필터의 상태는 OK이지만 변경되면 이 흐름이 트리거됩니다."
   },
-  "platforms": [
-    "local"
-  ],
+  "platforms": ["local"],
   "tokens": [
     {
       "type": "string",

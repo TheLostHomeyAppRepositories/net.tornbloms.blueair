@@ -14,18 +14,18 @@
     "ko": "tVOC가 변경되었습니다"
   },
   "titleFormatted": {
-    "en": "tVOC has changed.",
-    "nl": "tVOC is veranderd.",
-    "da": "tVOC er ændret.",
-    "de": "tVOC hat sich geändert.",
-    "es": "tVOC ha cambiado.",
-    "fr": "tVOC a changé.",
-    "it": "tVOC è cambiato.",
-    "no": "tVOC har endret seg.",
-    "sv": "tVOC har ändrats.",
-    "pl": "tVOC się zmienił.",
-    "ru": "tVOC изменился.",
-    "ko": "tVOC가 변경되었습니다."
+    "en": "tVOC has changed",
+    "nl": "tVOC is veranderd",
+    "da": "tVOC er ændret",
+    "de": "tVOC hat sich geändert",
+    "es": "tVOC ha cambiado",
+    "fr": "tVOC a changé",
+    "it": "tVOC è cambiato",
+    "no": "tVOC har endret seg",
+    "sv": "tVOC har ändrats",
+    "pl": "tVOC się zmienił",
+    "ru": "tVOC изменился",
+    "ko": "tVOC가 변경되었습니다"
   },
   "hint": {
     "en": "tVOC has been changed",
@@ -41,9 +41,7 @@
     "ru": "tVOC был изменен",
     "ko": "tVOC가 변경되었습니다"
   },
-  "platforms": [
-    "local"
-  ],
+  "platforms": ["local"],
   "tokens": [
     {
       "type": "string",

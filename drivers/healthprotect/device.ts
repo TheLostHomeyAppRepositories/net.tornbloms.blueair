@@ -624,7 +624,7 @@ class BlueAirHealthProtectDevice extends Device {
           this.calculateRemainingFilterLife(DeviceAttributes);
         if (this.savedFilterStatus !== currentFilterStatus) {
           const cardTriggerFilter = this.homey.flow.getTriggerCard(
-            'filter-status-has-changed'
+            'filter-needs-change'
           );
           cardTriggerFilter
             .trigger({
@@ -633,10 +633,7 @@ class BlueAirHealthProtectDevice extends Device {
               'filter life remaining': String(currentFilterStatus ?? 'Unknown'),
             })
             .catch((err) =>
-              this.error(
-                'Failed to trigger filter-status-has-changed flow card',
-                err
-              )
+              this.error('Failed to trigger filter-needs-change flow card', err)
             );
           this.savedFilterStatus = currentFilterStatus;
         }
