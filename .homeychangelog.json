@@ -97,5 +97,8 @@
   },
   "3.1.19": {
     "en": "Corrected spelling and texts based from Homey App review from las publish."
+  },
+  "3.1.20": {
+    "en": "Updated undelying modules for suecurity fixes"
   }
 }
