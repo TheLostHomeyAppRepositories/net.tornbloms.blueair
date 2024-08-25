@@ -33,13 +33,13 @@ class BlueAirClassicDevice extends Device {
 
     // Add capabilities if they are not already present
     const capabilities = [
-    'fan_speed',
-    'brightness',
-    'child_lock',
-    'last_retrival_date',
-    'wifi_status',
-    'filter_status',
-  ];
+      'fan_speed',
+      'brightness',
+      'child_lock',
+      'last_retrival_date',
+      'wifi_status',
+      'filter_status',
+    ];
 
     for (const capability of capabilities) {
       if (!this.hasCapability(capability)) {
@@ -71,7 +71,7 @@ class BlueAirClassicDevice extends Device {
             data.uuid,
             value,
             result?.defaultValue,
-            userId,
+            userId
           ); // Set fan to manual speed
           await client.setFanAuto(data.uuid, 'manual', 'manual', userId); // Ensure fan is in manual mode
         }
@@ -85,7 +85,7 @@ class BlueAirClassicDevice extends Device {
           data.uuid,
           String(value),
           result?.defaultValue,
-          userId,
+          userId
         );
       });
 
@@ -98,7 +98,7 @@ class BlueAirClassicDevice extends Device {
             data.uuid,
             '1',
             result?.defaultValue,
-            userId,
+            userId
           ); // Enable child lock
         } else {
           this.log('Changed child lock:', value);
@@ -106,7 +106,7 @@ class BlueAirClassicDevice extends Device {
             data.uuid,
             '0',
             result?.defaultValue,
-            userId,
+            userId
           ); // Disable child lock
         }
       });
@@ -115,28 +115,28 @@ class BlueAirClassicDevice extends Device {
       const resultFanSpeed = this.filterSettings(DeviceAttributes, 'fan_speed');
       const resultBrightness = this.filterSettings(
         DeviceAttributes,
-        'brightness',
+        'brightness'
       );
       const resultChildLock = this.filterSettings(
         DeviceAttributes,
-        'child_lock',
+        'child_lock'
       );
       const resultFilterStatus = this.filterSettings(
         DeviceAttributes,
-        'filter_status',
+        'filter_status'
       );
       const resultWiFiStatus = this.filterSettings(
         DeviceAttributes,
-        'wifi_status',
+        'wifi_status'
       );
 
       // Set capability values for fan speed, brightness, and child lock
       this.setCapabilityValue('fan_speed', resultFanSpeed?.currentValue).catch(
-        this.error,
+        this.error
       );
       this.setCapabilityValue(
         'brightness',
-        parseInt(resultBrightness?.currentValue, 10),
+        parseInt(resultBrightness?.currentValue, 10)
       ).catch(this.error);
 
       if (resultChildLock?.currentValue === 1) {
@@ -148,7 +148,7 @@ class BlueAirClassicDevice extends Device {
       // Set capability values for last retrieval date, Wi-Fi status, and filter status
       this.setCapabilityValue(
         'last_retrival_date',
-        this.timeConverter(DeviceInfo.lastSyncDate),
+        this.timeConverter(DeviceInfo.lastSyncDate)
       ).catch(this.error);
 
       if (resultWiFiStatus?.currentValue === '1') {
@@ -159,7 +159,7 @@ class BlueAirClassicDevice extends Device {
 
       this.setCapabilityValue(
         'filter_status',
-        resultFilterStatus?.currentValue,
+        resultFilterStatus?.currentValue
       ).catch(this.error);
 
       // Update device settings with the latest information from the API
@@ -189,33 +189,33 @@ class BlueAirClassicDevice extends Device {
 
           const resultFanSpeed = this.filterSettings(
             DeviceAttributes,
-            'fan_speed',
+            'fan_speed'
           );
           const resultBrightness = this.filterSettings(
             DeviceAttributes,
-            'brightness',
+            'brightness'
           );
           const resultChildLock = this.filterSettings(
             DeviceAttributes,
-            'child_lock',
+            'child_lock'
           );
           const resultFilterStatus = this.filterSettings(
             DeviceAttributes,
-            'filter_status',
+            'filter_status'
           );
           const resultWiFiStatus = this.filterSettings(
             DeviceAttributes,
-            'wifi_status',
+            'wifi_status'
           );
 
           // Update capability values based on the fetched data
           this.setCapabilityValue(
             'fan_speed',
-            resultFanSpeed?.currentValue,
+            resultFanSpeed?.currentValue
           ).catch(this.error);
           this.setCapabilityValue(
             'brightness',
-            parseInt(resultBrightness?.currentValue, 10),
+            parseInt(resultBrightness?.currentValue, 10)
           ).catch(this.error);
 
           if (resultChildLock?.currentValue === 1) {
@@ -226,7 +226,7 @@ class BlueAirClassicDevice extends Device {
 
           this.setCapabilityValue(
             'last_retrival_date',
-            this.timeConverter(DeviceInfo.lastSyncDate),
+            this.timeConverter(DeviceInfo.lastSyncDate)
           ).catch(this.error);
 
           if (resultWiFiStatus?.currentValue === '1') {
@@ -237,7 +237,7 @@ class BlueAirClassicDevice extends Device {
 
           this.setCapabilityValue(
             'filter_status',
-            resultFilterStatus?.currentValue,
+            resultFilterStatus?.currentValue
           ).catch(this.error);
 
           // Trigger a flow card if the fan speed has changed
@@ -245,14 +245,25 @@ class BlueAirClassicDevice extends Device {
             this._savedfanspeed?.currentValue !== resultFanSpeed?.currentValue
           ) {
             const cardTriggerFilter = this.homey.flow.getTriggerCard(
-              'fan-speed-has-changed',
+              'fan-speed-has-changed'
             );
-            cardTriggerFilter.trigger({
-              'device-name': settings.name,
-              'device-uuid': settings.uuid,
-              'fan speed': resultFanSpeed?.currentValue,
-            });
-            this._savedfanspeed = resultFanSpeed; // Update the saved fan speed
+
+            // Ensure the fan speed is defined and convert to a string if necessary
+            const fanSpeedValue = resultFanSpeed?.currentValue
+              ? String(resultFanSpeed.currentValue)
+              : '';
+            if (fanSpeedValue) {
+              cardTriggerFilter.trigger({
+                'device-name': settings.name,
+                'device-uuid': settings.uuid,
+                'fan speed': fanSpeedValue,
+              });
+              this._savedfanspeed = resultFanSpeed; // Update the saved fan speed
+            } else {
+              this.log(
+                'Fan speed value is undefined or invalid, cannot trigger flow card.'
+              );
+            }
           }
         } catch (error) {
           this.log('Error in interval 1:', error); // Log any errors encountered
@@ -274,7 +285,7 @@ class BlueAirClassicDevice extends Device {
             lastSyncDate: this.timeConverter(DeviceInfo.lastSyncDate),
             installationDate: this.timeConverter(DeviceInfo.installationDate),
             lastCalibrationDate: this.timeConverter(
-              DeviceInfo.lastCalibrationDate,
+              DeviceInfo.lastCalibrationDate
             ),
             initUsagePeriod: String(DeviceInfo.initUsagePeriod),
             rebootPeriod: String(DeviceInfo.rebootPeriod),
@@ -298,7 +309,7 @@ class BlueAirClassicDevice extends Device {
             data.uuid,
             value.fanspeed,
             value.fanspeed,
-            userId,
+            userId
           );
           await client.setFanAuto(data.uuid, 'manual', 'manual', userId);
         }
@@ -309,13 +320,13 @@ class BlueAirClassicDevice extends Device {
       brightnesscard.registerRunListener(async (value) => {
         this.log(
           'Want to change the brightness with value: ',
-          value.brightness,
+          value.brightness
         );
         await client.setBrightness(
           data.uuid,
           value.brightness,
           value.brightness,
-          userId,
+          userId
         );
         this.log('Changed brightness to:', value.brightness);
       });
@@ -328,7 +339,7 @@ class BlueAirClassicDevice extends Device {
           data.uuid,
           value.brightness,
           value.brightness,
-          userId,
+          userId
         );
         this.log('Changed child lock:', value.childlock);
       });
@@ -480,7 +491,7 @@ class BlueAirClassicDevice extends Device {
       return null;
     }
     const setting: Setting | undefined = settings.find(
-      (s: Setting) => s.name === name,
+      (s: Setting) => s.name === name
     );
     return setting || null; // Return the found setting or null if not found
   }
