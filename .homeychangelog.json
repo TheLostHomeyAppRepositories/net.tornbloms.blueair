@@ -109,5 +109,8 @@
   },
   "3.1.23": {
     "en": "Fixes app crach because of to many request http error 429."
+  },
+  "3.1.24": {
+    "en": "Added handeling for http error 229 in the backend"
   }
 }
