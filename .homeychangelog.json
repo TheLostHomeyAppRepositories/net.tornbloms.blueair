@@ -106,5 +106,8 @@
   },
   "3.1.22": {
     "en": "Updated backgroup packages to fix login failure"
+  },
+  "3.1.23": {
+    "en": "Fixes app crach because of to many request http error 429."
   }
 }
