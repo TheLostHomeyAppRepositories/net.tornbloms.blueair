@@ -7,13 +7,13 @@
   },
   "devDependencies": {
     "@tsconfig/node18": "^18.2.4",
-    "@types/homey": "npm:homey-apps-sdk-v3-types@^0.3.7",
-    "@types/node": "^22.5.4",
-    "typescript": "^5.6.2"
+    "@types/homey": "npm:homey-apps-sdk-v3-types@^0.3.10",
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
   },
   "dependencies": {
     "blueair-client": "^1.2.13",
-    "blueairaws-client": "^1.1.0",
+    "blueairaws-client": "^1.2.0",
     "homey-log": "^2.1.0"
   }
 }
