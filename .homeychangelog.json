@@ -103,5 +103,8 @@
   },
   "3.1.21": {
     "en": "Improved AWS Client and updated other node packages"
+  },
+  "3.1.22": {
+    "en": "Updated backgroup packages to fix login failure"
   }
 }
