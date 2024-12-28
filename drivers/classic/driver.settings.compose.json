@@ -255,6 +255,30 @@
         "min": 10,
         "max": 120,
         "units": { "en": "Seconds", "sv": "Sekunder", "nl": "Seconden" }
+      },
+      {
+        "id": "temperatureUnit",
+        "type": "dropdown",
+        "value": "C",
+        "label": {
+          "en": "Temperature unit",
+          "sv": "Temperatur",
+          "nl": "Temperatuureenheid"
+        },
+        "values": [
+          {
+            "id": "C",
+            "label": { "en": "Celsius", "sv": "Celsius", "nl": "Celsius" }
+          },
+          {
+            "id": "F",
+            "label": {
+              "en": "Fahrenheit",
+              "sv": "Fahrenheit",
+              "nl": "Fahrenheit"
+            }
+          }
+        ]
       }
     ]
   }

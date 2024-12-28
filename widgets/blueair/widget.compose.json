@@ -1,0 +1,40 @@
+{
+  "name": {
+    "en": "BlueAir Widget"
+  },
+  "height": 188,
+  "settings": [
+    {
+      "id": "widgetTitle",
+      "type": "text",
+      "label": { "en": "Widget Title" },
+      "placeholder": { "en": "My BlueAir Widget" }
+    },
+    {
+      "id": "selectedDevice",
+      "type": "dropdown",
+      "label": { "en": "Select BlueAir device" },
+      "options": []
+    },
+    {
+      "id": "selectedCapability",
+      "type": "dropdown",
+      "label": { "en": "Select measurement" },
+      "options": []
+    }
+  ],
+  "api": {
+    "getBlueAirDevices": {
+      "method": "GET",
+      "path": "/devices"
+    },
+    "getBlueAirCapabilities": {
+      "method": "GET",
+      "path": "/devices/:deviceId/capabilities"
+    },
+    "getBlueAirCapabilityValue": {
+      "method": "GET",
+      "path": "/devices/:deviceId/capabilities/:capabilityId"
+    }
+  }
+}

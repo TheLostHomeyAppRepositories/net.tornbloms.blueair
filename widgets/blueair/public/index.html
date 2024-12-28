@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>BlueAir Widget</title>
+    <style>
+      .widget-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+        height: 100%;
+        padding: 10px;
+      }
+      .title {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+      }
+      .measurement {
+        font-size: 2em;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="widget-container">
+      <div id="widget-title" class="title">Loading title...</div>
+      <div id="measurement-value" class="measurement">--</div>
+    </div>
+
+    <script>
+      (async () => {
+        try {
+          // 1) Hämta inställningar för denna widget (vald enhet och capability)
+          const settings = await Homey.Widget.getSettings();
+          const widgetTitle = settings.widgetTitle || 'BlueAir Widget';
+          const deviceId = settings.selectedDevice;
+          const capabilityId = settings.selectedCapability;
+
+          // Sätt widget-titel i UI
+          document.getElementById('widget-title').textContent = widgetTitle;
+
+          // Om användaren inte har valt enhet eller capability
+          if (!deviceId || !capabilityId) {
+            document.getElementById('measurement-value').textContent =
+              'Not configured';
+            return;
+          }
+
+          // 2) Definiera en funktion för att hämta värdet från API och uppdatera DOM
+          async function updateMeasurement() {
+            try {
+              // Bygg route t.ex. /devices/:deviceId/capabilities/:capabilityId
+              const route = `/devices/${deviceId}/capabilities/${capabilityId}`;
+
+              // Hämta värdet via Homey.api (GET)
+              const currentValue = await Homey.api('GET', route);
+
+              // Uppdatera HTML-elementet med det nya värdet
+              if (currentValue !== null && currentValue !== undefined) {
+                document.getElementById('measurement-value').textContent =
+                  currentValue;
+              } else {
+                document.getElementById('measurement-value').textContent =
+                  'No data';
+              }
+            } catch (err) {
+              console.error('Error updating measurement:', err);
+              document.getElementById('measurement-value').textContent =
+                'Error';
+            }
+          }
+
+          // 3) Gör en första uppdatering direkt
+          await updateMeasurement();
+
+          // 4) Sätt upp ett intervall som anropar updateMeasurement() var 30:e sekund
+          setInterval(updateMeasurement, 30000);
+        } catch (err) {
+          console.error('Error in widget script:', err);
+          document.getElementById('measurement-value').textContent = 'Error';
+        }
+      })();
+    </script>
+  </body>
+</html>

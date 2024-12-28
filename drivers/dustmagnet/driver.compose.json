@@ -27,15 +27,11 @@
     "measure_pm1",
     "measure_pm25",
     "measure_pm10",
-    "measure_tVOC",
+    "measure_tvoc",
     "measure_temperature"
   ],
-  "platforms": [
-    "local"
-  ],
-  "connectivity": [
-    "cloud"
-  ],
+  "platforms": ["local"],
+  "connectivity": ["cloud"],
   "images": {
     "small": "{{driverAssetsPath}}/images/small.png",
     "large": "{{driverAssetsPath}}/images/large.png",

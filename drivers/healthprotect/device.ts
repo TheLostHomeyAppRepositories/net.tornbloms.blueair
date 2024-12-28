@@ -84,6 +84,12 @@ class BlueAirHealthProtectDevice extends Device {
       settings
     );
 
+    if (this.hasCapability('measure_tVOC')) {
+      // You need to check if migration is needed
+      // do not call removeCapability on every init!
+      await this.removeCapability('measure_tVOC');
+    }
+
     // Add capabilities if they are not already present
     const capabilities = [
       'automode',
@@ -96,7 +102,7 @@ class BlueAirHealthProtectDevice extends Device {
       'measure_pm10',
       'measure_pm25',
       'measure_temperature',
-      'measure_tVOC',
+      'measure_tvoc',
       'nightmode',
       'standby',
       'wifi_status',
@@ -330,7 +336,7 @@ class BlueAirHealthProtectDevice extends Device {
       ).catch(this.error);
 
       this.setCapabilityValue(
-        'measure_tVOC',
+        'measure_tvoc',
         Number(resulttVOC?.value ?? 0) // Parse tVOC value as a number
       ).catch(this.error);
 
@@ -449,7 +455,7 @@ class BlueAirHealthProtectDevice extends Device {
           Number(resultPM1?.value ?? 0)
         ).catch(this.error);
         this.setCapabilityValue(
-          'measure_tVOC',
+          'measure_tvoc',
           Number(resulttVOC?.value ?? 0)
         ).catch(this.error);
         this.setCapabilityValue(
@@ -764,7 +770,7 @@ class BlueAirHealthProtectDevice extends Device {
         .registerRunListener(async (args, state) => {
           const result =
             conditionScoretVOCToString(
-              this.getCapabilityValue('measure_tVOC')
+              this.getCapabilityValue('measure_tvoc')
             ) === args.argument_main;
           return Promise.resolve(result);
         });

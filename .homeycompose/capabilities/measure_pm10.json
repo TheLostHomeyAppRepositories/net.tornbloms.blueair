@@ -1,61 +1,59 @@
 {
   "type": "number",
   "title": {
-    "en": "Current PM10 value",
-    "da": "Nuværende PM10-værdi",
-    "de": "Aktueller PM10-Wert",
-    "es": "Valor actual de PM10",
-    "fr": "Valeur actuelle de PM10",
-    "it": "Valore attuale di PM10",
-    "no": "Nåværende PM10-verdi",
-    "sv": "Nuvarande PM10-värde",
-    "pl": "Aktualna wartość PM10",
-    "ru": "Текущее значение ТЧ 10",
-    "ko": "현재 PM10 값"
+    "en": "PM10",
+    "nl": "PM10",
+    "de": "PM10",
+    "fr": "PM10",
+    "it": "PM10",
+    "sv": "PM10",
+    "no": "PM10",
+    "es": "PM10",
+    "ru": "ТЧ10",
+    "pl": "PM10",
+    "ko": "PM10",
+    "da": "PM10"
   },
   "units": {
     "en": "μg/m³",
-    "da": "μg/m³",
-    "de": "μg/m³",
-    "es": "μg/m³",
-    "fr": "μg/m³",
-    "it": "μg/m³",
-    "no": "μg/m³",
-    "sv": "μg/m³",
-    "pl": "μg/m³",
     "ru": "мкг/м³",
-    "ko": "μg/m³"
+    "ko": "μg/m³",
+    "no": "μg/m³",
+    "da": "μg/m³",
+    "it": "μg/m³",
+    "nl": "μg/m³",
+    "pl": "μg/m³",
+    "sv": "μg/m³",
+    "es": "μg/m³",
+    "fr": "μg/m³"
   },
   "insights": true,
   "desc": {
     "en": "Atmospheric particulate matter (μg/m³)",
-    "nl": "Deeltjesvormige luchtverontreiniging (μg/m³)",
+    "nl": "Zwevende deeltjes (μg/m³)",
     "de": "Atmosphärischer Feinstaub (μg/m³)",
     "fr": "Particules en suspension (μg/m³)",
     "it": "Particolato atmosferico (μg/m³)",
     "sv": "Atmosfäriskt partikelämne (μg/m³)",
-    "no": "Atmosfæriske partikler (μg/m³)",
+    "no": "Svevestøv (μg/m³)",
     "es": "Partículas atmosféricas (μg/m³)",
     "da": "Atmosfæriske partikler (μg/m³)",
-    "ru": "Атмосферные твердые частицы (мкг/м³)",
-    "pl": "Pył zawieszony (μg/m³)",
+    "ru": "Твердые частицы в воздухе (мкг/м³)",
+    "pl": "Pył zawieszony w powietrzu (μg/m³)",
     "ko": "대기 중 미세입자 수(μg/m³)"
   },
   "chartType": "spline",
-  "min": 0,
-  "max": 999,
   "decimals": 2,
   "getable": true,
   "setable": false,
   "uiComponent": "sensor",
-  "icon": "/assets/images/measure_pm10.svg",
   "$flow": {
     "triggers": [
       {
-        "id": "measure_PM10_changed",
+        "id": "measure_pm10_changed",
         "title": {
           "en": "The PM10 value has changed",
-          "nl": "De PM10 waarde is veranderd",
+          "nl": "De PM10-waarde is veranderd",
           "de": "Der PM10-Wert hat sich geändert",
           "fr": "La valeur PM10 a changé",
           "it": "Il valore di PM10 è cambiato",
@@ -63,13 +61,13 @@
           "no": "PM10-verdien er endret",
           "es": "El valor de PM10 ha cambiado",
           "da": "PM10-værdien har ændret sig",
-          "ru": "Значение ТЧ 10 изменилось",
-          "pl": "Zmiana poziomu stężenia PM10",
+          "ru": "Значение ТЧ10 изменилось",
+          "pl": "Zmieniła się wartość PM10",
           "ko": "PM10 값 변경됨"
         },
         "tokens": [
           {
-            "name": "measure_PM10",
+            "name": "measure_pm10",
             "title": {
               "en": "PM10",
               "nl": "PM10",
@@ -79,9 +77,10 @@
               "sv": "PM10",
               "no": "PM10",
               "es": "PM10",
-              "ru": "ТЧ 10",
+              "ru": "ТЧ10",
               "pl": "PM10",
-              "ko": "PM10"
+              "ko": "PM10",
+              "da": "PM10"
             },
             "type": "number",
             "example": 2
@@ -89,5 +88,6 @@
         ]
       }
     ]
-  }
+  },
+  "minCompatibility": "12.2.0"
 }

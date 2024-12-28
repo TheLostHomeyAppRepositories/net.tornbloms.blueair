@@ -385,6 +385,30 @@
           "ru": "Секунды",
           "ko": "초"
         }
+      },
+      {
+        "id": "temperatureUnit",
+        "type": "dropdown",
+        "value": "C",
+        "label": {
+          "en": "Temperature unit",
+          "sv": "Temperatur",
+          "nl": "Temperatuureenheid"
+        },
+        "values": [
+          {
+            "id": "C",
+            "label": { "en": "Celsius", "sv": "Celsius", "nl": "Celsius" }
+          },
+          {
+            "id": "F",
+            "label": {
+              "en": "Fahrenheit",
+              "sv": "Fahrenheit",
+              "nl": "Fahrenheit"
+            }
+          }
+        ]
       }
     ]
   }

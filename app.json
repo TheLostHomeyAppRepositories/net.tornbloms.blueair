@@ -2,7 +2,7 @@
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "net.tornbloms.blueair",
   "version": "3.1.24",
-  "compatibility": ">=12.1.2",
+  "compatibility": ">=12.2.0",
   "sdk": 3,
   "brandColor": "#0C2F4F",
   "platforms": [
@@ -3051,6 +3051,34 @@
                 "sv": "Sekunder",
                 "nl": "Seconden"
               }
+            },
+            {
+              "id": "temperatureUnit",
+              "type": "dropdown",
+              "value": "C",
+              "label": {
+                "en": "Temperature unit",
+                "sv": "Temperatur",
+                "nl": "Temperatuureenheid"
+              },
+              "values": [
+                {
+                  "id": "C",
+                  "label": {
+                    "en": "Celsius",
+                    "sv": "Celsius",
+                    "nl": "Celsius"
+                  }
+                },
+                {
+                  "id": "F",
+                  "label": {
+                    "en": "Fahrenheit",
+                    "sv": "Fahrenheit",
+                    "nl": "Fahrenheit"
+                  }
+                }
+              ]
             }
           ]
         }
@@ -3085,7 +3113,7 @@
         "measure_pm1",
         "measure_pm25",
         "measure_pm10",
-        "measure_tVOC",
+        "measure_tvoc",
         "measure_temperature"
       ],
       "platforms": [
@@ -3588,6 +3616,34 @@
                 "ru": "Секунды",
                 "ko": "초"
               }
+            },
+            {
+              "id": "temperatureUnit",
+              "type": "dropdown",
+              "value": "C",
+              "label": {
+                "en": "Temperature unit",
+                "sv": "Temperatur",
+                "nl": "Temperatuureenheid"
+              },
+              "values": [
+                {
+                  "id": "C",
+                  "label": {
+                    "en": "Celsius",
+                    "sv": "Celsius",
+                    "nl": "Celsius"
+                  }
+                },
+                {
+                  "id": "F",
+                  "label": {
+                    "en": "Fahrenheit",
+                    "sv": "Fahrenheit",
+                    "nl": "Fahrenheit"
+                  }
+                }
+              ]
             }
           ]
         }
@@ -3622,7 +3678,7 @@
         "measure_pm1",
         "measure_pm25",
         "measure_pm10",
-        "measure_tVOC",
+        "measure_tvoc",
         "measure_temperature"
       ],
       "platforms": [
@@ -4125,13 +4181,283 @@
                 "ru": "Секунды",
                 "ko": "초"
               }
+            },
+            {
+              "id": "temperatureUnit",
+              "type": "dropdown",
+              "value": "C",
+              "label": {
+                "en": "Temperature unit",
+                "sv": "Temperatur",
+                "nl": "Temperatuureenheid"
+              },
+              "values": [
+                {
+                  "id": "C",
+                  "label": {
+                    "en": "Celsius",
+                    "sv": "Celsius",
+                    "nl": "Celsius"
+                  }
+                },
+                {
+                  "id": "F",
+                  "label": {
+                    "en": "Fahrenheit",
+                    "sv": "Fahrenheit",
+                    "nl": "Fahrenheit"
+                  }
+                }
+              ]
             }
           ]
         }
       ]
     }
   ],
+  "widgets": {
+    "blueair": {
+      "name": {
+        "en": "BlueAir Widget"
+      },
+      "height": 188,
+      "settings": [
+        {
+          "id": "widgetTitle",
+          "type": "text",
+          "label": {
+            "en": "Widget Title"
+          },
+          "placeholder": {
+            "en": "My BlueAir Widget"
+          }
+        },
+        {
+          "id": "selectedDevice",
+          "type": "dropdown",
+          "label": {
+            "en": "Select BlueAir device"
+          },
+          "options": []
+        },
+        {
+          "id": "selectedCapability",
+          "type": "dropdown",
+          "label": {
+            "en": "Select measurement"
+          },
+          "options": []
+        }
+      ],
+      "api": {
+        "getBlueAirDevices": {
+          "method": "GET",
+          "path": "/devices"
+        },
+        "getBlueAirCapabilities": {
+          "method": "GET",
+          "path": "/devices/:deviceId/capabilities"
+        },
+        "getBlueAirCapabilityValue": {
+          "method": "GET",
+          "path": "/devices/:deviceId/capabilities/:capabilityId"
+        }
+      },
+      "id": "blueair"
+    }
+  },
   "capabilities": {
+    "alarm_pm1": {
+      "type": "boolean",
+      "title": {
+        "en": "PM1 alarm",
+        "nl": "PM1-waarschuwing",
+        "de": "PM1-Alarm",
+        "fr": "Alarme PM1",
+        "it": "Allarme PM1",
+        "sv": "PM1-larm",
+        "no": "PM1-alarm",
+        "es": "Alarma de PM1",
+        "da": "PM1-alarm",
+        "ru": "Сигнал ТЧ1",
+        "pl": "Alarm PM1",
+        "ko": "PM1 알람"
+      },
+      "desc": {
+        "en": "True when PM1 values exceeds threshold",
+        "nl": "Wordt geactiveerd wanneer PM1-waarden de drempel overschrijden",
+        "de": "True, wenn PM1-Werte die Schwelle überschreiten",
+        "fr": "Se déclenche lorsque les valeurs PM1 excèdent un seuil",
+        "it": "Vero quando i valori PM1 superano la soglia",
+        "sv": "Sant när PM1-värdena överstiger gränsvärdet",
+        "no": "Sann når PM1-verdiene overskrider grenseverdien",
+        "es": "Activado cuando los valores de PM1 superan el límite",
+        "da": "Sandt, når PM1-værdier overskrider grænseværdien",
+        "ru": "Значение «истина» при превышении контрольного значения ТЧ1",
+        "pl": "Prawda, gdy wartości PM1 przekraczają próg",
+        "ko": "PM1 값이 임계값을 초과하면 참"
+      },
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "PM1 alarm turned on",
+        "nl": "PM1-waarschuwing geactiveerd",
+        "de": "PM1-Alarm ist angegangen",
+        "fr": "Alarme PM1 activée",
+        "it": "Allarme PM1 acceso",
+        "sv": "PM1-larm aktiverat",
+        "no": "PM1-alarm aktivert",
+        "es": "Alarma de PM1 activada",
+        "da": "PM1-alarm blev aktiveret",
+        "ru": "Сигнал ТЧ1 включен",
+        "pl": "Alarm PM1 włączony",
+        "ko": "PM1 알람 켜짐"
+      },
+      "insightsTitleFalse": {
+        "en": "PM1 alarm turned off",
+        "nl": "PM1-waarschuwing gedeactiveerd",
+        "de": "PM1-Alarm ist ausgegangen",
+        "fr": "Alarme PM1 désactivée",
+        "it": "Allarme PM1 spento",
+        "sv": "PM1-larm inaktiverat",
+        "no": "PM1-alarmen ble deaktivert",
+        "es": "Alarma de PM1 desactivada",
+        "da": "PM1-alarm blev deaktiveret",
+        "ru": "Сигнал ТЧ1 выключен",
+        "pl": "Alarm PM1 wyłączony",
+        "ko": "PM1 알람 꺼짐"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "minCompatibility": "12.2.0"
+    },
+    "alarm_pm10": {
+      "type": "boolean",
+      "title": {
+        "en": "PM10 alarm",
+        "nl": "PM10-waarschuwing",
+        "de": "PM10-Alarm",
+        "fr": "Alarme PM10",
+        "it": "Allarme PM10",
+        "sv": "PM10-larm",
+        "no": "PM10-alarm",
+        "es": "Alarma de PM10",
+        "da": "PM10-alarm",
+        "ru": "Сигнал ТЧ10",
+        "pl": "Alarm PM10",
+        "ko": "PM10 알람"
+      },
+      "desc": {
+        "en": "True when PM10 values exceeds threshold",
+        "nl": "Wordt geactiveerd wanneer PM10-waarden de drempel overschrijden",
+        "de": "True, wenn PM10-Werte die Schwelle überschreiten",
+        "fr": "Se déclenche lorsque les valeurs PM10 excèdent un seuil",
+        "it": "Vero quando i valori PM10 superano la soglia",
+        "sv": "Sant när PM10-värdena överstiger gränsvärdet",
+        "no": "Sann når PM10-verdiene overskrider grenseverdien",
+        "es": "Activado cuando los valores de PM10 superan el límite",
+        "da": "Sandt, når PM10-værdier overskrider grænseværdien",
+        "ru": "Значение «истина» при превышении контрольного значения ТЧ10",
+        "pl": "Prawda, gdy wartości PM10 przekraczają próg",
+        "ko": "PM10 값이 임계값을 초과하면 참"
+      },
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "PM10 alarm turned on",
+        "nl": "PM10-waarschuwing geactiveerd",
+        "de": "PM10-Alarm ist angegangen",
+        "fr": "Alarme PM10 activée",
+        "it": "Allarme PM10 acceso",
+        "sv": "PM10-larm aktiverat",
+        "no": "PM10-alarm aktivert",
+        "es": "Alarma de PM10 activada",
+        "da": "PM10-alarm blev aktiveret",
+        "ru": "Сигнал ТЧ10 включен",
+        "pl": "Alarm PM10 włączony",
+        "ko": "PM10 알람 켜짐"
+      },
+      "insightsTitleFalse": {
+        "en": "PM10 alarm turned off",
+        "nl": "PM10-waarschuwing gedeactiveerd",
+        "de": "PM10-Alarm ist ausgegangen",
+        "fr": "Alarme PM10 désactivée",
+        "it": "Allarme PM10 spento",
+        "sv": "PM10-larm inaktiverat",
+        "no": "PM10-alarm deaktivert",
+        "es": "Alarma de PM10 desactivada",
+        "da": "PM10-alarm blev deaktiveret",
+        "ru": "Сигнал ТЧ10 выключен",
+        "pl": "Alarm PM10 wyłączony",
+        "ko": "PM10 알람 꺼짐"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "minCompatibility": "12.2.0"
+    },
+    "alarm_pm25": {
+      "type": "boolean",
+      "title": {
+        "en": "PM2.5 alarm",
+        "nl": "PM2,5-alarm",
+        "de": "PM2.5-Alarm",
+        "fr": "Alarme PM2.5",
+        "it": "Allarme PM2.5",
+        "sv": "PM2.5-larm",
+        "no": "PM2.5-alarm",
+        "es": "Alarma de PM2,5",
+        "da": "PM2,5-alarm",
+        "ru": "Сигнал ТЧ 2.5",
+        "pl": "Alarm PM2.5",
+        "ko": "PM2.5 알람"
+      },
+      "desc": {
+        "en": "True when PM2.5 values exceeds threshold",
+        "nl": "Gaat af wanneer de PM2,5 waarde overschreden wordt",
+        "de": "True, wenn PM2.5-Werte die Schwelle überschreiten",
+        "fr": "Vrai si les valeurs PM2.5 excèdent un seuil",
+        "it": "Vero quando i valori PM2.5 superano la soglia",
+        "sv": "Sant när PM2.5-värdena överstiger gränsvärdet",
+        "no": "Sant når PM2.5-verdiene overskrider grenseverdien",
+        "es": "Activado cuando los valores de PM2,5 superan el límite",
+        "da": "Sandt, når PM2,5-værdier overskrider grænseværdien",
+        "ru": "Значение «истина» при превышении контрольного значения ТЧ 2.5",
+        "pl": "Prawda, gdy wartości PM2.5 przekaczają próg",
+        "ko": "PM2.5 값이 임계값을 초과하면 참"
+      },
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "PM2.5 alarm turned on",
+        "nl": "PM2,5 alarm ging af",
+        "de": "PM2.5-Alarm ist angegangen",
+        "fr": "Alarme PM2.5 s'est activée",
+        "it": "Allarme PM2.5 attivato",
+        "sv": "PM2.5-larm aktiverat",
+        "no": "PM2.5-alarm aktivert",
+        "es": "Alarma de PM2,5 activada",
+        "da": "PM2,5-alarm blev aktiveret",
+        "ru": "Сигнал ТЧ 2.5 включен",
+        "pl": "Alarm PM2.5 włączony",
+        "ko": "PM2.5 알람 켜짐"
+      },
+      "insightsTitleFalse": {
+        "en": "PM2.5 alarm turned off",
+        "nl": "PM2,5 alarm ging uit",
+        "de": "PM2.5-Alarm ist ausgegangen",
+        "fr": "Alarme PM2.5 s'est désactivée",
+        "it": "Allarme PM2.5 disattivato",
+        "sv": "PM2.5-larm inaktiverat",
+        "no": "PM2.5-alarm deaktivert",
+        "es": "Alarma de PM2,5 desactivada",
+        "da": "PM2,5-alarm blev deaktiveret",
+        "ru": "Сигнал ТЧ 2.5 выключен",
+        "pl": "Alarm PM2.5 wyłączony",
+        "ko": "PM2.5 알람 꺼짐"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
     "automode": {
       "type": "boolean",
       "title": {
@@ -4403,125 +4729,565 @@
       "uiComponent": "sensor",
       "icon": "/assets/images/clock.svg"
     },
+    "level_pm1": {
+      "type": "enum",
+      "title": {
+        "en": "PM1 level",
+        "nl": "PM1-niveau",
+        "da": "PM1-niveau",
+        "it": "Livello PM1",
+        "ko": "PM1 수준",
+        "pl": "Poziom PM1",
+        "ru": "Уровень ТЧ1",
+        "sv": "PM1-nivå",
+        "es": "Nivel de PM1",
+        "fr": "Niveau de PM1",
+        "no": "PM1-nivå"
+      },
+      "desc": {
+        "en": "The amount of PM1 particles in the air represented by a level.",
+        "nl": "De hoeveelheid PM1-deeltjes in de lucht weergegeven als niveau.",
+        "da": "Mængden af PM1-partikler i luften repræsenteret ved et niveau.",
+        "es": "La cantidad de partículas PM1 en el aire representada por un nivel.",
+        "it": "La quantità di particelle PM1 nell'aria rappresentata da un livello.",
+        "ko": "수준으로 표현한 공기 중 PM1 입자의 양입니다.",
+        "pl": "Ilość cząstek PM1 w powietrzu przedstawiona jako poziom.",
+        "ru": "Количество частиц ТЧ1 в воздухе, представленное в виде уровня.",
+        "sv": "Mängden PM1-partiklar i luften som representeras av en nivå.",
+        "fr": "La quantité de particules PM1 dans l'air représentée sous forme de niveau.",
+        "no": "Mengden av PM1-partikler i luften uttrykt som et nivå."
+      },
+      "values": [
+        {
+          "id": "low",
+          "title": {
+            "en": "Low",
+            "nl": "Laag",
+            "da": "Lavt",
+            "it": "Basso",
+            "ko": "낮음",
+            "pl": "Niski",
+            "ru": "Низкий",
+            "sv": "Låg",
+            "es": "Bajo",
+            "fr": "Faible",
+            "no": "Lavt"
+          }
+        },
+        {
+          "id": "medium",
+          "title": {
+            "en": "Medium",
+            "nl": "Gemiddeld",
+            "da": "Medium",
+            "it": "Medio",
+            "ko": "중간",
+            "pl": "Średni",
+            "ru": "Средний",
+            "sv": "Medium",
+            "es": "Intermedio",
+            "fr": "Moyen\n",
+            "no": "Middels"
+          }
+        },
+        {
+          "id": "high",
+          "title": {
+            "en": "High",
+            "nl": "Hoog",
+            "da": "Højt",
+            "it": "Alto",
+            "ko": "높음",
+            "pl": "Wysoki",
+            "ru": "Высокий",
+            "sv": "Hög",
+            "es": "Alto",
+            "fr": "Élevé",
+            "no": "Høyt"
+          }
+        },
+        {
+          "id": "critical",
+          "title": {
+            "en": "Critical",
+            "nl": "Kritiek",
+            "da": "Kritisk",
+            "it": "Critico",
+            "ko": "치명적",
+            "pl": "Krytyczny",
+            "ru": "Критический",
+            "sv": "Kritisk",
+            "es": "Crítico",
+            "fr": "Critique",
+            "no": "Kritisk"
+          }
+        }
+      ],
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "minCompatibility": "12.2.0"
+    },
+    "level_pm10": {
+      "type": "enum",
+      "title": {
+        "en": "PM10 level",
+        "nl": "PM10-niveau",
+        "da": "PM10-niveau",
+        "it": "Livello di PM10",
+        "ko": "PM10 수준",
+        "pl": "Poziom PM10",
+        "ru": "Уровень ТЧ10",
+        "sv": "PM10-nivå",
+        "es": "Nivel de PM10",
+        "fr": "Niveau de PM10",
+        "no": "PM10-nivå"
+      },
+      "desc": {
+        "en": "The level of PM10 particles in the air.",
+        "nl": "De mate van PM10-deeltjes in de lucht.",
+        "da": "Niveauet af PM10-partikler i luften.",
+        "it": "Il livello di particelle PM10 nell'aria.",
+        "ko": "공기 중 PM10 입자의 수준입니다.",
+        "pl": "Poziom cząstek PM10 w powietrzu.",
+        "ru": "Уровень содержания частиц ТЧ10 в воздухе.",
+        "sv": "Halten av PM10-partiklar i luften.",
+        "es": "El nivel de partículas PM10 en el aire.",
+        "fr": "Le niveau de particules PM10 dans l'air.",
+        "no": "Nivået av PM10-partikler i luften."
+      },
+      "values": [
+        {
+          "id": "low",
+          "title": {
+            "en": "Low",
+            "nl": "Laag",
+            "da": "Lavt",
+            "it": "Basso",
+            "ko": "낮음",
+            "pl": "Niski",
+            "ru": "Низкий",
+            "sv": "Låg",
+            "es": "Bajo",
+            "fr": "Faible",
+            "no": "Lavt"
+          }
+        },
+        {
+          "id": "medium",
+          "title": {
+            "en": "Medium",
+            "nl": "Gemiddeld",
+            "da": "Medium",
+            "it": "Medio",
+            "ko": "중간",
+            "pl": "Średni",
+            "ru": "Средний",
+            "sv": "Medium",
+            "es": "Intermedio",
+            "fr": "Moyen",
+            "no": "Middels"
+          }
+        },
+        {
+          "id": "high",
+          "title": {
+            "en": "High",
+            "nl": "Hoog",
+            "da": "Højt",
+            "it": "Alto",
+            "ko": "높음",
+            "pl": "Wysoki",
+            "ru": "Высокий",
+            "sv": "Hög",
+            "es": "Alto",
+            "fr": "Élevé",
+            "no": "Høyt"
+          }
+        },
+        {
+          "id": "critical",
+          "title": {
+            "en": "Critical",
+            "nl": "Kritiek",
+            "da": "Kritisk",
+            "it": "Critico",
+            "ko": "치명적",
+            "pl": "Krytyczny",
+            "ru": "Критический",
+            "sv": "Kritisk",
+            "es": "Crítico",
+            "fr": "Critique",
+            "no": "Kritisk"
+          }
+        }
+      ],
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "minCompatibility": "12.2.0"
+    },
+    "level_pm25": {
+      "type": "enum",
+      "title": {
+        "en": "PM2.5 Level",
+        "nl": "PM2.5-niveau",
+        "da": "PM2.5-niveau",
+        "it": "Livello PM2.5",
+        "ko": "PM2.5 수준",
+        "pl": "Poziom PM2.5",
+        "ru": "Уровень ТЧ2.5",
+        "sv": "PM2.5-nivå",
+        "es": "Nivel de PM2,5",
+        "fr": "Niveau de PM2.5",
+        "no": "PM2.5-nivå"
+      },
+      "desc": {
+        "en": "The level of PM2.5 particles in the air.",
+        "nl": "De mate van PM2.5-deeltjes in de lucht.",
+        "da": "Niveauet af PM2.5-partikler i luften.",
+        "it": "Il livello di particelle PM2.5 nell'aria.",
+        "ko": "공기 중 PM2.5 입자의 수준입니다.",
+        "pl": "Poziom cząstek PM2.5 w powietrzu.",
+        "ru": "Уровень содержания частиц ТЧ2.5 в воздухе.",
+        "sv": "Halten av PM2.5-partiklar i luften.",
+        "es": "El nivel de partículas PM2,5 en el aire.",
+        "fr": "Le niveau de particules PM2.5 dans l'air.",
+        "no": "Nivået av PM2.5-partikler i luften."
+      },
+      "values": [
+        {
+          "id": "low",
+          "title": {
+            "en": "Low",
+            "nl": "Laag",
+            "da": "Lavt",
+            "ko": "낮음",
+            "pl": "Niski",
+            "ru": "Низкий",
+            "sv": "Låg",
+            "es": "Bajo",
+            "fr": "Faible",
+            "no": "Lavt"
+          }
+        },
+        {
+          "id": "medium",
+          "title": {
+            "en": "Medium",
+            "nl": "Gemiddeld",
+            "da": "Medium",
+            "ko": "중간",
+            "pl": "Średni",
+            "ru": "Средний",
+            "sv": "Medium",
+            "es": "Intermedio",
+            "fr": "Moyen",
+            "no": "Middels"
+          }
+        },
+        {
+          "id": "high",
+          "title": {
+            "en": "High",
+            "nl": "Hoog",
+            "da": "Højt",
+            "it": "Alto",
+            "ko": "높음",
+            "pl": "Wysoki",
+            "ru": "Высокий",
+            "sv": "Hög",
+            "es": "Alto",
+            "fr": "Élevé",
+            "no": "Høyt"
+          }
+        },
+        {
+          "id": "critical",
+          "title": {
+            "en": "Critical",
+            "nl": "Kritiek",
+            "da": "Kritisk",
+            "it": "Critico",
+            "ko": "치명적",
+            "pl": "Krytyczny",
+            "ru": "Критический",
+            "sv": "Kritisk",
+            "es": "Crítico",
+            "fr": "Critique",
+            "no": "Kritisk"
+          }
+        }
+      ],
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "minCompatibility": "12.2.0"
+    },
+    "level_tvoc": {
+      "type": "enum",
+      "title": {
+        "en": "TVOC Level",
+        "nl": "TVOC-niveau",
+        "da": "TVOC-niveau",
+        "it": "Livello di TVOC",
+        "ko": "TVOC 수준",
+        "pl": "Poziom wszystkich LZO",
+        "ru": "Уровень TVOC",
+        "sv": "TVOC-nivå",
+        "es": "Nivel de TVOC",
+        "fr": "Niveau de COVT",
+        "no": "TVOC-nivå"
+      },
+      "desc": {
+        "en": "The level of total volatile organic compounds in the air.",
+        "nl": "De mate van totaal vluchtige organische stoffen in de lucht.",
+        "da": "Niveauet af samlede flygtige organiske forbindelser i luften.",
+        "it": "Il livello di composti organici volatili totali nell'aria.",
+        "ko": "공기 중 휘발성 유기 화합물의 총량 수준입니다.",
+        "pl": "Poziom wszystkich lotnych związków organicznych w powietrzu.",
+        "ru": "Уровень общего содержания летучих органических соединений в воздухе.",
+        "sv": "Halten av totala mängden flyktiga organiska föreningar i luften.",
+        "es": "El nivel de compuestos orgánicos volátiles totales en el aire.",
+        "fr": "Le niveau de composés organiques volatils totaux dans l'air.",
+        "no": "Nivået av total mengde flyktige organiske forbindelser i luften."
+      },
+      "values": [
+        {
+          "id": "low",
+          "title": {
+            "en": "Low",
+            "nl": "Laag",
+            "da": "Lavt",
+            "it": "Basso",
+            "ko": "낮음",
+            "pl": "Niski",
+            "ru": "Низкий",
+            "sv": "Låg",
+            "es": "Bajo",
+            "fr": "Faible",
+            "no": "Lavt"
+          }
+        },
+        {
+          "id": "medium",
+          "title": {
+            "en": "Medium",
+            "nl": "Gemiddeld",
+            "da": "Medium",
+            "it": "Medio",
+            "ko": "중간",
+            "pl": "Średni",
+            "ru": "Средний",
+            "sv": "Medium",
+            "es": "Intermedio",
+            "fr": "Moyen",
+            "no": "Middels"
+          }
+        },
+        {
+          "id": "high",
+          "title": {
+            "en": "High",
+            "nl": "Hoog",
+            "da": "Højt",
+            "it": "Alto",
+            "ko": "높음",
+            "pl": "Wysoki",
+            "ru": "Высокий",
+            "sv": "Hög",
+            "es": "Alto",
+            "fr": "Élevé",
+            "no": "Høyt"
+          }
+        },
+        {
+          "id": "critical",
+          "title": {
+            "en": "Critical",
+            "nl": "Kritiek",
+            "da": "Kritisk",
+            "it": "Critico",
+            "ko": "치명적",
+            "pl": "Krytyczny",
+            "ru": "Критический",
+            "sv": "Kritisk",
+            "es": "Crítico",
+            "fr": "Critique",
+            "no": "Kritisk"
+          }
+        }
+      ],
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "minCompatibility": "12.2.0"
+    },
     "measure_humidity": {
       "type": "number",
       "title": {
-        "en": "Current Humidity value",
-        "nl": "Huidige luchtvochtigheidswaarde",
-        "da": "Aktuel fugtighedsværdi",
-        "de": "Aktueller Feuchtigkeitswert",
-        "es": "Valor de humedad actual",
-        "fr": "Valeur actuelle de l'humidité",
-        "it": "Valore attuale di umidità",
-        "no": "Nåværende fuktighetsverdi",
-        "sv": "Aktuellt fuktighetsvärde",
-        "pl": "Aktualna wartość wilgotności",
-        "ru": "Текущее значение влажности",
-        "ko": "현재 습도 값"
+        "en": "Humidity",
+        "nl": "Luchtvochtigheid",
+        "de": "Luftfeuchtigkeit",
+        "fr": "Humidité",
+        "it": "Umidità",
+        "sv": "Luftfuktighet",
+        "no": "Luftfuktighet",
+        "es": "Humedad",
+        "da": "Luftfugtighed",
+        "ru": "Влажность",
+        "pl": "Wilgotność",
+        "ko": "습도"
       },
-      "getable": true,
-      "setable": false,
       "units": {
         "en": "%",
-        "nl": "%",
-        "da": "%",
-        "de": "%",
-        "es": "%",
-        "fr": "%",
-        "it": "%",
+        "ko": "%",
         "no": "%",
-        "sv": "%",
-        "pl": "%",
-        "ru": "%",
-        "ko": "%"
+        "ru": "%"
       },
-      "min": 1,
-      "max": 99,
-      "decimals": 0,
       "insights": true,
-      "icon": "/assets/images/measure_humidity.svg"
+      "desc": {
+        "en": "Humidity in percent (%)",
+        "nl": "Relatieve luchtvochtigheid (%)",
+        "de": "Luftfeuchtigkeit in Prozent (%)",
+        "fr": "Humidité en pourcentage (%)",
+        "it": "Umidità in percentuale (%)",
+        "sv": "Luftfuktighet i procent (%)",
+        "no": "Luftfuktighet i prosent (%)",
+        "es": "Humedad en porcentaje (%)",
+        "da": "Luftfugtighed i procent (%)",
+        "ru": "Влажность в процентах (%)",
+        "pl": "Wilgotność w procentach (%)",
+        "ko": "습도(%)"
+      },
+      "chartType": "spline",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
     },
     "measure_pm1": {
       "type": "number",
       "title": {
-        "en": "Current PM1 value",
-        "nl": "Huidige PM1-waarde",
-        "da": "Nuværende PM1-værdi",
-        "de": "Aktueller PM1-Wert",
-        "es": "Valor actual de PM1",
-        "fr": "Valeur actuelle de PM1",
-        "it": "Valore attuale di PM1",
-        "no": "Nåværende PM1-verdi",
-        "sv": "Nuvarande PM1-värde",
-        "pl": "Aktualna wartość PM1",
-        "ru": "Текущий уровень PM1",
-        "ko": "현재 PM1 수치"
+        "en": "PM1",
+        "nl": "PM1",
+        "de": "PM1",
+        "fr": "PM1",
+        "it": "PM1",
+        "sv": "PM1",
+        "no": "PM1",
+        "es": "PM1",
+        "ru": "ТЧ1",
+        "pl": "PM1",
+        "ko": "PM1",
+        "da": "PM1"
       },
       "units": {
         "en": "μg/m³",
-        "nl": "μg/m³",
-        "da": "μg/m³",
-        "de": "μg/m³",
-        "es": "μg/m³",
-        "fr": "μg/m³",
-        "it": "μg/m³",
+        "ru": "мкг/м³",
+        "ko": "μg/m³",
         "no": "μg/m³",
-        "sv": "μg/m³",
+        "da": "μg/m³",
+        "it": "μg/m³",
+        "nl": "μg/m³",
         "pl": "μg/m³",
-        "ru": "μg/m³",
-        "ko": "μg/m³"
+        "sv": "μg/m³",
+        "es": "μg/m³",
+        "fr": "μg/m³"
       },
       "insights": true,
       "desc": {
         "en": "Atmospheric particulate matter (μg/m³)",
-        "nl": "Deeltjesvormige luchtverontreiniging (μg/m³)",
+        "nl": "Zwevende deeltjes (μg/m³)",
         "de": "Atmosphärischer Feinstaub (μg/m³)",
-        "fr": "Particules en suspension (μg/m³)",
+        "fr": "Particules en suspension (μg/m³)\n",
         "it": "Particolato atmosferico (μg/m³)",
         "sv": "Atmosfäriskt partikelämne (μg/m³)",
-        "no": "Atmosfæriske partikler (μg/m³)",
+        "no": "Svevestøv (μg/m³)",
         "es": "Partículas atmosféricas (μg/m³)",
         "da": "Atmosfæriske partikler (μg/m³)",
-        "ru": "Атмосферные твердые частицы (мкг/м³)",
-        "pl": "Pył zawieszony (μg/m³)",
+        "ru": "Твердые частицы в воздухе (мкг/м³)",
+        "pl": "Pył zawieszony w powietrzu (μg/m³)",
         "ko": "대기 중 미세입자 수(μg/m³)"
       },
       "chartType": "spline",
-      "min": 0,
-      "max": 999,
       "decimals": 2,
       "getable": true,
       "setable": false,
       "uiComponent": "sensor",
-      "icon": "/assets/images/measure_pm1.svg"
+      "minCompatibility": "12.2.0"
     },
     "measure_pm10": {
       "type": "number",
       "title": {
-        "en": "Current PM10 value",
-        "da": "Nuværende PM10-værdi",
-        "de": "Aktueller PM10-Wert",
-        "es": "Valor actual de PM10",
-        "fr": "Valeur actuelle de PM10",
-        "it": "Valore attuale di PM10",
-        "no": "Nåværende PM10-verdi",
-        "sv": "Nuvarande PM10-värde",
-        "pl": "Aktualna wartość PM10",
-        "ru": "Текущее значение ТЧ 10",
-        "ko": "현재 PM10 값"
+        "en": "PM10",
+        "nl": "PM10",
+        "de": "PM10",
+        "fr": "PM10",
+        "it": "PM10",
+        "sv": "PM10",
+        "no": "PM10",
+        "es": "PM10",
+        "ru": "ТЧ10",
+        "pl": "PM10",
+        "ko": "PM10",
+        "da": "PM10"
       },
       "units": {
         "en": "μg/m³",
-        "da": "μg/m³",
-        "de": "μg/m³",
-        "es": "μg/m³",
-        "fr": "μg/m³",
-        "it": "μg/m³",
-        "no": "μg/m³",
-        "sv": "μg/m³",
-        "pl": "μg/m³",
         "ru": "мкг/м³",
-        "ko": "μg/m³"
+        "ko": "μg/m³",
+        "no": "μg/m³",
+        "da": "μg/m³",
+        "it": "μg/m³",
+        "nl": "μg/m³",
+        "pl": "μg/m³",
+        "sv": "μg/m³",
+        "es": "μg/m³",
+        "fr": "μg/m³"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Atmospheric particulate matter (μg/m³)",
+        "nl": "Zwevende deeltjes (μg/m³)",
+        "de": "Atmosphärischer Feinstaub (μg/m³)",
+        "fr": "Particules en suspension (μg/m³)",
+        "it": "Particolato atmosferico (μg/m³)",
+        "sv": "Atmosfäriskt partikelämne (μg/m³)",
+        "no": "Svevestøv (μg/m³)",
+        "es": "Partículas atmosféricas (μg/m³)",
+        "da": "Atmosfæriske partikler (μg/m³)",
+        "ru": "Твердые частицы в воздухе (мкг/м³)",
+        "pl": "Pył zawieszony w powietrzu (μg/m³)",
+        "ko": "대기 중 미세입자 수(μg/m³)"
+      },
+      "chartType": "spline",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "minCompatibility": "12.2.0"
+    },
+    "measure_pm25": {
+      "type": "number",
+      "title": {
+        "en": "PM2.5",
+        "nl": "PM2,5",
+        "de": "PM2.5",
+        "fr": "PM2.5",
+        "it": "PM2.5",
+        "sv": "PM2.5",
+        "no": "PM2.5",
+        "es": "PM2,5",
+        "ru": "ТЧ 2.5",
+        "pl": "PM2.5",
+        "ko": "PM2.5"
+      },
+      "units": {
+        "en": "μg/m³",
+        "ru": "мкг/м³",
+        "ko": "μg/m³",
+        "no": "μg/m³"
       },
       "insights": true,
       "desc": {
@@ -4539,157 +5305,137 @@
         "ko": "대기 중 미세입자 수(μg/m³)"
       },
       "chartType": "spline",
-      "min": 0,
-      "max": 999,
       "decimals": 2,
       "getable": true,
       "setable": false,
-      "uiComponent": "sensor",
-      "icon": "/assets/images/measure_pm10.svg"
+      "uiComponent": "sensor"
     },
-    "measure_pm25": {
+    "measure_temperature": {
       "type": "number",
       "title": {
-        "en": "Current PM2.5 value",
-        "nl": "Huidige PM2.5-waarde",
-        "da": "Nuværende PM2.5-værdi",
-        "de": "Aktueller PM2.5-Wert",
-        "es": "Valor actual de PM2.5",
-        "fr": "Valeur actuelle de PM2.5",
-        "it": "Valore corrente di PM2.5",
-        "no": "Nåværende PM2.5-verdi",
-        "sv": "Nuvarande PM2.5-värde",
-        "pl": "Aktualna wartość PM2.5",
-        "ru": "Текущая величина PM2.5",
-        "ko": "현재 PM2.5 값"
+        "en": "Temperature",
+        "nl": "Temperatuur",
+        "de": "Temperatur",
+        "fr": "Température",
+        "it": "Temperatura",
+        "sv": "Temperatur",
+        "no": "Temperatur",
+        "es": "Temperatura",
+        "da": "Temperatur",
+        "ru": "Температура",
+        "pl": "Temperatura",
+        "ko": "온도"
+      },
+      "units": {
+        "en": "°C",
+        "ko": "°C",
+        "no": "°C",
+        "ru": "°C"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Temperature in degrees Celsius (°C)",
+        "nl": "Temperatuur in graden Celsius (°C)",
+        "de": "Temperatur in Grad Celsius (°C)",
+        "fr": "Température en degrés Celsius (°C)",
+        "it": "Temperatura in gradi Celsius (°C)",
+        "sv": "Temperatur i grader Celsius (°C)",
+        "no": "Temperatur i grader Celsius (°C)",
+        "es": "Temperatura en grados Celsius (°C)",
+        "da": "Temperatur i Celsius (°C)",
+        "ru": "Температура в градусах Цельсия (°C)",
+        "pl": "Temperatura w stopniach Celsjusza (°C)",
+        "ko": "온도 섭씨(°C)"
+      },
+      "decimals": 1,
+      "chartType": "spline",
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "measure_tvoc": {
+      "type": "number",
+      "title": {
+        "en": "TVOC",
+        "nl": "VOS",
+        "da": "TVOC",
+        "it": "TVOC",
+        "ko": "TVOC",
+        "pl": "Wszystkie LZO",
+        "ru": "TVOC",
+        "sv": "TVOC",
+        "es": "TVOC",
+        "fr": "TVOC",
+        "no": "TVOC"
       },
       "units": {
         "en": "μg/m³",
         "nl": "μg/m³",
         "da": "μg/m³",
-        "de": "μg/m³",
-        "es": "μg/m³",
-        "fr": "μg/m³",
         "it": "μg/m³",
-        "no": "μg/m³",
-        "sv": "μg/m³",
+        "ko": "μg/m³",
         "pl": "μg/m³",
         "ru": "мкг/м³",
-        "ko": "μg/m³"
+        "sv": "μg/m³",
+        "es": "μg/m³",
+        "fr": "μg/m³",
+        "no": "μg/m³"
       },
       "insights": true,
       "desc": {
-        "en": "Atmospheric particulate matter (μg/m³)",
-        "nl": "Atmosferische deeltjes (μg/m³)",
-        "da": "Atmosfærisk partikelmateriale (μg/m³)",
-        "de": "Atmosphärischer Feinstaub (μg/m³)",
-        "es": "Partículas atmosféricas (μg/m³)",
-        "fr": "Matière particulaire atmosphérique (μg/m³)",
-        "it": "Materiale particolato atmosferico (μg/m³)",
-        "no": "Atmosfæriske partikler (μg/m³)",
-        "sv": "Atmosfäriska partiklar (μg/m³)",
-        "pl": "Pył zawieszony (μg/m³)",
-        "ru": "Атмосферные твердые частицы (мкг/м³)",
-        "ko": "대기 중 미립자 (μg/m³)"
+        "en": "Total volatile organic compounds in micrograms per cubic meter (μg/m³)",
+        "nl": "Totale vluchtige organische stoffen in microgram per kubieke meter (μg/m³)",
+        "da": "Total mængde flygtige organiske forbindelser i mikrogram pr. kubikmeter (μg/m³)",
+        "it": "Composti organici volatili totali in microgrammi per metro cubo (μg/m³)",
+        "ko": "입방미터당 마이크로그램(μg/m³) 단위의 휘발성 유기 화합물 총량",
+        "pl": "Całkowita ilość lotnych związków organicznych w mikrogramach na metr sześcienny (μg/m³)",
+        "ru": "Общее количество летучих органических соединений в микрограммах на кубический метр (мкг/м³)",
+        "sv": "Totalt antal flyktiga organiska föreningar i mikrogram per kubikmeter (μg/m³)",
+        "es": "Compuestos orgánicos volátiles totales en microgramos por metro cúbico (μg/m³)",
+        "fr": "Total des composés organiques volatils en microgrammes par mètre cube (μg/m³)",
+        "no": "Total mengde flyktige organiske forbindelser i mikrogram per kubikkmeter (μg/m³)"
       },
       "chartType": "spline",
-      "min": 0,
-      "max": 999,
       "decimals": 2,
       "getable": true,
       "setable": false,
       "uiComponent": "sensor",
-      "icon": "/assets/images/measure_pm1.svg"
+      "minCompatibility": "12.2.0"
     },
-    "measure_temperature": {
+    "measure_tvoc_index": {
       "type": "number",
       "title": {
-        "en": "Current temperature value",
-        "nl": "Huidige temperatuurwaarde",
-        "da": "Aktuel temperaturværdi",
-        "de": "Aktueller Temperaturwert",
-        "es": "Valor actual de temperatura",
-        "fr": "Valeur actuelle de température",
-        "it": "Valore attuale della temperatura",
-        "no": "Gjeldende temperaturverdi",
-        "sv": "Aktuell temperaturvärde",
-        "pl": "Aktualna wartość temperatury",
-        "ru": "Текущее значение температуры",
-        "ko": "현재 온도 값"
-      },
-      "getable": true,
-      "setable": false,
-      "units": {
-        "en": "C",
-        "nl": "C",
-        "da": "C",
-        "de": "C",
-        "es": "C",
-        "fr": "C",
-        "it": "C",
-        "no": "C",
-        "sv": "C",
-        "pl": "C",
-        "ru": "C",
-        "ko": "C"
-      },
-      "min": -10,
-      "max": 50,
-      "decimals": 0,
-      "insights": true,
-      "icon": "/assets/images/measure_temperature.svg"
-    },
-    "measure_tVOC": {
-      "type": "number",
-      "title": {
-        "en": "Current tVOC value",
-        "da": "Nuværende tVOC-værdi",
-        "de": "Aktueller tVOC-Wert",
-        "es": "Valor actual de tVOC",
-        "fr": "Valeur actuelle de tVOC",
-        "it": "Valore corrente di tVOC",
-        "no": "Nåværende tVOC-verdi",
-        "sv": "Nuvarande tVOC-värde",
-        "pl": "Aktualna wartość tVOC",
-        "ru": "Текущее значение tVOC",
-        "ko": "현재 tVOC 값"
-      },
-      "units": {
-        "en": "ppm³",
-        "da": "ppm³",
-        "de": "ppm³",
-        "es": "ppm³",
-        "fr": "ppm³",
-        "it": "ppm³",
-        "no": "ppm³",
-        "sv": "ppm³",
-        "pl": "ppm³",
-        "ru": "ppm³",
-        "ko": "ppm³"
+        "en": "TVOC index",
+        "nl": "VOS-index",
+        "da": "TVOC-indeks",
+        "it": "Indice TVOC",
+        "ko": "TVOC 지수",
+        "pl": "Wskaźnik wszystkich LZO",
+        "ru": "Показатель TVOC",
+        "sv": "TVOC-index",
+        "es": "Índice de COVT",
+        "fr": "Indice TVOC",
+        "no": "TVOC-indeks"
       },
       "insights": true,
       "desc": {
-        "en": "tVOC, Total volatile organic compounds, a wide range of organic chemical compounds (ppm)",
-        "nl": "tVOC, Totale vluchtige organische stoffen, een breed scala aan organische chemische verbindingen (ppm)",
-        "da": "tVOC, Total flygtige organiske forbindelser, en bred vifte af organiske kemiske forbindelser (ppm)",
-        "de": "tVOC, Gesamtmenge flüchtiger organischer Verbindungen, eine breite Palette organischer chemischer Verbindungen (ppm)",
-        "es": "tVOC, Compuestos orgánicos volátiles totales, una amplia gama de compuestos químicos orgánicos (ppm)",
-        "fr": "tVOC, Composés organiques volatils totaux, une large gamme de composés chimiques organiques (ppm)",
-        "it": "tVOC, Composti organici volatili totali, una vasta gamma di composti chimici organici (ppm)",
-        "no": "tVOC, Total flyktige organiske forbindelser, et bredt spekter av organiske kjemiske forbindelser (ppm)",
-        "sv": "tVOC, Totala flyktiga organiska föreningar, ett brett spektrum av organiska kemiska föreningar (ppm)",
-        "pl": "tVOC, Całkowite lotne związki organiczne, szeroka gama organicznych związków chemicznych (ppm)",
-        "ru": "tVOC, Совокупный объём летучих органических соединений, широкий спектр органических химических соединений (ppm)",
-        "ko": "tVOC, 총 휘발성 유기 화합물, 다양한 유기 화학 화합물 (ppm)"
+        "en": "Total volatile organic compounds index",
+        "nl": "Index van totaal vluchtige organische stoffen",
+        "da": "Samlet indeks for flygtige organiske forbindelser",
+        "it": "Indice dei composti organici volatili totali",
+        "ko": "휘발성 유기 화합물 총량 지수",
+        "pl": "Wskaźnik wszystkich lotnych związków organicznych",
+        "ru": "Общий показатель летучих органических соединений",
+        "sv": "Index för totala mängden flyktiga organiska föreningar",
+        "es": "Índice de compuestos orgánicos volátiles en total",
+        "fr": "Indice des composés organiques volatils totaux",
+        "no": "Indeks for total mengde flyktige organiske forbindelser"
       },
       "chartType": "spline",
-      "min": 0,
-      "max": 9999,
-      "decimals": 2,
       "getable": true,
       "setable": false,
       "uiComponent": "sensor",
-      "icon": "/assets/images/measure_dust.svg"
+      "minCompatibility": "12.2.0"
     },
     "nightmode": {
       "type": "boolean",
