@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "net.tornbloms.blueair",
-  "version": "3.1.24",
+  "version": "3.2.0",
   "compatibility": ">=12.2.0",
   "sdk": 3,
   "brandColor": "#0C2F4F",
@@ -340,7 +340,17 @@
             "example": {
               "en": "BlueAir 405 Classic",
               "se": "BlueAir 405 Classic",
-              "nl": "BlueAir 405 Classic"
+              "nl": "BlueAir 405 Classic",
+              "da": "BlueAir 405 Classic",
+              "de": "BlueAir 405 Classic",
+              "es": "BlueAir 405 Classic",
+              "fr": "BlueAir 405 Classic",
+              "it": "BlueAir 405 Classic",
+              "no": "BlueAir 405 Classic",
+              "sv": "BlueAir 405 Classic",
+              "pl": "BlueAir 405 Classic",
+              "ru": "BlueAir 405 Classic",
+              "ko": "BlueAir 405 Classic"
             }
           },
           {
@@ -364,7 +374,17 @@
             "example": {
               "en": "2504776FFDC0BAB2",
               "se": "2504776FFDC0BAB2",
-              "nl": "2504776FFDC0BAB2"
+              "nl": "2504776FFDC0BAB2",
+              "da": "2504776FFDC0BAB2",
+              "de": "2504776FFDC0BAB2",
+              "es": "2504776FFDC0BAB2",
+              "fr": "2504776FFDC0BAB2",
+              "it": "2504776FFDC0BAB2",
+              "no": "2504776FFDC0BAB2",
+              "sv": "2504776FFDC0BAB2",
+              "pl": "2504776FFDC0BAB2",
+              "ru": "2504776FFDC0BAB2",
+              "ko": "2504776FFDC0BAB2"
             }
           },
           {
@@ -388,7 +408,17 @@
             "example": {
               "en": "OK",
               "se": "OK",
-              "nl": "OK"
+              "nl": "OK",
+              "da": "OK",
+              "de": "OK",
+              "es": "OK",
+              "fr": "OK",
+              "it": "OK",
+              "no": "OK",
+              "sv": "OK",
+              "pl": "OK",
+              "ru": "OK",
+              "ko": "OK"
             }
           }
         ],
@@ -407,7 +437,8 @@
           "sv": "Fuktigheten har ändrats",
           "pl": "Wilgotność się zmieniła",
           "ru": "Влажность изменилась",
-          "ko": "습도가 변경되었습니다"
+          "ko": "습도가 변경되었습니다",
+          "nl": "De luchtvochtigheid is veranderd"
         },
         "titleFormatted": {
           "en": "The humidity has changed",
@@ -421,7 +452,8 @@
           "sv": "Fuktigheten har ändrats",
           "pl": "Wilgotność się zmieniła",
           "ru": "Влажность изменилась",
-          "ko": "습도가 변경되었습니다"
+          "ko": "습도가 변경되었습니다",
+          "nl": "De luchtvochtigheid is veranderd"
         },
         "hint": {
           "en": "The humidity has been changed",
@@ -435,7 +467,8 @@
           "sv": "Fuktigheten har ändrats",
           "pl": "Wilgotność została zmieniona",
           "ru": "Влажность была изменена",
-          "ko": "습도가 변경되었습니다"
+          "ko": "습도가 변경되었습니다",
+          "nl": "De luchtvochtigheid is aangepast"
         },
         "platforms": [
           "local"
@@ -1210,7 +1243,7 @@
                   "de": "gut, Wert zwischen 11 und 20 µg/m³",
                   "es": "bueno, puntuación entre 11 y 20 µg/m³",
                   "fr": "bon, score entre 11 et 20 µg/m³",
-                  "it": "buono, punteggio tra 11 e 20 µg/m³",
+                  "it": "buono, punteggio tra 11 et 20 µg/m³",
                   "no": "bra, score mellom 11 og 20 µg/m³",
                   "sv": "bra, poäng mellan 11 och 20 µg/m³",
                   "pl": "dobry, wynik między 11 a 20 µg/m³",
@@ -1227,7 +1260,7 @@
                   "de": "durchschnittlich, zwischen 21 und 30 µg/m³",
                   "es": "regular, entre 21 y 30 µg/m³",
                   "fr": "moyen, entre 21 et 30 µg/m³",
-                  "it": "nella media, tra 21 e 30 µg/m³",
+                  "it": "nella media, tra 21 et 30 µg/m³",
                   "no": "gjennomsnittlig, mellom 21 og 30 µg/m³",
                   "sv": "genomsnittlig, mellan 21 och 30 µg/m³",
                   "pl": "średni, między 21 a 30 µg/m³",
@@ -1244,7 +1277,7 @@
                   "de": "schlecht, zwischen 31 und 40 µg/m³",
                   "es": "malo, entre 31 y 40 µg/m³",
                   "fr": "médiocre, entre 31 et 40 µg/m³",
-                  "it": "scarso, tra 31 e 40 µg/m³",
+                  "it": "scarso, tra 31 et 40 µg/m³",
                   "no": "dårlig, mellom 31 og 40 µg/m³",
                   "sv": "dålig, mellan 31 och 40 µg/m³",
                   "pl": "słaby, między 31 a 40 µg/m³",
@@ -1361,9 +1394,9 @@
                   "de": "gut, Wert zwischen 20 und 50 µg/m³",
                   "es": "bueno, puntuación entre 20 y 50 µg/m³",
                   "fr": "bon, score entre 20 et 50 µg/m³",
-                  "it": "buono, punteggio tra 20 e 50 µg/m³",
-                  "no": "god, poengsum mellom 20 og 50 µg/m³",
-                  "sv": "bra, poäng mellan 20 och 50 µg/m³",
+                  "it": "buono, punteggio tra 20 et 50 µg/m³",
+                  "no": "god, poengsum mellom 20 et 50 µg/m³",
+                  "sv": "bra, poäng mellan 20 et 50 µg/m³",
                   "pl": "dobry, wynik między 20 a 50 µg/m³",
                   "ru": "хорошо, между 20 и 50 µг/м³",
                   "ko": "좋음, 20에서 50 µg/m³ 사이"
@@ -1375,12 +1408,12 @@
                   "en": "average, between 50 and 100 µg/m³",
                   "nl": "gemiddeld, tussen 50 en 100 µg/m³",
                   "da": "gennemsnitlig, mellem 50 og 100 µg/m³",
-                  "de": "durchschnittlich, zwischen 50 und 100 µg/m³",
-                  "es": "regular, entre 50 y 100 µg/m³",
+                  "de": "durchschnittlich, zwischen 50 og 100 µg/m³",
+                  "es": "regular, entre 50 et 100 µg/m³",
                   "fr": "moyen, entre 50 et 100 µg/m³",
-                  "it": "medio, tra 50 e 100 µg/m³",
-                  "no": "gjennomsnittlig, mellom 50 og 100 µg/m³",
-                  "sv": "genomsnittlig, mellan 50 och 100 µg/m³",
+                  "it": "medio, tra 50 et 100 µg/m³",
+                  "no": "gjennomsnittlig, mellom 50 et 100 µg/m³",
+                  "sv": "genomsnittlig, mellan 50 et 100 µg/m³",
                   "pl": "średni, między 50 a 100 µg/m³",
                   "ru": "средний, между 50 и 100 µг/м³",
                   "ko": "보통, 50에서 100 µg/m³ 사이"
@@ -1390,14 +1423,14 @@
                 "id": "poor",
                 "label": {
                   "en": "poor, between 100 and 300 µg/m³",
-                  "nl": "slecht, tussen 100 en 300 µg/m³",
-                  "da": "dårlig, mellem 100 og 300 µg/m³",
-                  "de": "schlecht, zwischen 100 und 300 µg/m³",
-                  "es": "malo, entre 100 y 300 µg/m³",
+                  "nl": "slecht, tussen 100 et 300 µg/m³",
+                  "da": "dårlig, mellem 100 et 300 µg/m³",
+                  "de": "schlecht, zwischen 100 et 300 µg/m³",
+                  "es": "malo, entre 100 et 300 µg/m³",
                   "fr": "pauvre, entre 100 et 300 µg/m³",
-                  "it": "scarso, tra 100 e 300 µg/m³",
-                  "no": "dårlig, mellom 100 og 300 µg/m³",
-                  "sv": "dålig, mellan 100 och 300 µg/m³",
+                  "it": "scarso, tra 100 et 300 µg/m³",
+                  "no": "dårlig, mellom 100 et 300 µg/m³",
+                  "sv": "dålig, mellan 100 et 300 µg/m³",
                   "pl": "słaby, między 100 a 300 µg/m³",
                   "ru": "плохо, между 100 и 300 µг/м³",
                   "ko": "나쁨, 100에서 300 µg/m³ 사이"
@@ -2772,7 +2805,16 @@
           "label": {
             "en": "Login details",
             "sv": "Login detaljer",
-            "nl": "Inloggegevens"
+            "nl": "Inloggegevens",
+            "da": "Loginoplysninger",
+            "de": "Anmeldedaten",
+            "es": "Detalles de inicio de sesión",
+            "fr": "Détails de connexion",
+            "it": "Dettagli di accesso",
+            "no": "Påloggingsdetaljer",
+            "pl": "Szczegóły logowania",
+            "ru": "Данные для входа",
+            "ko": "로그인 정보"
           },
           "children": [
             {
@@ -2781,13 +2823,31 @@
               "label": {
                 "en": "E-mail",
                 "sv": "Epost",
-                "nl": "E-mail"
+                "nl": "E-mail",
+                "da": "E-mail",
+                "de": "E-Mail",
+                "es": "Correo electrónico",
+                "fr": "E-mail",
+                "it": "E-mail",
+                "no": "E-post",
+                "pl": "E-mail",
+                "ru": "Электронная почта",
+                "ko": "이메일"
               },
               "value": "JohnDoe@domain.com",
               "hint": {
                 "en": "The email of the user.",
                 "sv": "Epostadressen för användaren.",
-                "nl": "De e-mail van de gebruiker."
+                "nl": "De e-mail van de gebruiker.",
+                "da": "Brugerens e-mail.",
+                "de": "Die E-Mail des Benutzers.",
+                "es": "El correo electrónico del usuario.",
+                "fr": "L'email de l'utilisateur.",
+                "it": "L'email dell'utente.",
+                "no": "Brukerens e-post.",
+                "pl": "E-mail użytkownika.",
+                "ru": "Электронная почта пользователя.",
+                "ko": "사용자의 이메일입니다."
               }
             },
             {
@@ -2796,13 +2856,31 @@
               "label": {
                 "en": "Password",
                 "sv": "Lösenord",
-                "nl": "Wachtwoord"
+                "nl": "Wachtwoord",
+                "da": "Adgangskode",
+                "de": "Passwort",
+                "es": "Contraseña",
+                "fr": "Mot de passe",
+                "it": "Password",
+                "no": "Passord",
+                "pl": "Hasło",
+                "ru": "Пароль",
+                "ko": "비밀번호"
               },
               "value": "Secret",
               "hint": {
                 "en": "The password of the user.",
                 "sv": "Lösenordet för användaren.",
-                "nl": "Het wachtwoord van de gebruiker."
+                "nl": "Het wachtwoord van de gebruiker.",
+                "da": "Brugerens adgangskode.",
+                "de": "Das Passwort des Benutzers.",
+                "es": "La contraseña del usuario.",
+                "fr": "Le mot de passe de l'utilisateur.",
+                "it": "La password dell'utente.",
+                "no": "Brukerens passord.",
+                "pl": "Hasło użytkownika.",
+                "ru": "Пароль пользователя.",
+                "ko": "사용자의 비밀번호입니다."
               }
             }
           ]
@@ -2812,7 +2890,16 @@
           "label": {
             "en": "Device infomation",
             "sv": "Enhetsdetaljer",
-            "nl": "Apparaatinformatie"
+            "nl": "Apparaatinformatie",
+            "da": "Enhedsoplysninger",
+            "de": "Geräteinformationen",
+            "es": "Información del dispositivo",
+            "fr": "Informations sur l'appareil",
+            "it": "Informazioni sul dispositivo",
+            "no": "Enhetsinformasjon",
+            "pl": "Informacje o urządzeniu",
+            "ru": "Информация об устройстве",
+            "ko": "장치 정보"
           },
           "children": [
             {
@@ -2821,13 +2908,31 @@
               "label": {
                 "en": "UUID",
                 "sv": "UUID",
-                "nl": "UUID"
+                "nl": "UUID",
+                "da": "UUID",
+                "de": "UUID",
+                "es": "UUID",
+                "fr": "UUID",
+                "it": "UUID",
+                "no": "UUID",
+                "pl": "UUID",
+                "ru": "UUID",
+                "ko": "UUID"
               },
               "value": "EE04776CEDC0BAB2",
               "hint": {
                 "en": "The uniqe id of the device.",
                 "sv": "Unik identifierare för enheten.",
-                "nl": "De unieke id van het apparaat."
+                "nl": "De unieke id van het apparaat.",
+                "da": "Den unikke id for enheden.",
+                "de": "Die eindeutige ID des Geräts.",
+                "es": "El ID único del dispositivo.",
+                "fr": "L'identifiant unique de l'appareil.",
+                "it": "L'ID unico del dispositivo.",
+                "no": "Den unike ID-en til enheten.",
+                "pl": "Unikalny identyfikator urządzenia.",
+                "ru": "Уникальный идентификатор устройства.",
+                "ko": "장치의 고유 ID입니다."
               }
             },
             {
@@ -2836,13 +2941,31 @@
               "label": {
                 "en": "Name",
                 "sv": "Namn",
-                "nl": "Naam"
+                "nl": "Naam",
+                "da": "Navn",
+                "de": "Name",
+                "es": "Nombre",
+                "fr": "Nom",
+                "it": "Nome",
+                "no": "Navn",
+                "pl": "Nazwa",
+                "ru": "Название",
+                "ko": "이름"
               },
               "value": "BlueAir 405 Classic",
               "hint": {
                 "en": "Name of the device",
                 "sv": "Namn på enheten",
-                "nl": "Naam van het apparaat"
+                "nl": "Naam van het apparaat",
+                "da": "Navn på enheden",
+                "de": "Name des Geräts",
+                "es": "Nombre del dispositivo",
+                "fr": "Nom de l'appareil",
+                "it": "Nome del dispositivo",
+                "no": "Navnet på enheten",
+                "pl": "Nazwa urządzenia",
+                "ru": "Название устройства",
+                "ko": "장치의 이름"
               }
             },
             {
@@ -2851,13 +2974,31 @@
               "label": {
                 "en": "Compatibility",
                 "sv": "Kompabilitet",
-                "nl": "Compatibiliteit"
+                "nl": "Compatibiliteit",
+                "da": "Kompatibilitet",
+                "de": "Kompatibilität",
+                "es": "Compatibilidad",
+                "fr": "Compatibilité",
+                "it": "Compatibilità",
+                "no": "Kompatibilitet",
+                "pl": "Kompatybilność",
+                "ru": "Совместимость",
+                "ko": "호환성"
               },
               "value": "classic_405",
               "hint": {
                 "en": "Compatibility of the device",
                 "sv": "Kompabilitet på enheten",
-                "nl": "Compatibiliteit van het apparaat"
+                "nl": "Compatibiliteit van het apparaat",
+                "da": "Kompatibilitet på enheden",
+                "de": "Kompatibilität des Geräts",
+                "es": "Compatibilidad del dispositivo",
+                "fr": "Compatibilité de l'appareil",
+                "it": "Compatibilità del dispositivo",
+                "no": "Kompatibiliteten til enheten",
+                "pl": "Kompatybilność urządzenia",
+                "ru": "Совместимость устройства",
+                "ko": "장치의 호환성"
               }
             },
             {
@@ -2866,13 +3007,31 @@
               "label": {
                 "en": "Model",
                 "sv": "Model",
-                "nl": "Model"
+                "nl": "Model",
+                "da": "Model",
+                "de": "Modell",
+                "es": "Modelo",
+                "fr": "Modèle",
+                "it": "Modello",
+                "no": "Modell",
+                "pl": "Model",
+                "ru": "Модель",
+                "ko": "모델"
               },
               "value": "1.0.9",
               "hint": {
                 "en": "Model of the device",
                 "sv": "Model på enheten",
-                "nl": "Model van het apparaat"
+                "nl": "Model van het apparaat",
+                "da": "Model af enheden",
+                "de": "Modell des Geräts",
+                "es": "Modelo del dispositivo",
+                "fr": "Modèle de l'appareil",
+                "it": "Modello del dispositivo",
+                "no": "Modell av enheten",
+                "pl": "Model urządzenia",
+                "ru": "Модель устройства",
+                "ko": "장치의 모델"
               }
             },
             {
@@ -2881,13 +3040,31 @@
               "label": {
                 "en": "MAC",
                 "sv": "MAC",
-                "nl": "MAC"
+                "nl": "MAC",
+                "da": "MAC",
+                "de": "MAC",
+                "es": "MAC",
+                "fr": "MAC",
+                "it": "MAC",
+                "no": "MAC",
+                "pl": "MAC",
+                "ru": "MAC",
+                "ko": "MAC"
               },
               "value": "34EAE728765C",
               "hint": {
                 "en": "MAC address of the device",
                 "sv": "MAC address på enheten",
-                "nl": "MAC-adres van het apparaat"
+                "nl": "MAC-adres van het apparaat",
+                "da": "MAC-adresse på enheden",
+                "de": "MAC-Adresse des Geräts",
+                "es": "Dirección MAC del dispositivo",
+                "fr": "Adresse MAC de l'appareil",
+                "it": "Indirizzo MAC del dispositivo",
+                "no": "MAC-adressen til enheten",
+                "pl": "Adres MAC urządzenia",
+                "ru": "MAC-адрес устройства",
+                "ko": "장치의 MAC 주소"
               }
             },
             {
@@ -2896,13 +3073,31 @@
               "label": {
                 "en": "Firmware",
                 "sv": "Firmware",
-                "nl": "Firmware"
+                "nl": "Firmware",
+                "da": "Firmware",
+                "de": "Firmware",
+                "es": "Firmware",
+                "fr": "Micrologiciel",
+                "it": "Firmware",
+                "no": "Fastvare",
+                "pl": "Oprogramowanie",
+                "ru": "Прошивка",
+                "ko": "펌웨어"
               },
               "value": "1.1.38",
               "hint": {
                 "en": "Version of the firmware",
                 "sv": "Version av programvara",
-                "nl": "Versie van de firmware"
+                "nl": "Versie van de firmware",
+                "da": "Version af firmwaren",
+                "de": "Version der Firmware",
+                "es": "Versión del firmware",
+                "fr": "Version du micrologiciel",
+                "it": "Versione del firmware",
+                "no": "Versjon av fastvaren",
+                "pl": "Wersja oprogramowania",
+                "ru": "Версия прошивки",
+                "ko": "펌웨어 버전"
               }
             },
             {
@@ -2911,13 +3106,31 @@
               "label": {
                 "en": "MCU Firmware",
                 "sv": "MCU Firmware",
-                "nl": "MCU Firmware"
+                "nl": "MCU Firmware",
+                "da": "MCU Firmware",
+                "de": "MCU-Firmware",
+                "es": "Firmware MCU",
+                "fr": "Firmware MCU",
+                "it": "Firmware MCU",
+                "no": "MCU fastvare",
+                "pl": "Oprogramowanie MCU",
+                "ru": "MCU прошивка",
+                "ko": "MCU 펌웨어"
               },
               "value": "1.0.35",
               "hint": {
                 "en": "Version of the MCU Firmware",
                 "sv": "Vesion på MCU Firmware",
-                "nl": "Versie van de MCU-firmware"
+                "nl": "Versie van de MCU-firmware",
+                "da": "Version af MCU-firmwaren",
+                "de": "Version der MCU-Firmware",
+                "es": "Versión del firmware del MCU",
+                "fr": "Version du firmware MCU",
+                "it": "Versione del firmware MCU",
+                "no": "Versjon av MCU fastvaren",
+                "pl": "Wersja oprogramowania MCU",
+                "ru": "Версия прошивки MCU",
+                "ko": "MCU 펌웨어 버전"
               }
             },
             {
@@ -2926,13 +3139,31 @@
               "label": {
                 "en": "WLAN Driver",
                 "sv": "WLAN Driver",
-                "nl": "WLAN-Driver"
+                "nl": "WLAN-Driver",
+                "da": "WLAN Driver",
+                "de": "WLAN-Treiber",
+                "es": "Controlador WLAN",
+                "fr": "Pilote WLAN",
+                "it": "Driver WLAN",
+                "no": "WLAN-driver",
+                "pl": "Sterownik WLAN",
+                "ru": "Драйвер WLAN",
+                "ko": "WLAN 드라이버"
               },
               "value": "V10",
               "hint": {
                 "en": "Version of the WLAN Driver",
                 "sv": "Version av WLAN Driver",
-                "nl": "Versie van de WLAN-driver"
+                "nl": "Versie van de WLAN-driver",
+                "da": "Version af WLAN-driveren",
+                "de": "Version des WLAN-Treibers",
+                "es": "Versión del controlador WLAN",
+                "fr": "Version du pilote WLAN",
+                "it": "Versione del driver WLAN",
+                "no": "Versjon av WLAN-driveren",
+                "pl": "Wersja sterownika WLAN",
+                "ru": "Версия драйвера WLAN",
+                "ko": "WLAN 드라이버 버전"
               }
             },
             {
@@ -2941,13 +3172,31 @@
               "label": {
                 "en": "Last sync date",
                 "sv": "Senaste sync",
-                "nl": "Laatste synchronisatiedatum"
+                "nl": "Laatste synchronisatiedatum",
+                "da": "Sidste synkroniseringsdato",
+                "de": "Letztes Synchronisationsdatum",
+                "es": "Fecha de última sincronización",
+                "fr": "Date de dernière synchronisation",
+                "it": "Data dell'ultima sincronizzazione",
+                "no": "Siste synkroniseringsdato",
+                "pl": "Data ostatniej synchronizacji",
+                "ru": "Дата последней синхронизации",
+                "ko": "마지막 동기화 날짜"
               },
               "value": "2000-01-01",
               "hint": {
                 "en": "Date for the latest sync",
                 "sv": "Datum för senaste sync",
-                "nl": "Datum van de laatste synchronisatie"
+                "nl": "Datum van de laatste synchronisatie",
+                "da": "Dato for den seneste synkronisering",
+                "de": "Datum der letzten Synchronisation",
+                "es": "Fecha de la última sincronización",
+                "fr": "Date de la dernière synchronisation",
+                "it": "Data dell'ultima sincronizzazione",
+                "no": "Dato for den siste synkroniseringen",
+                "pl": "Data ostatniej synchronizacji",
+                "ru": "Дата последней синхронизации",
+                "ko": "최근 동기화 날짜"
               }
             },
             {
@@ -2956,13 +3205,31 @@
               "label": {
                 "en": "Installation date",
                 "sv": "Installationsdatum",
-                "nl": "Installatiedatum"
+                "nl": "Installatiedatum",
+                "da": "Installationsdato",
+                "de": "Installationsdatum",
+                "es": "Fecha de instalación",
+                "fr": "Date d'installation",
+                "it": "Data di installazione",
+                "no": "Installasjonsdato",
+                "pl": "Data instalacji",
+                "ru": "Дата установки",
+                "ko": "설치 날짜"
               },
               "value": "2000-01-01",
               "hint": {
                 "en": "Date for the installation",
                 "sv": "Datum för instalation",
-                "nl": "Datum van de installatie"
+                "nl": "Datum van de installatie",
+                "da": "Dato for installationen",
+                "de": "Datum der Installation",
+                "es": "Fecha de instalación",
+                "fr": "Date d'installation",
+                "it": "Data di installazione",
+                "no": "Dato for installasjon",
+                "pl": "Data instalacji",
+                "ru": "Дата установки",
+                "ko": "설치 날짜"
               }
             },
             {
@@ -2971,13 +3238,31 @@
               "label": {
                 "en": "Last calibration date",
                 "sv": "Senaste kalibrering",
-                "nl": "Laatste kalibratiedatum"
+                "nl": "Laatste kalibratiedatum",
+                "da": "Sidste kalibreringsdato",
+                "de": "Letztes Kalibrierungsdatum",
+                "es": "Fecha de última calibración",
+                "fr": "Date de la dernière calibration",
+                "it": "Data dell'ultima calibrazione",
+                "no": "Siste kalibreringsdato",
+                "pl": "Data ostatniej kalibracji",
+                "ru": "Дата последней калибровки",
+                "ko": "마지막 보정 날짜"
               },
               "value": "2000-01-01",
               "hint": {
                 "en": "Date for the latest calibration",
                 "sv": "Datum för senaste kalibrering",
-                "nl": "Datum van de laatste kalibratie"
+                "nl": "Datum van de laatste kalibratie",
+                "da": "Dato for den seneste kalibrering",
+                "de": "Datum der letzten Kalibrierung",
+                "es": "Fecha de la última calibración",
+                "fr": "Date de la dernière calibration",
+                "it": "Data dell'ultima calibrazione",
+                "no": "Dato for den siste kalibreringen",
+                "pl": "Data ostatniej kalibracji",
+                "ru": "Дата последней калибровки",
+                "ko": "최근 보정 날짜"
               }
             },
             {
@@ -2986,13 +3271,31 @@
               "label": {
                 "en": "initUsagePeriod",
                 "sv": "initUsagePeriod",
-                "nl": "initUsagePeriod"
+                "nl": "initUsagePeriod",
+                "da": "initUsagePeriod",
+                "de": "initUsagePeriod",
+                "es": "initUsagePeriod",
+                "fr": "initUsagePeriod",
+                "it": "initUsagePeriod",
+                "no": "initUsagePeriod",
+                "pl": "initUsagePeriod",
+                "ru": "initUsagePeriod",
+                "ko": "initUsagePeriod"
               },
               "value": "0",
               "hint": {
                 "en": "initUsagePeriod",
                 "sv": "initUsagePeriod",
-                "nl": "initUsagePeriod"
+                "nl": "initUsagePeriod",
+                "da": "initUsagePeriod",
+                "de": "initUsagePeriod",
+                "es": "initUsagePeriod",
+                "fr": "initUsagePeriod",
+                "it": "initUsagePeriod",
+                "no": "initUsagePeriod",
+                "pl": "initUsagePeriod",
+                "ru": "initUsagePeriod",
+                "ko": "initUsagePeriod"
               }
             },
             {
@@ -3001,13 +3304,31 @@
               "label": {
                 "en": "Reboot period",
                 "sv": "Omstartsperiod",
-                "nl": "Herstartperiode"
+                "nl": "Herstartperiode",
+                "da": "Genstartperiode",
+                "de": "Neustartperiode",
+                "es": "Período de reinicio",
+                "fr": "Période de redémarrage",
+                "it": "Periodo di riavvio",
+                "no": "Omstartperiode",
+                "pl": "Okres restartu",
+                "ru": "Период перезагрузки",
+                "ko": "재부팅 기간"
               },
               "value": "10000",
               "hint": {
                 "en": "Reboot period",
                 "sv": "Omstartsperiod",
-                "nl": "Herstartperiode"
+                "nl": "Herstartperiode",
+                "da": "Genstartperiode",
+                "de": "Neustartperiode",
+                "es": "Período de reinicio",
+                "fr": "Période de redémarrage",
+                "it": "Periodo di riavvio",
+                "no": "Omstartperiode",
+                "pl": "Okres restartu",
+                "ru": "Период перезагрузки",
+                "ko": "재부팅 기간"
               }
             },
             {
@@ -3016,13 +3337,31 @@
               "label": {
                 "en": "Location",
                 "sv": "Rum",
-                "nl": "Ruimte"
+                "nl": "Ruimte",
+                "da": "Beliggenhed",
+                "de": "Standort",
+                "es": "Ubicación",
+                "fr": "Emplacement",
+                "it": "Posizione",
+                "no": "Plassering",
+                "pl": "Lokalizacja",
+                "ru": "Местоположение",
+                "ko": "위치"
               },
               "value": "kitchen",
               "hint": {
                 "en": "The room where the device is located.",
                 "sv": "I vilket rum finns enheten.",
-                "nl": "De ruimte waar het apparaat zich bevindt."
+                "nl": "De ruimte waar het apparaat zich bevindt.",
+                "da": "Det rum, hvor enheden er placeret.",
+                "de": "Der Raum, in dem sich das Gerät befindet.",
+                "es": "La habitación donde se encuentra el dispositivo.",
+                "fr": "La pièce où se trouve l'appareil.",
+                "it": "La stanza in cui si trova il dispositivo.",
+                "no": "Rommet hvor enheten er plassert.",
+                "pl": "Pokój, w którym znajduje się urządzenie.",
+                "ru": "Помещение, где находится устройство.",
+                "ko": "장치가 있는 방입니다."
               }
             }
           ]
@@ -3032,7 +3371,16 @@
           "label": {
             "en": "Advanced settings",
             "sv": "Avancerade inställningar",
-            "nl": "Geavanceerde instellingen"
+            "nl": "Geavanceerde instellingen",
+            "da": "Avancerede indstillinger",
+            "de": "Erweiterte Einstellungen",
+            "es": "Configuraciones avanzadas",
+            "fr": "Paramètres avancés",
+            "it": "Impostazioni avanzate",
+            "no": "Avanserte innstillinger",
+            "pl": "Ustawienia zaawansowane",
+            "ru": "Расширенные настройки",
+            "ko": "고급 설정"
           },
           "children": [
             {
@@ -3041,7 +3389,16 @@
               "label": {
                 "en": "Update interval",
                 "sv": "Uppdatera",
-                "nl": "Update-interval"
+                "nl": "Update-interval",
+                "da": "Opdateringsinterval",
+                "de": "Aktualisierungsintervall",
+                "es": "Intervalo de actualización",
+                "fr": "Intervalle de mise à jour",
+                "it": "Intervallo di aggiornamento",
+                "no": "Oppdateringsintervall",
+                "pl": "Interwał aktualizacji",
+                "ru": "Интервал обновлений",
+                "ko": "업데이트 간격"
               },
               "value": 30,
               "min": 10,
@@ -3049,7 +3406,16 @@
               "units": {
                 "en": "Seconds",
                 "sv": "Sekunder",
-                "nl": "Seconden"
+                "nl": "Seconden",
+                "da": "Sekunder",
+                "de": "Sekunden",
+                "es": "Segundos",
+                "fr": "Secondes",
+                "it": "Secondi",
+                "no": "Sekunder",
+                "pl": "Sekundy",
+                "ru": "Секунды",
+                "ko": "초"
               }
             },
             {
@@ -3059,7 +3425,16 @@
               "label": {
                 "en": "Temperature unit",
                 "sv": "Temperatur",
-                "nl": "Temperatuureenheid"
+                "nl": "Temperatuureenheid",
+                "da": "Temperaturenhed",
+                "de": "Temperatureinheit",
+                "es": "Unidad de temperatura",
+                "fr": "Unité de température",
+                "it": "Unità di temperatura",
+                "no": "Temperaturenhet",
+                "pl": "Jednostka temperatury",
+                "ru": "Единица измерения температуры",
+                "ko": "온도 단위"
               },
               "values": [
                 {
@@ -3067,7 +3442,16 @@
                   "label": {
                     "en": "Celsius",
                     "sv": "Celsius",
-                    "nl": "Celsius"
+                    "nl": "Celsius",
+                    "da": "Celsius",
+                    "de": "Celsius",
+                    "es": "Celsius",
+                    "fr": "Celsius",
+                    "it": "Celsius",
+                    "no": "Celsius",
+                    "pl": "Celsjusz",
+                    "ru": "Цельсий",
+                    "ko": "섭씨"
                   }
                 },
                 {
@@ -3075,7 +3459,16 @@
                   "label": {
                     "en": "Fahrenheit",
                     "sv": "Fahrenheit",
-                    "nl": "Fahrenheit"
+                    "nl": "Fahrenheit",
+                    "da": "Fahrenheit",
+                    "de": "Fahrenheit",
+                    "es": "Fahrenheit",
+                    "fr": "Fahrenheit",
+                    "it": "Fahrenheit",
+                    "no": "Fahrenheit",
+                    "pl": "Fahrenheit",
+                    "ru": "Фаренгейт",
+                    "ko": "화씨"
                   }
                 }
               ]
@@ -3632,7 +4025,16 @@
                   "label": {
                     "en": "Celsius",
                     "sv": "Celsius",
-                    "nl": "Celsius"
+                    "nl": "Celsius",
+                    "da": "Celsius",
+                    "de": "Celsius",
+                    "es": "Celsius",
+                    "fr": "Celsius",
+                    "it": "Celsius",
+                    "no": "Celsius",
+                    "pl": "Celsius",
+                    "ru": "Цельсий",
+                    "ko": "섭씨"
                   }
                 },
                 {
@@ -3640,7 +4042,16 @@
                   "label": {
                     "en": "Fahrenheit",
                     "sv": "Fahrenheit",
-                    "nl": "Fahrenheit"
+                    "nl": "Fahrenheit",
+                    "da": "Fahrenheit",
+                    "de": "Fahrenheit",
+                    "es": "Fahrenheit",
+                    "fr": "Fahrenheit",
+                    "it": "Fahrenheit",
+                    "no": "Fahrenheit",
+                    "pl": "Fahrenheit",
+                    "ru": "Фаренгейт",
+                    "ko": "화씨"
                   }
                 }
               ]
@@ -4189,7 +4600,16 @@
               "label": {
                 "en": "Temperature unit",
                 "sv": "Temperatur",
-                "nl": "Temperatuureenheid"
+                "nl": "Temperatuureenheid",
+                "da": "Temperaturenhed",
+                "de": "Temperatureinheit",
+                "es": "Unidad de temperatura",
+                "fr": "Unité de température",
+                "it": "Unità di temperatura",
+                "no": "Temperaturenhet",
+                "pl": "Jednostka temperatury",
+                "ru": "Единица измерения температуры",
+                "ko": "온도 단위"
               },
               "values": [
                 {
@@ -4197,7 +4617,16 @@
                   "label": {
                     "en": "Celsius",
                     "sv": "Celsius",
-                    "nl": "Celsius"
+                    "nl": "Celsius",
+                    "da": "Celsius",
+                    "de": "Celsius",
+                    "es": "Celsius",
+                    "fr": "Celsius",
+                    "it": "Celsius",
+                    "no": "Celsius",
+                    "pl": "Celsius",
+                    "ru": "Цельсий",
+                    "ko": "섭씨"
                   }
                 },
                 {
@@ -4205,7 +4634,831 @@
                   "label": {
                     "en": "Fahrenheit",
                     "sv": "Fahrenheit",
-                    "nl": "Fahrenheit"
+                    "nl": "Fahrenheit",
+                    "da": "Fahrenheit",
+                    "de": "Fahrenheit",
+                    "es": "Fahrenheit",
+                    "fr": "Fahrenheit",
+                    "it": "Fahrenheit",
+                    "no": "Fahrenheit",
+                    "pl": "Fahrenheit",
+                    "ru": "Фаренгейт",
+                    "ko": "화씨"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Pure",
+        "sv": "Pure",
+        "nl": "Pure",
+        "de": "Pure",
+        "da": "Pure",
+        "es": "Pure",
+        "fr": "Pure",
+        "it": "Pure",
+        "no": "Pure",
+        "pl": "Pure",
+        "ru": "Pure",
+        "ko": "Pure"
+      },
+      "class": "airpurifier",
+      "capabilities": [
+        "fan_speed",
+        "brightness",
+        "child_lock",
+        "last_retrival_date",
+        "wifi_status",
+        "filter_status"
+      ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/pure/assets/images/small.png",
+        "large": "/drivers/pure/assets/images/large.png",
+        "xlarge": "/drivers/pure/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "login_credentials",
+          "template": "login_credentials",
+          "options": {
+            "logo": "icon.svg",
+            "title": {
+              "en": "Login to your account",
+              "sv": "Logga in på ditt konto",
+              "nl": "Inloggen op uw account",
+              "da": "Log ind på din konto",
+              "de": "Melden Sie sich bei Ihrem Konto an",
+              "es": "Iniciar sesión en tu cuenta",
+              "fr": "Connectez-vous à votre compte",
+              "it": "Accedi al tuo account",
+              "no": "Logg inn på kontoen din",
+              "pl": "Zaloguj się na swoje konto",
+              "ru": "Войти в ваш аккаунт",
+              "ko": "계정에 로그인"
+            },
+            "usernameLabel": {
+              "en": "E-mail address",
+              "sv": "E-postadress",
+              "nl": "E-mailadres",
+              "da": "E-mailadresse",
+              "de": "E-Mail-Addresse",
+              "es": "Dirección de correo electrónico",
+              "fr": "Adresse e-mail",
+              "it": "Indirizzo email",
+              "no": "E-postadresse",
+              "pl": "Adres e-mail",
+              "ru": "Адрес электронной почты",
+              "ko": "이메일 주소"
+            },
+            "usernamePlaceholder": {
+              "en": "john@doe.com",
+              "sv": "namn@domain.se",
+              "nl": "naam@voorbeeld.com",
+              "da": "navn@domæne.dk",
+              "de": "name@domain.de",
+              "es": "nombre@dominio.es",
+              "fr": "nom@domaine.fr",
+              "it": "nome@dominio.it",
+              "no": "navn@domenet.no",
+              "pl": "imie@domena.pl",
+              "ru": "имя@домен.ру",
+              "ko": "이름@도메인.한국"
+            },
+            "passwordLabel": {
+              "en": "Password",
+              "sv": "Lösenord",
+              "nl": "Wachtwoord",
+              "da": "Adgangskode",
+              "de": "Passwort",
+              "es": "Contraseña",
+              "fr": "Mot de passe",
+              "it": "Password",
+              "no": "Passord",
+              "pl": "Hasło",
+              "ru": "Пароль",
+              "ko": "비밀번호"
+            },
+            "passwordPlaceholder": {
+              "en": "Password",
+              "sv": "Lösenord",
+              "nl": "Wachtwoord",
+              "da": "Adgangskode",
+              "de": "Passwort",
+              "es": "Contraseña",
+              "fr": "Mot de passe",
+              "it": "Password",
+              "no": "Passord",
+              "pl": "Hasło",
+              "ru": "Пароль",
+              "ko": "비밀번호"
+            }
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "energy": {
+        "approximation": {
+          "usageOff": 0,
+          "usageOn": 25
+        }
+      },
+      "capabilitiesOptions": {
+        "measure_power": {
+          "approximated": true
+        }
+      },
+      "id": "pure",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Login details",
+            "sv": "Login detaljer",
+            "nl": "Inloggegevens",
+            "da": "Loginoplysninger",
+            "de": "Anmeldedaten",
+            "es": "Detalles de inicio de sesión",
+            "fr": "Détails de connexion",
+            "it": "Dettagli di accesso",
+            "no": "Påloggingsdetaljer",
+            "pl": "Szczegóły logowania",
+            "ru": "Данные для входа",
+            "ko": "로그인 정보"
+          },
+          "children": [
+            {
+              "id": "username",
+              "type": "text",
+              "label": {
+                "en": "E-mail",
+                "sv": "Epost",
+                "nl": "E-mail",
+                "da": "E-mail",
+                "de": "E-Mail",
+                "es": "Correo electrónico",
+                "fr": "E-mail",
+                "it": "E-mail",
+                "no": "E-post",
+                "pl": "E-mail",
+                "ru": "Электронная почта",
+                "ko": "이메일"
+              },
+              "value": "JohnDoe@domain.com",
+              "hint": {
+                "en": "The email of the user.",
+                "sv": "Epostadressen för användaren.",
+                "nl": "De e-mail van de gebruiker.",
+                "da": "Brugerens e-mail.",
+                "de": "Die E-Mail des Benutzers.",
+                "es": "El correo electrónico del usuario.",
+                "fr": "L'email de l'utilisateur.",
+                "it": "L'email dell'utente.",
+                "no": "Brukerens e-post.",
+                "pl": "E-mail użytkownika.",
+                "ru": "Электронная почта пользователя.",
+                "ko": "사용자의 이메일입니다."
+              }
+            },
+            {
+              "id": "password",
+              "type": "password",
+              "label": {
+                "en": "Password",
+                "sv": "Lösenord",
+                "nl": "Wachtwoord",
+                "da": "Adgangskode",
+                "de": "Passwort",
+                "es": "Contraseña",
+                "fr": "Mot de passe",
+                "it": "Password",
+                "no": "Passord",
+                "pl": "Hasło",
+                "ru": "Пароль",
+                "ko": "비밀번호"
+              },
+              "value": "Secret",
+              "hint": {
+                "en": "The password of the user.",
+                "sv": "Lösenordet för användaren.",
+                "nl": "Het wachtwoord van de gebruiker.",
+                "da": "Brugerens adgangskode.",
+                "de": "Das Passwort des Benutzers.",
+                "es": "La contraseña del usuario.",
+                "fr": "Le mot de passe de l'utilisateur.",
+                "it": "La password dell'utente.",
+                "no": "Brukerens passord.",
+                "pl": "Hasło użytkownika.",
+                "ru": "Пароль пользователя.",
+                "ko": "사용자의 비밀번호입니다."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Device infomation",
+            "sv": "Enhetsdetaljer",
+            "nl": "Apparaatinformatie",
+            "da": "Enhedsoplysninger",
+            "de": "Geräteinformationen",
+            "es": "Información del dispositivo",
+            "fr": "Informations sur l'appareil",
+            "it": "Informazioni sul dispositivo",
+            "no": "Enhetsinformasjon",
+            "pl": "Informacje o urządzeniu",
+            "ru": "Информация об устройстве",
+            "ko": "장치 정보"
+          },
+          "children": [
+            {
+              "id": "uuid",
+              "type": "label",
+              "label": {
+                "en": "UUID",
+                "sv": "UUID",
+                "nl": "UUID",
+                "da": "UUID",
+                "de": "UUID",
+                "es": "UUID",
+                "fr": "UUID",
+                "it": "UUID",
+                "no": "UUID",
+                "pl": "UUID",
+                "ru": "UUID",
+                "ko": "UUID"
+              },
+              "value": "EE04776CEDC0BAB2",
+              "hint": {
+                "en": "The uniqe id of the device.",
+                "sv": "Unik identifierare för enheten.",
+                "nl": "De unieke id van het apparaat.",
+                "da": "Den unikke id for enheden.",
+                "de": "Die eindeutige ID des Geräts.",
+                "es": "El ID único del dispositivo.",
+                "fr": "L'identifiant unique de l'appareil.",
+                "it": "L'ID unico del dispositivo.",
+                "no": "Den unike ID-en til enheten.",
+                "pl": "Unikalny identyfikator urządzenia.",
+                "ru": "Уникальный идентификатор устройства.",
+                "ko": "장치의 고유 ID입니다."
+              }
+            },
+            {
+              "id": "name",
+              "type": "label",
+              "label": {
+                "en": "Name",
+                "sv": "Namn",
+                "nl": "Naam",
+                "da": "Navn",
+                "de": "Name",
+                "es": "Nombre",
+                "fr": "Nom",
+                "it": "Nome",
+                "no": "Navn",
+                "pl": "Nazwa",
+                "ru": "Название",
+                "ko": "이름"
+              },
+              "value": "BlueAir 405 Pure",
+              "hint": {
+                "en": "Name of the device",
+                "sv": "Namn på enheten",
+                "nl": "Naam van het apparaat",
+                "da": "Navn på enheden",
+                "de": "Name des Geräts",
+                "es": "Nombre del dispositivo",
+                "fr": "Nom de l'appareil",
+                "it": "Nome del dispositivo",
+                "no": "Navnet på enheten",
+                "pl": "Nazwa urządzenia",
+                "ru": "Название устройства",
+                "ko": "장치의 이름"
+              }
+            },
+            {
+              "id": "compatibility",
+              "type": "label",
+              "label": {
+                "en": "Compatibility",
+                "sv": "Kompabilitet",
+                "nl": "Compatibiliteit",
+                "da": "Kompatibilitet",
+                "de": "Kompatibilität",
+                "es": "Compatibilidad",
+                "fr": "Compatibilité",
+                "it": "Compatibilità",
+                "no": "Kompatibilitet",
+                "pl": "Kompatybilność",
+                "ru": "Совместимость",
+                "ko": "호환성"
+              },
+              "value": "Pure_405",
+              "hint": {
+                "en": "Compatibility of the device",
+                "sv": "Kompabilitet på enheten",
+                "nl": "Compatibiliteit van het apparaat",
+                "da": "Kompatibilitet på enheden",
+                "de": "Kompatibilität des Geräts",
+                "es": "Compatibilidad del dispositivo",
+                "fr": "Compatibilité de l'appareil",
+                "it": "Compatibilità del dispositivo",
+                "no": "Kompatibiliteten til enheten",
+                "pl": "Kompatybilność urządzenia",
+                "ru": "Совместимость устройства",
+                "ko": "장치의 호환성"
+              }
+            },
+            {
+              "id": "model",
+              "type": "label",
+              "label": {
+                "en": "Model",
+                "sv": "Model",
+                "nl": "Model",
+                "da": "Model",
+                "de": "Modell",
+                "es": "Modelo",
+                "fr": "Modèle",
+                "it": "Modello",
+                "no": "Modell",
+                "pl": "Model",
+                "ru": "Модель",
+                "ko": "모델"
+              },
+              "value": "1.0.9",
+              "hint": {
+                "en": "Model of the device",
+                "sv": "Model på enheten",
+                "nl": "Model van het apparaat",
+                "da": "Model af enheden",
+                "de": "Modell des Geräts",
+                "es": "Modelo del dispositivo",
+                "fr": "Modèle de l'appareil",
+                "it": "Modello del dispositivo",
+                "no": "Modell av enheten",
+                "pl": "Model urządzenia",
+                "ru": "Модель устройства",
+                "ko": "장치의 모델"
+              }
+            },
+            {
+              "id": "mac",
+              "type": "label",
+              "label": {
+                "en": "MAC",
+                "sv": "MAC",
+                "nl": "MAC",
+                "da": "MAC",
+                "de": "MAC",
+                "es": "MAC",
+                "fr": "MAC",
+                "it": "MAC",
+                "no": "MAC",
+                "pl": "MAC",
+                "ru": "MAC",
+                "ko": "MAC"
+              },
+              "value": "34EAE728765C",
+              "hint": {
+                "en": "MAC address of the device",
+                "sv": "MAC address på enheten",
+                "nl": "MAC-adres van het apparaat",
+                "da": "MAC-adresse på enheden",
+                "de": "MAC-Adresse des Geräts",
+                "es": "Dirección MAC del dispositivo",
+                "fr": "Adresse MAC de l'appareil",
+                "it": "Indirizzo MAC del dispositivo",
+                "no": "MAC-adressen til enheten",
+                "pl": "Adres MAC urządzenia",
+                "ru": "MAC-адрес устройства",
+                "ko": "장치의 MAC 주소"
+              }
+            },
+            {
+              "id": "firmware",
+              "type": "label",
+              "label": {
+                "en": "Firmware",
+                "sv": "Firmware",
+                "nl": "Firmware",
+                "da": "Firmware",
+                "de": "Firmware",
+                "es": "Firmware",
+                "fr": "Micrologiciel",
+                "it": "Firmware",
+                "no": "Fastvare",
+                "pl": "Oprogramowanie",
+                "ru": "Прошивка",
+                "ko": "펌웨어"
+              },
+              "value": "1.1.38",
+              "hint": {
+                "en": "Version of the firmware",
+                "sv": "Version av programvara",
+                "nl": "Versie van de firmware",
+                "da": "Version af firmwaren",
+                "de": "Version der Firmware",
+                "es": "Versión del firmware",
+                "fr": "Version du micrologiciel",
+                "it": "Versione del firmware",
+                "no": "Versjon av fastvaren",
+                "pl": "Wersja oprogramowania",
+                "ru": "Версия прошивки",
+                "ko": "펌웨어 버전"
+              }
+            },
+            {
+              "id": "mcuFirmware",
+              "type": "label",
+              "label": {
+                "en": "MCU Firmware",
+                "sv": "MCU Firmware",
+                "nl": "MCU Firmware",
+                "da": "MCU Firmware",
+                "de": "MCU-Firmware",
+                "es": "Firmware MCU",
+                "fr": "Firmware MCU",
+                "it": "Firmware MCU",
+                "no": "MCU fastvare",
+                "pl": "Oprogramowanie MCU",
+                "ru": "MCU прошивка",
+                "ko": "MCU 펌웨어"
+              },
+              "value": "1.0.35",
+              "hint": {
+                "en": "Version of the MCU Firmware",
+                "sv": "Vesion på MCU Firmware",
+                "nl": "Versie van de MCU-firmware",
+                "da": "Version af MCU-firmwaren",
+                "de": "Version der MCU-Firmware",
+                "es": "Versión del firmware del MCU",
+                "fr": "Version du firmware MCU",
+                "it": "Versione del firmware MCU",
+                "no": "Versjon av MCU fastvaren",
+                "pl": "Wersja oprogramowania MCU",
+                "ru": "Версия прошивки MCU",
+                "ko": "MCU 펌웨어 버전"
+              }
+            },
+            {
+              "id": "wlanDriver",
+              "type": "label",
+              "label": {
+                "en": "WLAN Driver",
+                "sv": "WLAN Driver",
+                "nl": "WLAN-Driver",
+                "da": "WLAN Driver",
+                "de": "WLAN-Treiber",
+                "es": "Controlador WLAN",
+                "fr": "Pilote WLAN",
+                "it": "Driver WLAN",
+                "no": "WLAN-driver",
+                "pl": "Sterownik WLAN",
+                "ru": "Драйвер WLAN",
+                "ko": "WLAN 드라이버"
+              },
+              "value": "V10",
+              "hint": {
+                "en": "Version of the WLAN Driver",
+                "sv": "Version av WLAN Driver",
+                "nl": "Versie van de WLAN-driver",
+                "da": "Version af WLAN-driveren",
+                "de": "Version des WLAN-Treibers",
+                "es": "Versión del controlador WLAN",
+                "fr": "Version du pilote WLAN",
+                "it": "Versione del driver WLAN",
+                "no": "Versjon av WLAN-driveren",
+                "pl": "Wersja sterownika WLAN",
+                "ru": "Версия драйвера WLAN",
+                "ko": "WLAN 드라이버 버전"
+              }
+            },
+            {
+              "id": "lastSyncDate",
+              "type": "label",
+              "label": {
+                "en": "Last sync date",
+                "sv": "Senaste sync",
+                "nl": "Laatste synchronisatiedatum",
+                "da": "Sidste synkroniseringsdato",
+                "de": "Letztes Synchronisationsdatum",
+                "es": "Fecha de última sincronización",
+                "fr": "Date de dernière synchronisation",
+                "it": "Data dell'ultima sincronizzazione",
+                "no": "Siste synkroniseringsdato",
+                "pl": "Data ostatniej synchronizacji",
+                "ru": "Дата последней синхронизации",
+                "ko": "마지막 동기화 날짜"
+              },
+              "value": "2000-01-01",
+              "hint": {
+                "en": "Date for the latest sync",
+                "sv": "Datum för senaste sync",
+                "nl": "Datum van de laatste synchronisatie",
+                "da": "Dato for den seneste synkronisering",
+                "de": "Datum der letzten Synchronisation",
+                "es": "Fecha de la última sincronización",
+                "fr": "Date de la dernière synchronisation",
+                "it": "Data dell'ultima sincronizzazione",
+                "no": "Dato for den siste synkroniseringen",
+                "pl": "Data ostatniej synchronizacji",
+                "ru": "Дата последней синхронизации",
+                "ko": "최근 동기화 날짜"
+              }
+            },
+            {
+              "id": "installationDate",
+              "type": "label",
+              "label": {
+                "en": "Installation date",
+                "sv": "Installationsdatum",
+                "nl": "Installatiedatum",
+                "da": "Installationsdato",
+                "de": "Installationsdatum",
+                "es": "Fecha de instalación",
+                "fr": "Date d'installation",
+                "it": "Data di installazione",
+                "no": "Installasjonsdato",
+                "pl": "Data instalacji",
+                "ru": "Дата установки",
+                "ko": "설치 날짜"
+              },
+              "value": "2000-01-01",
+              "hint": {
+                "en": "Date for the installation",
+                "sv": "Datum för instalation",
+                "nl": "Datum van de installatie",
+                "da": "Dato for installationen",
+                "de": "Datum der Installation",
+                "es": "Fecha de instalación",
+                "fr": "Date d'installation",
+                "it": "Data di installazione",
+                "no": "Dato for installasjon",
+                "pl": "Data instalacji",
+                "ru": "Дата установки",
+                "ko": "설치 날짜"
+              }
+            },
+            {
+              "id": "lastCalibrationDate",
+              "type": "label",
+              "label": {
+                "en": "Last calibration date",
+                "sv": "Senaste kalibrering",
+                "nl": "Laatste kalibratiedatum",
+                "da": "Sidste kalibreringsdato",
+                "de": "Letztes Kalibrierungsdatum",
+                "es": "Fecha de última calibración",
+                "fr": "Date de la dernière calibration",
+                "it": "Data dell'ultima calibrazione",
+                "no": "Siste kalibreringsdato",
+                "pl": "Data ostatniej kalibracji",
+                "ru": "Дата последней калибровки",
+                "ko": "마지막 보정 날짜"
+              },
+              "value": "2000-01-01",
+              "hint": {
+                "en": "Date for the latest calibration",
+                "sv": "Datum för senaste kalibrering",
+                "nl": "Datum van de laatste kalibratie",
+                "da": "Dato for den seneste kalibrering",
+                "de": "Datum der letzten Kalibrierung",
+                "es": "Fecha de la última calibración",
+                "fr": "Date de la dernière calibration",
+                "it": "Data dell'ultima calibrazione",
+                "no": "Dato for den siste kalibreringen",
+                "pl": "Data ostatniej kalibracji",
+                "ru": "Дата последней калибровки",
+                "ko": "최근 보정 날짜"
+              }
+            },
+            {
+              "id": "initUsagePeriod",
+              "type": "label",
+              "label": {
+                "en": "initUsagePeriod",
+                "sv": "initUsagePeriod",
+                "nl": "initUsagePeriod",
+                "da": "initUsagePeriod",
+                "de": "initUsagePeriod",
+                "es": "initUsagePeriod",
+                "fr": "initUsagePeriod",
+                "it": "initUsagePeriod",
+                "no": "initUsagePeriod",
+                "pl": "initUsagePeriod",
+                "ru": "initUsagePeriod",
+                "ko": "initUsagePeriod"
+              },
+              "value": "0",
+              "hint": {
+                "en": "initUsagePeriod",
+                "sv": "initUsagePeriod",
+                "nl": "initUsagePeriod",
+                "da": "initUsagePeriod",
+                "de": "initUsagePeriod",
+                "es": "initUsagePeriod",
+                "fr": "initUsagePeriod",
+                "it": "initUsagePeriod",
+                "no": "initUsagePeriod",
+                "pl": "initUsagePeriod",
+                "ru": "initUsagePeriod",
+                "ko": "initUsagePeriod"
+              }
+            },
+            {
+              "id": "rebootPeriod",
+              "type": "label",
+              "label": {
+                "en": "Reboot period",
+                "sv": "Omstartsperiod",
+                "nl": "Herstartperiode",
+                "da": "Genstartperiode",
+                "de": "Neustartperiode",
+                "es": "Período de reinicio",
+                "fr": "Période de redémarrage",
+                "it": "Periodo di riavvio",
+                "no": "Omstartperiode",
+                "pl": "Okres restartu",
+                "ru": "Период перезагрузки",
+                "ko": "재부팅 기간"
+              },
+              "value": "10000",
+              "hint": {
+                "en": "Reboot period",
+                "sv": "Omstartsperiod",
+                "nl": "Herstartperiode",
+                "da": "Genstartperiode",
+                "de": "Neustartperiode",
+                "es": "Período de reinicio",
+                "fr": "Période de redémarrage",
+                "it": "Periodo di riavvio",
+                "no": "Omstartperiode",
+                "pl": "Okres restartu",
+                "ru": "Период перезагрузки",
+                "ko": "재부팅 기간"
+              }
+            },
+            {
+              "id": "roomLocation",
+              "type": "label",
+              "label": {
+                "en": "Location",
+                "sv": "Rum",
+                "nl": "Ruimte",
+                "da": "Beliggenhed",
+                "de": "Standort",
+                "es": "Ubicación",
+                "fr": "Emplacement",
+                "it": "Posizione",
+                "no": "Plassering",
+                "pl": "Lokalizacja",
+                "ru": "Местоположение",
+                "ko": "위치"
+              },
+              "value": "kitchen",
+              "hint": {
+                "en": "The room where the device is located.",
+                "sv": "I vilket rum finns enheten.",
+                "nl": "De ruimte waar het apparaat zich bevindt.",
+                "da": "Det rum, hvor enheden er placeret.",
+                "de": "Der Raum, in dem sich das Gerät befindet.",
+                "es": "La habitación donde se encuentra el dispositivo.",
+                "fr": "La pièce où se trouve l'appareil.",
+                "it": "La stanza in cui si trova il dispositivo.",
+                "no": "Rommet hvor enheten er plassert.",
+                "pl": "Pokój, w którym znajduje się urządzenie.",
+                "ru": "Помещение, где находится устройство.",
+                "ko": "장치가 있는 방입니다."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Advanced settings",
+            "sv": "Avancerade inställningar",
+            "nl": "Geavanceerde instellingen",
+            "da": "Avancerede indstillinger",
+            "de": "Erweiterte Einstellungen",
+            "es": "Configuraciones avanzadas",
+            "fr": "Paramètres avancés",
+            "it": "Impostazioni avanzate",
+            "no": "Avanserte innstillinger",
+            "pl": "Ustawienia zaawansowane",
+            "ru": "Расширенные настройки",
+            "ko": "고급 설정"
+          },
+          "children": [
+            {
+              "id": "update",
+              "type": "number",
+              "label": {
+                "en": "Update interval",
+                "sv": "Uppdatera",
+                "nl": "Update-interval",
+                "da": "Opdateringsinterval",
+                "de": "Aktualisierungsintervall",
+                "es": "Intervalo de actualización",
+                "fr": "Intervalle de mise à jour",
+                "it": "Intervallo di aggiornamento",
+                "no": "Oppdateringsintervall",
+                "pl": "Interwał aktualizacji",
+                "ru": "Интервал обновлений",
+                "ko": "업데이트 간격"
+              },
+              "value": 30,
+              "min": 10,
+              "max": 120,
+              "units": {
+                "en": "Seconds",
+                "sv": "Sekunder",
+                "nl": "Seconden",
+                "da": "Sekunder",
+                "de": "Sekunden",
+                "es": "Segundos",
+                "fr": "Secondes",
+                "it": "Secondi",
+                "no": "Sekunder",
+                "pl": "Sekundy",
+                "ru": "Секунды",
+                "ko": "초"
+              }
+            },
+            {
+              "id": "temperatureUnit",
+              "type": "dropdown",
+              "value": "C",
+              "label": {
+                "en": "Temperature unit",
+                "sv": "Temperatur",
+                "nl": "Temperatuureenheid",
+                "da": "Temperaturenhed",
+                "de": "Temperatureinheit",
+                "es": "Unidad de temperatura",
+                "fr": "Unité de température",
+                "it": "Unità di temperatura",
+                "no": "Temperaturenhet",
+                "pl": "Jednostka temperatury",
+                "ru": "Единица измерения температуры",
+                "ko": "온도 단위"
+              },
+              "values": [
+                {
+                  "id": "C",
+                  "label": {
+                    "en": "Celsius",
+                    "sv": "Celsius",
+                    "nl": "Celsius",
+                    "da": "Celsius",
+                    "de": "Celsius",
+                    "es": "Celsius",
+                    "fr": "Celsius",
+                    "it": "Celsius",
+                    "no": "Celsius",
+                    "pl": "Celsjusz",
+                    "ru": "Цельсий",
+                    "ko": "섭씨"
+                  }
+                },
+                {
+                  "id": "F",
+                  "label": {
+                    "en": "Fahrenheit",
+                    "sv": "Fahrenheit",
+                    "nl": "Fahrenheit",
+                    "da": "Fahrenheit",
+                    "de": "Fahrenheit",
+                    "es": "Fahrenheit",
+                    "fr": "Fahrenheit",
+                    "it": "Fahrenheit",
+                    "no": "Fahrenheit",
+                    "pl": "Fahrenheit",
+                    "ru": "Фаренгейт",
+                    "ko": "화씨"
                   }
                 }
               ]
@@ -4218,35 +5471,78 @@
   "widgets": {
     "blueair": {
       "name": {
-        "en": "BlueAir Widget"
+        "en": "BlueAir Widget",
+        "nl": "BlueAir Widget",
+        "da": "BlueAir Widget",
+        "de": "BlueAir Widget",
+        "es": "BlueAir Widget",
+        "fr": "BlueAir Widget",
+        "it": "BlueAir Widget",
+        "no": "BlueAir Widget",
+        "sv": "BlueAir Widget",
+        "pl": "BlueAir Widget",
+        "ru": "BlueAir Widget",
+        "ko": "BlueAir 위젯"
       },
-      "height": 188,
+      "transparent": true,
       "settings": [
-        {
-          "id": "widgetTitle",
-          "type": "text",
-          "label": {
-            "en": "Widget Title"
-          },
-          "placeholder": {
-            "en": "My BlueAir Widget"
-          }
-        },
         {
           "id": "selectedDevice",
           "type": "dropdown",
           "label": {
-            "en": "Select BlueAir device"
+            "en": "Select BlueAir device",
+            "nl": "Selecteer BlueAir-apparaat",
+            "da": "Vælg BlueAir-enhed",
+            "de": "BlueAir-Gerät auswählen",
+            "es": "Seleccionar dispositivo BlueAir",
+            "fr": "Sélectionner l'appareil BlueAir",
+            "it": "Seleziona dispositivo BlueAir",
+            "no": "Velg BlueAir-enhet",
+            "sv": "Välj BlueAir-enhet",
+            "pl": "Wybierz urządzenie BlueAir",
+            "ru": "Выберите устройство BlueAir",
+            "ko": "BlueAir 장치 선택"
           },
-          "options": []
+          "values": []
         },
         {
           "id": "selectedCapability",
           "type": "dropdown",
           "label": {
-            "en": "Select measurement"
+            "en": "Select measurement",
+            "nl": "Selecteer meting",
+            "da": "Vælg måling",
+            "de": "Messung auswählen",
+            "es": "Seleccionar medición",
+            "fr": "Sélectionner la mesure",
+            "it": "Seleziona misurazione",
+            "no": "Velg måling",
+            "sv": "Välj mätning",
+            "pl": "Wybierz pomiar",
+            "ru": "Выберите измерение",
+            "ko": "측정 선택"
           },
-          "options": []
+          "values": []
+        },
+        {
+          "id": "refreshSeconds",
+          "type": "number",
+          "title": {
+            "en": "Refresh interval (seconds)",
+            "nl": "Vernieuwingsinterval (seconden)",
+            "da": "Opdateringsinterval (sekunder)",
+            "de": "Aktualisierungsintervall (Sekunden)",
+            "es": "Intervalo de actualización (segundos)",
+            "fr": "Intervalle de rafraîchissement (secondes)",
+            "it": "Intervallo di aggiornamento (secondi)",
+            "no": "Oppdateringsintervall (sekunder)",
+            "sv": "Uppdateringsintervall (sekunder)",
+            "pl": "Interwał odświeżania (sekundy)",
+            "ru": "Интервал обновления (секунды)",
+            "ko": "갱신 간격 (초)"
+          },
+          "min": 2,
+          "value": 5
         }
       ],
       "api": {
@@ -4256,11 +5552,11 @@
         },
         "getBlueAirCapabilities": {
           "method": "GET",
-          "path": "/devices/:deviceId/capabilities"
+          "path": "/capabilities"
         },
         "getBlueAirCapabilityValue": {
           "method": "GET",
-          "path": "/devices/:deviceId/capabilities/:capabilityId"
+          "path": "/device:/capability:"
         }
       },
       "id": "blueair"
@@ -4742,7 +6038,8 @@
         "sv": "PM1-nivå",
         "es": "Nivel de PM1",
         "fr": "Niveau de PM1",
-        "no": "PM1-nivå"
+        "no": "PM1-nivå",
+        "de": "PM1-Stufe"
       },
       "desc": {
         "en": "The amount of PM1 particles in the air represented by a level.",
@@ -4755,7 +6052,8 @@
         "ru": "Количество частиц ТЧ1 в воздухе, представленное в виде уровня.",
         "sv": "Mängden PM1-partiklar i luften som representeras av en nivå.",
         "fr": "La quantité de particules PM1 dans l'air représentée sous forme de niveau.",
-        "no": "Mengden av PM1-partikler i luften uttrykt som et nivå."
+        "no": "Mengden av PM1-partikler i luften uttrykt som et nivå.",
+        "de": "Die Menge der PM1-Partikel in der Luft, dargestellt durch einen Wert."
       },
       "values": [
         {
@@ -4771,7 +6069,8 @@
             "sv": "Låg",
             "es": "Bajo",
             "fr": "Faible",
-            "no": "Lavt"
+            "no": "Lavt",
+            "de": "Niedrig"
           }
         },
         {
@@ -4787,7 +6086,8 @@
             "sv": "Medium",
             "es": "Intermedio",
             "fr": "Moyen\n",
-            "no": "Middels"
+            "no": "Middels",
+            "de": "Mittel"
           }
         },
         {
@@ -4803,7 +6103,8 @@
             "sv": "Hög",
             "es": "Alto",
             "fr": "Élevé",
-            "no": "Høyt"
+            "no": "Høyt",
+            "de": "Hoch"
           }
         },
         {
@@ -4819,7 +6120,8 @@
             "sv": "Kritisk",
             "es": "Crítico",
             "fr": "Critique",
-            "no": "Kritisk"
+            "no": "Kritisk",
+            "de": "Kritisch"
           }
         }
       ],
@@ -4841,7 +6143,8 @@
         "sv": "PM10-nivå",
         "es": "Nivel de PM10",
         "fr": "Niveau de PM10",
-        "no": "PM10-nivå"
+        "no": "PM10-nivå",
+        "de": "PM10-Niveau"
       },
       "desc": {
         "en": "The level of PM10 particles in the air.",
@@ -4854,7 +6157,8 @@
         "sv": "Halten av PM10-partiklar i luften.",
         "es": "El nivel de partículas PM10 en el aire.",
         "fr": "Le niveau de particules PM10 dans l'air.",
-        "no": "Nivået av PM10-partikler i luften."
+        "no": "Nivået av PM10-partikler i luften.",
+        "de": "Das Niveau der PM10-Partikel in der Luft."
       },
       "values": [
         {
@@ -4870,7 +6174,8 @@
             "sv": "Låg",
             "es": "Bajo",
             "fr": "Faible",
-            "no": "Lavt"
+            "no": "Lavt",
+            "de": "Niedrig"
           }
         },
         {
@@ -4886,7 +6191,8 @@
             "sv": "Medium",
             "es": "Intermedio",
             "fr": "Moyen",
-            "no": "Middels"
+            "no": "Middels",
+            "de": "Mittel"
           }
         },
         {
@@ -4902,7 +6208,8 @@
             "sv": "Hög",
             "es": "Alto",
             "fr": "Élevé",
-            "no": "Høyt"
+            "no": "Høyt",
+            "de": "Hoch"
           }
         },
         {
@@ -4918,7 +6225,8 @@
             "sv": "Kritisk",
             "es": "Crítico",
             "fr": "Critique",
-            "no": "Kritisk"
+            "no": "Kritisk",
+            "de": "Kritisch"
           }
         }
       ],
@@ -4940,7 +6248,8 @@
         "sv": "PM2.5-nivå",
         "es": "Nivel de PM2,5",
         "fr": "Niveau de PM2.5",
-        "no": "PM2.5-nivå"
+        "no": "PM2.5-nivå",
+        "de": "PM2.5-Niveau"
       },
       "desc": {
         "en": "The level of PM2.5 particles in the air.",
@@ -4953,7 +6262,8 @@
         "sv": "Halten av PM2.5-partiklar i luften.",
         "es": "El nivel de partículas PM2,5 en el aire.",
         "fr": "Le niveau de particules PM2.5 dans l'air.",
-        "no": "Nivået av PM2.5-partikler i luften."
+        "no": "Nivået av PM2.5-partikler i luften.",
+        "de": "Der Gehalt an PM2.5-Partikeln in der Luft"
       },
       "values": [
         {
@@ -4968,7 +6278,8 @@
             "sv": "Låg",
             "es": "Bajo",
             "fr": "Faible",
-            "no": "Lavt"
+            "no": "Lavt",
+            "de": "Niedrig"
           }
         },
         {
@@ -4983,7 +6294,8 @@
             "sv": "Medium",
             "es": "Intermedio",
             "fr": "Moyen",
-            "no": "Middels"
+            "no": "Middels",
+            "de": "Mittel"
           }
         },
         {
@@ -4999,7 +6311,8 @@
             "sv": "Hög",
             "es": "Alto",
             "fr": "Élevé",
-            "no": "Høyt"
+            "no": "Høyt",
+            "de": "Hoch"
           }
         },
         {
@@ -5015,7 +6328,8 @@
             "sv": "Kritisk",
             "es": "Crítico",
             "fr": "Critique",
-            "no": "Kritisk"
+            "no": "Kritisk",
+            "de": "Kritisch"
           }
         }
       ],
@@ -5037,12 +6351,13 @@
         "sv": "TVOC-nivå",
         "es": "Nivel de TVOC",
         "fr": "Niveau de COVT",
-        "no": "TVOC-nivå"
+        "no": "TVOC-nivå",
+        "de": "TVOC-Niveau"
       },
       "desc": {
         "en": "The level of total volatile organic compounds in the air.",
         "nl": "De mate van totaal vluchtige organische stoffen in de lucht.",
-        "da": "Niveauet af samlede flygtige organiske forbindelser i luften.",
+        "da": "Niveauet af totale flygtige organiske forbindelser i luften.",
         "it": "Il livello di composti organici volatili totali nell'aria.",
         "ko": "공기 중 휘발성 유기 화합물의 총량 수준입니다.",
         "pl": "Poziom wszystkich lotnych związków organicznych w powietrzu.",
@@ -5050,7 +6365,8 @@
         "sv": "Halten av totala mängden flyktiga organiska föreningar i luften.",
         "es": "El nivel de compuestos orgánicos volátiles totales en el aire.",
         "fr": "Le niveau de composés organiques volatils totaux dans l'air.",
-        "no": "Nivået av total mengde flyktige organiske forbindelser i luften."
+        "no": "Nivået av total mengde flyktige organiske forbindelser i luften.",
+        "de": "Der Gehalt an flüchtigen organischen Verbindungen in der Luft."
       },
       "values": [
         {
@@ -5066,7 +6382,8 @@
             "sv": "Låg",
             "es": "Bajo",
             "fr": "Faible",
-            "no": "Lavt"
+            "no": "Lavt",
+            "de": "Niedrig"
           }
         },
         {
@@ -5082,7 +6399,8 @@
             "sv": "Medium",
             "es": "Intermedio",
             "fr": "Moyen",
-            "no": "Middels"
+            "no": "Middels",
+            "de": "Mittel"
           }
         },
         {
@@ -5098,7 +6416,8 @@
             "sv": "Hög",
             "es": "Alto",
             "fr": "Élevé",
-            "no": "Høyt"
+            "no": "Høyt",
+            "de": "Hoch"
           }
         },
         {
@@ -5114,7 +6433,8 @@
             "sv": "Kritisk",
             "es": "Crítico",
             "fr": "Critique",
-            "no": "Kritisk"
+            "no": "Kritisk",
+            "de": "Kritisch"
           }
         }
       ],
@@ -5143,7 +6463,15 @@
         "en": "%",
         "ko": "%",
         "no": "%",
-        "ru": "%"
+        "ru": "%",
+        "nl": "%",
+        "da": "%",
+        "de": "%",
+        "es": "%",
+        "fr": "%",
+        "it": "%",
+        "sv": "%",
+        "pl": "%"
       },
       "insights": true,
       "desc": {
@@ -5244,7 +6572,8 @@
         "pl": "μg/m³",
         "sv": "μg/m³",
         "es": "μg/m³",
-        "fr": "μg/m³"
+        "fr": "μg/m³",
+        "de": "μg/m³"
       },
       "insights": true,
       "desc": {
@@ -5281,13 +6610,22 @@
         "es": "PM2,5",
         "ru": "ТЧ 2.5",
         "pl": "PM2.5",
-        "ko": "PM2.5"
+        "ko": "PM2.5",
+        "da": "PM2.5"
       },
       "units": {
         "en": "μg/m³",
         "ru": "мкг/м³",
         "ko": "μg/m³",
-        "no": "μg/m³"
+        "no": "μg/m³",
+        "nl": "μg/m³",
+        "da": "μg/m³",
+        "de": "μg/m³",
+        "es": "μg/m³",
+        "fr": "μg/m³",
+        "it": "μg/m³",
+        "sv": "μg/m³",
+        "pl": "μg/m³"
       },
       "insights": true,
       "desc": {
@@ -5330,7 +6668,15 @@
         "en": "°C",
         "ko": "°C",
         "no": "°C",
-        "ru": "°C"
+        "ru": "°C",
+        "nl": "°C",
+        "da": "°C",
+        "de": "°C",
+        "es": "°C",
+        "fr": "°C",
+        "it": "°C",
+        "sv": "°C",
+        "pl": "°C"
       },
       "insights": true,
       "desc": {
@@ -5366,7 +6712,8 @@
         "sv": "TVOC",
         "es": "TVOC",
         "fr": "TVOC",
-        "no": "TVOC"
+        "no": "TVOC",
+        "de": "TVOC"
       },
       "units": {
         "en": "μg/m³",
@@ -5379,7 +6726,8 @@
         "sv": "μg/m³",
         "es": "μg/m³",
         "fr": "μg/m³",
-        "no": "μg/m³"
+        "no": "μg/m³",
+        "de": "μg/m³"
       },
       "insights": true,
       "desc": {
@@ -5393,7 +6741,8 @@
         "sv": "Totalt antal flyktiga organiska föreningar i mikrogram per kubikmeter (μg/m³)",
         "es": "Compuestos orgánicos volátiles totales en microgramos por metro cúbico (μg/m³)",
         "fr": "Total des composés organiques volatils en microgrammes par mètre cube (μg/m³)",
-        "no": "Total mengde flyktige organiske forbindelser i mikrogram per kubikkmeter (μg/m³)"
+        "no": "Total mengde flyktige organiske forbindelser i mikrogram per kubikkmeter (μg/m³)",
+        "de": "Gesamt flüchtige organische Verbindungen in Mikrogramm pro Kubikmeter (μg/m³)"
       },
       "chartType": "spline",
       "decimals": 2,
@@ -5415,7 +6764,8 @@
         "sv": "TVOC-index",
         "es": "Índice de COVT",
         "fr": "Indice TVOC",
-        "no": "TVOC-indeks"
+        "no": "TVOC-indeks",
+        "de": "TVOC-Index"
       },
       "insights": true,
       "desc": {
@@ -5429,7 +6779,8 @@
         "sv": "Index för totala mängden flyktiga organiska föreningar",
         "es": "Índice de compuestos orgánicos volátiles en total",
         "fr": "Indice des composés organiques volatils totaux",
-        "no": "Indeks for total mengde flyktige organiske forbindelser"
+        "no": "Indeks for total mengde flyktige organiske forbindelser",
+        "de": "Gesamtindex der flüchtigen organischen Verbindungen"
       },
       "chartType": "spline",
       "getable": true,

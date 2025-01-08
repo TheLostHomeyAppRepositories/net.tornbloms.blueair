@@ -112,5 +112,8 @@
   },
   "3.1.24": {
     "en": "Added handeling for http error 229 in the backend"
+  },
+  "3.2.0": {
+    "en": "Added Blue Pure driver"
   }
 }
