@@ -5,15 +5,15 @@
       "en": "Login details",
       "sv": "Login detaljer",
       "nl": "Inloggegevens",
-      "da": "Login detaljer",
-      "de": "Login-Daten",
+      "da": "Loginoplysninger",
+      "de": "Anmeldedaten",
       "es": "Detalles de inicio de sesión",
       "fr": "Détails de connexion",
       "it": "Dettagli di accesso",
-      "no": "Innloggingsdetaljer",
+      "no": "Påloggingsdetaljer",
       "pl": "Szczegóły logowania",
-      "ru": "Детали входа",
-      "ko": "로그인 세부 정보"
+      "ru": "Данные для входа",
+      "ko": "로그인 정보"
     },
     "children": [
       {
@@ -30,7 +30,7 @@
           "it": "E-mail",
           "no": "E-post",
           "pl": "E-mail",
-          "ru": "Эл. адрес",
+          "ru": "Электронная почта",
           "ko": "이메일"
         },
         "value": "JohnDoe@domain.com",
@@ -43,15 +43,15 @@
           "es": "El correo electrónico del usuario.",
           "fr": "L'email de l'utilisateur.",
           "it": "L'email dell'utente.",
-          "no": "E-posten til brukeren.",
+          "no": "Brukerens e-post.",
           "pl": "E-mail użytkownika.",
-          "ru": "Эл. адрес пользователя.",
+          "ru": "Электронная почта пользователя.",
           "ko": "사용자의 이메일입니다."
         }
       },
       {
         "id": "password",
-        "type": "text",
+        "type": "password",
         "label": {
           "en": "Password",
           "sv": "Lösenord",
@@ -94,7 +94,7 @@
       "de": "Geräteinformationen",
       "es": "Información del dispositivo",
       "fr": "Informations sur l'appareil",
-      "it": "Informazioni del dispositivo",
+      "it": "Informazioni sul dispositivo",
       "no": "Enhetsinformasjon",
       "pl": "Informacje o urządzeniu",
       "ru": "Информация об устройстве",
@@ -125,12 +125,12 @@
           "nl": "De unieke id van het apparaat.",
           "da": "Den unikke id for enheden.",
           "de": "Die eindeutige ID des Geräts.",
-          "es": "La ID única del dispositivo.",
-          "fr": "L'ID unique de l'appareil.",
+          "es": "El ID único del dispositivo.",
+          "fr": "L'identifiant unique de l'appareil.",
           "it": "L'ID unico del dispositivo.",
           "no": "Den unike ID-en til enheten.",
-          "pl": "Unikalne id urządzenia.",
-          "ru": "Уникальный id устройства.",
+          "pl": "Unikalny identyfikator urządzenia.",
+          "ru": "Уникальный идентификатор устройства.",
           "ko": "장치의 고유 ID입니다."
         }
       },
@@ -148,15 +148,15 @@
           "it": "Nome",
           "no": "Navn",
           "pl": "Nazwa",
-          "ru": "Имя",
+          "ru": "Название",
           "ko": "이름"
         },
-        "value": "BlueAir HealthProtect",
+        "value": "BlueAir 405 Pure",
         "hint": {
           "en": "Name of the device",
           "sv": "Namn på enheten",
           "nl": "Naam van het apparaat",
-          "da": "Navnet på enheden",
+          "da": "Navn på enheden",
           "de": "Name des Geräts",
           "es": "Nombre del dispositivo",
           "fr": "Nom de l'appareil",
@@ -164,7 +164,40 @@
           "no": "Navnet på enheten",
           "pl": "Nazwa urządzenia",
           "ru": "Название устройства",
-          "ko": "장치 이름"
+          "ko": "장치의 이름"
+        }
+      },
+      {
+        "id": "compatibility",
+        "type": "label",
+        "label": {
+          "en": "Compatibility",
+          "sv": "Kompabilitet",
+          "nl": "Compatibiliteit",
+          "da": "Kompatibilitet",
+          "de": "Kompatibilität",
+          "es": "Compatibilidad",
+          "fr": "Compatibilité",
+          "it": "Compatibilità",
+          "no": "Kompatibilitet",
+          "pl": "Kompatybilność",
+          "ru": "Совместимость",
+          "ko": "호환성"
+        },
+        "value": "Pure_405",
+        "hint": {
+          "en": "Compatibility of the device",
+          "sv": "Kompabilitet på enheten",
+          "nl": "Compatibiliteit van het apparaat",
+          "da": "Kompatibilitet på enheden",
+          "de": "Kompatibilität des Geräts",
+          "es": "Compatibilidad del dispositivo",
+          "fr": "Compatibilité de l'appareil",
+          "it": "Compatibilità del dispositivo",
+          "no": "Kompatibiliteten til enheten",
+          "pl": "Kompatybilność urządzenia",
+          "ru": "Совместимость устройства",
+          "ko": "장치의 호환성"
         }
       },
       {
@@ -189,15 +222,15 @@
           "en": "Model of the device",
           "sv": "Model på enheten",
           "nl": "Model van het apparaat",
-          "da": "Enhedsmodel",
-          "de": "Gerätemodell",
+          "da": "Model af enheden",
+          "de": "Modell des Geräts",
           "es": "Modelo del dispositivo",
           "fr": "Modèle de l'appareil",
           "it": "Modello del dispositivo",
           "no": "Modell av enheten",
           "pl": "Model urządzenia",
           "ru": "Модель устройства",
-          "ko": "장치 모델"
+          "ko": "장치의 모델"
         }
       },
       {
@@ -222,7 +255,7 @@
           "en": "MAC address of the device",
           "sv": "MAC address på enheten",
           "nl": "MAC-adres van het apparaat",
-          "da": "MAC-adressen på enheden",
+          "da": "MAC-adresse på enheden",
           "de": "MAC-Adresse des Geräts",
           "es": "Dirección MAC del dispositivo",
           "fr": "Adresse MAC de l'appareil",
@@ -234,6 +267,39 @@
         }
       },
       {
+        "id": "firmware",
+        "type": "label",
+        "label": {
+          "en": "Firmware",
+          "sv": "Firmware",
+          "nl": "Firmware",
+          "da": "Firmware",
+          "de": "Firmware",
+          "es": "Firmware",
+          "fr": "Micrologiciel",
+          "it": "Firmware",
+          "no": "Fastvare",
+          "pl": "Oprogramowanie",
+          "ru": "Прошивка",
+          "ko": "펌웨어"
+        },
+        "value": "1.1.38",
+        "hint": {
+          "en": "Version of the firmware",
+          "sv": "Version av programvara",
+          "nl": "Versie van de firmware",
+          "da": "Version af firmwaren",
+          "de": "Version der Firmware",
+          "es": "Versión del firmware",
+          "fr": "Version du micrologiciel",
+          "it": "Versione del firmware",
+          "no": "Versjon av fastvaren",
+          "pl": "Wersja oprogramowania",
+          "ru": "Версия прошивки",
+          "ko": "펌웨어 버전"
+        }
+      },
+      {
         "id": "mcuFirmware",
         "type": "label",
         "label": {
@@ -242,12 +308,12 @@
           "nl": "MCU Firmware",
           "da": "MCU Firmware",
           "de": "MCU-Firmware",
-          "es": "Firmware de MCU",
+          "es": "Firmware MCU",
           "fr": "Firmware MCU",
-          "it": "Firmware di MCU",
-          "no": "MCU-fastvare",
+          "it": "Firmware MCU",
+          "no": "MCU fastvare",
           "pl": "Oprogramowanie MCU",
-          "ru": "Прошивка MCU",
+          "ru": "MCU прошивка",
           "ko": "MCU 펌웨어"
         },
         "value": "1.0.35",
@@ -257,10 +323,10 @@
           "nl": "Versie van de MCU-firmware",
           "da": "Version af MCU-firmwaren",
           "de": "Version der MCU-Firmware",
-          "es": "Versión del firmware de MCU",
+          "es": "Versión del firmware del MCU",
           "fr": "Version du firmware MCU",
-          "it": "Versione del firmware di MCU",
-          "no": "Versjon av MCU-fastvaren",
+          "it": "Versione del firmware MCU",
+          "no": "Versjon av MCU fastvaren",
           "pl": "Wersja oprogramowania MCU",
           "ru": "Версия прошивки MCU",
           "ko": "MCU 펌웨어 버전"
@@ -273,7 +339,7 @@
           "en": "WLAN Driver",
           "sv": "WLAN Driver",
           "nl": "WLAN-Driver",
-          "da": "WLAN-driver",
+          "da": "WLAN Driver",
           "de": "WLAN-Treiber",
           "es": "Controlador WLAN",
           "fr": "Pilote WLAN",
@@ -300,36 +366,201 @@
         }
       },
       {
-        "id": "serial",
+        "id": "lastSyncDate",
         "type": "label",
         "label": {
-          "en": "Serial",
-          "sv": "Serienummer",
-          "nl": "Serienummer",
-          "da": "Serienummer",
-          "de": "Seriennummer",
-          "es": "Número de serie",
-          "fr": "Numéro de série",
-          "it": "Numero di serie",
-          "no": "Serienummer",
-          "pl": "Numer seryjny",
-          "ru": "Серийный номер",
-          "ko": "일련 번호"
+          "en": "Last sync date",
+          "sv": "Senaste sync",
+          "nl": "Laatste synchronisatiedatum",
+          "da": "Sidste synkroniseringsdato",
+          "de": "Letztes Synchronisationsdatum",
+          "es": "Fecha de última sincronización",
+          "fr": "Date de dernière synchronisation",
+          "it": "Data dell'ultima sincronizzazione",
+          "no": "Siste synkroniseringsdato",
+          "pl": "Data ostatniej synchronizacji",
+          "ru": "Дата последней синхронизации",
+          "ko": "마지막 동기화 날짜"
         },
-        "value": "102938765378827653",
+        "value": "2000-01-01",
         "hint": {
-          "en": "The serial number of the device.",
-          "sv": "Serienummer på enheten.",
-          "nl": "Serienummer van het apparaat.",
-          "da": "Enhedens serienummer.",
-          "de": "Die Seriennummer des Geräts.",
-          "es": "El número de serie del dispositivo.",
-          "fr": "Le numéro de série de l'appareil.",
-          "it": "Il numero di serie del dispositivo.",
-          "no": "Enhetens serienummer.",
-          "pl": "Numer seryjny urządzenia.",
-          "ru": "Серийный номер устройства.",
-          "ko": "장치의 일련 번호입니다."
+          "en": "Date for the latest sync",
+          "sv": "Datum för senaste sync",
+          "nl": "Datum van de laatste synchronisatie",
+          "da": "Dato for den seneste synkronisering",
+          "de": "Datum der letzten Synchronisation",
+          "es": "Fecha de la última sincronización",
+          "fr": "Date de la dernière synchronisation",
+          "it": "Data dell'ultima sincronizzazione",
+          "no": "Dato for den siste synkroniseringen",
+          "pl": "Data ostatniej synchronizacji",
+          "ru": "Дата последней синхронизации",
+          "ko": "최근 동기화 날짜"
+        }
+      },
+      {
+        "id": "installationDate",
+        "type": "label",
+        "label": {
+          "en": "Installation date",
+          "sv": "Installationsdatum",
+          "nl": "Installatiedatum",
+          "da": "Installationsdato",
+          "de": "Installationsdatum",
+          "es": "Fecha de instalación",
+          "fr": "Date d'installation",
+          "it": "Data di installazione",
+          "no": "Installasjonsdato",
+          "pl": "Data instalacji",
+          "ru": "Дата установки",
+          "ko": "설치 날짜"
+        },
+        "value": "2000-01-01",
+        "hint": {
+          "en": "Date for the installation",
+          "sv": "Datum för instalation",
+          "nl": "Datum van de installatie",
+          "da": "Dato for installationen",
+          "de": "Datum der Installation",
+          "es": "Fecha de instalación",
+          "fr": "Date d'installation",
+          "it": "Data di installazione",
+          "no": "Dato for installasjon",
+          "pl": "Data instalacji",
+          "ru": "Дата установки",
+          "ko": "설치 날짜"
+        }
+      },
+      {
+        "id": "lastCalibrationDate",
+        "type": "label",
+        "label": {
+          "en": "Last calibration date",
+          "sv": "Senaste kalibrering",
+          "nl": "Laatste kalibratiedatum",
+          "da": "Sidste kalibreringsdato",
+          "de": "Letztes Kalibrierungsdatum",
+          "es": "Fecha de última calibración",
+          "fr": "Date de la dernière calibration",
+          "it": "Data dell'ultima calibrazione",
+          "no": "Siste kalibreringsdato",
+          "pl": "Data ostatniej kalibracji",
+          "ru": "Дата последней калибровки",
+          "ko": "마지막 보정 날짜"
+        },
+        "value": "2000-01-01",
+        "hint": {
+          "en": "Date for the latest calibration",
+          "sv": "Datum för senaste kalibrering",
+          "nl": "Datum van de laatste kalibratie",
+          "da": "Dato for den seneste kalibrering",
+          "de": "Datum der letzten Kalibrierung",
+          "es": "Fecha de la última calibración",
+          "fr": "Date de la dernière calibration",
+          "it": "Data dell'ultima calibrazione",
+          "no": "Dato for den siste kalibreringen",
+          "pl": "Data ostatniej kalibracji",
+          "ru": "Дата последней калибровки",
+          "ko": "최근 보정 날짜"
+        }
+      },
+      {
+        "id": "initUsagePeriod",
+        "type": "label",
+        "label": {
+          "en": "initUsagePeriod",
+          "sv": "initUsagePeriod",
+          "nl": "initUsagePeriod",
+          "da": "initUsagePeriod",
+          "de": "initUsagePeriod",
+          "es": "initUsagePeriod",
+          "fr": "initUsagePeriod",
+          "it": "initUsagePeriod",
+          "no": "initUsagePeriod",
+          "pl": "initUsagePeriod",
+          "ru": "initUsagePeriod",
+          "ko": "initUsagePeriod"
+        },
+        "value": "0",
+        "hint": {
+          "en": "initUsagePeriod",
+          "sv": "initUsagePeriod",
+          "nl": "initUsagePeriod",
+          "da": "initUsagePeriod",
+          "de": "initUsagePeriod",
+          "es": "initUsagePeriod",
+          "fr": "initUsagePeriod",
+          "it": "initUsagePeriod",
+          "no": "initUsagePeriod",
+          "pl": "initUsagePeriod",
+          "ru": "initUsagePeriod",
+          "ko": "initUsagePeriod"
+        }
+      },
+      {
+        "id": "rebootPeriod",
+        "type": "label",
+        "label": {
+          "en": "Reboot period",
+          "sv": "Omstartsperiod",
+          "nl": "Herstartperiode",
+          "da": "Genstartperiode",
+          "de": "Neustartperiode",
+          "es": "Período de reinicio",
+          "fr": "Période de redémarrage",
+          "it": "Periodo di riavvio",
+          "no": "Omstartperiode",
+          "pl": "Okres restartu",
+          "ru": "Период перезагрузки",
+          "ko": "재부팅 기간"
+        },
+        "value": "10000",
+        "hint": {
+          "en": "Reboot period",
+          "sv": "Omstartsperiod",
+          "nl": "Herstartperiode",
+          "da": "Genstartperiode",
+          "de": "Neustartperiode",
+          "es": "Período de reinicio",
+          "fr": "Période de redémarrage",
+          "it": "Periodo di riavvio",
+          "no": "Omstartperiode",
+          "pl": "Okres restartu",
+          "ru": "Период перезагрузки",
+          "ko": "재부팅 기간"
+        }
+      },
+      {
+        "id": "roomLocation",
+        "type": "label",
+        "label": {
+          "en": "Location",
+          "sv": "Rum",
+          "nl": "Ruimte",
+          "da": "Beliggenhed",
+          "de": "Standort",
+          "es": "Ubicación",
+          "fr": "Emplacement",
+          "it": "Posizione",
+          "no": "Plassering",
+          "pl": "Lokalizacja",
+          "ru": "Местоположение",
+          "ko": "위치"
+        },
+        "value": "kitchen",
+        "hint": {
+          "en": "The room where the device is located.",
+          "sv": "I vilket rum finns enheten.",
+          "nl": "De ruimte waar het apparaat zich bevindt.",
+          "da": "Det rum, hvor enheden er placeret.",
+          "de": "Der Raum, in dem sich das Gerät befindet.",
+          "es": "La habitación donde se encuentra el dispositivo.",
+          "fr": "La pièce où se trouve l'appareil.",
+          "it": "La stanza in cui si trova il dispositivo.",
+          "no": "Rommet hvor enheten er plassert.",
+          "pl": "Pokój, w którym znajduje się urządzenie.",
+          "ru": "Помещение, где находится устройство.",
+          "ko": "장치가 있는 방입니다."
         }
       }
     ]
@@ -342,7 +573,7 @@
       "nl": "Geavanceerde instellingen",
       "da": "Avancerede indstillinger",
       "de": "Erweiterte Einstellungen",
-      "es": "Ajustes avanzados",
+      "es": "Configuraciones avanzadas",
       "fr": "Paramètres avancés",
       "it": "Impostazioni avanzate",
       "no": "Avanserte innstillinger",
@@ -365,7 +596,7 @@
           "it": "Intervallo di aggiornamento",
           "no": "Oppdateringsintervall",
           "pl": "Interwał aktualizacji",
-          "ru": "Интервал обновления",
+          "ru": "Интервал обновлений",
           "ko": "업데이트 간격"
         },
         "value": 30,
@@ -417,7 +648,7 @@
               "fr": "Celsius",
               "it": "Celsius",
               "no": "Celsius",
-              "pl": "Celsius",
+              "pl": "Celsjusz",
               "ru": "Цельсий",
               "ko": "섭씨"
             }

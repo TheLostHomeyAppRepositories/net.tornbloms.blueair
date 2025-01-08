@@ -44,7 +44,9 @@
     "ru": "Скорость вентилятора была изменена",
     "ko": "팬 속도가 변경되었습니다"
   },
-  "platforms": ["local"],
+  "platforms": [
+    "local"
+  ],
   "tokens": [
     {
       "type": "string",

@@ -1,26 +1,77 @@
 {
   "name": {
-    "en": "BlueAir Widget"
+    "en": "BlueAir Widget",
+    "nl": "BlueAir Widget",
+    "da": "BlueAir Widget",
+    "de": "BlueAir Widget",
+    "es": "BlueAir Widget",
+    "fr": "BlueAir Widget",
+    "it": "BlueAir Widget",
+    "no": "BlueAir Widget",
+    "sv": "BlueAir Widget",
+    "pl": "BlueAir Widget",
+    "ru": "BlueAir Widget",
+    "ko": "BlueAir 위젯"
   },
-  "height": 188,
+  "transparent": true,
   "settings": [
-    {
-      "id": "widgetTitle",
-      "type": "text",
-      "label": { "en": "Widget Title" },
-      "placeholder": { "en": "My BlueAir Widget" }
-    },
     {
       "id": "selectedDevice",
       "type": "dropdown",
-      "label": { "en": "Select BlueAir device" },
-      "options": []
+      "label": {
+        "en": "Select BlueAir device",
+        "nl": "Selecteer BlueAir-apparaat",
+        "da": "Vælg BlueAir-enhed",
+        "de": "BlueAir-Gerät auswählen",
+        "es": "Seleccionar dispositivo BlueAir",
+        "fr": "Sélectionner l'appareil BlueAir",
+        "it": "Seleziona dispositivo BlueAir",
+        "no": "Velg BlueAir-enhet",
+        "sv": "Välj BlueAir-enhet",
+        "pl": "Wybierz urządzenie BlueAir",
+        "ru": "Выберите устройство BlueAir",
+        "ko": "BlueAir 장치 선택"
+      },
+      "values": []
     },
     {
       "id": "selectedCapability",
       "type": "dropdown",
-      "label": { "en": "Select measurement" },
-      "options": []
+      "label": {
+        "en": "Select measurement",
+        "nl": "Selecteer meting",
+        "da": "Vælg måling",
+        "de": "Messung auswählen",
+        "es": "Seleccionar medición",
+        "fr": "Sélectionner la mesure",
+        "it": "Seleziona misurazione",
+        "no": "Velg måling",
+        "sv": "Välj mätning",
+        "pl": "Wybierz pomiar",
+        "ru": "Выберите измерение",
+        "ko": "측정 선택"
+      },
+      "values": []
+    },
+    {
+      "id": "refreshSeconds",
+      "type": "number",
+      "title": {
+        "en": "Refresh interval (seconds)",
+        "nl": "Vernieuwingsinterval (seconden)",
+        "da": "Opdateringsinterval (sekunder)",
+        "de": "Aktualisierungsintervall (Sekunden)",
+        "es": "Intervalo de actualización (segundos)",
+        "fr": "Intervalle de rafraîchissement (secondes)",
+        "it": "Intervallo di aggiornamento (secondi)",
+        "no": "Oppdateringsintervall (sekunder)",
+        "sv": "Uppdateringsintervall (sekunder)",
+        "pl": "Interwał odświeżania (sekundy)",
+        "ru": "Интервал обновления (секунды)",
+        "ko": "갱신 간격 (초)"
+      },
+      "min": 2,
+      "value": 5
     }
   ],
   "api": {
@@ -30,11 +81,11 @@
     },
     "getBlueAirCapabilities": {
       "method": "GET",
-      "path": "/devices/:deviceId/capabilities"
+      "path": "/capabilities"
     },
     "getBlueAirCapabilityValue": {
       "method": "GET",
-      "path": "/devices/:deviceId/capabilities/:capabilityId"
+      "path": "/device:/capability:"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "net.tornbloms.blueair",
-  "version": "3.1.21",
+  "version": "3.1.2",
   "main": "app.js",
   "scripts": {
     "build": "tsc"
@@ -8,11 +8,11 @@
   "devDependencies": {
     "@tsconfig/node18": "^18.2.4",
     "@types/homey": "npm:homey-apps-sdk-v3-types@^0.3.10",
-    "@types/node": "^22.10.2",
-    "typescript": "^5.7.2"
+    "@types/node": "^22.10.5",
+    "typescript": "^5.7.3"
   },
   "dependencies": {
-    "blueair-client": "^1.2.13",
+    "blueair-client": "^1.2.14",
     "blueairaws-client": "^1.2.3",
     "homey-log": "^2.1.0"
   }

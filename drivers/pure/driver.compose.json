@@ -1,41 +1,29 @@
 {
   "name": {
-    "en": "DustMagnet",
-    "sv": "DustMagnet",
-    "nl": "DustMagnet",
-    "da": "DustMagnet",
-    "de": "DustMagnet",
-    "es": "DustMagnet",
-    "fr": "DustMagnet",
-    "it": "DustMagnet",
-    "no": "DustMagnet",
-    "pl": "DustMagnet",
-    "ru": "DustMagnet",
-    "ko": "DustMagnet"
+    "en": "Pure",
+    "sv": "Pure",
+    "nl": "Pure",
+    "de": "Pure",
+    "da": "Pure",
+    "es": "Pure",
+    "fr": "Pure",
+    "it": "Pure",
+    "no": "Pure",
+    "pl": "Pure",
+    "ru": "Pure",
+    "ko": "Pure"
   },
   "class": "airpurifier",
   "capabilities": [
-    "fanspeed",
-    "brightness2",
+    "fan_speed",
+    "brightness",
     "child_lock",
-    "nightmode",
-    "standby",
-    "automode",
+    "last_retrival_date",
     "wifi_status",
-    "filter_status",
-    "measure_humidity",
-    "measure_pm1",
-    "measure_pm25",
-    "measure_pm10",
-    "measure_tvoc",
-    "measure_temperature"
+    "filter_status"
   ],
-  "platforms": [
-    "local"
-  ],
-  "connectivity": [
-    "cloud"
-  ],
+  "platforms": ["local"],
+  "connectivity": ["cloud"],
   "images": {
     "small": "{{driverAssetsPath}}/images/small.png",
     "large": "{{driverAssetsPath}}/images/large.png",
@@ -53,23 +41,23 @@
           "nl": "Inloggen op uw account",
           "da": "Log ind på din konto",
           "de": "Melden Sie sich bei Ihrem Konto an",
-          "es": "Inicia sesión en tu cuenta",
+          "es": "Iniciar sesión en tu cuenta",
           "fr": "Connectez-vous à votre compte",
           "it": "Accedi al tuo account",
           "no": "Logg inn på kontoen din",
           "pl": "Zaloguj się na swoje konto",
-          "ru": "Войдите в свою учётную запись",
-          "ko": "계정에 로그인하세요"
+          "ru": "Войти в ваш аккаунт",
+          "ko": "계정에 로그인"
         },
         "usernameLabel": {
           "en": "E-mail address",
           "sv": "E-postadress",
           "nl": "E-mailadres",
-          "da": "E-mail-adresse",
-          "de": "E-Mail-Adresse",
+          "da": "E-mailadresse",
+          "de": "E-Mail-Addresse",
           "es": "Dirección de correo electrónico",
           "fr": "Adresse e-mail",
-          "it": "Indirizzo e-mail",
+          "it": "Indirizzo email",
           "no": "E-postadresse",
           "pl": "Adres e-mail",
           "ru": "Адрес электронной почты",
@@ -84,10 +72,10 @@
           "es": "nombre@dominio.es",
           "fr": "nom@domaine.fr",
           "it": "nome@dominio.it",
-          "no": "navn@domene.no",
-          "pl": "nazwisko@domena.pl",
+          "no": "navn@domenet.no",
+          "pl": "imie@domena.pl",
           "ru": "имя@домен.ру",
-          "ko": "이름@도메인.코리아"
+          "ko": "이름@도메인.한국"
         },
         "passwordLabel": {
           "en": "Password",

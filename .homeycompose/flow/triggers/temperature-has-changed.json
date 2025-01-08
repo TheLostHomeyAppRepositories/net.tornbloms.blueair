@@ -44,7 +44,9 @@
     "ru": "Температура была изменена",
     "ko": "온도가 변경되었습니다"
   },
-  "platforms": ["local"],
+  "platforms": [
+    "local"
+  ],
   "tokens": [
     {
       "type": "string",

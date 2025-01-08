@@ -11,7 +11,8 @@
     "sv": "TVOC-index",
     "es": "Índice de COVT",
     "fr": "Indice TVOC",
-    "no": "TVOC-indeks"
+    "no": "TVOC-indeks",
+    "de": "TVOC-Index"
   },
   "insights": true,
   "desc": {
@@ -25,7 +26,8 @@
     "sv": "Index för totala mängden flyktiga organiska föreningar",
     "es": "Índice de compuestos orgánicos volátiles en total",
     "fr": "Indice des composés organiques volatils totaux",
-    "no": "Indeks for total mengde flyktige organiske forbindelser"
+    "no": "Indeks for total mengde flyktige organiske forbindelser",
+    "de": "Gesamtindex der flüchtigen organischen Verbindungen"
   },
   "chartType": "spline",
   "getable": true,
@@ -46,7 +48,8 @@
           "ru": "Значение показателя TVOC изменилось",
           "sv": "TVOC-indexvärdet har ändrats",
           "es": "El índice de TVOC ha cambiado",
-          "fr": "La valeur de l'indice TVOC a changé"
+          "fr": "La valeur de l'indice TVOC a changé",
+          "de": "Der TVOC-Index hat sich geändert"
         },
         "tokens": [
           {
@@ -62,7 +65,8 @@
               "sv": "TVOC-index",
               "es": "Índice de COVT",
               "fr": "Indice TVOC",
-              "no": "TVOC-indeks"
+              "no": "TVOC-indeks",
+              "de": "TVOC-Index"
             },
             "type": "number",
             "example": 2

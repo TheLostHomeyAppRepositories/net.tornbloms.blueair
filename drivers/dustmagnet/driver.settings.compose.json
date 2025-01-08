@@ -398,14 +398,36 @@
         "values": [
           {
             "id": "C",
-            "label": { "en": "Celsius", "sv": "Celsius", "nl": "Celsius" }
+            "label": {
+              "en": "Celsius",
+              "sv": "Celsius",
+              "nl": "Celsius",
+              "da": "Celsius",
+              "de": "Celsius",
+              "es": "Celsius",
+              "fr": "Celsius",
+              "it": "Celsius",
+              "no": "Celsius",
+              "pl": "Celsius",
+              "ru": "Цельсий",
+              "ko": "섭씨"
+            }
           },
           {
             "id": "F",
             "label": {
               "en": "Fahrenheit",
               "sv": "Fahrenheit",
-              "nl": "Fahrenheit"
+              "nl": "Fahrenheit",
+              "da": "Fahrenheit",
+              "de": "Fahrenheit",
+              "es": "Fahrenheit",
+              "fr": "Fahrenheit",
+              "it": "Fahrenheit",
+              "no": "Fahrenheit",
+              "pl": "Fahrenheit",
+              "ru": "Фаренгейт",
+              "ko": "화씨"
             }
           }
         ]

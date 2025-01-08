@@ -11,7 +11,8 @@
     "sv": "PM1-nivå",
     "es": "Nivel de PM1",
     "fr": "Niveau de PM1",
-    "no": "PM1-nivå"
+    "no": "PM1-nivå",
+    "de": "PM1-Stufe"
   },
   "desc": {
     "en": "The amount of PM1 particles in the air represented by a level.",
@@ -24,7 +25,8 @@
     "ru": "Количество частиц ТЧ1 в воздухе, представленное в виде уровня.",
     "sv": "Mängden PM1-partiklar i luften som representeras av en nivå.",
     "fr": "La quantité de particules PM1 dans l'air représentée sous forme de niveau.",
-    "no": "Mengden av PM1-partikler i luften uttrykt som et nivå."
+    "no": "Mengden av PM1-partikler i luften uttrykt som et nivå.",
+    "de": "Die Menge der PM1-Partikel in der Luft, dargestellt durch einen Wert."
   },
   "values": [
     {
@@ -40,7 +42,8 @@
         "sv": "Låg",
         "es": "Bajo",
         "fr": "Faible",
-        "no": "Lavt"
+        "no": "Lavt",
+        "de": "Niedrig"
       }
     },
     {
@@ -56,7 +59,8 @@
         "sv": "Medium",
         "es": "Intermedio",
         "fr": "Moyen\n",
-        "no": "Middels"
+        "no": "Middels",
+        "de": "Mittel"
       }
     },
     {
@@ -72,7 +76,8 @@
         "sv": "Hög",
         "es": "Alto",
         "fr": "Élevé",
-        "no": "Høyt"
+        "no": "Høyt",
+        "de": "Hoch"
       }
     },
     {
@@ -88,7 +93,8 @@
         "sv": "Kritisk",
         "es": "Crítico",
         "fr": "Critique",
-        "no": "Kritisk"
+        "no": "Kritisk",
+        "de": "Kritisch"
       }
     }
   ],
@@ -111,7 +117,8 @@
           "sv": "PM1-nivån ändrades till",
           "es": "El nivel de PM1 ha cambiado a",
           "fr": "Le niveau PM1 est passé à",
-          "no": "PM1-nivået ble endret til"
+          "no": "PM1-nivået ble endret til",
+          "de": "Das PM1-Niveau hat sich geändert zu"
         },
         "args": [
           {
@@ -131,7 +138,8 @@
                   "sv": "Låg",
                   "es": "Bajo",
                   "fr": "Faible",
-                  "no": "Lavt"
+                  "no": "Lavt",
+                  "de": "Niedrig"
                 }
               },
               {
@@ -147,7 +155,8 @@
                   "sv": "Medium",
                   "es": "Intermedio",
                   "fr": "Moyen\n",
-                  "no": "Middels"
+                  "no": "Middels",
+                  "de": "Mittel"
                 }
               },
               {
@@ -163,7 +172,8 @@
                   "sv": "Hög",
                   "es": "Alto",
                   "fr": "Élevé",
-                  "no": "Høyt"
+                  "no": "Høyt",
+                  "de": "Hoch"
                 }
               },
               {
@@ -179,7 +189,8 @@
                   "sv": "Kritisk",
                   "es": "Crítico",
                   "fr": "Critique",
-                  "no": "Kritisk"
+                  "no": "Kritisk",
+                  "de": "Kritisch"
                 }
               }
             ],
@@ -204,7 +215,8 @@
           "sv": "PM1-nivån !{{är|är inte}}",
           "es": "El nivel de PM1 !{{es|no es}}",
           "fr": "Le niveau PM1 !{{est|n'est pas}}",
-          "no": "PM1-nivået !{{er|er ikke}}"
+          "no": "PM1-nivået !{{er|er ikke}}",
+          "de": "Das PM1-Niveau !{{ist|ist nicht}}"
         },
         "args": [
           {
@@ -224,7 +236,8 @@
                   "sv": "Låg",
                   "es": "Bajo",
                   "fr": "Faible",
-                  "no": "Lavt"
+                  "no": "Lavt",
+                  "de": "Niedrig"
                 }
               },
               {
@@ -240,7 +253,8 @@
                   "sv": "Medium",
                   "es": "Intermedio",
                   "fr": "Moyen\n",
-                  "no": "Middels"
+                  "no": "Middels",
+                  "de": "Mittel"
                 }
               },
               {
@@ -256,7 +270,8 @@
                   "sv": "Hög",
                   "es": "Alto",
                   "fr": "Élevé",
-                  "no": "Høyt"
+                  "no": "Høyt",
+                  "de": "Hoch"
                 }
               },
               {
@@ -272,7 +287,8 @@
                   "sv": "Kritisk",
                   "es": "Crítico",
                   "fr": "Critique",
-                  "no": "Kritisk"
+                  "no": "Kritisk",
+                  "de": "Kritisch"
                 }
               }
             ],

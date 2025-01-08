@@ -44,7 +44,9 @@
     "ru": "Обычно статус фильтра ОК, но если он изменится, этот поток будет запущен.",
     "ko": "일반적으로 필터의 상태는 OK이지만 변경되면 이 흐름이 트리거됩니다."
   },
-  "platforms": ["local"],
+  "platforms": [
+    "local"
+  ],
   "tokens": [
     {
       "type": "string",
@@ -67,7 +69,17 @@
       "example": {
         "en": "BlueAir 405 Classic",
         "se": "BlueAir 405 Classic",
-        "nl": "BlueAir 405 Classic"
+        "nl": "BlueAir 405 Classic",
+        "da": "BlueAir 405 Classic",
+        "de": "BlueAir 405 Classic",
+        "es": "BlueAir 405 Classic",
+        "fr": "BlueAir 405 Classic",
+        "it": "BlueAir 405 Classic",
+        "no": "BlueAir 405 Classic",
+        "sv": "BlueAir 405 Classic",
+        "pl": "BlueAir 405 Classic",
+        "ru": "BlueAir 405 Classic",
+        "ko": "BlueAir 405 Classic"
       }
     },
     {
@@ -91,7 +103,17 @@
       "example": {
         "en": "2504776FFDC0BAB2",
         "se": "2504776FFDC0BAB2",
-        "nl": "2504776FFDC0BAB2"
+        "nl": "2504776FFDC0BAB2",
+        "da": "2504776FFDC0BAB2",
+        "de": "2504776FFDC0BAB2",
+        "es": "2504776FFDC0BAB2",
+        "fr": "2504776FFDC0BAB2",
+        "it": "2504776FFDC0BAB2",
+        "no": "2504776FFDC0BAB2",
+        "sv": "2504776FFDC0BAB2",
+        "pl": "2504776FFDC0BAB2",
+        "ru": "2504776FFDC0BAB2",
+        "ko": "2504776FFDC0BAB2"
       }
     },
     {
@@ -115,7 +137,17 @@
       "example": {
         "en": "OK",
         "se": "OK",
-        "nl": "OK"
+        "nl": "OK",
+        "da": "OK",
+        "de": "OK",
+        "es": "OK",
+        "fr": "OK",
+        "it": "OK",
+        "no": "OK",
+        "sv": "OK",
+        "pl": "OK",
+        "ru": "OK",
+        "ko": "OK"
       }
     }
   ]

@@ -11,12 +11,13 @@
     "sv": "TVOC-nivå",
     "es": "Nivel de TVOC",
     "fr": "Niveau de COVT",
-    "no": "TVOC-nivå"
+    "no": "TVOC-nivå",
+    "de": "TVOC-Niveau"
   },
   "desc": {
     "en": "The level of total volatile organic compounds in the air.",
     "nl": "De mate van totaal vluchtige organische stoffen in de lucht.",
-    "da": "Niveauet af samlede flygtige organiske forbindelser i luften.",
+    "da": "Niveauet af totale flygtige organiske forbindelser i luften.",
     "it": "Il livello di composti organici volatili totali nell'aria.",
     "ko": "공기 중 휘발성 유기 화합물의 총량 수준입니다.",
     "pl": "Poziom wszystkich lotnych związków organicznych w powietrzu.",
@@ -24,7 +25,8 @@
     "sv": "Halten av totala mängden flyktiga organiska föreningar i luften.",
     "es": "El nivel de compuestos orgánicos volátiles totales en el aire.",
     "fr": "Le niveau de composés organiques volatils totaux dans l'air.",
-    "no": "Nivået av total mengde flyktige organiske forbindelser i luften."
+    "no": "Nivået av total mengde flyktige organiske forbindelser i luften.",
+    "de": "Der Gehalt an flüchtigen organischen Verbindungen in der Luft."
   },
   "values": [
     {
@@ -40,7 +42,8 @@
         "sv": "Låg",
         "es": "Bajo",
         "fr": "Faible",
-        "no": "Lavt"
+        "no": "Lavt",
+        "de": "Niedrig"
       }
     },
     {
@@ -56,7 +59,8 @@
         "sv": "Medium",
         "es": "Intermedio",
         "fr": "Moyen",
-        "no": "Middels"
+        "no": "Middels",
+        "de": "Mittel"
       }
     },
     {
@@ -72,7 +76,8 @@
         "sv": "Hög",
         "es": "Alto",
         "fr": "Élevé",
-        "no": "Høyt"
+        "no": "Høyt",
+        "de": "Hoch"
       }
     },
     {
@@ -88,7 +93,8 @@
         "sv": "Kritisk",
         "es": "Crítico",
         "fr": "Critique",
-        "no": "Kritisk"
+        "no": "Kritisk",
+        "de": "Kritisch"
       }
     }
   ],
@@ -111,7 +117,8 @@
           "sv": "TVOC-nivån ändrades till",
           "es": "El nivel de COVT ha cambiado a",
           "fr": "Le niveau en COVT est passé à",
-          "no": "TVOC-nivået ble endret til"
+          "no": "TVOC-nivået ble endret til",
+          "de": "Das TVOC-Niveau änderte sich zu"
         },
         "args": [
           {
@@ -131,7 +138,8 @@
                   "sv": "Låg",
                   "es": "Bajo",
                   "fr": "Faible",
-                  "no": "Lavt"
+                  "no": "Lavt",
+                  "de": "Niedrig"
                 }
               },
               {
@@ -147,7 +155,8 @@
                   "sv": "Medium",
                   "es": "Intermedio",
                   "fr": "Moyen",
-                  "no": "Middels"
+                  "no": "Middels",
+                  "de": "Mittel"
                 }
               },
               {
@@ -163,7 +172,8 @@
                   "sv": "Hög",
                   "es": "Alto",
                   "fr": "Élevé",
-                  "no": "Høyt"
+                  "no": "Høyt",
+                  "de": "Hoch"
                 }
               },
               {
@@ -179,7 +189,8 @@
                   "sv": "Kritisk",
                   "es": "Crítico",
                   "fr": "Critique",
-                  "no": "Kritisk"
+                  "no": "Kritisk",
+                  "de": "Kritisch"
                 }
               }
             ],
@@ -204,7 +215,8 @@
           "sv": "TVOC-nivån !{{är|är inte}}",
           "es": "El nivel de TVOC !{{es|no es}}",
           "fr": "Le niveau de COVT !{{est|n'est pas}}",
-          "no": "TVOC-nivået !{{er|er ikke}}"
+          "no": "TVOC-nivået !{{er|er ikke}}",
+          "de": "Das TVOC-Niveau !{{ist|ist nicht}}"
         },
         "args": [
           {
@@ -224,7 +236,8 @@
                   "sv": "Låg",
                   "es": "Bajo",
                   "fr": "Faible",
-                  "no": "Lavt"
+                  "no": "Lavt",
+                  "de": "Niedrig"
                 }
               },
               {
@@ -240,7 +253,8 @@
                   "sv": "Medium",
                   "es": "Intermedio",
                   "fr": "Moyen",
-                  "no": "Middels"
+                  "no": "Middels",
+                  "de": "Mittel"
                 }
               },
               {
@@ -256,7 +270,8 @@
                   "sv": "Hög",
                   "es": "Alto",
                   "fr": "Élevé",
-                  "no": "Høyt"
+                  "no": "Høyt",
+                  "de": "Hoch"
                 }
               },
               {
@@ -272,7 +287,8 @@
                   "sv": "Kritisk",
                   "es": "Crítico",
                   "fr": "Critique",
-                  "no": "Kritisk"
+                  "no": "Kritisk",
+                  "de": "Kritisch"
                 }
               }
             ],

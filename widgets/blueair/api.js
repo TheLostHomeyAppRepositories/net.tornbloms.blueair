@@ -1,17 +1,6 @@
 'use strict';
 
-/**
- * This module handles API calls defined in widget.compose.json under the "api" section.
- * Each function corresponds to an HTTP route for our BlueAir Widget.
- */
 module.exports = {
-  /**
-   * GET /devices
-   * Returns a list of devices that match "BlueAir".
-   *
-   * @param {object} homey - The Homey object provided by the SDK
-   * @returns {Promise<Array>} - An array of { id, name } representing devices
-   */
   async getBlueAirDevices({ homey }) {
     // 1) Get all devices from Homey
     const devices = await homey.devices.getDevices();
@@ -19,10 +8,7 @@ module.exports = {
     // 2) Filter only the ones we consider "BlueAir devices"
     //    (for example, by driverId or something else)
     const blueAirDevices = Object.values(devices).filter((device) => {
-      return (
-        device.driverUri === 'homey:app:com.blueair' ||
-        device.driverId === 'blueair'
-      );
+      return device.driverUri === 'homey:net.tornbloms.blueair';
     });
 
     // 3) Return an array of simplified device info (id + name)
@@ -82,8 +68,7 @@ module.exports = {
     }
 
     // 2) Read the capability value
-    //    The actual location might differ; often it's device.capabilitiesObj[capabilityId].value
-    const currentValue = device.capabilitiesObj?.[capabilityId]?.value ?? null;
+    //    The actual location might differ; often it's device.capabilitiesObj[capabilityId!]?.value ?? null;
 
     // 3) Return the value (could be number, string, boolean, etc.)
     return currentValue;

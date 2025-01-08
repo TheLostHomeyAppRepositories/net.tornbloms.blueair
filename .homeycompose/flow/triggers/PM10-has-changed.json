@@ -44,7 +44,9 @@
     "ru": "PM 10 был изменён",
     "ko": "PM 10이 변경되었습니다"
   },
-  "platforms": ["local"],
+  "platforms": [
+    "local"
+  ],
   "tokens": [
     {
       "type": "string",

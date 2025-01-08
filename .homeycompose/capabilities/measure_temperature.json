@@ -18,7 +18,15 @@
     "en": "°C",
     "ko": "°C",
     "no": "°C",
-    "ru": "°C"
+    "ru": "°C",
+    "nl": "°C",
+    "da": "°C",
+    "de": "°C",
+    "es": "°C",
+    "fr": "°C",
+    "it": "°C",
+    "sv": "°C",
+    "pl": "°C"
   },
   "insights": true,
   "desc": {
