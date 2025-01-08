@@ -115,5 +115,8 @@
   },
   "3.2.0": {
     "en": "Added Blue Pure driver"
+  },
+  "3.2.1": {
+    "en": "Capability for the Blur Air Max"
   }
 }
