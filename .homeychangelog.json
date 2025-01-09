@@ -121,5 +121,8 @@
   },
   "3.2.2": {
     "en": "Compatibility with Blue Air Pure Devices"
+  },
+  "3.2.3": {
+    "en": "Adding PM2.5 capability to Pure devices"
   }
 }
