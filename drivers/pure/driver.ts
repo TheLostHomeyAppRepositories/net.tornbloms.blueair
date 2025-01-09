@@ -1,7 +1,7 @@
 import BlueAirAwsBaseDriver from '../BlueAirAwsBaseDriver';
 
 class BlueAirPureDriver extends BlueAirAwsBaseDriver {
-  protected deviceModelFilter = 'pure';
+  protected deviceModelFilter = 'version:blue';
 
   /**
    * onInit is called when the driver is initialized.

@@ -5,6 +5,7 @@ import {
   BlueAirDeviceState,
   BlueAirDeviceSensorData,
 } from 'blueairaws-client/dist/Consts';
+import { conditionScorePm25ToString } from '../BlueAirAwsUtils';
 
 /**
  * Represents a setting object.
@@ -52,7 +53,8 @@ function filterSettings(
  * This class is responsible for managing the device's capabilities and settings within the Homey app.
  */
 class BlueAirPureDevice extends Device {
-  private savedfanspeed: Setting | null = null; // Store the last known fan speed setting
+  private savedfanspeed: Setting | null = null; // Store the last known fan speed
+  private savedPM25: Setting | null = null; // Store the last known PM2.5 value
   private savedFilterStatus: string | null = null; // Store the last known filter status percentage with % character
 
   // Define interval ID properties to store interval identifiers
@@ -69,6 +71,12 @@ class BlueAirPureDevice extends Device {
 
     this.log('Initializing BlueAirPure Device with settings:', settings);
 
+    if (this.hasCapability('measure_tVOC')) {
+      // You need to check if migration is needed
+      // do not call removeCapability on every init!
+      await this.removeCapability('measure_tVOC');
+    }
+
     // Add capabilities if they are not already present
     const capabilities = [
       'automode',
@@ -76,6 +84,7 @@ class BlueAirPureDevice extends Device {
       'child_lock',
       'fanspeed',
       'filter_status',
+      'measure_pm25',
       'nightmode',
       'standby',
       'wifi_status',
@@ -101,6 +110,7 @@ class BlueAirPureDevice extends Device {
 
       // Retrieve initial device settings and store them in class properties
       this.savedfanspeed = filterSettings(DeviceAttributes, 'fanspeed');
+      this.savedPM25 = filterSettings(DeviceAttributes, 'pm2_5');
       this.savedFilterStatus =
         this.calculateRemainingFilterLife(DeviceAttributes);
 
@@ -238,6 +248,7 @@ class BlueAirPureDevice extends Device {
       // Fetch and set initial states for all capabilities
 
       const resultFanSpeed = filterSettings(DeviceAttributes, 'fanspeed');
+      const resultPM25 = filterSettings(DeviceAttributes, 'pm2_5');
       const resultBrightness = filterSettings(DeviceAttributes, 'brightness');
       const resultChildLock = filterSettings(DeviceAttributes, 'childlock');
       const resultNightMode = filterSettings(DeviceAttributes, 'nightmode');
@@ -251,6 +262,7 @@ class BlueAirPureDevice extends Device {
 
       // Log initial capability values for debugging
       this.log('Initial fanspeed:', resultFanSpeed);
+      this.log('Initial PM2.5:', resultPM25);
       this.log('Initial brightness:', resultBrightness);
       this.log('Initial child_lock:', resultChildLock);
       this.log('Initial night mode:', resultNightMode);
@@ -263,6 +275,11 @@ class BlueAirPureDevice extends Device {
       this.setCapabilityValue(
         'fanspeed',
         Number(resultFanSpeed?.value ?? 0) // Parse fan speed as a number
+      ).catch(this.error);
+
+      this.setCapabilityValue(
+        'measure_pm25',
+        Number(resultPM25?.value ?? 0) // Parse PM2.5 value as a number
       ).catch(this.error);
 
       this.setCapabilityValue(
@@ -326,6 +343,7 @@ class BlueAirPureDevice extends Device {
 
         // Fetch updated states for each capability
         const resultFanSpeed = filterSettings(DeviceAttributes, 'fanspeed');
+        const resultPM25 = filterSettings(DeviceAttributes, 'pm2_5');
         const resultBrightness = filterSettings(DeviceAttributes, 'brightness');
         const resultChildLock = filterSettings(DeviceAttributes, 'childlock');
         const resultNightMode = filterSettings(DeviceAttributes, 'nightmode');
@@ -339,6 +357,7 @@ class BlueAirPureDevice extends Device {
 
         // Log updated capability values for debugging
         this.log('Updated fanspeed:', resultFanSpeed);
+        this.log('Updated PM2.5:', resultPM25);
         this.log('Updated brightness:', resultBrightness);
         this.log('Updated child_lock:', resultChildLock);
         this.log('Updated night mode:', resultNightMode);
@@ -351,6 +370,10 @@ class BlueAirPureDevice extends Device {
         this.setCapabilityValue(
           'fanspeed',
           Number(resultFanSpeed?.value ?? 0)
+        ).catch(this.error);
+        this.setCapabilityValue(
+          'measure_pm25',
+          Number(resultPM25?.value ?? 0)
         ).catch(this.error);
         this.setCapabilityValue(
           'brightness2',
@@ -399,6 +422,23 @@ class BlueAirPureDevice extends Device {
               )
             );
           this.savedfanspeed = resultFanSpeed; // Update saved fan speed
+        }
+
+        // Trigger PM2.5 change card if there's a change
+        if (this.savedPM25?.value !== resultPM25?.value) {
+          const cardTriggerFilter =
+            this.homey.flow.getTriggerCard('PM25-has-changed');
+          cardTriggerFilter
+            .trigger({
+              'device-name': String(settings.name ?? 'Unknown Device'),
+              'device-uuid': String(settings.uuid ?? 'Unknown UUID'),
+              'PM25 new': Number(resultPM25?.value ?? 0),
+              'PM25 old': Number(this.savedPM25?.value ?? 0),
+            })
+            .catch((err) =>
+              this.error('Failed to trigger PM25-has-changed flow card', err)
+            );
+          this.savedPM25 = resultPM25;
         }
 
         // Trigger filter status change card if there's a change
@@ -512,6 +552,17 @@ class BlueAirPureDevice extends Device {
         await client.setChildLock(data.uuid, value.childlock);
         this.log('Changed child lock:', value.childlock);
       });
+
+      // Register condition card listeners for PM and tVOC score conditions
+      this.homey.flow
+        .getConditionCard('score_pm25')
+        .registerRunListener(async (args, state) => {
+          const result =
+            conditionScorePm25ToString(
+              this.getCapabilityValue('measure_pm25')
+            ) === args.argument_main;
+          return Promise.resolve(result);
+        });
 
       this.log('BlueAirPureDevice has been initialized');
     } catch (e) {
