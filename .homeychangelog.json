@@ -208,5 +208,8 @@
   },
   "3.2.35": {
     "en": "Updated underlying BlueAir client libraries to patch several security vulnerabilities (SSRF, prototype pollution, CRLF injection) in shared dependencies."
+  },
+  "3.2.37": {
+    "en": "Several fixes from the community"
   }
 }
