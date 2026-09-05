@@ -25,7 +25,6 @@ class BlueAirPureDevice extends BlueAirAwsBaseDevice {
 
   // Saved values for flow-card change detection
   private savedFanspeed: DeviceSetting | null = null;
-  private savedPM25: DeviceSetting | null = null;
   private savedFilterStatus: string | null = null;
   private savedWifiStatus: boolean | null = null;
 
@@ -72,12 +71,6 @@ class BlueAirPureDevice extends BlueAirAwsBaseDevice {
           .catch((e) => this.error('Failed to trigger fan-speed-has-changed', e));
       }
 
-      if (pm25 && this.savedPM25?.value !== pm25.value) {
-        this.homey.flow.getDeviceTriggerCard('PM25-has-changed')
-          .trigger(this, { 'device-name': name, 'device-uuid': uuid, 'pm25': Number(pm25.value) })
-          .catch((e) => this.error('Failed to trigger PM25-has-changed', e));
-      }
-
       if (this.savedFilterStatus !== filterLife) {
         this.homey.flow.getDeviceTriggerCard('filter-needs-change')
           .trigger(this, { 'device-name': name, 'device-uuid': uuid, 'device-response': String(filterLife ?? 'Unknown') })
@@ -93,7 +86,6 @@ class BlueAirPureDevice extends BlueAirAwsBaseDevice {
     }
 
     this.savedFanspeed    = fanspeed;
-    this.savedPM25        = pm25;
     this.savedWifiStatus  = online?.value === 'true';
     this.savedFilterStatus = filterLife;
   }

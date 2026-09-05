@@ -40,14 +40,7 @@ abstract class BlueAirAwsFullDevice extends BlueAirAwsBaseDevice {
 
   // Saved values for flow-card change detection
   private savedFanspeed: DeviceSetting | null = null;
-  private savedHumidity: DeviceSetting | null = null;
-  private savedTemperature: DeviceSetting | null = null;
-  private savedPM1: DeviceSetting | null = null;
-  private savedPM25: DeviceSetting | null = null;
-  private savedPM10: DeviceSetting | null = null;
-  private savedtVOC: DeviceSetting | null = null;
   private savedFilterStatus: string | null = null;
-  private savedCo2: DeviceSetting | null = null;
   private savedHcho: DeviceSetting | null = null;
   private savedWifiStatus: boolean | null = null;
 
@@ -128,20 +121,11 @@ abstract class BlueAirAwsFullDevice extends BlueAirAwsBaseDevice {
 
     // Only trigger flow cards after initial load
     if (this.isInitialized) {
-      this.triggerFlowCards(settings, {
-        fanspeed, humidity, temperature, pm1, pm25, pm10, tvoc, co2, hcho, online, filterLife,
-      });
+      this.triggerFlowCards(settings, { fanspeed, hcho, online, filterLife });
     }
 
     // Update saved state
     this.savedFanspeed    = fanspeed;
-    this.savedHumidity    = humidity;
-    this.savedTemperature = temperature;
-    this.savedPM1         = pm1;
-    this.savedPM25        = pm25;
-    this.savedPM10        = pm10;
-    this.savedtVOC        = tvoc;
-    this.savedCo2         = co2;
     this.savedHcho        = hcho;
     this.savedWifiStatus  = online?.value === 'true';
     this.savedFilterStatus = filterLife;
@@ -153,13 +137,6 @@ abstract class BlueAirAwsFullDevice extends BlueAirAwsBaseDevice {
     settings: Record<string, any>,
     current: {
       fanspeed:    DeviceSetting | null;
-      humidity:    DeviceSetting | null;
-      temperature: DeviceSetting | null;
-      pm1:         DeviceSetting | null;
-      pm25:        DeviceSetting | null;
-      pm10:        DeviceSetting | null;
-      tvoc:        DeviceSetting | null;
-      co2:         DeviceSetting | null;
       hcho:        DeviceSetting | null;
       online:      DeviceSetting | null;
       filterLife:  string | null;
@@ -174,53 +151,11 @@ abstract class BlueAirAwsFullDevice extends BlueAirAwsBaseDevice {
         .catch((e) => this.error('Failed to trigger fan-speed-has-changed', e));
     }
 
-    if (this.savedHumidity?.value !== current.humidity?.value) {
-      this.homey.flow.getDeviceTriggerCard('humidity-has-changed')
-        .trigger(this, { 'device-name': name, 'device-uuid': uuid, 'humidity': Number(current.humidity?.value ?? 0) })
-        .catch((e) => this.error('Failed to trigger humidity-has-changed', e));
-    }
-
-    if (this.savedTemperature?.value !== current.temperature?.value) {
-      this.homey.flow.getDeviceTriggerCard('temperature-has-changed')
-        .trigger(this, { 'device-name': name, 'device-uuid': uuid, 'temperature': Number(current.temperature?.value ?? 0) })
-        .catch((e) => this.error('Failed to trigger temperature-has-changed', e));
-    }
-
-    if (this.savedPM1?.value !== current.pm1?.value) {
-      this.homey.flow.getDeviceTriggerCard('PM1-has-changed')
-        .trigger(this, { 'device-name': name, 'device-uuid': uuid, 'pm1': Number(current.pm1?.value ?? 0) })
-        .catch((e) => this.error('Failed to trigger PM1-has-changed', e));
-    }
-
-    if (this.savedPM25?.value !== current.pm25?.value) {
-      this.homey.flow.getDeviceTriggerCard('PM25-has-changed')
-        .trigger(this, { 'device-name': name, 'device-uuid': uuid, 'pm25': Number(current.pm25?.value ?? 0) })
-        .catch((e) => this.error('Failed to trigger PM25-has-changed', e));
-    }
-
-    if (this.savedPM10?.value !== current.pm10?.value) {
-      this.homey.flow.getDeviceTriggerCard('PM10-has-changed')
-        .trigger(this, { 'device-name': name, 'device-uuid': uuid, 'pm10': Number(current.pm10?.value ?? 0) })
-        .catch((e) => this.error('Failed to trigger PM10-has-changed', e));
-    }
-
-    if (this.savedtVOC?.value !== current.tvoc?.value) {
-      this.homey.flow.getDeviceTriggerCard('tVOC-has-changed')
-        .trigger(this, { 'device-name': name, 'device-uuid': uuid, 'tvoc': Number(current.tvoc?.value ?? 0) })
-        .catch((e) => this.error('Failed to trigger tVOC-has-changed', e));
-    }
-
     const isOnline = current.online?.value === 'true';
     if (this.savedWifiStatus !== null && this.savedWifiStatus !== isOnline) {
       this.homey.flow.getDeviceTriggerCard('wifi-status-changed')
         .trigger(this, { 'device-name': name, 'device-uuid': uuid, 'online': isOnline })
         .catch((e) => this.error('Failed to trigger wifi-status-changed', e));
-    }
-
-    if (this.hasCapability('measure_co2') && this.savedCo2?.value !== current.co2?.value) {
-      this.homey.flow.getDeviceTriggerCard('CO2-has-changed')
-        .trigger(this, { 'device-name': name, 'device-uuid': uuid, 'co2': Number(current.co2?.value ?? 0) })
-        .catch((e) => this.error('Failed to trigger CO2-has-changed', e));
     }
 
     if (this.hasCapability('measure_hcho') && this.savedHcho?.value !== current.hcho?.value) {

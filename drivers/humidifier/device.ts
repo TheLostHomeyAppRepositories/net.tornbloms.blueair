@@ -25,8 +25,6 @@ class BlueAirHumidifierDevice extends BlueAirAwsBaseDevice {
 
   // Saved values for flow-card change detection
   private savedFanspeed: DeviceSetting | null = null;
-  private savedHumidity: DeviceSetting | null = null;
-  private savedTemperature: DeviceSetting | null = null;
   private savedFilterStatus: string | null = null;
   private savedWifiStatus: boolean | null = null;
 
@@ -72,18 +70,6 @@ class BlueAirHumidifierDevice extends BlueAirAwsBaseDevice {
           .catch((e) => this.error('Failed to trigger fan-speed-has-changed', e));
       }
 
-      if (this.savedHumidity?.value !== humidity?.value) {
-        this.homey.flow.getDeviceTriggerCard('humidity-has-changed')
-          .trigger(this, { 'device-name': name, 'device-uuid': uuid, 'humidity': Number(humidity?.value ?? 0) })
-          .catch((e) => this.error('Failed to trigger humidity-has-changed', e));
-      }
-
-      if (this.savedTemperature?.value !== temperature?.value) {
-        this.homey.flow.getDeviceTriggerCard('temperature-has-changed')
-          .trigger(this, { 'device-name': name, 'device-uuid': uuid, 'temperature': Number(temperature?.value ?? 0) })
-          .catch((e) => this.error('Failed to trigger temperature-has-changed', e));
-      }
-
       if (this.savedFilterStatus !== filterLife) {
         this.homey.flow.getDeviceTriggerCard('filter-needs-change')
           .trigger(this, { 'device-name': name, 'device-uuid': uuid, 'device-response': String(filterLife ?? 'Unknown') })
@@ -99,8 +85,6 @@ class BlueAirHumidifierDevice extends BlueAirAwsBaseDevice {
     }
 
     this.savedFanspeed    = fanspeed;
-    this.savedHumidity    = humidity;
-    this.savedTemperature = temperature;
     this.savedWifiStatus  = online?.value === 'true';
     this.savedFilterStatus = filterLife;
   }

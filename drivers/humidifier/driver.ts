@@ -19,6 +19,7 @@ class BlueAirHumidifierDriver extends BlueAirAwsBaseDriver {
     for (const device of devicesList) {
       const statusArray = await client.getDeviceStatus(accountuuid, [device.uuid]);
       for (const info of statusArray) {
+        this.log(`[pair] device model="${info.model}" sku="${info.sku}" name="${info.name}" — filters="${HUMIDIFIER_MODELS.join('|')}"`);
         if (HUMIDIFIER_MODELS.some(m => info.model.toLowerCase().includes(m))) {
           compatible.push({
             name: info.name,
