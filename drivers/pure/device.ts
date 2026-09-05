@@ -47,7 +47,9 @@ class BlueAirPureDevice extends BlueAirAwsBaseDevice {
     const filterLifePercent = calculateFilterLifePercent(attrs);
 
     this.setCapabilityValue('fanspeed',      Number(fanspeed?.value ?? 0)).catch(this.error);
-    this.setCapabilityValue('measure_pm25',  Number(pm25?.value ?? 0)).catch(this.error);
+    if (pm25) {
+      this.setCapabilityValue('measure_pm25', Number(pm25.value)).catch(this.error);
+    }
     this.setCapabilityValue('brightness2',   Number(brightness?.value ?? 0)).catch(this.error);
     this.setCapabilityValue('child_lock',    childlock?.value === 'true').catch(this.error);
     this.setCapabilityValue('nightmode',     nightmode?.value === 'true').catch(this.error);
@@ -70,9 +72,9 @@ class BlueAirPureDevice extends BlueAirAwsBaseDevice {
           .catch((e) => this.error('Failed to trigger fan-speed-has-changed', e));
       }
 
-      if (this.savedPM25?.value !== pm25?.value) {
+      if (pm25 && this.savedPM25?.value !== pm25.value) {
         this.homey.flow.getDeviceTriggerCard('PM25-has-changed')
-          .trigger(this, { 'device-name': name, 'device-uuid': uuid, 'pm25': Number(pm25?.value ?? 0) })
+          .trigger(this, { 'device-name': name, 'device-uuid': uuid, 'pm25': Number(pm25.value) })
           .catch((e) => this.error('Failed to trigger PM25-has-changed', e));
       }
 

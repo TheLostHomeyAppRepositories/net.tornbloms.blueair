@@ -53,7 +53,7 @@ BlueAirAwsBaseDevice  ← polling loop, auth recovery, safeSetCommand, performSe
 
 **Shared client pool** — `BlueAirAwsBaseDriver.getOrCreateClient(username, password)` keeps one `BlueAirAwsClient` per username. Concurrent calls await the same promise to avoid multiple Gigya logins.
 
-**Re-auth** — On 3 consecutive poll failures (auth-related error strings), `clearClient(username)` is called and polling stops until the device reinitialises. A 20 h proactive re-auth timer runs in every AWS device.
+**Re-auth** — On auth-related poll errors the *same* client object is re-initialised (`client.initialize()`) with exponential backoff (5 → 30 min). The client object is never replaced after `onInit`, because subclasses' capability listeners hold a reference to it. After 3 consecutive failures the device is marked unavailable; polling continues and `setAvailable()` fires on the next success. A 20 h proactive re-auth timer runs in every AWS device.
 
 **`standby` is inverted** — `standby: true` in Homey means "device is ON" (not in standby). The API receives `!value`.
 

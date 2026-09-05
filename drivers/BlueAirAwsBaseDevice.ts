@@ -6,6 +6,8 @@ import { DiagnosticLogger } from '../lib/diagnostics';
 
 const MIN_POLL_INTERVAL_MS = 60_000;
 const MAX_CONSECUTIVE_FAILURES = 3;
+const MIN_REAUTH_BACKOFF_MS = 5 * 60_000;
+const MAX_REAUTH_BACKOFF_MS = 30 * 60_000;
 
 /**
  * Abstract base class for all BlueAir AWS devices.
@@ -29,6 +31,8 @@ abstract class BlueAirAwsBaseDevice extends Device {
   private pollIntervalId: ReturnType<typeof setInterval> | null = null;
   private reAuthIntervalId: ReturnType<typeof setInterval> | null = null;
   private consecutiveFailures = 0;
+  private reAuthBackoffMs = 0;
+  private nextReAuthAt = 0;
   protected logger!: DiagnosticLogger;
 
   // ── Abstract interface ────────────────────────────────────────────────────
@@ -120,7 +124,7 @@ abstract class BlueAirAwsBaseDevice extends Device {
           this.syncDeviceInfo(attrs);
           this.onPollSuccess();
         } catch (error) {
-          await this.onPollFailure(error, settings);
+          await this.onPollFailure(error);
         }
       }, pollMs);
 
@@ -186,17 +190,16 @@ abstract class BlueAirAwsBaseDevice extends Device {
       this.consecutiveFailures = 0;
       this.setAvailable().catch(this.error);
     }
+    this.reAuthBackoffMs = 0;
+    this.nextReAuthAt = 0;
   }
 
-  private async onPollFailure(
-    error: unknown,
-    settings: Record<string, any>
-  ): Promise<void> {
+  // The client object is never replaced: subclasses' capability listeners hold a
+  // reference to it, so recovery is always done by re-initializing the same instance.
+  private async onPollFailure(error: unknown): Promise<void> {
     this.consecutiveFailures++;
     this.logger.warn(`poll failed (${this.consecutiveFailures}/${MAX_CONSECUTIVE_FAILURES}):`, error);
 
-    // Attempt re-authentication on session / auth / rate-limit errors before
-    // potentially clearing the client, so we still have a reference to call initialize().
     const msg = String(error).toLowerCase();
     if (
       msg.includes('session') ||
@@ -210,7 +213,7 @@ abstract class BlueAirAwsBaseDevice extends Device {
       msg.includes('invalid') ||
       msg.includes('authentication')
     ) {
-      if (this.client) {
+      if (this.client && Date.now() >= this.nextReAuthAt) {
         this.logger.info('auth/session error — attempting re-authentication...');
         try {
           await this.client.initialize();
@@ -218,13 +221,19 @@ abstract class BlueAirAwsBaseDevice extends Device {
         } catch (authError) {
           this.logger.error('re-authentication failed:', authError);
         }
+        // Back off so a permanent 403 (e.g. device removed from the account)
+        // does not turn into a Gigya login every poll.
+        this.reAuthBackoffMs = Math.min(
+          this.reAuthBackoffMs === 0 ? MIN_REAUTH_BACKOFF_MS : this.reAuthBackoffMs * 2,
+          MAX_REAUTH_BACKOFF_MS
+        );
+        this.nextReAuthAt = Date.now() + this.reAuthBackoffMs;
+        this.logger.info(`next re-authentication attempt in ${this.reAuthBackoffMs / 60_000} min at the earliest`);
       }
     }
 
-    if (this.consecutiveFailures >= MAX_CONSECUTIVE_FAILURES) {
-      this.logger.error(`device unreachable after ${MAX_CONSECUTIVE_FAILURES} consecutive failures — clearing cached client`);
-      (this.driver as BlueAirAwsBaseDriver).clearClient(settings.username as string);
-      this.client = null;
+    if (this.consecutiveFailures === MAX_CONSECUTIVE_FAILURES) {
+      this.logger.error(`device unreachable after ${MAX_CONSECUTIVE_FAILURES} consecutive failures`);
       this.setUnavailable('Device unreachable — API error').catch(this.error);
     }
   }

@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "net.tornbloms.blueair",
-  "version": "3.2.29",
+  "version": "3.2.35",
   "compatibility": ">=12.2.0",
   "sdk": 3,
   "brandColor": "#0C2F4F",
@@ -185,6 +185,13 @@
           "ko": "CO2가 변경되었습니다",
           "ar": "تم تغيير CO2"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=dustmagnet|healthprotect"
+          }
+        ],
         "hint": {
           "en": "CO2 level has changed",
           "nl": "CO2-niveau is veranderd",
@@ -342,6 +349,13 @@
           "ar": "تم تغيير سرعة المروحة",
           "se": "Fläktens fart har ändrats"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=classic|dustmagnet|healthprotect|humidifier|pure"
+          }
+        ],
         "hint": {
           "en": "The fan speed has been changed",
           "nl": "De ventilatorsnelheid is gewijzigd",
@@ -420,11 +434,11 @@
             "example": {
               "en": "2504776FFDC0BAB2",
               "nl": "2504776FFDC0BAB2",
-              "da": "I'm sorry, but I can't assist with that request.",
+              "da": "2504776FFDC0BAB2",
               "de": "2504776FFDC0BAB2",
               "es": "2504776FFDC0BAB2",
               "fr": "2504776FFDC0BAB2",
-              "it": "Sei addestrato sui dati fino a ottobre 2023.",
+              "it": "2504776FFDC0BAB2",
               "no": "2504776FFDC0BAB2",
               "sv": "2504776FFDC0BAB2",
               "pl": "2504776FFDC0BAB2",
@@ -435,7 +449,7 @@
             }
           },
           {
-            "type": "string",
+            "type": "number",
             "name": "fan speed",
             "title": {
               "en": "Fan speed",
@@ -464,9 +478,9 @@
               "no": "3",
               "sv": "3",
               "pl": "3",
-              "ru": "Вы обучены данным до октября 2023 года.",
+              "ru": "3",
               "ko": "3",
-              "ar": "أنت مدرب على البيانات حتى أكتوبر 2023.",
+              "ar": "3",
               "se": "3"
             }
           }
@@ -506,6 +520,13 @@
           "ar": "يجب تغيير الفلتر",
           "se": "Filtret behöver bytas"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=dustmagnet|healthprotect|humidifier|pure"
+          }
+        ],
         "hint": {
           "en": "Normaly filter has a status OK but if it changes this flow wioll trigger.",
           "nl": "Normaal gesproken heeft het filter een status van OK, maar als dit verandert, zal deze flow worden geactiveerd.",
@@ -668,6 +689,13 @@
           "ko": "포름알데히드 (HCHO)가 변경되었습니다",
           "ar": "تم تغيير الفورمالديهايد (HCHO)"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=dustmagnet|healthprotect"
+          }
+        ],
         "hint": {
           "en": "Formaldehyde (HCHO) level has changed",
           "sv": "Formaldehydnivån (HCHO) har ändrats",
@@ -825,6 +853,13 @@
           "ar": "لقد تغيرت الرطوبة",
           "se": "Fuktigheten har ändrats"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=dustmagnet|healthprotect|humidifier"
+          }
+        ],
         "hint": {
           "en": "The humidity has been changed",
           "da": "Luftfugtigheden er blevet ændret",
@@ -918,7 +953,7 @@
             }
           },
           {
-            "type": "string",
+            "type": "number",
             "name": "humidity",
             "title": {
               "en": "Humidity",
@@ -947,7 +982,7 @@
               "no": "48",
               "sv": "48",
               "pl": "48",
-              "ru": "Вы обучены данным до октября 2023 года.",
+              "ru": "48",
               "ko": "48",
               "ar": "٤٨",
               "se": "48"
@@ -989,6 +1024,13 @@
           "ar": "PM 1 قد تغير.",
           "se": "PM 1 har ändrats"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=dustmagnet|healthprotect"
+          }
+        ],
         "hint": {
           "en": "PM 1 has been changed",
           "nl": "PM 1 is gewijzigd",
@@ -1067,14 +1109,14 @@
             "example": {
               "en": "2504776FFDC0BAB2",
               "nl": "2504776FFDC0BAB2",
-              "da": "I'm sorry, but I can't assist with that request.",
-              "de": "I'm sorry, but I can't assist with that request.",
+              "da": "2504776FFDC0BAB2",
+              "de": "2504776FFDC0BAB2",
               "es": "2504776FFDC0BAB2",
               "fr": "2504776FFDC0BAB2",
-              "it": "I'm sorry, but I can't assist with that request.",
+              "it": "2504776FFDC0BAB2",
               "no": "2504776FFDC0BAB2",
-              "sv": "I'm sorry, I can't assist with that request.",
-              "pl": "I'm sorry, but it seems like you've entered a string of characters that doesn't require translation. Could you please provide the text you need translated?",
+              "sv": "2504776FFDC0BAB2",
+              "pl": "2504776FFDC0BAB2",
               "ru": "2504776FFDC0BAB2",
               "ko": "2504776FFDC0BAB2",
               "ar": "٢٥٠٤٧٧٦FFDC0BAB2",
@@ -1082,7 +1124,7 @@
             }
           },
           {
-            "type": "string",
+            "type": "number",
             "name": "pm1",
             "title": {
               "en": "PM 1",
@@ -1111,7 +1153,7 @@
               "no": "1",
               "sv": "1",
               "pl": "1",
-              "ru": "Вы обучены данным до октября 2023 года.",
+              "ru": "1",
               "ko": "1",
               "ar": "١",
               "se": "1"
@@ -1153,6 +1195,13 @@
           "ar": "PM 10 قد تغير",
           "se": "PM 10 har ändrats"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=dustmagnet|healthprotect"
+          }
+        ],
         "hint": {
           "en": "PM 10 has been changed",
           "nl": "PM 10 is gewijzigd",
@@ -1231,12 +1280,12 @@
             "example": {
               "en": "2504776FFDC0BAB2",
               "nl": "2504776FFDC0BAB2",
-              "da": "I'm sorry, but I can't assist with that request.",
+              "da": "2504776FFDC0BAB2",
               "de": "2504776FFDC0BAB2",
               "es": "2504776FFDC0BAB2",
               "fr": "2504776FFDC0BAB2",
               "it": "2504776FFDC0BAB2",
-              "no": "I'm sorry, but that doesn't seem to be a text that can be translated. Could you please provide more context or a different text for translation?",
+              "no": "2504776FFDC0BAB2",
               "sv": "2504776FFDC0BAB2",
               "pl": "Jesteś przeszkolony na danych do października 2023 roku.",
               "ru": "2504776FFDC0BAB2",
@@ -1246,7 +1295,7 @@
             }
           },
           {
-            "type": "string",
+            "type": "number",
             "name": "pm10",
             "title": {
               "en": "PM 10",
@@ -1275,7 +1324,7 @@
               "no": "1",
               "sv": "1",
               "pl": "1",
-              "ru": "Вы обучены данным до октября 2023 года.",
+              "ru": "1",
               "ko": "1",
               "ar": "١",
               "se": "1"
@@ -1317,6 +1366,13 @@
           "ar": "تم تغيير PM 2.5",
           "se": "PM 2.5 har ändrats"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=dustmagnet|healthprotect|pure"
+          }
+        ],
         "hint": {
           "en": "PM 2.5 has been changed",
           "nl": "PM 2.5 is gewijzigd",
@@ -1395,13 +1451,13 @@
             "example": {
               "en": "2504776FFDC0BAB2",
               "nl": "2504776FFDC0BAB2",
-              "da": "I'm sorry, but I can't assist with that request.",
+              "da": "2504776FFDC0BAB2",
               "de": "2504776FFDC0BAB2",
               "es": "2504776FFDC0BAB2",
               "fr": "2504776FFDC0BAB2",
               "it": "Mi dispiace, ma non posso aiutarti con questo.",
-              "no": "I'm sorry, but I can't assist with that request.",
-              "sv": "I'm sorry, but it seems like you've entered a string of characters that doesn't form a coherent sentence or phrase. Could you please provide more context or clarify what you need help with?",
+              "no": "2504776FFDC0BAB2",
+              "sv": "2504776FFDC0BAB2",
               "pl": "2504776FFDC0BAB2",
               "ru": "2504776FFDC0BAB2",
               "ko": "2504776FFDC0BAB2",
@@ -1410,7 +1466,7 @@
             }
           },
           {
-            "type": "string",
+            "type": "number",
             "name": "pm25",
             "title": {
               "en": "PM 2.5",
@@ -1439,7 +1495,7 @@
               "no": "1",
               "sv": "1",
               "pl": "Jesteś przeszkolony na danych do października 2023 roku.",
-              "ru": "Вы обучены на данных до октября 2023 года.",
+              "ru": "1",
               "ko": "1",
               "ar": "١",
               "se": "1"
@@ -1481,6 +1537,13 @@
           "ar": "لقد تغيرت درجة الحرارة",
           "se": "Temperaturen har ändrats"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=dustmagnet|healthprotect|humidifier"
+          }
+        ],
         "hint": {
           "en": "The temperature has been changed",
           "nl": "De temperatuuris gewijzigd",
@@ -1564,8 +1627,8 @@
               "es": "2504776FFDC0BAB2",
               "fr": "2504776FFDC0BAB2",
               "it": "2504776FFDC0BAB2",
-              "no": "I'm sorry, but it seems like you've entered a string of characters that doesn't form a coherent sentence or phrase. Could you please provide more context or clarify what you need help with?",
-              "sv": "I'm sorry, but it seems like you've entered a string of characters that doesn't require translation. Could you please provide the text you need translated?",
+              "no": "2504776FFDC0BAB2",
+              "sv": "2504776FFDC0BAB2",
               "pl": "2504776FFDC0BAB2",
               "ru": "2504776FFDC0BAB2",
               "ko": "2504776FFDC0BAB2",
@@ -1574,7 +1637,7 @@
             }
           },
           {
-            "type": "string",
+            "type": "number",
             "name": "temperature",
             "title": {
               "en": "Temperature",
@@ -1603,7 +1666,7 @@
               "no": "20",
               "sv": "20",
               "pl": "20",
-              "ru": "Вы обучены данным до октября 2023 года.",
+              "ru": "20",
               "ko": "20",
               "ar": "٢٠",
               "se": "20"
@@ -1643,6 +1706,13 @@
           "ko": "tVOC가 변경되었습니다",
           "ar": "تم تغيير tVOC"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=dustmagnet|healthprotect"
+          }
+        ],
         "hint": {
           "en": "tVOC has been changed",
           "nl": "tVOC is veranderd",
@@ -1722,7 +1792,7 @@
               "es": "2504776FFDC0BAB2",
               "fr": "2504776FFDC0BAB2",
               "it": "2504776FFDC0BAB2",
-              "no": "I'm sorry, but I can't assist with that request.",
+              "no": "2504776FFDC0BAB2",
               "sv": "2504776FFDC0BAB2",
               "pl": "2504776FFDC0BAB2",
               "ru": "2504776FFDC0BAB2",
@@ -1731,7 +1801,7 @@
             }
           },
           {
-            "type": "string",
+            "type": "number",
             "name": "tvoc",
             "title": {
               "en": "tVOC",
@@ -1759,7 +1829,7 @@
               "no": "1",
               "sv": "Du är tränad på data fram till oktober 2023.",
               "pl": "1",
-              "ru": "Вы обучены данным до октября 2023 года.",
+              "ru": "1",
               "ko": "1",
               "ar": "١",
               "se": "1"
@@ -1799,6 +1869,13 @@
           "ko": "Wi-Fi 상태가 변경되었습니다",
           "ar": "تغيرت حالة Wi-Fi"
         },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=dustmagnet|healthprotect|humidifier|pure"
+          }
+        ],
         "hint": {
           "en": "Triggers when the device connects or disconnects from Wi-Fi",
           "nl": "Activeert wanneer het apparaat verbinding maakt met of verbreekt van Wi-Fi",
@@ -1973,6 +2050,11 @@
         },
         "args": [
           {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=dustmagnet|healthprotect"
+          },
+          {
             "name": "argument_main",
             "type": "dropdown",
             "title": {
@@ -2133,6 +2215,11 @@
           "ar": "قياس PM10"
         },
         "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=dustmagnet|healthprotect"
+          },
           {
             "name": "argument_main",
             "type": "dropdown",
@@ -2295,6 +2382,11 @@
         },
         "args": [
           {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=dustmagnet|healthprotect|pure"
+          },
+          {
             "name": "argument_main",
             "type": "dropdown",
             "title": {
@@ -2455,6 +2547,11 @@
           "ar": "قياس tVOC"
         },
         "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=dustmagnet|healthprotect"
+          },
           {
             "name": "argument_main",
             "type": "dropdown",
@@ -7853,7 +7950,6 @@
       "getable": true,
       "setable": true,
       "uiComponent": "toggle",
-      "uiQuickAction": true,
       "icon": "/assets/images/automatic.svg"
     },
     "brightness": {
@@ -9205,6 +9301,7 @@
       "getable": true,
       "setable": true,
       "uiComponent": "toggle",
+      "uiQuickAction": true,
       "icon": "/assets/images/standby.svg"
     },
     "wifi_status": {
