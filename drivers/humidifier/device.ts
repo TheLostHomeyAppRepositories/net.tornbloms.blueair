@@ -47,8 +47,12 @@ class BlueAirHumidifierDevice extends BlueAirAwsBaseDevice {
     const filterLifePercent = calculateFilterLifePercent(attrs);
 
     this.setCapabilityValue('fanspeed',            Number(fanspeed?.value ?? 0)).catch(this.error);
-    this.setCapabilityValue('measure_humidity',     Number(humidity?.value ?? 0)).catch(this.error);
-    this.setCapabilityValue('measure_temperature',  Number(temperature?.value ?? 0)).catch(this.error);
+    if (humidity) {
+      this.setCapabilityValue('measure_humidity', Number(humidity.value)).catch(this.error);
+    }
+    if (temperature) {
+      this.setCapabilityValue('measure_temperature', Number(temperature.value)).catch(this.error);
+    }
     this.setCapabilityValue('brightness2',          Number(brightness?.value ?? 0)).catch(this.error);
     this.setCapabilityValue('child_lock',           childlock?.value === 'true').catch(this.error);
     this.setCapabilityValue('nightmode',            nightmode?.value === 'true').catch(this.error);

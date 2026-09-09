@@ -75,7 +75,7 @@ abstract class BlueAirAwsFullDevice extends BlueAirAwsBaseDevice {
     const pm1         = filterSettings(attrs, 'pm1');
     const pm25        = filterSettings(attrs, 'pm2_5');
     const pm10        = filterSettings(attrs, 'pm10');
-    const tvoc        = filterSettings(attrs, 'tvoc');
+    const tvoc        = filterSettings(attrs, 'voc');
     const brightness  = filterSettings(attrs, 'brightness');
     const childlock   = filterSettings(attrs, 'childlock');
     const nightmode   = filterSettings(attrs, 'nightmode');

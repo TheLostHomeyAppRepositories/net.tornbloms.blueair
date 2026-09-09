@@ -211,5 +211,11 @@
   },
   "3.2.37": {
     "en": "Several fixes from the community"
+  },
+  "3.3.0": {
+    "en": "Removed duplicate \"… has changed\" trigger cards for CO2, PM1, PM2.5, PM10, tVOC, temperature and humidity — use Homey's built-in \"… changed\" cards instead. Flows using the old cards need to be re-linked. Humidifier pairing now logs the reported model to help add new units."
+  },
+  "3.3.1": {
+    "en": "Sensor readings (PM2.5 etc.) are now fetched from Blueair's telemetry when the device reports none directly — fixes missing PM2.5 on Blue Pure 311i Max. Added pairing support for the DreamWell (H38i) humidifier. Fixed tVOC never updating on HealthProtect/DustMagnet. Humidity/temperature no longer show a fake 0 when not reported."
   }
 }

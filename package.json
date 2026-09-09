@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "blueair-client": "^1.2.15",
-    "blueairaws-client": "^1.2.8",
+    "blueairaws-client": "^1.2.9",
     "homey-log": "^2.1.0"
   }
 }
